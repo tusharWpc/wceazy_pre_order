@@ -1,0 +1,89 @@
+.wceazy_address_book_address_section {
+    --wceazy_ab_add_btn_bg_color: #6E32C9;
+    --wceazy_ab_add_btn_text_color: #ffffff;
+    --wceazy_ab_add_btn_bg_hover_color: #ffffff;
+    --wceazy_ab_add_btn_text_hover_color: #6E32C9;
+    --wceazy_ab_add_btn_border_hover_color: #6E32C9;
+    --wceazy_ab_card_bg_color: #ffffff;
+    --wceazy_ab_card_border_color: #e2e2ef;
+    --wceazy_ab_card_text_color: #6d6d6d;
+    --wceazy_ab_card_footer_color: #fafbff;
+    --wceazy_ab_card_link_text_color: #6E32C9;
+}
+
+
+
+.wceazy_address_book_address_section{
+    margin: 30px 0 0 0;
+    display: inline-block;
+    width: 100%;
+}
+.wceazy_address_book_address_section header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wceazy_address_book_address_section header h3{
+    margin: 0;
+}
+.wceazy_address_book_address_section header a{
+    cursor: pointer;
+    text-decoration: none !important;
+    background-color: var(--wceazy_ab_add_btn_bg_color);
+    padding: 4px 21px;
+    color: var(--wceazy_ab_add_btn_text_color);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+.wceazy_address_book_address_section header a:hover{
+    background-color: var(--wceazy_ab_add_btn_bg_hover_color);
+    color: var(--wceazy_ab_add_btn_text_hover_color);
+    border: 1px solid var(--wceazy_ab_add_btn_border_hover_color);
+}
+
+
+
+.wceazy_address_book_address_card_container{
+    margin: 20px 0 0 0;
+}
+
+.wceazy_address_book_address_card{
+    border: 1px solid var(--wceazy_ab_card_border_color);
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.wceazy_address_book_address_card_body{
+    background: var(--wceazy_ab_card_bg_color);
+    border-radius: 6px 6px 0 0;
+    padding: 11px 20px;
+    color: var(--wceazy_ab_card_text_color);
+}
+
+
+.wceazy_address_book_address_card_footer{
+    display: flex;
+    align-items: center;
+    column-gap: 18px;
+    background: var(--wceazy_ab_card_footer_color);
+    border-top: 1px solid var(--wceazy_ab_card_border_color);
+    border-radius: 0 0 6px 6px;
+    padding: 8px 20px;
+}
+
+.wceazy_address_book_address_card_footer a{
+    text-decoration: none !important;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--wceazy_ab_card_link_text_color);
+}
+
+.wceazy_address_book_address_card_footer a.wceazy_address_book_address_make_primary{
+    margin-left: auto;
+}
+
+
+

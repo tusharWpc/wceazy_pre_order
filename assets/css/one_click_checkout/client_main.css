@@ -1,0 +1,42 @@
+/** master frontend style for pdf invoice, packing slips**/
+
+/* Single Product Busy Now Style */
+a.button.wfocc_single_product_buy_now.wfocc_before_form {
+    margin: 4px 4px 4px 0;
+}
+a.button.wfocc_single_product_buy_now.wfocc_after_form {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: -4px;
+}
+
+a.button.wfocc_single_product_buy_now.wfocc_before_button {
+    margin-right: 4px;
+}
+a.button.wfocc_single_product_buy_now.wfocc_after_button {
+    margin-left: 4px;
+}
+
+a.button.wfocc_variation_btn_disabled {
+    background: #ddd !important;
+    cursor: no-drop !important;
+}
+
+/* Single Product Busy Now Style End */
+
+
+
+/* Start peoduct archive buy now button */
+a.button.wfocc_product_archive_buy_now.wfoccpa_before_button {
+    border-radius: 2px;
+    margin-bottom: 25px !important;
+    text-decoration: none !important;
+}
+a.button.wfocc_product_archive_buy_now.wfoccpa_after_button {
+    border-radius: 2px;
+    text-decoration: none !important;
+    margin-top: 25px !important;
+}
+
+/* end product archive buy now button */
+

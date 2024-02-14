@@ -1,0 +1,3526 @@
+# Copyright (C) 2024 wcEazy
+# This file is distributed under the same license as the wcEazy package.
+msgid ""
+msgstr ""
+"Project-Id-Version: wcEazy 1.1.6\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wceazy\n"
+"POT-Creation-Date: 2024-01-30 10:36:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-01-31 04:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.2"
+
+#: backend/templates/views/one_click_checkout/settings.php:691
+msgid " Billing Address 1 "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:694
+msgid " Billing Address 2 "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:700
+msgid " Billing City "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:709
+msgid " Billing Company "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:697
+msgid " Billing Country "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:715
+msgid " Billing Email "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:685
+msgid " Billing First Name "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:688
+msgid " Billing Last Name "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:712
+msgid " Billing Phone "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:706
+msgid " Billing Postcode "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:703
+msgid " Billing State "
+msgstr ""
+
+#: backend/templates/views/floating_cart/settings.php:410
+msgid " Customize the continue shopping button text."
+msgstr ""
+
+#: backend/templates/views/floating_cart/settings.php:194
+#: backend/templates/views/pdf_invoice/settings.php:306
+msgid " Please select"
+msgstr ""
+
+#: backend/templates/views/modules.php:94
+#: backend/templates/views/modules.php:134
+#: backend/templates/views/modules.php:174
+#: backend/templates/views/modules.php:194
+msgid " Settings"
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:235
+msgid "\"Add to Cart\" Button Text"
+msgstr "\"カートに追加\"ボタンのテキスト"
+
+#: backend/templates/views/product_filter/settings.php:630
+msgid "\"And Up\" Font Color"
+msgstr "\"と\"文字色"
+
+#: backend/templates/views/product_filter/settings.php:604
+msgid "\"And Up\" Text"
+msgstr "\"や、\"テキスト"
+
+#: backend/templates/views/shipping_bar/settings.php:286
+msgid ""
+"\"Empty Cart in Shipping Zone: Add items to qualify for Free Shipping "
+"({minimum_order}).\""
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:855
+msgid "\"In Stock\" Text"
+msgstr "における\"在庫あり\"のテキスト"
+
+#: backend/templates/views/product_filter/settings.php:277
+msgid "\"Next Page\" Button Text"
+msgstr "\"次ページ\"ボタンのテキスト"
+
+#: backend/templates/views/product_filter/settings.php:866
+msgid "\"Out of Stock\" Text"
+msgstr "\"の\"テキスト"
+
+#: backend/templates/views/product_filter/settings.php:266
+msgid "\"Previous Page\" Button Text"
+msgstr "\"前のページ\"ボタンのテキスト"
+
+#: backend/templates/views/product_filter/settings.php:245
+msgid "\"Select Options\" Button Text"
+msgstr "\"オプションの選択\"ボタンのテキスト"
+
+#: backend/templates/views/product_filter/settings.php:255
+msgid "\"Stock Out\" Button Text"
+msgstr "\"株式出力\"ボタンのテキスト"
+
+#: backend/templates/views/pdf_invoice/invoice.php:124
+#: backend/templates/views/pdf_invoice/invoice.php:125
+msgid "$0.00"
+msgstr "$0.00"
+
+#: backend/templates/views/address_book/settings.php:164
+#: backend/templates/views/address_book/settings.php:181
+#: backend/templates/views/address_book/settings.php:189
+#: backend/templates/views/address_book/settings.php:198
+#: backend/templates/views/address_book/settings.php:206
+#: backend/templates/views/address_book/settings.php:214
+#: backend/templates/views/address_book/settings.php:234
+#: backend/templates/views/address_book/settings.php:245
+#: backend/templates/views/address_book/settings.php:256
+#: backend/templates/views/address_book/settings.php:267
+#: backend/templates/views/address_book/settings.php:279
+#: backend/templates/views/address_book/settings.php:292
+#: backend/templates/views/address_book/settings.php:303
+#: backend/templates/views/address_book/settings.php:314
+#: backend/templates/views/address_book/settings.php:325
+#: backend/templates/views/address_book/settings.php:337
+#: backend/templates/views/coupon_generator/settings.php:37
+#: backend/templates/views/one_click_checkout/settings.php:216
+#: backend/templates/views/one_click_checkout/settings.php:555
+#: backend/templates/views/one_click_checkout/settings.php:572
+#: backend/templates/views/one_click_checkout/settings.php:588
+#: backend/templates/views/one_click_checkout/settings.php:599
+#: backend/templates/views/one_click_checkout/settings.php:610
+#: backend/templates/views/one_click_checkout/settings.php:652
+#: backend/templates/views/one_click_checkout/settings.php:665
+#: backend/templates/views/one_click_checkout/settings.php:679
+#: backend/templates/views/one_click_checkout/settings.php:725
+#: backend/templates/views/pdf_invoice/settings.php:343
+#: backend/templates/views/pdf_invoice/settings.php:354
+#: backend/templates/views/pdf_invoice/settings.php:416
+#: backend/templates/views/pdf_invoice/settings.php:425
+#: backend/templates/views/pdf_invoice/settings.php:524
+#: backend/templates/views/pdf_invoice/settings.php:536
+#: backend/templates/views/product_filter/settings.php:287
+#: backend/templates/views/product_filter/settings.php:302
+#: backend/templates/views/product_filter/settings.php:319
+#: backend/templates/views/product_filter/settings.php:335
+#: backend/templates/views/product_filter/settings.php:351
+#: backend/templates/views/product_filter/settings.php:401
+#: backend/templates/views/product_filter/settings.php:418
+#: backend/templates/views/product_filter/settings.php:436
+#: backend/templates/views/product_filter/settings.php:453
+#: backend/templates/views/product_filter/settings.php:515
+#: backend/templates/views/product_filter/settings.php:532
+#: backend/templates/views/product_filter/settings.php:550
+#: backend/templates/views/product_filter/settings.php:567
+#: backend/templates/views/product_filter/settings.php:615
+#: backend/templates/views/product_filter/settings.php:631
+#: backend/templates/views/product_filter/settings.php:747
+#: backend/templates/views/product_filter/settings.php:764
+#: backend/templates/views/product_filter/settings.php:782
+#: backend/templates/views/product_filter/settings.php:800
+#: backend/templates/views/product_filter/settings.php:818
+#: backend/templates/views/product_filter/settings.php:878
+#: backend/templates/views/product_filter/settings.php:894
+#: backend/templates/views/product_filter/settings.php:911
+#: backend/templates/views/product_filter/settings.php:929
+#: backend/templates/views/product_filter/settings.php:947
+#: backend/templates/views/product_sticky_bar/settings.php:205
+#: backend/templates/views/product_sticky_bar/settings.php:317
+#: backend/templates/views/product_sticky_bar/settings.php:333
+#: backend/templates/views/product_sticky_bar/settings.php:349
+#: backend/templates/views/product_sticky_bar/settings.php:366
+#: backend/templates/views/product_sticky_bar/settings.php:393
+#: backend/templates/views/product_sticky_bar/settings.php:408
+#: backend/templates/views/product_sticky_bar/settings.php:434
+#: backend/templates/views/product_sticky_bar/settings.php:460
+#: backend/templates/views/product_sticky_bar/settings.php:476
+#: backend/templates/views/product_sticky_bar/settings.php:493
+#: backend/templates/views/product_sticky_bar/settings.php:509
+#: backend/templates/views/product_sticky_bar/settings.php:523
+#: backend/templates/views/shipping_bar/settings.php:154
+#: backend/templates/views/shipping_bar/settings.php:167
+#: backend/templates/views/shipping_bar/settings.php:241
+#: backend/templates/views/shipping_bar/settings.php:252
+#: backend/templates/views/shipping_bar/settings.php:263
+#: backend/templates/views/shipping_bar/settings.php:283
+#: backend/templates/views/shipping_bar/settings.php:291
+#: backend/templates/views/shipping_bar/settings.php:299
+#: backend/templates/views/shipping_bar/settings.php:316
+#: backend/templates/views/shipping_bar/settings.php:324
+#: backend/templates/views/shipping_bar/settings.php:332
+#: backend/templates/views/shipping_bar/settings.php:373
+#: backend/templates/views/shipping_bar/settings.php:409
+#: backend/templates/views/shipping_bar/settings.php:420
+#: backend/templates/views/shipping_bar/settings.php:466
+#: backend/templates/views/shipping_bar/settings.php:504
+#: backend/templates/views/shipping_bar/settings.php:515
+#: backend/templates/views/shipping_bar/settings.php:527
+msgid "(Pro)"
+msgstr "(Pro)"
+
+#: backend/templates/views/pdf_invoice/invoice.php:121
+msgid "001"
+msgstr "001"
+
+#: backend/templates/views/pdf_invoice/invoice.php:123
+msgid "1"
+msgstr "001"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:35
+msgid "10"
+msgstr "10"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:44
+msgid "100"
+msgstr "100"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:36
+msgid "20"
+msgstr "20"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:37
+msgid "30"
+msgstr "30"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:38
+msgid "40"
+msgstr "40"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:39
+msgid "50"
+msgstr "50"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:40
+msgid "60"
+msgstr "60"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:41
+msgid "70"
+msgstr "70"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:42
+msgid "80"
+msgstr "80"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:43
+msgid "90"
+msgstr "90"
+
+#: backend/templates/views/address_book/settings.php:137
+msgid "Account Page"
+msgstr "アカウントページ"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:81
+#: backend/templates/views/url_coupon/settings.php:65
+msgid "Action"
+msgstr "行動"
+
+#: backend/templates/views/product_filter/settings.php:286
+msgid "Action Button Background Color"
+msgstr "アクションボタンの背景色"
+
+#: backend/templates/views/product_filter/settings.php:301
+msgid "Action Button Font Color"
+msgstr "アクションボタンの文字色"
+
+#: backend/templates/views/modules.php:26
+msgid "Active"
+msgstr "活動"
+
+#: backend/templates/views/address_book/settings.php:164
+msgid "Add Billing Address Button Text"
+msgstr "追加料コンテキストボタン"
+
+#: backend/templates/views/address_book/settings.php:234
+msgid "Add Button Background Color"
+msgstr "追加ボタンの背景色"
+
+#: backend/templates/views/address_book/settings.php:256
+msgid "Add Button Background Hover Color"
+msgstr "追加ボタンの背景色の推移"
+
+#: backend/templates/views/address_book/settings.php:279
+msgid "Add Button Border Hover Color"
+msgstr "追加ボタンホバーボーダーの色"
+
+#: backend/templates/views/address_book/settings.php:245
+msgid "Add Button Text Color"
+msgstr "追加ボタンのテキストカラーを設定します。"
+
+#: backend/templates/views/address_book/settings.php:267
+msgid "Add Button Text Hover Color"
+msgstr "追加ボタンのテキストホバー色"
+
+#: backend/templates/views/bogo_deal/settings.php:23
+msgid "Add Rule"
+msgstr "追加ルール"
+
+#: backend/templates/views/address_book/settings.php:173
+msgid "Add Shipping Address Button Text"
+msgstr "追加送ボタンのテキスト"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:48
+msgid "Add to auto apply"
+msgstr "追加の自動適用"
+
+#: backend/templates/views/one_click_checkout/settings.php:99
+msgid "Add To Cart"
+msgstr "を追加することができます。"
+
+#: backend/templates/views/one_click_checkout/settings.php:209
+msgid "Add to Cart Button Settings"
+msgstr "カートに追加ボタンの設定"
+
+#: backend/templates/views/one_click_checkout/settings.php:244
+msgid "Add to cart button text"
+msgstr "カートに追加ボタンのテキスト"
+
+#: backend/templates/views/address_book/settings.php:54
+#: backend/templates/views/modules.php:227
+msgid "Address Book"
+msgstr "アドレス帳"
+
+#: backend/templates/views/address_book/settings.php:83
+msgid "Address Book on Account Page"
+msgstr "アドレス帳にアカウントページ"
+
+#: backend/templates/views/address_book/settings.php:292
+msgid "Address Card Background Color"
+msgstr "アドレスカードの背景色"
+
+#: backend/templates/views/address_book/settings.php:303
+msgid "Address Card Border Color "
+msgstr ""
+
+#: backend/templates/views/address_book/settings.php:325
+msgid "Address Card Footer Background Color"
+msgstr "アドレスカードフッターの背景色"
+
+#: backend/templates/views/address_book/settings.php:337
+msgid "Address Card Link Text Color"
+msgstr "アドレスカードリンクテキストカラーを設定します。"
+
+#: backend/templates/views/address_book/settings.php:206
+msgid "Address Delete Link Text"
+msgstr "アドレスの削除リンクテキストをドキュメント"
+
+#: backend/templates/views/address_book/settings.php:198
+msgid "Address Edit Link Text"
+msgstr "アドレスの編集リンクテキストをドキュメント"
+
+#: backend/templates/views/address_book/settings.php:130
+msgid "Address Field Label"
+msgstr "住所ラベル分野"
+
+#: backend/templates/views/address_book/settings.php:101
+msgid "Address Field on Checkout Page"
+msgstr "ドレページ"
+
+#: backend/templates/views/pdf_invoice/settings.php:197
+msgid "Address Line 1"
+msgstr "住所1号線"
+
+#: backend/templates/views/pdf_invoice/settings.php:206
+msgid "Address Line 2"
+msgstr "住所2"
+
+#: backend/templates/views/address_book/settings.php:214
+msgid "Address Make Primary Link Text"
+msgstr "住所しているリンクテキストをドキュメント"
+
+#: backend/templates/views/address_book/settings.php:314
+msgid "Address Text Color"
+msgstr "住所テキストカラーを設定します。"
+
+#: backend/templates/views/product_sticky_bar/settings.php:514
+msgid ""
+"Adjust space around the add to cart button in the sticky bar (Default: 30)."
+msgstr "調整スペースにカートに追加]ボタンを粘バー(デフォルト時30分）までとなります。"
+
+#: backend/templates/views/one_click_checkout/settings.php:150
+msgid ""
+"After clicking the add to cart button, it will automatically redirect to the "
+"checkout page."
+msgstr "クリックし、カートに追加ボタンを押すと自動的にリダイレクトチェックアウトページです。"
+
+#: backend/templates/views/shipping_bar/settings.php:202
+#: backend/templates/views/shipping_bar/settings.php:224
+msgid "After shipping block"
+msgstr "その後、ブロック"
+
+#: backend/templates/views/modules.php:25
+msgid "All"
+msgstr "すべての"
+
+#: backend/templates/views/floating_cart/settings.php:290
+msgid "Allow Deleting Item From Cart"
+msgstr "を削除する項目からカート"
+
+#: backend/templates/views/shipping_bar/settings.php:324
+msgid "Allow Disappear Time"
+msgstr "きくの間"
+
+#: backend/templates/views/coupon_generator/settings.php:98
+msgid "Allow free shipping"
+msgstr "できるようにすることで輸送"
+
+#: backend/templates/views/floating_cart/settings.php:301
+msgid "Allow Quantity Update"
+msgstr "る数量を更新"
+
+#: backend/templates/views/coupon_generator/settings.php:186
+msgid "Allowed emails"
+msgstr "せメール"
+
+#: backend/templates/views/one_click_checkout/settings.php:231
+msgid "Alter the \"Add to Cart\" button text."
+msgstr "の\"カートに追加\"ボタンを押します。"
+
+#: backend/templates/views/floating_cart/settings.php:872
+msgid "Always Hide"
+msgstr "常に非表示"
+
+#: backend/templates/views/floating_cart/settings.php:869
+msgid "Always Show"
+msgstr "メインメニューからツール"
+
+#: backend/templates/views/product_filter/settings.php:47
+#: modules/product_filter/template.php:47
+msgid "And Up"
+msgstr "最"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:95
+msgid "Are you sure?"
+msgstr "ご確認ください。"
+
+#: backend/templates/views/pdf_invoice/settings.php:353
+msgid "Attach to Email"
+msgstr "添付メール"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:17
+#: backend/templates/views/modules.php:47
+msgid "Auto Apply Coupon"
+msgstr "自動車用クーポン"
+
+#: backend/templates/views/address_book/settings.php:58
+#: backend/templates/views/auto_apply_coupon/settings.php:21
+#: backend/templates/views/bogo_deal/settings.php:22
+#: backend/templates/views/coupon_generator/settings.php:17
+#: backend/templates/views/floating_cart/settings.php:110
+#: backend/templates/views/one_click_checkout/settings.php:84
+#: backend/templates/views/pdf_invoice/settings.php:82
+#: backend/templates/views/product_filter/settings.php:104
+#: backend/templates/views/product_sticky_bar/settings.php:65
+#: backend/templates/views/url_coupon/settings.php:18
+msgid "Back to all Modules"
+msgstr "帰すべてのモジュール"
+
+#: backend/templates/views/one_click_checkout/settings.php:539
+#: backend/templates/views/shipping_bar/settings.php:373
+msgid "Background Color"
+msgstr "背景色"
+
+#: backend/templates/views/product_sticky_bar/settings.php:281
+msgid "Bar Style"
+msgstr "バースタイル"
+
+#: backend/templates/views/floating_cart/settings.php:1019
+msgid "Basket Background Color"
+msgstr "バスケットの背景色"
+
+#: backend/templates/views/floating_cart/settings.php:175
+msgid "Basket Count"
+msgstr "バスケットカウント"
+
+#: backend/templates/views/floating_cart/settings.php:1047
+msgid "Basket Count Background Color"
+msgstr "バスケットカウントの背景色"
+
+#: backend/templates/views/floating_cart/settings.php:1033
+msgid "Basket Count Color"
+msgstr "バスケットカウント色"
+
+#: backend/templates/views/floating_cart/settings.php:983
+msgid "Basket Count Position"
+msgstr "バスケットカウントの位置"
+
+#: backend/templates/views/floating_cart/settings.php:919
+msgid "Basket Icon"
+msgstr "バスケットアイコン"
+
+#: backend/templates/views/floating_cart/settings.php:1005
+msgid "Basket Icon Color"
+msgstr "バスケットアイコンの色"
+
+#: backend/templates/views/floating_cart/settings.php:898
+msgid "Basket Icon Size"
+msgstr "バスケットアイコンのサイズ"
+
+#: backend/templates/views/floating_cart/settings.php:973
+msgid "Basket Offset (Horizontal)"
+msgstr "バスケットオフセット（横画面）"
+
+#: backend/templates/views/floating_cart/settings.php:963
+msgid "Basket Offset (Vertical)"
+msgstr "バスケットオフセット(縦)"
+
+#: backend/templates/views/floating_cart/settings.php:941
+msgid "Basket Position"
+msgstr "バスケットの位置"
+
+#: backend/templates/views/floating_cart/settings.php:882
+msgid "Basket Shape"
+msgstr "バスケット形状"
+
+#: backend/templates/views/floating_cart/settings.php:148
+#: backend/templates/views/floating_cart/settings.php:857
+msgid "Basket Style"
+msgstr "バスケットスタイル"
+
+#: backend/templates/views/shipping_bar/settings.php:201
+#: backend/templates/views/shipping_bar/settings.php:223
+msgid "Before shipping block"
+msgstr "出荷前のブロック"
+
+#: backend/templates/views/pdf_invoice/invoice.php:73
+msgid "Biller Email Address"
+msgstr "Billerメールアドレス"
+
+#: backend/templates/views/pdf_invoice/invoice.php:76
+msgid "Biller Phone Number "
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/invoice.php:58
+#: backend/templates/views/pdf_invoice/invoice.php:67
+#: backend/templates/views/pdf_invoice/settings.php:557
+msgid "Billing Address"
+msgstr "請求先"
+
+#: backend/templates/views/address_book/settings.php:181
+msgid "Billing Address Book Empty Message "
+msgstr ""
+
+#: backend/templates/views/address_book/settings.php:148
+msgid "Billing Address Book Headline"
+msgstr "請求アドレス帳のヘッドライン"
+
+#: backend/templates/views/address_book/settings.php:104
+msgid "Billing Address Field on Checkout?"
+msgstr "請求先分野に精算?"
+
+#: backend/templates/views/pdf_invoice/invoice.php:66
+msgid "Billing to Name"
+msgstr "請求名"
+
+#: backend/templates/views/floating_cart/settings.php:240
+msgid "Body Settings"
+msgstr "本体の設定"
+
+#: backend/templates/views/bogo_deal/settings.php:17
+#: backend/templates/views/modules.php:67
+msgid "BOGO Deal"
+msgstr "戌午の対応"
+
+#: backend/templates/views/one_click_checkout/settings.php:609
+msgid "Border Radius"
+msgstr "ボーダーの半径"
+
+#: backend/templates/views/product_sticky_bar/settings.php:143
+#: backend/templates/views/shipping_bar/settings.php:354
+msgid "Bottom"
+msgstr "底"
+
+#: backend/templates/views/floating_cart/settings.php:953
+#: backend/templates/views/floating_cart/settings.php:995
+msgid "Bottom Left"
+msgstr "左下"
+
+#: backend/templates/views/floating_cart/settings.php:956
+#: backend/templates/views/floating_cart/settings.php:998
+msgid "Bottom Right"
+msgstr "右下"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:47
+msgid "Bulk actions"
+msgstr "バルク行動"
+
+#: backend/templates/views/floating_cart/settings.php:570
+#: backend/templates/views/product_sticky_bar/settings.php:392
+msgid "Button Background Color"
+msgstr "ボタンの背景色"
+
+#: backend/templates/views/product_sticky_bar/settings.php:459
+msgid "Button Background Hover Color "
+msgstr ""
+
+#: backend/templates/views/floating_cart/settings.php:615
+#: backend/templates/views/product_sticky_bar/settings.php:433
+msgid "Button Border Color"
+msgstr "ボタンのボーダーの色"
+
+#: backend/templates/views/floating_cart/settings.php:630
+#: backend/templates/views/product_sticky_bar/settings.php:475
+msgid "Button Border Hover Color"
+msgstr "ボタンのホバーボーダーの色"
+
+#: backend/templates/views/floating_cart/settings.php:645
+msgid "Button Border Radius"
+msgstr "ボタンの国境の半径"
+
+#: backend/templates/views/product_sticky_bar/settings.php:448
+msgid "Button Border Width"
+msgstr "ボタンのボーダー幅"
+
+#: backend/templates/views/floating_cart/settings.php:555
+#: backend/templates/views/product_sticky_bar/settings.php:407
+msgid "Button Font Color"
+msgstr "ボタンの文字色"
+
+#: backend/templates/views/floating_cart/settings.php:545
+#: backend/templates/views/product_sticky_bar/settings.php:422
+msgid "Button Font Size"
+msgstr "ボタンの文字サイズ"
+
+#: backend/templates/views/floating_cart/settings.php:600
+msgid "Button Hover Background"
+msgstr "ボタンホバーの背景"
+
+#: backend/templates/views/floating_cart/settings.php:585
+#: backend/templates/views/product_sticky_bar/settings.php:492
+msgid "Button Hover Font Color"
+msgstr "ボタンホバーフォント色"
+
+#: backend/templates/views/product_sticky_bar/settings.php:508
+msgid "Button Padding Left-Right "
+msgstr ""
+
+#: backend/templates/views/product_sticky_bar/settings.php:522
+msgid "Button Padding Top-Bottom"
+msgstr "ボタンのパディング上下"
+
+#: backend/templates/views/one_click_checkout/settings.php:102
+msgid "Buy Now Button"
+msgstr "購入ボタン"
+
+#: backend/templates/views/one_click_checkout/settings.php:615
+msgid "Buy now button border radius (PX)"
+msgstr "購入ボタンの国境の半径(PX)"
+
+#: backend/templates/views/one_click_checkout/settings.php:520
+msgid "Buy Now Button design"
+msgstr "購入ボタンデザイン"
+
+#: backend/templates/views/one_click_checkout/settings.php:306
+#: backend/templates/views/one_click_checkout/settings.php:426
+msgid "Buy now button label"
+msgstr "購入ボタンのラベル"
+
+#: backend/templates/views/one_click_checkout/settings.php:302
+#: backend/templates/views/one_click_checkout/settings.php:422
+msgid "Buy now button label <span style=\"color: #FF521D;\">(Pro)</span>"
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:374
+#: backend/templates/views/one_click_checkout/settings.php:488
+msgid "Buy now button margin bottom"
+msgstr "購入ボタンの引下"
+
+#: backend/templates/views/one_click_checkout/settings.php:378
+#: backend/templates/views/one_click_checkout/settings.php:492
+msgid "Buy now button margin bottom (PX)."
+msgstr "購入ボタンの証拠金のみ下部(PX)。"
+
+#: backend/templates/views/one_click_checkout/settings.php:385
+#: backend/templates/views/one_click_checkout/settings.php:499
+msgid "Buy now button margin left"
+msgstr "購入ボタンの証拠金残"
+
+#: backend/templates/views/one_click_checkout/settings.php:389
+#: backend/templates/views/one_click_checkout/settings.php:503
+msgid "Buy now button margin left (PX)."
+msgstr "購入ボタンを拠左(PX)。"
+
+#: backend/templates/views/one_click_checkout/settings.php:396
+#: backend/templates/views/one_click_checkout/settings.php:510
+msgid "Buy now button margin right"
+msgstr "購入ボタン価"
+
+#: backend/templates/views/one_click_checkout/settings.php:400
+#: backend/templates/views/one_click_checkout/settings.php:514
+msgid "Buy now button margin right (PX)."
+msgstr "購入ボタン価(PX)。"
+
+#: backend/templates/views/one_click_checkout/settings.php:363
+#: backend/templates/views/one_click_checkout/settings.php:477
+msgid "Buy now button margin top"
+msgstr "購入ボタンの引トップ"
+
+#: backend/templates/views/one_click_checkout/settings.php:367
+#: backend/templates/views/one_click_checkout/settings.php:481
+msgid "Buy now button margin top (PX)."
+msgstr "購入ボタンの引トップ(PX)。"
+
+#: backend/templates/views/one_click_checkout/settings.php:404
+msgid "Buy Now Button on the Archive Page"
+msgstr "購入ボタンをアーカイブページ"
+
+#: backend/templates/views/one_click_checkout/settings.php:284
+msgid "Buy Now Button on the Product Page"
+msgstr "購入ボタンを押し製品ページ"
+
+#: backend/templates/views/one_click_checkout/settings.php:603
+msgid "Buy now button padding left & right (PX)"
+msgstr "購入ボタンのパディングを左右に(PX)"
+
+#: backend/templates/views/one_click_checkout/settings.php:592
+msgid "Buy now button padding top & bottom (PX)"
+msgstr "購入ボタンのパディングトップ＆ボトム(PX)"
+
+#: backend/templates/views/one_click_checkout/settings.php:281
+msgid "Buy Now Button Settings"
+msgstr "購入ボタンの設定"
+
+#: backend/templates/views/one_click_checkout/settings.php:352
+#: backend/templates/views/one_click_checkout/settings.php:466
+msgid "Buy now button width"
+msgstr "購入ボタンの幅"
+
+#: backend/templates/views/one_click_checkout/settings.php:470
+msgid "Buy now button width on product archive page (PX)."
+msgstr "購入ボタンを幅製品のアーカイブページ(PX)。"
+
+#: backend/templates/views/one_click_checkout/settings.php:356
+msgid "Buy now button width on product page (PX)."
+msgstr "購入ボタンの幅は製品ページ(PX)。"
+
+#: backend/templates/dashboard.php:63
+msgid "Cancel"
+msgstr "消"
+
+#: backend/templates/views/pdf_invoice/settings.php:363
+msgid "Cancelled Order"
+msgstr "取り止め"
+
+#: backend/templates/views/shipping_bar/settings.php:183
+msgid "Cart & Checkout Page Settings"
+msgstr "カート&アウトページに設定"
+
+#: backend/templates/views/floating_cart/settings.php:127
+msgid "Cart Body"
+msgstr "カート本体"
+
+#: backend/templates/views/floating_cart/settings.php:130
+msgid "Cart Footer"
+msgstr "カートのフッタ"
+
+#: backend/templates/views/floating_cart/settings.php:124
+msgid "Cart Header"
+msgstr "カートのヘッダ"
+
+#: backend/templates/views/floating_cart/settings.php:529
+msgid "Cart Open From"
+msgstr "カートから"
+
+#: backend/templates/views/shipping_bar/settings.php:186
+msgid "Cart Page"
+msgstr "カートページ"
+
+#: backend/templates/views/shipping_bar/settings.php:189
+msgid "Cart Total"
+msgstr "カートに入合計"
+
+#: backend/templates/views/floating_cart/settings.php:519
+msgid "Cart Width(px)"
+msgstr "カート幅(px)"
+
+#: backend/templates/views/product_filter/settings.php:128
+msgid "Category Filter"
+msgstr "カテゴリフィルター"
+
+#: backend/templates/views/product_filter/settings.php:727
+msgid "Category Filter Settings"
+msgstr "カテゴリフィルタの設定"
+
+#: backend/templates/views/product_filter/settings.php:763
+msgid "Category Font Color"
+msgstr "カテゴリの文字色"
+
+#: backend/templates/views/shipping_bar/settings.php:445
+msgid "Center"
+msgstr "センター"
+
+#: backend/templates/views/coupon_generator/settings.php:43
+msgid "Characters"
+msgstr "文字"
+
+#: backend/templates/views/coupon_generator/settings.php:45
+msgid "Characters & Numbers (Available in Pro)"
+msgstr "文字-数字（Pro）"
+
+#: backend/templates/views/coupon_generator/settings.php:101
+msgid "Check this box if the coupon grants free shipping. A"
+msgstr "チェックマークを付ける場合はクーポン助成金送料無料になります。 A"
+
+#: backend/templates/views/product_filter/settings.php:817
+#: backend/templates/views/product_filter/settings.php:946
+msgid "Checkbox Checked Background Color"
+msgstr "チェックボックスを確認背景色"
+
+#: backend/templates/views/product_filter/settings.php:910
+msgid "Checkbox Unchecked Background Color"
+msgstr "チェックボックスチェックの背景色"
+
+#: backend/templates/views/product_filter/settings.php:781
+msgid "Checkbox Unchecked Background Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:928
+msgid "Checkbox Unchecked Border Color"
+msgstr "チェックボックスチェックボーダーの色"
+
+#: backend/templates/views/product_filter/settings.php:799
+msgid "Checkbox Unchecked Border Color "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:105
+msgid "Checkout"
+msgstr "精算"
+
+#: backend/templates/views/floating_cart/settings.php:426
+msgid "Checkout Button"
+msgstr "アウトボタン"
+
+#: backend/templates/views/address_book/settings.php:127
+#: backend/templates/views/shipping_bar/settings.php:208
+msgid "Checkout Page"
+msgstr "アウトページ"
+
+#: backend/templates/views/one_click_checkout/settings.php:623
+msgid "Checkout Settings"
+msgstr "レジに設定"
+
+#: backend/templates/views/shipping_bar/settings.php:368
+msgid "Choose layout to auto fill other style configurations."
+msgstr "選べるレイアウトを自動入その他のスタイルが可能です。-"
+
+#: backend/templates/views/shipping_bar/settings.php:197
+msgid "Choose spot on cart page."
+msgstr "選べるスポットにカートページです。"
+
+#: backend/templates/views/one_click_checkout/settings.php:717
+msgid "Choose the info you want to delete from 'Billing.'"
+msgstr "の情報を削除したいから販売高です。'"
+
+#: backend/templates/views/pdf_invoice/settings.php:336
+msgid "Choose the order status that you want to disable the invoice"
+msgstr "選択の状態を無効化するかどうかは、請求書"
+
+#: backend/templates/views/coupon_generator/settings.php:89
+msgid "Choose the specific discount type."
+msgstr "選べる特定の割引タイプです。"
+
+#: backend/templates/views/one_click_checkout/settings.php:758
+msgid "Choose which information you want to delete from the Shipping Section."
+msgstr "を選択する情報を削除したいから出荷ます。"
+
+#: backend/templates/views/pdf_invoice/invoice.php:48
+#: backend/templates/views/pdf_invoice/invoice.php:68
+#: backend/templates/views/pdf_invoice/invoice.php:94
+#: backend/templates/views/pdf_invoice/settings.php:214
+msgid "City"
+msgstr "都市"
+
+#: backend/templates/views/shipping_bar/settings.php:466
+msgid "Close Icon Color"
+msgstr "あのアイコンの色"
+
+#: backend/templates/views/shipping_bar/settings.php:478
+msgid "Close Icon Size"
+msgstr "あのアイコンのサイズ"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:73
+#: backend/templates/views/url_coupon/settings.php:57
+msgid "Code"
+msgstr "コード"
+
+#: backend/class-wceazy-admin.php:140
+msgid "Community support"
+msgstr "コミュニティサポート"
+
+#: backend/templates/views/pdf_invoice/settings.php:375
+msgid "Complete Order"
+msgstr "完全受注生産"
+
+#: backend/templates/views/pdf_invoice/settings.php:278
+msgid "Contact Number"
+msgstr "お問い合わせ"
+
+#: backend/templates/views/floating_cart/settings.php:145
+#: backend/templates/views/floating_cart/settings.php:730
+msgid "Content Style"
+msgstr "コンテンツスタイル"
+
+#: backend/templates/views/floating_cart/settings.php:406
+msgid "Continue Shopping Button"
+msgstr "続くショッピングボタン"
+
+#: backend/templates/views/floating_cart/settings.php:475
+msgid "Continue Shopping Button Url"
+msgstr "続くショッピングボタンのUrl"
+
+#: backend/templates/views/pdf_invoice/invoice.php:49
+#: backend/templates/views/pdf_invoice/invoice.php:69
+#: backend/templates/views/pdf_invoice/invoice.php:95
+msgid "Country"
+msgstr "国"
+
+#: backend/templates/views/pdf_invoice/settings.php:243
+msgid "Country/State"
+msgstr "国状態"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:75
+#: backend/templates/views/url_coupon/settings.php:59
+msgid "Coupon Amount"
+msgstr "クーポン金額"
+
+#: backend/templates/views/coupon_generator/settings.php:93
+msgid "Coupon amount"
+msgstr "クーポン金額"
+
+#: backend/templates/views/coupon_generator/settings.php:108
+msgid "Coupon expiry date"
+msgstr "クーポンの有効期限"
+
+#: backend/templates/views/coupon_generator/settings.php:13
+#: backend/templates/views/modules.php:87
+msgid "Coupon Generator"
+msgstr "クーポン発生装置"
+
+#: backend/templates/views/coupon_generator/settings.php:26
+msgid "Coupon prefix"
+msgstr "クーポンの接頭辞"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:74
+#: backend/templates/views/coupon_generator/settings.php:36
+#: backend/templates/views/url_coupon/settings.php:58
+msgid "Coupon Type"
+msgstr "クーポン-タイプ"
+
+#: backend/templates/views/coupon_generator/settings.php:50
+msgid "Coupons Character Length"
+msgstr "クーポンキャラクタ長"
+
+#: backend/templates/views/coupon_generator/settings.php:234
+msgid "Coupons Generated Successfully!"
+msgstr "クーポンの発生に成功しました!"
+
+#: backend/templates/views/bogo_deal/settings.php:36
+msgid "Create First Rule"
+msgstr "を最初のルール"
+
+#: backend/templates/views/floating_cart/settings.php:666
+msgid "Cross Icon Size(px)"
+msgstr "クロスアイコンのサイズ(px)"
+
+#: backend/templates/views/pdf_invoice/invoice.php:189
+msgid "Custom Footer Text"
+msgstr "カスタムフッターテキスト"
+
+#: backend/templates/views/pdf_invoice/settings.php:384
+msgid "Customer Invoice"
+msgstr "お客様の請求書"
+
+#: backend/templates/views/pdf_invoice/settings.php:612
+msgid "Customer Note"
+msgstr "お客様のご注意"
+
+#: backend/templates/views/pdf_invoice/invoice.php:178
+msgid "Customer Note:"
+msgstr "お客様の注意:"
+
+#: backend/templates/views/pdf_invoice/settings.php:102
+msgid "Customize Invoice"
+msgstr "請求書にカスタマイズ"
+
+#: backend/templates/views/shipping_bar/settings.php:278
+msgid "Customize Messages"
+msgstr "カスタマイズメッセージ"
+
+#: backend/templates/views/address_book/settings.php:228
+#: backend/templates/views/shipping_bar/settings.php:344
+msgid "Customize Styles"
+msgstr "カスタマイズスタイル"
+
+#: backend/templates/views/floating_cart/settings.php:430
+msgid "Customize the checkout button text."
+msgstr "カスタマイズチェックアウトボタンです。"
+
+#: backend/templates/views/floating_cart/settings.php:440
+msgid "Customize the empty cart message for the cart."
+msgstr "カスタマイズの空のカートメッセージカートに入れます。"
+
+#: backend/templates/views/floating_cart/settings.php:400
+msgid "Customize the heading title for the cart."
+msgstr "カスタマイズのタイトルをカートに入れます。"
+
+#: backend/templates/views/floating_cart/settings.php:450
+msgid "Customize the subtotal text of the cart."
+msgstr "カスタマイズを小文字にカートに入れます。"
+
+#: backend/templates/views/floating_cart/settings.php:460
+msgid "Customize the total amount text of in the cart."
+msgstr "カスタマイズの総量のテキストをカートに入れます。"
+
+#: backend/templates/views/floating_cart/settings.php:420
+msgid "Customize the view cart button text"
+msgstr "カスタマイズのカートボタンのテキスト"
+
+#: backend/templates/views/pdf_invoice/settings.php:121
+msgid "Deactivate Invoice "
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/settings.php:132
+msgid "Deactivate Shipping Label"
+msgstr "無効の輸送ラベル"
+
+#: backend/templates/views/bogo_deal/settings.php:66
+msgid "Delete Rule"
+msgstr "削除-ルール"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:76
+#: backend/templates/views/url_coupon/settings.php:60
+msgid "Description"
+msgstr "説明"
+
+#: backend/templates/views/pdf_invoice/settings.php:312
+msgid "Direct Download"
+msgstr "直接ダウンロード"
+
+#: backend/templates/views/one_click_checkout/settings.php:121
+msgid "Disable Cart Page"
+msgstr "無効カートページ"
+
+#: backend/templates/views/pdf_invoice/settings.php:326
+msgid "Disable for Order Status"
+msgstr "を無効にした状況の確認"
+
+#: backend/templates/views/one_click_checkout/settings.php:126
+msgid ""
+"Disable the cart page. It will automatically redirect to the checkout page."
+msgstr "を無効にカートページです。 自動的にリダイレクトチェックアウトページです。"
+
+#: backend/templates/views/pdf_invoice/invoice.php:142
+msgid "Discount"
+msgstr "割引"
+
+#: backend/templates/views/bogo_deal/settings.php:80
+msgid "Discount Amount"
+msgstr "割引額"
+
+#: backend/templates/views/bogo_deal/settings.php:72
+msgid "Discount Type"
+msgstr "割引タイプ"
+
+#: backend/templates/views/coupon_generator/settings.php:82
+msgid "Discount type"
+msgstr "割引タイプ"
+
+#: backend/templates/views/product_sticky_bar/settings.php:167
+msgid ""
+"Display a bar on the product page when the user scrolls a certain distance. "
+"It only activates if the \"Scroll Pixels\" option is turned on, with a "
+"default setting of 180 pixels."
+msgstr ""
+"表示では、バー製品ページは、ユーザが巻一定の距離をいう。 で起動する場合、スクロールピクセルの\"オプションでは、デフォルトの設定180ピクセルです。"
+
+#: backend/templates/views/shipping_bar/settings.php:125
+msgid "Display in Desktop"
+msgstr "表示デスクトップ"
+
+#: backend/templates/views/shipping_bar/settings.php:133
+msgid "Display in Mobile"
+msgstr "表示モバイル"
+
+#: backend/templates/views/shipping_bar/settings.php:211
+msgid "Display in Total Cost Area"
+msgstr "表示中の総コスト地域"
+
+#: backend/class-wceazy-admin.php:139
+msgid "Docs"
+msgstr "Docs"
+
+#: backend/templates/views/pdf_invoice/settings.php:457
+msgid "Document Title"
+msgstr "文書タイトル"
+
+#: backend/templates/views/address_book/settings.php:55
+#: backend/templates/views/auto_apply_coupon/settings.php:18
+#: backend/templates/views/bogo_deal/settings.php:19
+#: backend/templates/views/coupon_generator/settings.php:14
+#: backend/templates/views/floating_cart/settings.php:106
+#: backend/templates/views/modules.php:56
+#: backend/templates/views/modules.php:76
+#: backend/templates/views/modules.php:96
+#: backend/templates/views/modules.php:116
+#: backend/templates/views/modules.php:136
+#: backend/templates/views/modules.php:156
+#: backend/templates/views/modules.php:176
+#: backend/templates/views/modules.php:196
+#: backend/templates/views/modules.php:216
+#: backend/templates/views/modules.php:236
+#: backend/templates/views/modules.php:256
+#: backend/templates/views/modules.php:278
+#: backend/templates/views/one_click_checkout/settings.php:80
+#: backend/templates/views/pdf_invoice/settings.php:78
+#: backend/templates/views/product_filter/settings.php:98
+#: backend/templates/views/product_sticky_bar/settings.php:61
+#: backend/templates/views/url_coupon/settings.php:15
+msgid "Documentation"
+msgstr "文書"
+
+#: backend/templates/views/shipping_bar/settings.php:312
+msgid "Effect Settings"
+msgstr "効果を設定"
+
+#: backend/templates/views/pdf_invoice/settings.php:579
+#: backend/templates/views/pdf_invoice/settings.php:736
+#: backend/templates/views/pdf_invoice/settings.php:748
+msgid "Email"
+msgstr "メール"
+
+#: backend/templates/views/floating_cart/settings.php:436
+msgid "Empty Cart Message"
+msgstr "空のカートメッセージ"
+
+#: backend/templates/views/floating_cart/settings.php:164
+msgid "Enable Auto Open Cart"
+msgstr "オオカート"
+
+#: backend/templates/views/floating_cart/settings.php:863
+msgid "Enable Basket d"
+msgstr "をバスケットd"
+
+#: backend/templates/views/address_book/settings.php:86
+msgid "Enable Billing Address Book"
+msgstr "する請求アドレス帳"
+
+#: backend/templates/views/one_click_checkout/settings.php:289
+#: backend/templates/views/one_click_checkout/settings.php:409
+msgid "Enable Buy Now Button"
+msgstr "を購入するボタン"
+
+#: backend/templates/views/shipping_bar/settings.php:488
+msgid "Enable Progress Bar"
+msgstr "を進捗バー"
+
+#: backend/templates/views/one_click_checkout/settings.php:144
+msgid "Enable Redirect on Add to Cart"
+msgstr "をリダイレクトにカートに追加"
+
+#: backend/templates/views/address_book/settings.php:94
+msgid "Enable Shipping Address Book"
+msgstr "を送アドレス帳"
+
+#: backend/templates/views/one_click_checkout/settings.php:132
+msgid "Enable single page checkout"
+msgstr "を単一ページアウト"
+
+#: backend/templates/views/product_sticky_bar/settings.php:96
+msgid "Enable Sticky Bar"
+msgstr "を粘バー"
+
+#: backend/templates/views/one_click_checkout/settings.php:645
+msgid "Enable to remove “Coupon Form” from the checkout page"
+msgstr "Enable\"を除いた部分をクーポンのフォーム\"からチェックアウトページ"
+
+#: backend/templates/views/one_click_checkout/settings.php:634
+msgid "Enable to remove “order comment” from the checkout page."
+msgstr "を削除すめコメント\"からのチェックアウトページです。"
+
+#: backend/templates/views/one_click_checkout/settings.php:657
+msgid "Enable to remove “Policy Text” from the checkout page."
+msgstr "を除\"政策テキスト\"からのチェックアウトページです。"
+
+#: backend/templates/views/one_click_checkout/settings.php:670
+msgid "Enable to remove “Terms & Conditions” from the checkout page."
+msgstr "を除\"本規約\"からチェックアウトページです。"
+
+#: backend/templates/views/pdf_invoice/settings.php:400
+msgid "Enable to show the order number as the invoice number."
+msgstr "の表示の順番として、請求書の番号です。"
+
+#: backend/templates/views/product_sticky_bar/settings.php:222
+msgid "Enable Update Product Qty"
+msgstr "を更新商品数"
+
+#: backend/templates/views/product_sticky_bar/settings.php:234
+msgid "Enable Variable Product"
+msgstr "を変製品"
+
+#: backend/templates/views/pdf_invoice/settings.php:342
+msgid "Enable VAT & SSN on Checkout "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:184
+msgid "Enable/Disable the category filter on the sidebar."
+msgstr "有効/無効設定のカテゴリフィルターを追加するには、次のようにします"
+
+#: backend/templates/views/floating_cart/settings.php:295
+msgid "Enable/disable the deleting item option on the cart menu."
+msgstr "有効/無効にするに削除する項目オプションのカートメニューです。"
+
+#: backend/templates/views/floating_cart/settings.php:326
+msgid "Enable/Disable the fixed footer position on the cart."
+msgstr "有効/無効にするには固定フッタ位置のカートに入れます。"
+
+#: backend/templates/views/pdf_invoice/settings.php:137
+msgid "Enable/Disable the invoice on the PDF document"
+msgstr "有効/無効にするに請求書のPDFドキュメント"
+
+#: backend/templates/views/pdf_invoice/settings.php:126
+msgid "Enable/Disable the invoice on the PDF document."
+msgstr "有効/無効にするに請求書をPDF文書です。"
+
+#: backend/templates/views/product_filter/settings.php:162
+msgid "Enable/Disable the price filter on the sidebar."
+msgstr "有効/無効にするに価格フィルターを追加するには、次のようにします"
+
+#: backend/templates/views/product_filter/settings.php:173
+msgid "Enable/Disable the rating filter on the sidebar."
+msgstr "有効/無効にするに格付けフィルターを追加するには、次のようにします"
+
+#: backend/templates/views/product_filter/settings.php:151
+msgid "Enable/Disable the search filter on the sidebar."
+msgstr "有効/無効にするに検索フィルタを追加するには、次のようにします"
+
+#: backend/templates/views/product_filter/settings.php:194
+msgid "Enable/Disable the stock status filter on the sidebar. "
+msgstr ""
+
+#: backend/templates/views/shipping_bar/settings.php:236
+msgid "Enter cart & checkout page free shipping progress bar headline text."
+msgstr "入りカート&アウトページで送料無料進捗バーヘッドラインです。"
+
+#: backend/templates/views/pdf_invoice/settings.php:181
+msgid "Enter invoice footer info"
+msgstr "入り請求書をフッター情報"
+
+#: backend/templates/views/coupon_generator/settings.php:175
+msgid "Exclude categories"
+msgstr "除カテゴリ"
+
+#: backend/templates/views/shipping_bar/settings.php:154
+msgid "Exclude Pages"
+msgstr "を除くページ"
+
+#: backend/templates/views/coupon_generator/settings.php:135
+msgid "Exclude sale items"
+msgstr "除外販売商品"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:79
+#: backend/templates/views/url_coupon/settings.php:63
+msgid "Expiry Date"
+msgstr "有効期限"
+
+#: backend/templates/views/coupon_generator/settings.php:235
+msgid "Export as CSV"
+msgstr "Export CSV"
+
+#: backend/templates/views/pdf_invoice/settings.php:366
+msgid "Failed Order"
+msgstr "失敗した順"
+
+#: backend/templates/views/pdf_invoice/invoice.php:143
+msgid "Fee"
+msgstr "料金"
+
+#: backend/templates/views/product_filter/settings.php:58
+#: modules/product_filter/template.php:58
+msgid "Filter By Category"
+msgstr "フィルターカテゴリー"
+
+#: backend/templates/views/product_filter/settings.php:37
+msgid "Filter By Price"
+msgstr "フィルターによる価格"
+
+#: backend/templates/views/product_filter/settings.php:46
+#: modules/product_filter/template.php:46
+msgid "Filter By Rating"
+msgstr "フィルターによる格付け"
+
+#: backend/templates/views/product_filter/settings.php:66
+#: modules/product_filter/template.php:66
+msgid "Filter By Stock"
+msgstr "フィルター株式"
+
+#: backend/templates/views/product_filter/settings.php:200
+msgid "Filter Sidebar Position"
+msgstr "フィルターサイドバーの位置"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:55
+#: backend/templates/views/coupon_generator/settings.php:86
+#: backend/templates/views/url_coupon/settings.php:44
+msgid "Fixed cart discount"
+msgstr "固定カート割引"
+
+#: backend/templates/views/bogo_deal/settings.php:76
+msgid "Fixed discount"
+msgstr "固定割引"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:56
+#: backend/templates/views/coupon_generator/settings.php:87
+#: backend/templates/views/url_coupon/settings.php:45
+msgid "Fixed product discount"
+msgstr "固定商品の割引"
+
+#: backend/templates/views/floating_cart/settings.php:104
+#: backend/templates/views/modules.php:167
+msgid "Floating Cart"
+msgstr "浮体式カート"
+
+#: backend/templates/views/one_click_checkout/settings.php:524
+msgid "Font Color"
+msgstr "フォント色"
+
+#: backend/templates/views/shipping_bar/settings.php:431
+msgid "Font Size of Message"
+msgstr "フォントサイズのメッセージ"
+
+#: backend/templates/views/pdf_invoice/settings.php:623
+msgid "Footer"
+msgstr "フッター"
+
+#: backend/templates/views/pdf_invoice/settings.php:177
+msgid "Footer Info"
+msgstr "フッター情報"
+
+#: backend/templates/views/floating_cart/settings.php:321
+msgid "Footer Position Fixed"
+msgstr "フッタ位置固定"
+
+#: backend/templates/views/floating_cart/settings.php:315
+msgid "Footer Settings"
+msgstr "フッター設定"
+
+#: backend/templates/views/shipping_bar/settings.php:302
+msgid ""
+"Free Shipping Alert: Your order qualifies! Click {checkout_page} to proceed."
+msgstr ""
+
+#: backend/templates/views/modules.php:207
+msgid "Free Shipping Bar"
+msgstr "送料無料-バー"
+
+#: backend/templates/views/coupon_generator/settings.php:102
+msgid "free shipping method"
+msgstr "無料のお支払方法について"
+
+#: backend/templates/views/pdf_invoice/invoice.php:39
+#: backend/templates/views/pdf_invoice/settings.php:676
+msgid "From Address"
+msgstr "からのアドレス"
+
+#: backend/templates/views/address_book/settings.php:70
+#: backend/templates/views/coupon_generator/settings.php:64
+#: backend/templates/views/coupon_generator/settings.php:78
+#: backend/templates/views/floating_cart/settings.php:121
+#: backend/templates/views/one_click_checkout/settings.php:96
+#: backend/templates/views/pdf_invoice/settings.php:96
+#: backend/templates/views/product_filter/settings.php:113
+msgid "General"
+msgstr "一般"
+
+#: backend/templates/views/address_book/settings.php:79
+#: backend/templates/views/floating_cart/settings.php:157
+#: backend/templates/views/one_click_checkout/settings.php:114
+#: backend/templates/views/pdf_invoice/settings.php:147
+#: backend/templates/views/product_filter/settings.php:140
+msgid "General Settings"
+msgstr "一般設定"
+
+#: backend/templates/views/floating_cart/settings.php:139
+#: backend/templates/views/floating_cart/settings.php:513
+msgid "General Style"
+msgstr "一般的なスタイル"
+
+#: backend/templates/views/coupon_generator/settings.php:230
+msgid "Generating Coupons"
+msgstr "クーポンを発生"
+
+#: backend/templates/dashboard.php:64
+msgid "Get Premium"
+msgstr "車プレミアム"
+
+#: backend/templates/views/address_book/settings.php:46
+#: backend/templates/views/auto_apply_coupon/settings.php:9
+#: backend/templates/views/bogo_deal/settings.php:9
+#: backend/templates/views/coupon_generator/settings.php:7
+#: backend/templates/views/floating_cart/settings.php:96
+#: backend/templates/views/modules.php:10
+#: backend/templates/views/one_click_checkout/settings.php:70
+#: backend/templates/views/pdf_invoice/settings.php:68
+#: backend/templates/views/product_filter/settings.php:88
+#: backend/templates/views/product_sticky_bar/settings.php:52
+#: backend/templates/views/url_coupon/settings.php:8
+msgid "GET PRO"
+msgstr "車プロ"
+
+#: backend/templates/views/floating_cart/settings.php:208
+msgid "Header Settings"
+msgstr "ヘッダの設定"
+
+#: backend/templates/views/floating_cart/settings.php:142
+#: backend/templates/views/floating_cart/settings.php:660
+msgid "Header Style"
+msgstr "ヘッダをスタイル"
+
+#: backend/templates/views/floating_cart/settings.php:676
+msgid "Heading Basket Icon Size(px)"
+msgstr "見出しバスケットアイコンのサイズ(px)"
+
+#: backend/templates/views/floating_cart/settings.php:711
+msgid "Heading Border Bottom Color"
+msgstr "見出しボーダー底面の色"
+
+#: backend/templates/views/floating_cart/settings.php:696
+msgid "Heading Font Color"
+msgstr "見出しの文字色"
+
+#: backend/templates/views/floating_cart/settings.php:686
+msgid "Heading Font Size(px)"
+msgstr "見出しのフォントサイズ(px)"
+
+#: backend/templates/views/floating_cart/settings.php:396
+msgid "Heading Title"
+msgstr "見出しタイトル"
+
+#: backend/templates/views/shipping_bar/settings.php:233
+msgid "Headline Text"
+msgstr "ヘッドラインテキスト"
+
+#: backend/templates/views/product_sticky_bar/settings.php:286
+msgid "Height"
+msgstr "高さ"
+
+#: backend/templates/views/shipping_bar/settings.php:149
+msgid "Here"
+msgstr "こちらの"
+
+#: backend/templates/views/pdf_invoice/settings.php:260
+msgid "Hey, please select"
+msgstr "こんにちはを選んでください"
+
+#: backend/templates/views/product_sticky_bar/settings.php:267
+msgid "Hide Sticky bar (Product Out of Stock)"
+msgstr "Hide粘バー(商品の株)"
+
+#: backend/templates/views/floating_cart/settings.php:875
+msgid "Hide when cart is empty"
+msgstr "非表示の際のカートは空です"
+
+#: backend/templates/views/one_click_checkout/settings.php:571
+msgid "Hover Background Color"
+msgstr "ホバーの背景色"
+
+#: backend/templates/views/one_click_checkout/settings.php:554
+msgid "Hover Font Color"
+msgstr "ホバーフォント色"
+
+#: backend/templates/views/pdf_invoice/settings.php:303
+msgid "How do you want to view the PDF?"
+msgstr "というキャッチフレーズのPDF?"
+
+#: backend/templates/views/coupon_generator/settings.php:198
+msgid "How many times you can use it."
+msgstr "どのように多くの時用としてもお使いいただけます。"
+
+#. Author URI of the plugin/theme
+msgid "https://wceazy.com"
+msgstr ""
+
+#: backend/templates/views/coupon_generator/settings.php:131
+msgid "If coupon can/t be used with others, mark this box."
+msgstr "場合はクーポンで/t使用され、このボックス。"
+
+#: backend/templates/views/coupon_generator/settings.php:138
+msgid ""
+"If it/s on sale, skip the coupon. The coupon only applies to regular-priced "
+"items, whether bought alone or in the cart."
+msgstr "さい/sの販売、ページ内移動用のクーポン のクーポンのみ適用される通常の価格品かどうかを買ってみまたはカートに入れます。"
+
+#: backend/templates/views/product_filter/settings.php:67
+#: modules/product_filter/template.php:67
+msgid "In Stock"
+msgstr "株式"
+
+#: backend/templates/views/modules.php:27
+msgid "Inactive"
+msgstr "不活性"
+
+#: backend/templates/views/coupon_generator/settings.php:128
+msgid "Individual use only"
+msgstr "個人利用のみ"
+
+#: backend/templates/views/shipping_bar/settings.php:316
+msgid "Initial Delay Time"
+msgstr "初期遅れ時間"
+
+#: backend/templates/views/product_filter/settings.php:435
+msgid "Input Field Background Color"
+msgstr "入力フィールドの背景色"
+
+#: backend/templates/views/product_filter/settings.php:549
+msgid "Input Field Background Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:531
+msgid "Input Field Border Color"
+msgstr "入力フィールドボーダーの色"
+
+#: backend/templates/views/product_filter/settings.php:417
+msgid "Input Field Border Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:452
+msgid "Input Field Text Color"
+msgstr "入力フィールドテキストカラーを設定します。"
+
+#: backend/templates/views/product_filter/settings.php:566
+msgid "Input Field Text Color "
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/invoice.php:7
+#: backend/templates/views/pdf_invoice/invoice.php:14
+msgid "INVOICE"
+msgstr "請求書"
+
+#: backend/templates/views/pdf_invoice/settings.php:99
+msgid "Invoice"
+msgstr "請求書"
+
+#: backend/templates/views/pdf_invoice/settings.php:438
+msgid "Invoice Customization"
+msgstr "請求書のカスタマイズ"
+
+#: backend/templates/views/pdf_invoice/settings.php:501
+msgid "Invoice Date"
+msgstr "請求書発行日"
+
+#: backend/templates/views/pdf_invoice/invoice.php:15
+msgid "Invoice Date:"
+msgstr "請求書発行日:"
+
+#: backend/templates/views/pdf_invoice/settings.php:390
+#: backend/templates/views/pdf_invoice/settings.php:479
+msgid "Invoice Number"
+msgstr "請求書番号"
+
+#: backend/templates/views/pdf_invoice/settings.php:321
+msgid "Invoice Settings"
+msgstr "請求書の設定"
+
+#: backend/templates/views/pdf_invoice/settings.php:406
+msgid "Invoice Start Number"
+msgstr "請求書の開始番号"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:80
+msgid "Is Auto Coupon"
+msgstr "オートクーポン"
+
+#: backend/templates/views/url_coupon/settings.php:64
+msgid "Is URL Coupon"
+msgstr "はURLのクーポン"
+
+#: backend/templates/views/product_filter/settings.php:400
+#: backend/templates/views/product_filter/settings.php:514
+msgid "Label Font Color"
+msgstr "ラベルフォント色"
+
+#: backend/templates/views/product_filter/settings.php:614
+#: backend/templates/views/product_filter/settings.php:746
+#: backend/templates/views/product_filter/settings.php:877
+msgid "Label Font Color "
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/settings.php:105
+msgid "Label Tailoring"
+msgstr "ラベル仕立て"
+
+#: backend/templates/views/product_filter/settings.php:378
+#: backend/templates/views/product_filter/settings.php:480
+#: backend/templates/views/product_filter/settings.php:594
+#: backend/templates/views/product_filter/settings.php:734
+#: backend/templates/views/product_filter/settings.php:844
+msgid "Label Text"
+msgstr "ラベルテキスト"
+
+#: backend/templates/views/shipping_bar/settings.php:365
+msgid "Layout 1"
+msgstr "レイアウト1"
+
+#: backend/templates/views/shipping_bar/settings.php:366
+msgid "Layout 2"
+msgstr "レイアウト2"
+
+#: backend/templates/views/coupon_generator/settings.php:153
+#: backend/templates/views/shipping_bar/settings.php:167
+msgid "Leave out items."
+msgstr "ことしか書いてあります。"
+
+#: backend/templates/views/floating_cart/settings.php:535
+#: backend/templates/views/product_filter/settings.php:209
+#: backend/templates/views/shipping_bar/settings.php:444
+msgid "Left"
+msgstr "左"
+
+#: backend/templates/views/url_coupon/url_coupon_tab.php:45
+msgid ""
+"Let your customers apply this coupon by visiting a URL. This coupon "
+"generates a unique coupon URL that can be used in all kind of scenarios (eg. "
+"email marketing, live chat support, blog links)."
+msgstr ""
+"うお客様にこのクーポンを訪問りましたが、修正いたしました。 このクーポンを生成する独自のクーポンのURLで使用できるすべての種類のシナリオ（例. "
+"メールマーケティング、ライブチャットサポートすると、リンク）。"
+
+#: backend/templates/views/coupon_generator/settings.php:202
+msgid "Limit usage to X items"
+msgstr "制限使用量×品目"
+
+#: backend/templates/views/shipping_bar/settings.php:420
+msgid "Link Color on Message"
+msgstr "リンク色のメッセージ"
+
+#: backend/templates/views/product_filter/settings.php:39
+msgid "Max"
+msgstr "Max"
+
+#: backend/templates/views/product_filter/settings.php:503
+msgid "Max Placeholder Text"
+msgstr "最大プレースホルダ文字"
+
+#: backend/templates/views/product_filter/settings.php:224
+msgid "Max Product Per Page"
+msgstr "最大製品ページ"
+
+#: backend/templates/views/coupon_generator/settings.php:124
+msgid "Maximum spend"
+msgstr "最大過ごし"
+
+#: backend/templates/views/address_book/settings.php:140
+msgid "Menu Title"
+msgstr "タイトルメニュー"
+
+#: backend/templates/views/shipping_bar/settings.php:299
+msgid "Message on Completed Order Amount"
+msgstr "メッセージを完了し込み合計金額"
+
+#: backend/templates/views/shipping_bar/settings.php:291
+msgid "Message on Partially Completed Order Amount"
+msgstr "メッセージを一部受注金額"
+
+#: backend/templates/views/shipping_bar/settings.php:283
+msgid "Message on Zero Order Amount"
+msgstr "メッセージをゼロオーダーの金額"
+
+#: backend/templates/views/product_filter/settings.php:38
+msgid "Min"
+msgstr "Min"
+
+#: backend/templates/views/product_filter/settings.php:491
+msgid "Min Placeholder Text"
+msgstr "分のプレースホルダーテキスト"
+
+#: backend/templates/views/coupon_generator/settings.php:120
+msgid "Minimum spend"
+msgstr "最低で過ごす"
+
+#: backend/templates/views/modules.php:18
+msgid "Modules"
+msgstr "モジュール"
+
+#: backend/templates/views/coupon_generator/settings.php:103
+msgid ""
+"must be enabled in your shipping zone and be set to require \"a valid free "
+"shipping coupon\" (see the \"Free Shipping Requires\" setting)."
+msgstr "設定を有効にしてください輸送ゾーンを設定する\"が有効で送料無料クーポン\"の\"送料無料が必要である\"設定)."
+
+#: backend/templates/views/pdf_invoice/invoice.php:122
+#: backend/templates/views/pdf_invoice/invoice.php:129
+msgid "Name of the product"
+msgstr "製品名"
+
+#: backend/templates/views/pdf_invoice/invoice.php:46
+msgid "Name of the shop"
+msgstr "名店"
+
+#: backend/templates/views/pdf_invoice/settings.php:360
+msgid "New Order (Admin Email)"
+msgstr "新しい秩序(管理者メール)"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:97
+msgid "No"
+msgstr "No"
+
+#: backend/templates/views/coupon_generator/settings.php:125
+msgid "No maximum"
+msgstr "上限はありません"
+
+#: backend/templates/views/coupon_generator/settings.php:121
+msgid "No minimum"
+msgstr "の下限は設けません"
+
+#: backend/templates/views/bogo_deal/settings.php:35
+msgid "No pricing rule has been created"
+msgstr "な価格ルールが作成された"
+
+#: backend/templates/views/coupon_generator/settings.php:187
+msgid "No restrictions"
+msgstr "制限なし"
+
+#: backend/templates/views/coupon_generator/settings.php:30
+msgid "Number of Coupons"
+msgstr "数券"
+
+#: backend/templates/views/floating_cart/settings.php:181
+msgid "Number Of Products"
+msgstr "商品数"
+
+#: backend/templates/views/coupon_generator/settings.php:44
+msgid "Numbers (Available in Pro)"
+msgstr "番号（プロ）"
+
+#: backend/templates/views/pdf_invoice/settings.php:369
+msgid "On-Hold Order"
+msgstr "-保順"
+
+#: backend/templates/views/modules.php:147
+#: backend/templates/views/one_click_checkout/settings.php:78
+msgid "One Click Checkout"
+msgstr "ワンクリックでアウト"
+
+#: backend/templates/views/pdf_invoice/settings.php:309
+msgid "Open The PDF in a New Window"
+msgstr "のPDFファイルを新しいウィンドウ"
+
+#: backend/templates/views/modules.php:269
+msgid "Order Cancel"
+msgstr "取消"
+
+#: backend/templates/views/pdf_invoice/settings.php:512
+msgid "Order Date"
+msgstr "注文日より"
+
+#: backend/templates/views/pdf_invoice/invoice.php:17
+msgid "Order Date:"
+msgstr "注文日より:"
+
+#: backend/templates/views/pdf_invoice/invoice.php:16
+msgid "Order No.:"
+msgstr "その際\"注文No.:"
+
+#: backend/templates/views/pdf_invoice/settings.php:490
+#: backend/templates/views/pdf_invoice/settings.php:700
+msgid "Order Number"
+msgstr "注文番号"
+
+#: backend/templates/views/pdf_invoice/settings.php:299
+msgid "Other Settings"
+msgstr "その他の設定"
+
+#: backend/templates/views/product_filter/settings.php:68
+#: modules/product_filter/template.php:68
+msgid "Out of Stock"
+msgstr "在庫切れ"
+
+#: backend/templates/views/shipping_bar/settings.php:392
+msgid "Padding Bottom"
+msgstr "パディング底"
+
+#: backend/templates/views/one_click_checkout/settings.php:598
+#: backend/templates/views/shipping_bar/settings.php:400
+msgid "Padding Left-Right"
+msgstr "パディングに左右"
+
+#: backend/templates/views/shipping_bar/settings.php:384
+msgid "Padding Top"
+msgstr "パディングトップ"
+
+#: backend/templates/views/one_click_checkout/settings.php:587
+msgid "Padding Top-Bottom"
+msgstr "パディング上下"
+
+#: backend/templates/views/product_filter/settings.php:318
+msgid "Pagination Button Border Color"
+msgstr "ページングボタンのボーダーの色"
+
+#: backend/templates/views/product_filter/settings.php:334
+msgid "Pagination Button Font Color"
+msgstr "ページングボタンの文字色"
+
+#: backend/templates/views/pdf_invoice/settings.php:381
+msgid "Partially Refunded Order"
+msgstr "一部の返順"
+
+#: backend/templates/views/pdf_invoice/settings.php:601
+msgid "Payment Method"
+msgstr "お支払い方法"
+
+#: backend/templates/views/pdf_invoice/invoice.php:173
+msgid "Payment Method: COD"
+msgstr "お支払い方法:COD"
+
+#: backend/templates/views/pdf_invoice/settings.php:93
+#: backend/templates/views/pdf_invoice/settings.php:114
+msgid "PDF Document"
+msgstr "PDFドキュメント"
+
+#: backend/templates/views/modules.php:187
+#: backend/templates/views/pdf_invoice/settings.php:76
+msgid "PDF Invoice & Packing Slips"
+msgstr "PDF請求&納"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:33
+#: backend/templates/views/url_coupon/settings.php:27
+msgid "Per page view"
+msgstr "ページあたり表示"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:54
+#: backend/templates/views/bogo_deal/settings.php:75
+#: backend/templates/views/coupon_generator/settings.php:85
+#: backend/templates/views/url_coupon/settings.php:43
+msgid "Percentage discount"
+msgstr "割合は割引"
+
+#: backend/templates/views/pdf_invoice/settings.php:590
+msgid "Phone Number"
+msgstr "電話番号"
+
+#: backend/templates/views/pdf_invoice/settings.php:386
+msgid "Pick when you/d like the bill sent by email."
+msgstr "ピき/dのように電子メールにてご連絡ください。"
+
+#: backend/templates/views/product_filter/settings.php:389
+msgid "Placeholder Text"
+msgstr "プレースホルダ文字"
+
+#: modules/url_coupon/ModuleUtils.php:170
+msgid "Please first add the product to the cart and then apply the URL coupon."
+msgstr "にしてください追加の製品をカートにそのURL。"
+
+#: backend/templates/views/bogo_deal/settings.php:74
+#: backend/templates/views/bogo_deal/settings.php:110
+#: backend/templates/views/bogo_deal/settings.php:128
+#: backend/templates/views/coupon_generator/settings.php:42
+#: backend/templates/views/coupon_generator/settings.php:52
+#: backend/templates/views/coupon_generator/settings.php:84
+#: backend/templates/views/coupon_generator/settings.php:144
+#: backend/templates/views/coupon_generator/settings.php:155
+#: backend/templates/views/coupon_generator/settings.php:166
+#: backend/templates/views/coupon_generator/settings.php:177
+#: backend/templates/views/floating_cart/settings.php:178
+#: backend/templates/views/floating_cart/settings.php:532
+#: backend/templates/views/floating_cart/settings.php:866
+#: backend/templates/views/floating_cart/settings.php:885
+#: backend/templates/views/floating_cart/settings.php:944
+#: backend/templates/views/floating_cart/settings.php:986
+#: backend/templates/views/one_click_checkout/settings.php:682
+#: backend/templates/views/one_click_checkout/settings.php:728
+#: backend/templates/views/pdf_invoice/settings.php:329
+#: backend/templates/views/pdf_invoice/settings.php:357
+#: backend/templates/views/product_filter/settings.php:203
+#: backend/templates/views/product_sticky_bar/settings.php:137
+#: backend/templates/views/product_sticky_bar/settings.php:208
+#: backend/templates/views/shipping_bar/settings.php:144
+#: backend/templates/views/shipping_bar/settings.php:157
+#: backend/templates/views/shipping_bar/settings.php:170
+#: backend/templates/views/shipping_bar/settings.php:200
+#: backend/templates/views/shipping_bar/settings.php:222
+#: backend/templates/views/shipping_bar/settings.php:352
+#: backend/templates/views/shipping_bar/settings.php:364
+#: backend/templates/views/shipping_bar/settings.php:443
+msgid "Please select"
+msgstr "を選択してください"
+
+#: backend/templates/views/floating_cart/settings.php:201
+msgid "Please select pages where you do not show floating cart."
+msgstr "を選択してくださいするページを表示しない浮かぶ。"
+
+#: backend/templates/views/floating_cart/settings.php:935
+msgid "Please select your basket icon."
+msgstr "をお選びくださいバスケットアイコンで表します。"
+
+#: backend/templates/views/shipping_bar/settings.php:461
+msgid "Please select your close icon of shipping bar."
+msgstr "を選択してくださいおり、アイコンの出荷バーがあります。"
+
+#: backend/templates/views/floating_cart/settings.php:750
+msgid "Please select your delete icon."
+msgstr "をお選びください削除アイコンをクリックします。"
+
+#: backend/templates/views/product_filter/settings.php:717
+msgid "Please turn off if you do not want to show the 0 star rating filter."
+msgstr "Offにしてくださいない場合は、0スター格付はフィルター"
+
+#: backend/templates/views/product_filter/settings.php:704
+msgid "Please turn off if you do not want to show the 1 star rating filter."
+msgstr "Offにしてくださいない場合は、1階にアルバートストリート格付フィルター"
+
+#: backend/templates/views/product_filter/settings.php:691
+msgid "Please turn off if you do not want to show the 2 star rating filter."
+msgstr "Offにしてくださいない場合は、2つの星の格付けフィルター"
+
+#: backend/templates/views/product_filter/settings.php:678
+msgid "Please turn off if you do not want to show the 3 star rating filter."
+msgstr "Offにしてくださいしない場合の3つ星の格付けフィルター"
+
+#: backend/templates/views/product_filter/settings.php:665
+msgid "Please turn off if you do not want to show the 4 star rating filter."
+msgstr "Offにしてくださいなんばの4つ星の格付けフィルター"
+
+#: backend/templates/views/product_filter/settings.php:652
+msgid "Please turn off if you do not want to show the 5 star rating filter."
+msgstr "Offにしてくださいない場合は、5スター格付はフィルター"
+
+#: backend/templates/views/product_sticky_bar/settings.php:261
+msgid "Please turn off if you don't want to show stock quantity on sticky bar"
+msgstr "Offにしてくださいまを表示したくない株式の数量トバー"
+
+#: backend/templates/views/one_click_checkout/settings.php:329
+#: backend/templates/views/one_click_checkout/settings.php:449
+msgid "Position Of the Button <span style=\"color: #FF521D;\">(Pro)</span>"
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/settings.php:234
+msgid "Postal Code"
+msgstr "郵便番号"
+
+#: backend/templates/views/coupon_generator/settings.php:25
+#: backend/templates/views/pdf_invoice/settings.php:415
+msgid "Prefix"
+msgstr "接頭辞"
+
+#: backend/templates/views/pdf_invoice/invoice.php:117
+msgid "PRICE"
+msgstr "価格"
+
+#: backend/templates/views/product_filter/settings.php:122
+msgid "Price Filter"
+msgstr "価格フィルター"
+
+#: backend/templates/views/product_filter/settings.php:472
+msgid "Price Filter Settings"
+msgstr "価格フィルタの設定"
+
+#: backend/templates/views/modules.php:263
+msgid "Pro"
+msgstr "Pro"
+
+#: backend/templates/views/pdf_invoice/settings.php:372
+msgid "Processing Order"
+msgstr "加工順"
+
+#: backend/templates/views/pdf_invoice/invoice.php:115
+msgid "PRODUCT"
+msgstr "製品"
+
+#: backend/templates/views/bogo_deal/settings.php:126
+msgid "Product"
+msgstr "製品"
+
+#: backend/templates/views/coupon_generator/settings.php:164
+msgid "Product categories"
+msgstr "製品カテゴリー"
+
+#: backend/templates/views/modules.php:247
+#: backend/templates/views/product_filter/settings.php:96
+msgid "Product Filter"
+msgstr "商品フィルター"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:77
+#: backend/templates/views/url_coupon/settings.php:61
+msgid "Product IDs"
+msgstr "商品Id"
+
+#: backend/templates/views/product_sticky_bar/settings.php:297
+msgid "Product Image Shape"
+msgstr "製品イメージ形状"
+
+#: backend/templates/views/floating_cart/settings.php:766
+msgid "Product Image Width"
+msgstr "商品イメージの幅"
+
+#: backend/templates/views/product_filter/settings.php:350
+msgid "Product Loader Color"
+msgstr "製品ローダーの色"
+
+#: backend/templates/views/product_sticky_bar/settings.php:365
+msgid "Product Price Color"
+msgstr "製品価格の色"
+
+#: backend/templates/views/product_sticky_bar/settings.php:381
+msgid "Product Price Font Size"
+msgstr "製品価格のフォントサイズ"
+
+#: backend/templates/views/product_sticky_bar/settings.php:332
+msgid "Product Rating Color "
+msgstr ""
+
+#: backend/templates/views/product_sticky_bar/settings.php:348
+msgid "Product Rating Count Color"
+msgstr "商品の格付のカウント色"
+
+#: backend/templates/views/floating_cart/settings.php:736
+msgid "Product Remove Icon"
+msgstr "商品の削除アイコン"
+
+#: backend/templates/views/floating_cart/settings.php:756
+msgid "Product Remove Icon Size(px)"
+msgstr "商品の削除アイコンのサイズ(px)"
+
+#: backend/templates/views/product_filter/settings.php:116
+#: backend/templates/views/product_filter/settings.php:218
+msgid "Product Settings"
+msgstr "製品の設定"
+
+#: backend/templates/views/modules.php:127
+#: backend/templates/views/product_sticky_bar/settings.php:60
+msgid "Product Sticky Bar"
+msgstr "製品の粘バー"
+
+#: backend/templates/views/floating_cart/settings.php:776
+msgid "Product Title Color"
+msgstr "商品名色"
+
+#: backend/templates/views/product_sticky_bar/settings.php:316
+msgid "Product Title Color "
+msgstr ""
+
+#: backend/templates/views/floating_cart/settings.php:790
+msgid "Product Title Font Size"
+msgstr "製品のタイトル文字サイズ"
+
+#: backend/templates/views/coupon_generator/settings.php:142
+msgid "Products"
+msgstr "製品"
+
+#: backend/templates/views/bogo_deal/settings.php:85
+msgid "Products to Buy"
+msgstr "製品の購入"
+
+#: backend/templates/views/bogo_deal/settings.php:94
+msgid "Products to Gift"
+msgstr "商品プレゼント"
+
+#: backend/templates/views/bogo_deal/settings.php:108
+msgid "Productv"
+msgstr "Productv"
+
+#: backend/templates/views/shipping_bar/settings.php:485
+msgid "Progress Bar Style"
+msgstr "進捗バースタイル"
+
+#: backend/templates/views/shipping_bar/settings.php:241
+#: backend/templates/views/shipping_bar/settings.php:504
+msgid "Progress Bar's Background"
+msgstr "進捗バーの背景"
+
+#: backend/templates/views/shipping_bar/settings.php:546
+msgid "Progress Bar's Border Radius"
+msgstr "進捗バーのボーダーの半径"
+
+#: backend/templates/views/shipping_bar/settings.php:252
+#: backend/templates/views/shipping_bar/settings.php:515
+msgid "Progress Bar's Color"
+msgstr "進捗バーの色"
+
+#: backend/templates/views/shipping_bar/settings.php:538
+msgid "Progress Bar's Font Size"
+msgstr "進捗バーのフォントサイズ"
+
+#: backend/templates/views/shipping_bar/settings.php:263
+#: backend/templates/views/shipping_bar/settings.php:527
+msgid "Progress Bar's Text Color"
+msgstr "進捗バーのテキストカラーを設定します。"
+
+#: backend/templates/views/shipping_bar/settings.php:496
+msgid "Progress Bar's Top Margin"
+msgstr "進捗バーのトップマージン"
+
+#: backend/templates/views/pdf_invoice/invoice.php:116
+msgid "QUANTITY"
+msgstr "数量"
+
+#: backend/templates/views/floating_cart/settings.php:824
+msgid "Quantity Box Background Color"
+msgstr "量ボックスの背景色"
+
+#: backend/templates/views/floating_cart/settings.php:810
+msgid "Quantity Box Border Color"
+msgstr "量ボックスボーダーの色"
+
+#: backend/templates/views/floating_cart/settings.php:838
+msgid "Quantity Box Text Color"
+msgstr "量ボックステキストカラーを設定します。"
+
+#: backend/templates/views/floating_cart/settings.php:800
+msgid "Quantity Box Width"
+msgstr "量ボックス幅"
+
+#: backend/templates/views/one_click_checkout/settings.php:215
+msgid "Quickly add item to shopping cart with Ajax."
+msgstr "早く商品追加ショッピングカートにAjax."
+
+#: backend/templates/views/product_filter/settings.php:125
+msgid "Rating Filter"
+msgstr "格付けフィルター"
+
+#: backend/templates/views/product_filter/settings.php:586
+msgid "Rating Filter Settings"
+msgstr "格付けのフィルタの設定"
+
+#: backend/templates/views/one_click_checkout/settings.php:266
+msgid "Read more button text"
+msgstr "Read moreボタンのテキスト"
+
+#: backend/templates/views/pdf_invoice/settings.php:170
+msgid "Recommended image size 150px X 60px"
+msgstr "推奨画像サイズ150px×60px"
+
+#: backend/templates/views/one_click_checkout/settings.php:156
+#: backend/templates/views/one_click_checkout/settings.php:184
+msgid "Redirect to custom url"
+msgstr "リダイレクトカスタムのurl"
+
+#: backend/templates/views/one_click_checkout/settings.php:162
+msgid ""
+"Redirect to custom url instead of page, so using this you can redirect to "
+"any page."
+msgstr "リダイレクトカスタムのurlの代わりにページで利用できるようにリダイレクトを他のページです。"
+
+#: backend/templates/views/one_click_checkout/settings.php:168
+msgid "Redirect to page"
+msgstr "リダイレクトページ"
+
+#: backend/templates/views/one_click_checkout/settings.php:313
+#: backend/templates/views/one_click_checkout/settings.php:433
+msgid "Redirect to page <span style=\"color: #FF521D;\">(Pro)</span>"
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:188
+msgid ""
+"Redirect to this any custom url of your website e.g.: http://yourwebsite.com"
+msgstr ""
+
+#: backend/templates/views/floating_cart/settings.php:136
+msgid "Redirect URLs"
+msgstr "リダイレクトUrl"
+
+#: backend/templates/views/floating_cart/settings.php:469
+msgid "Redirect URLs Settings"
+msgstr "リダイレクトUrl設定"
+
+#: backend/templates/views/pdf_invoice/settings.php:378
+msgid "Refunded Order"
+msgstr "返順"
+
+#: backend/templates/views/one_click_checkout/settings.php:678
+msgid "Remove billing fields "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:640
+msgid "Remove coupon form"
+msgstr "Removeクーポンの形"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:49
+msgid "Remove from auto apply"
+msgstr "削除からの自動適用"
+
+#: backend/templates/views/one_click_checkout/settings.php:629
+msgid "Remove Order comment"
+msgstr "削除すめコメント"
+
+#: backend/templates/views/one_click_checkout/settings.php:651
+msgid "Remove policy text"
+msgstr "除去方針テキスト"
+
+#: backend/templates/views/one_click_checkout/settings.php:664
+msgid "Remove terms & conditions"
+msgstr "削除条件"
+
+#: backend/templates/views/bogo_deal/settings.php:114
+#: backend/templates/views/bogo_deal/settings.php:132
+msgid "Required Quantity"
+msgstr "必要量"
+
+#: backend/templates/views/floating_cart/settings.php:538
+#: backend/templates/views/shipping_bar/settings.php:446
+msgid "Right"
+msgstr "右"
+
+#: backend/templates/views/product_filter/settings.php:206
+msgid "Right "
+msgstr ""
+
+#: backend/templates/views/floating_cart/settings.php:888
+#: backend/templates/views/product_sticky_bar/settings.php:303
+msgid "Round"
+msgstr "丸"
+
+#: backend/templates/views/bogo_deal/settings.php:24
+msgid "Save Changes"
+msgstr "変更を保存"
+
+#: backend/templates/views/address_book/settings.php:354
+#: backend/templates/views/coupon_generator/settings.php:217
+#: backend/templates/views/floating_cart/settings.php:1063
+#: backend/templates/views/one_click_checkout/settings.php:773
+#: backend/templates/views/pdf_invoice/settings.php:766
+#: backend/templates/views/product_filter/settings.php:970
+#: backend/templates/views/product_sticky_bar/settings.php:538
+#: backend/templates/views/shipping_bar/settings.php:559
+msgid "Save Settings"
+msgstr "保存設定"
+
+#: backend/templates/views/product_sticky_bar/settings.php:163
+msgid "Scroll Pixels"
+msgstr "スクロールピクセル"
+
+#: backend/templates/views/url_coupon/settings.php:49
+msgid "Search"
+msgstr "検索"
+
+#: backend/templates/views/product_filter/settings.php:31
+msgid "Search by Product Name"
+msgstr "検索による製品名"
+
+#: backend/templates/views/product_filter/settings.php:119
+msgid "Search Filter"
+msgstr "検索フィルター"
+
+#: backend/templates/views/product_filter/settings.php:370
+msgid "Search Filter Settings"
+msgstr "検索フィルタの設定"
+
+#: backend/templates/views/product_filter/settings.php:27
+#: modules/product_filter/template.php:28
+#: modules/product_filter/template.php:31
+msgid "Search Product"
+msgstr "製品検索"
+
+#: backend/templates/views/address_book/settings.php:238
+#: backend/templates/views/address_book/settings.php:249
+#: backend/templates/views/address_book/settings.php:260
+#: backend/templates/views/address_book/settings.php:271
+#: backend/templates/views/address_book/settings.php:283
+#: backend/templates/views/address_book/settings.php:296
+#: backend/templates/views/address_book/settings.php:307
+#: backend/templates/views/address_book/settings.php:318
+#: backend/templates/views/address_book/settings.php:329
+#: backend/templates/views/address_book/settings.php:341
+#: backend/templates/views/floating_cart/settings.php:562
+#: backend/templates/views/floating_cart/settings.php:577
+#: backend/templates/views/floating_cart/settings.php:592
+#: backend/templates/views/floating_cart/settings.php:607
+#: backend/templates/views/floating_cart/settings.php:622
+#: backend/templates/views/floating_cart/settings.php:637
+#: backend/templates/views/floating_cart/settings.php:703
+#: backend/templates/views/floating_cart/settings.php:718
+#: backend/templates/views/floating_cart/settings.php:783
+#: backend/templates/views/floating_cart/settings.php:817
+#: backend/templates/views/floating_cart/settings.php:831
+#: backend/templates/views/floating_cart/settings.php:845
+#: backend/templates/views/floating_cart/settings.php:1012
+#: backend/templates/views/floating_cart/settings.php:1026
+#: backend/templates/views/floating_cart/settings.php:1040
+#: backend/templates/views/floating_cart/settings.php:1054
+#: backend/templates/views/one_click_checkout/settings.php:530
+#: backend/templates/views/one_click_checkout/settings.php:545
+#: backend/templates/views/one_click_checkout/settings.php:562
+#: backend/templates/views/one_click_checkout/settings.php:579
+#: backend/templates/views/product_filter/settings.php:293
+#: backend/templates/views/product_filter/settings.php:308
+#: backend/templates/views/product_filter/settings.php:325
+#: backend/templates/views/product_filter/settings.php:341
+#: backend/templates/views/product_filter/settings.php:357
+#: backend/templates/views/product_filter/settings.php:407
+#: backend/templates/views/product_filter/settings.php:425
+#: backend/templates/views/product_filter/settings.php:442
+#: backend/templates/views/product_filter/settings.php:460
+#: backend/templates/views/product_filter/settings.php:521
+#: backend/templates/views/product_filter/settings.php:539
+#: backend/templates/views/product_filter/settings.php:556
+#: backend/templates/views/product_filter/settings.php:574
+#: backend/templates/views/product_filter/settings.php:621
+#: backend/templates/views/product_filter/settings.php:637
+#: backend/templates/views/product_filter/settings.php:753
+#: backend/templates/views/product_filter/settings.php:771
+#: backend/templates/views/product_filter/settings.php:789
+#: backend/templates/views/product_filter/settings.php:807
+#: backend/templates/views/product_filter/settings.php:825
+#: backend/templates/views/product_filter/settings.php:884
+#: backend/templates/views/product_filter/settings.php:900
+#: backend/templates/views/product_filter/settings.php:918
+#: backend/templates/views/product_filter/settings.php:936
+#: backend/templates/views/product_filter/settings.php:954
+#: backend/templates/views/product_sticky_bar/settings.php:323
+#: backend/templates/views/product_sticky_bar/settings.php:339
+#: backend/templates/views/product_sticky_bar/settings.php:356
+#: backend/templates/views/product_sticky_bar/settings.php:372
+#: backend/templates/views/product_sticky_bar/settings.php:399
+#: backend/templates/views/product_sticky_bar/settings.php:415
+#: backend/templates/views/product_sticky_bar/settings.php:440
+#: backend/templates/views/product_sticky_bar/settings.php:466
+#: backend/templates/views/product_sticky_bar/settings.php:482
+#: backend/templates/views/product_sticky_bar/settings.php:499
+#: backend/templates/views/shipping_bar/settings.php:245
+#: backend/templates/views/shipping_bar/settings.php:256
+#: backend/templates/views/shipping_bar/settings.php:267
+#: backend/templates/views/shipping_bar/settings.php:377
+#: backend/templates/views/shipping_bar/settings.php:413
+#: backend/templates/views/shipping_bar/settings.php:424
+#: backend/templates/views/shipping_bar/settings.php:470
+#: backend/templates/views/shipping_bar/settings.php:508
+#: backend/templates/views/shipping_bar/settings.php:519
+#: backend/templates/views/shipping_bar/settings.php:531
+msgid "Select Color"
+msgstr "色選択"
+
+#: backend/templates/views/floating_cart/settings.php:191
+msgid "Select Don't Show Pages"
+msgstr "を選択しいページ"
+
+#: backend/templates/views/one_click_checkout/settings.php:255
+msgid "Select options button text"
+msgstr "選択オプションボタンのテキスト"
+
+#: backend/templates/views/shipping_bar/settings.php:204
+msgid "Select position of the free shipping notification in cart page."
+msgstr "選定の位置に送料無料通知カートに入れます。"
+
+#: backend/templates/views/shipping_bar/settings.php:219
+msgid "Select Position on Checkout Page"
+msgstr "選択位置を返ページ"
+
+#: backend/templates/views/shipping_bar/settings.php:226
+msgid ""
+"Select position where the free shipping notification will be displayed on "
+"checkout page."
+msgstr "を選択の場合送料無料通知が表示されアウトページです。"
+
+#: backend/templates/views/shipping_bar/settings.php:141
+msgid "Select Shipping Zone"
+msgstr "選択送ゾーン"
+
+#: backend/templates/views/shipping_bar/settings.php:162
+msgid "Select the pages where you don't want to show the Free Shipping Bar."
+msgstr "を選択するページを表示したくない、送料無料バーがあります。"
+
+#: backend/templates/views/shipping_bar/settings.php:175
+msgid ""
+"Select the products for which you don't want to allow Free Shipping Bar."
+msgstr "選択の製品をおすすめできるようにすることで出荷バーがあります。"
+
+#: backend/templates/views/product_sticky_bar/settings.php:216
+msgid "Select the products where you do not want to show the sticky bar"
+msgstr "を選択しの商品がないの粘バー"
+
+#: backend/templates/views/pdf_invoice/settings.php:188
+msgid "Sender Name"
+msgstr "送信者の名前"
+
+#: backend/templates/views/product_filter/settings.php:295
+msgid ""
+"Set background color of Add to Cart, Select Option and Stock Out button."
+msgstr "セットのバックグラウンドカラーを追加することができます。を選択し、オプションや株Outボタンを押します。"
+
+#: backend/templates/views/floating_cart/settings.php:579
+msgid "Set background color of all buttons"
+msgstr "セットのバックグラウンドカラーはすべてボタン"
+
+#: backend/templates/views/product_filter/settings.php:558
+msgid "Set background color of input field of the price filter."
+msgstr "セットのバックグラウンドカラーは入力フィールドをフィルター"
+
+#: backend/templates/views/product_filter/settings.php:444
+msgid "Set background color of input field of the search filter."
+msgstr "セットのバックグラウンドカラーの入力フィールドに検索フィルター"
+
+#: backend/templates/views/floating_cart/settings.php:624
+msgid "Set border color of all buttons"
+msgstr "セットボーダーの色のボタン"
+
+#: backend/templates/views/product_filter/settings.php:541
+msgid "Set border color of input field of the price filter."
+msgstr "セットボーダーの色の入力フィールドをフィルター"
+
+#: backend/templates/views/product_filter/settings.php:427
+msgid "Set border color of input field of the search filter."
+msgstr "セットボーダーの色の入力フィールドに検索フィルター"
+
+#: backend/templates/views/product_filter/settings.php:327
+msgid "Set border color of Previous Page and Next Page buttons."
+msgstr "セットボーダーの色前のページ-次のページボタンを押します。"
+
+#: backend/templates/views/floating_cart/settings.php:639
+msgid "Set border hover color of all buttons"
+msgstr "セットボーダーホバーの色のボタン"
+
+#: backend/templates/views/one_click_checkout/settings.php:547
+msgid "Set button background color"
+msgstr "ボタンの背景色"
+
+#: backend/templates/views/one_click_checkout/settings.php:581
+msgid "Set button background color on hover"
+msgstr "ボタンの背景色に推移"
+
+#: backend/templates/views/one_click_checkout/settings.php:532
+msgid "Set button font color"
+msgstr "セットボタンの文字色"
+
+#: backend/templates/views/one_click_checkout/settings.php:564
+msgid "Set button font color on hover"
+msgstr "セットボタンの文字色に推移"
+
+#: backend/templates/views/floating_cart/settings.php:480
+msgid "Set continue shopping button url."
+msgstr "セット買い物を続けボタンます。"
+
+#: backend/templates/views/shipping_bar/settings.php:332
+msgid "Set Disappear Time"
+msgstr "設定が消え時間"
+
+#: backend/templates/views/shipping_bar/settings.php:335
+msgid ""
+"Set disappear time in milliseconds. The Free Shipping Bar will disappear "
+"according to your setting time."
+msgstr "セットな時間をミリ秒です。 に送料無料-バーが消えるに従って設定。"
+
+#: backend/templates/views/floating_cart/settings.php:564
+msgid "Set font color of all buttons"
+msgstr "設定フォントの色のボタン"
+
+#: backend/templates/views/floating_cart/settings.php:609
+msgid "Set hover background color of all buttons"
+msgstr "セットホバーのバックグラウンドカラーはすべてボタン"
+
+#: backend/templates/views/floating_cart/settings.php:594
+msgid "Set hover font color of all buttons"
+msgstr "設定推移フォントの色のボタン"
+
+#: backend/templates/views/product_filter/settings.php:228
+msgid "Set maximum number of products can be showed in a page."
+msgstr "セットの最大数の製品ができた。"
+
+#: backend/templates/views/product_sticky_bar/settings.php:452
+msgid "Set sticky bar add to cart button border width (Ex. 1)"
+msgstr "セット粘着バーを追加することができます。ボタンのボーダー幅(Ex. 1)"
+
+#: backend/templates/views/product_sticky_bar/settings.php:426
+msgid "Set sticky bar add to cart button font size (Ex. 14)"
+msgstr "セット粘着バーを追加することができます。ボタンのフォントサイズ(Ex. 14)"
+
+#: backend/templates/views/product_sticky_bar/settings.php:528
+msgid "Set sticky bar add to cart button top-bottom padding (Default: 10)"
+msgstr "セット粘着バーを追加することができます。ボタンを上下のパディング(Default:10)"
+
+#: backend/templates/views/product_sticky_bar/settings.php:290
+msgid "Set sticky bar height in pixel(Ex.150) - Default 100px."
+msgstr "セットで付箋バーの高さをピクセル(Ex.150)-デフォルト100px."
+
+#: backend/templates/views/product_sticky_bar/settings.php:385
+msgid "Set sticky bar product price font size (Ex. 17)"
+msgstr "セットで付箋バー製品価格のフォントサイズ(Ex. 17)"
+
+#: backend/templates/views/product_filter/settings.php:639
+msgid "Set text color of \"And Up\" text shown beside ratings."
+msgstr "セットの文字色\"、\"テキスト表示の横ます。"
+
+#: backend/templates/views/product_filter/settings.php:310
+msgid "Set text color of Add to Cart, Select Option and Stock Out button."
+msgstr "セットの文字色を追加することができます。を選択し、オプションや株Outボタンを押します。"
+
+#: backend/templates/views/product_filter/settings.php:773
+msgid "Set text color of category name."
+msgstr "セットの文字色カテゴリの名前です。"
+
+#: backend/templates/views/product_filter/settings.php:576
+msgid "Set text color of input field of the price filter."
+msgstr "セットの文字色入力フィールドをフィルター"
+
+#: backend/templates/views/product_filter/settings.php:462
+msgid "Set text color of input field of the search filter."
+msgstr "セットの文字色入力フィールドに検索フィルター"
+
+#: backend/templates/views/product_filter/settings.php:755
+msgid "Set text color of label of the category filter."
+msgstr "セットの文字色ラベルカテゴリのフィルター"
+
+#: backend/templates/views/product_filter/settings.php:523
+msgid "Set text color of label of the price filter."
+msgstr "セットの文字色のラベルの価格フィルター"
+
+#: backend/templates/views/product_filter/settings.php:623
+msgid "Set text color of label of the rating filter."
+msgstr "セットの文字色のラベルの格付けフィルター"
+
+#: backend/templates/views/product_filter/settings.php:409
+msgid "Set text color of label of the search filter."
+msgstr "セットの文字色のラベルに検索フィルター"
+
+#: backend/templates/views/product_filter/settings.php:886
+msgid "Set text color of label of the stock filter."
+msgstr "セットの文字色のラベルの株フィルター"
+
+#: backend/templates/views/product_filter/settings.php:343
+msgid "Set text color of Previous Page and Next Page buttons."
+msgstr "セットの文字色前のページ-次のページボタンを押します。"
+
+#: backend/templates/views/product_filter/settings.php:902
+msgid "Set text color of stock status name."
+msgstr "セットの文字色株式の状態の名前です。"
+
+#: backend/templates/views/product_filter/settings.php:239
+msgid "Set the \"Add to Cart\" button text."
+msgstr "セットの\"カートに追加\"ボタンを押します。"
+
+#: backend/templates/views/product_filter/settings.php:608
+msgid "Set the \"And Up\" text shown beside ratings."
+msgstr "設定\"、\"テキスト表示の横ます。"
+
+#: backend/templates/views/product_filter/settings.php:859
+msgid "Set the \"In Stock\" option text."
+msgstr "セットにおける\"在庫あり\"オプションです。"
+
+#: backend/templates/views/product_filter/settings.php:281
+msgid "Set the \"Next Page\" button text."
+msgstr "設定の\"次ページ\"ボタンを押します。"
+
+#: backend/templates/views/product_filter/settings.php:870
+msgid "Set the \"Out of Stock\" option text."
+msgstr "設定\"の\"オプションです。"
+
+#: backend/templates/views/product_filter/settings.php:270
+msgid "Set the \"Previous Page\" button text."
+msgstr "設定の\"前のページ\"ボタンを押します。"
+
+#: backend/templates/views/product_filter/settings.php:249
+msgid "Set the \"Select Options\" button text for variable products."
+msgstr "設定の\"オプションの選択\"ボタンのテキスト変数の製品です。"
+
+#: backend/templates/views/product_filter/settings.php:259
+msgid "Set the \"Stock Out\" button text for stock out products."
+msgstr "セットの\"株式出力\"ボタンのテキスト株式出します。"
+
+#: backend/templates/views/address_book/settings.php:143
+msgid "Set the account page menu title for Address Book."
+msgstr "設定アカウントページメニューのタイトルのための機能が作動することになります。"
+
+#: backend/templates/views/address_book/settings.php:262
+msgid "Set the add new button background color on hover."
+msgstr "セットの新規追加ボタンの背景色に推移."
+
+#: backend/templates/views/address_book/settings.php:240
+msgid "Set the add new button background color."
+msgstr "セットの新規追加ボタンの背景色です。"
+
+#: backend/templates/views/address_book/settings.php:285
+msgid "Set the add new button border color on hover."
+msgstr "セットの新規追加ボタンボーダーカラーホバー."
+
+#: backend/templates/views/address_book/settings.php:273
+msgid "Set the add new button text color on hover."
+msgstr "セットの新規追加ボタンのテキストカラーホバー."
+
+#: backend/templates/views/address_book/settings.php:251
+msgid "Set the add new button text color."
+msgstr "セットの新規追加ボタンのテキストカラーです。"
+
+#: backend/templates/views/address_book/settings.php:209
+msgid "Set the address delete link text."
+msgstr "アドレスを設定し削除リンクをクリックします。"
+
+#: backend/templates/views/address_book/settings.php:201
+msgid "Set the address edit link text."
+msgstr "セットのアドレスの編集リンクします。"
+
+#: backend/templates/views/address_book/settings.php:217
+msgid "Set the address make primary link text."
+msgstr "セットのアドレスをもったものでありリンクします。"
+
+#: backend/templates/views/address_book/settings.php:133
+msgid "Set the address selection field label text on checkout page."
+msgstr "セットのアドレス選択フィールドレーベルのテキストアウトページです。"
+
+#: backend/templates/views/address_book/settings.php:298
+msgid "Set the background color of address card."
+msgstr "セットのバックグラウンドカラーでペイドカードです。"
+
+#: backend/templates/views/product_filter/settings.php:827
+#: backend/templates/views/product_filter/settings.php:956
+msgid "Set the background color of checkbox on checked state."
+msgstr "セットのバックグラウンドカラーのチェックボックスをチェック。"
+
+#: backend/templates/views/product_filter/settings.php:791
+#: backend/templates/views/product_filter/settings.php:920
+msgid "Set the background color of checkbox on unchecked state."
+msgstr "セットのバックグラウンドカラーのチェックボックスをチェックなしの状態です。"
+
+#: backend/templates/views/address_book/settings.php:309
+msgid "Set the border color of address card."
+msgstr "セットのボーダーの色のアドレスカードです。"
+
+#: backend/templates/views/product_filter/settings.php:809
+#: backend/templates/views/product_filter/settings.php:938
+msgid "Set the border color of checkbox on unchecked state."
+msgstr "セットの枠線の色のチェックボックスをチェックなしの状態です。"
+
+#: backend/templates/views/address_book/settings.php:167
+msgid "Set the button text of add new billing address."
+msgstr "セットボタンのテキストの新規追加料金の請求ます。"
+
+#: backend/templates/views/address_book/settings.php:176
+msgid "Set the button text of add new shipping address."
+msgstr "セットボタンのテキストの新規追加お送りします。"
+
+#: backend/templates/views/product_filter/settings.php:738
+msgid "Set the Category Filter Label text."
+msgstr "設定のカテゴリフィルターのラベルです。"
+
+#: backend/templates/views/product_filter/settings.php:359
+msgid "Set the color of product loader animation."
+msgstr "色を設定し製品のローダーアニメーション"
+
+#: backend/templates/views/address_book/settings.php:184
+msgid "Set the empty message text of billing address book."
+msgstr "セットは、空のメッセージテキストの課金機能が作動することになります。"
+
+#: backend/templates/views/address_book/settings.php:192
+msgid "Set the empty message text of shipping address book."
+msgstr "セットは、空のメッセージテキストの送機能が作動することになります。"
+
+#: backend/templates/views/address_book/settings.php:331
+msgid "Set the footer background color of address card."
+msgstr "セットのフッタバックグラウンドカラーでペイドカードです。"
+
+#: backend/templates/views/address_book/settings.php:151
+msgid "Set the headline text of billing address book."
+msgstr "セットのヘッドラインテキストの課金機能が作動することになります。"
+
+#: backend/templates/views/address_book/settings.php:159
+msgid "Set the headline text of shipping address book."
+msgstr "セットのヘッドラインテキストの送機能が作動することになります。"
+
+#: backend/templates/views/address_book/settings.php:343
+msgid "Set the link text color of address card."
+msgstr "セットリンクの文字色のアドレスカードです。"
+
+#: backend/templates/views/product_filter/settings.php:507
+msgid "Set the Maximum Price Field input placeholder text."
+msgstr "最大価格の分野の入力プレースホルダです。"
+
+#: backend/templates/views/product_filter/settings.php:495
+msgid "Set the Minimum Price Field input placeholder text."
+msgstr "設定最低価格の入力分野のプレースホルダーです。"
+
+#: backend/templates/views/product_filter/settings.php:484
+msgid "Set the Price Filter Label text."
+msgstr "価格設定をフィルターのラベルです。"
+
+#: backend/templates/views/product_filter/settings.php:598
+msgid "Set the Rating Filter Label text."
+msgstr "セットの格付フィルターのラベルです。"
+
+#: backend/templates/views/product_filter/settings.php:393
+msgid "Set the Search Field input placeholder text."
+msgstr "セットの検索フィールドに入力プレースホルダです。"
+
+#: backend/templates/views/product_filter/settings.php:382
+msgid "Set the Search Filter Label text."
+msgstr "セットの検索フィルタのラベルです。"
+
+#: backend/templates/views/product_filter/settings.php:848
+msgid "Set the Stock Filter Label text."
+msgstr "設定の株フィルターのラベルです。"
+
+#: backend/templates/views/address_book/settings.php:320
+msgid "Set the text color of address inside address card."
+msgstr "セットの文字色のアドレス内の住所ます。"
+
+#: backend/templates/views/shipping_bar/settings.php:319
+msgid ""
+"Set the time delay for Free Shipping Bar to decide when it appears in "
+"milliseconds."
+msgstr "設定の時間遅れのための送料無料-バーの決定がされたミリ秒です。"
+
+#: backend/templates/views/floating_cart/settings.php:492
+msgid "Set view cart details button url."
+msgstr "セットビュカートの詳細ボタンます。"
+
+#: backend/templates/views/floating_cart/settings.php:503
+msgid "Set view checkout button url."
+msgstr "セットビューアウトボタン。"
+
+#: backend/templates/views/floating_cart/settings.php:650
+msgid "Set your all button border raduis (Ex. 4)"
+msgstr "設定の全てのボタンの国境raduisます。 4)"
+
+#: backend/templates/views/floating_cart/settings.php:549
+msgid "Set your all button font size in px (Ex. 16)"
+msgstr "設定の全てのボタンの文字サイズpxます。 16)"
+
+#: backend/templates/views/floating_cart/settings.php:977
+msgid "Set your basket horizontal offset in px (Ex. 60)"
+msgstr "設定バスケットの水平のオフセットpxます。 60)"
+
+#: backend/templates/views/floating_cart/settings.php:902
+msgid "Set your basket icon size in px (Ex. 35)"
+msgstr "設定バスケットアイコンのサイズpxます。 35)"
+
+#: backend/templates/views/floating_cart/settings.php:967
+msgid "Set your basket vertical offset in px (Ex. 110)"
+msgstr "設定バスケットの垂直オフセットpxます。 110)"
+
+#: backend/templates/views/floating_cart/settings.php:760
+msgid "Set your cart content delete icon size in px (Ex. 16)"
+msgstr "ッカートコンテンツの削除アイコンのサイズpxます。 16)"
+
+#: backend/templates/views/floating_cart/settings.php:770
+msgid "Set your cart content product image width in percent(%) (Ex. 100)"
+msgstr "ッカートコンテンツ商品イメージの幅に比(%)(Ex. 100)"
+
+#: backend/templates/views/floating_cart/settings.php:804
+msgid "Set your cart content product quantity input box width in px (Ex. 56)"
+msgstr "設定カートの内容製品の数量の入力ボックスの幅pxます。 56)"
+
+#: backend/templates/views/floating_cart/settings.php:794
+msgid "Set your cart content product title font size in px (Ex. 16)"
+msgstr "設定カートの内容製品のタイトル文字サイズpxます。 16)"
+
+#: backend/templates/views/floating_cart/settings.php:680
+msgid "Set your cart header basket icon in px (Ex. 30)"
+msgstr "ッカートヘッダーバスケットアイコンpxます。 30)"
+
+#: backend/templates/views/floating_cart/settings.php:720
+msgid "Set your cart header border bottom color."
+msgstr "ッカートヘッダのボーダー底面カラーです。"
+
+#: backend/templates/views/floating_cart/settings.php:670
+msgid "Set your cart header cross icon in px (Ex. 30)"
+msgstr "ッカートヘッダーのクロスアイコンpxます。 30)"
+
+#: backend/templates/views/floating_cart/settings.php:705
+msgid "Set your cart header font color."
+msgstr "ッカートヘッダの文字色。"
+
+#: backend/templates/views/floating_cart/settings.php:690
+msgid "Set your cart header font size in px (Ex. 24)"
+msgstr "ッカートヘッダのフォントサイズpxます。 24)"
+
+#: backend/templates/views/floating_cart/settings.php:523
+msgid "Set your cart width in px (Ex. 460)"
+msgstr "ッカート幅pxます。 460)"
+
+#: backend/templates/views/shipping_bar/settings.php:379
+msgid "Set your free shipping bar background color."
+msgstr "設定送料無料-バーの背景色です。"
+
+#: backend/templates/views/shipping_bar/settings.php:549
+msgid "Set your free shipping bar progress border radius."
+msgstr "設定送料無料-バーボーダーの進捗している。"
+
+#: backend/templates/views/shipping_bar/settings.php:541
+msgid "Set your free shipping bar progress font size."
+msgstr "設定送料無料-バーの進捗フォントサイズです。"
+
+#: backend/templates/views/shipping_bar/settings.php:499
+msgid "Set your free shipping bar progress margin top."
+msgstr "設定送料無料-バーの進捗率です。"
+
+#: backend/templates/views/shipping_bar/settings.php:395
+msgid "Set your free shipping bar's bottom padding."
+msgstr "設定送料無料-バーの底面方向のパディング"
+
+#: backend/templates/views/shipping_bar/settings.php:472
+msgid "Set your free shipping bar's close icon color."
+msgstr "設定送料無料-バーのアイコンカラーです。"
+
+#: backend/templates/views/shipping_bar/settings.php:481
+msgid "Set your free shipping bar's close icon size."
+msgstr "設定送料無料-バーのアイコンのサイズです。"
+
+#: backend/templates/views/shipping_bar/settings.php:403
+msgid "Set your free shipping bar's left and right padding."
+msgstr "設定送料無料-バーの左右のパディングします。"
+
+#: backend/templates/views/shipping_bar/settings.php:434
+msgid "Set your free shipping bar's message font size."
+msgstr "設定送料無料-バーのメッセージフォントサイズです。"
+
+#: backend/templates/views/shipping_bar/settings.php:426
+msgid "Set your free shipping bar's message link text color."
+msgstr "設定送料無料-バーのメッセージがリンクテキストカラーです。"
+
+#: backend/templates/views/shipping_bar/settings.php:415
+msgid "Set your free shipping bar's message text color."
+msgstr "設定送料無料-バーのメッセージテキストカラーです。"
+
+#: backend/templates/views/shipping_bar/settings.php:258
+#: backend/templates/views/shipping_bar/settings.php:521
+msgid "Set your free shipping bar's progress color."
+msgstr "設定送料無料進捗バーの色です。"
+
+#: backend/templates/views/shipping_bar/settings.php:269
+#: backend/templates/views/shipping_bar/settings.php:533
+msgid "Set your free shipping bar's progress text color."
+msgstr "設定送料無料-バーの進捗をテキストカラーです。"
+
+#: backend/templates/views/shipping_bar/settings.php:387
+msgid "Set your free shipping bar's top padding."
+msgstr "設定送料無料-バートップのパディングします。"
+
+#: backend/templates/views/pdf_invoice/settings.php:410
+msgid "Set your invoice start number."
+msgstr "設定請求書を開始。"
+
+#: backend/templates/views/shipping_bar/settings.php:247
+#: backend/templates/views/shipping_bar/settings.php:510
+msgid "Set your progress bar's background color."
+msgstr "設定進捗バーの背景色です。"
+
+#: backend/templates/views/modules.php:54
+#: backend/templates/views/modules.php:74
+#: backend/templates/views/modules.php:114
+#: backend/templates/views/modules.php:154
+#: backend/templates/views/modules.php:214
+#: backend/templates/views/modules.php:234
+#: backend/templates/views/modules.php:254
+#: backend/templates/views/modules.php:276
+#: backend/templates/views/product_sticky_bar/settings.php:78
+#: backend/templates/views/product_sticky_bar/settings.php:89
+msgid "Settings"
+msgstr "設定"
+
+#: backend/templates/views/pdf_invoice/invoice.php:141
+msgid "Shipping"
+msgstr "海運"
+
+#: backend/templates/views/pdf_invoice/invoice.php:85
+#: backend/templates/views/pdf_invoice/invoice.php:93
+#: backend/templates/views/pdf_invoice/settings.php:568
+msgid "Shipping Address"
+msgstr "配送先住所"
+
+#: backend/templates/views/one_click_checkout/settings.php:737
+msgid "Shipping Address 1"
+msgstr "配送先1"
+
+#: backend/templates/views/one_click_checkout/settings.php:740
+msgid "Shipping Address 2"
+msgstr "ご住所2"
+
+#: backend/templates/views/address_book/settings.php:189
+msgid "Shipping Address Book Empty Message "
+msgstr ""
+
+#: backend/templates/views/address_book/settings.php:156
+msgid "Shipping Address Book Headline"
+msgstr "発送アドレス帳のヘッドライン"
+
+#: backend/templates/views/address_book/settings.php:112
+msgid "Shipping Address Field on Checkout?"
+msgstr "送分野に精算?"
+
+#: backend/templates/views/shipping_bar/settings.php:294
+msgid ""
+"Shipping Alert: Add {missing_amount} for Free Shipping (Min. order: "
+"{minimum_order}, Current total: {cart_total})."
+msgstr ""
+
+#: backend/templates/views/shipping_bar/settings.php:452
+msgid "Shipping Bar Close Icon"
+msgstr "出荷バー内のアイコン"
+
+#: backend/templates/views/shipping_bar/settings.php:361
+msgid "Shipping Bar Layout"
+msgstr "出荷バーのレイアウト"
+
+#: backend/templates/views/shipping_bar/settings.php:349
+msgid "Shipping Bar Position"
+msgstr "輸送のコンテキストメニュー"
+
+#: backend/templates/views/one_click_checkout/settings.php:746
+msgid "Shipping City"
+msgstr "海運市"
+
+#: backend/templates/views/one_click_checkout/settings.php:755
+msgid "Shipping Company"
+msgstr "運送会社"
+
+#: backend/templates/views/one_click_checkout/settings.php:743
+msgid "Shipping Country"
+msgstr "配送先の国"
+
+#: backend/templates/views/pdf_invoice/settings.php:724
+msgid "Shipping Date"
+msgstr "出荷日"
+
+#: backend/templates/views/one_click_checkout/settings.php:731
+msgid "Shipping First Name"
+msgstr "船名"
+
+#: backend/templates/views/pdf_invoice/settings.php:646
+msgid "Shipping Label Customization"
+msgstr "出荷ラベルのカスタマイズ"
+
+#: backend/templates/views/one_click_checkout/settings.php:734
+msgid "Shipping Last Name"
+msgstr "船名"
+
+#: backend/templates/views/one_click_checkout/settings.php:752
+msgid "Shipping Postcode"
+msgstr "配送郵便番号"
+
+#: backend/templates/views/one_click_checkout/settings.php:749
+msgid "Shipping State"
+msgstr "出荷状態"
+
+#: backend/templates/views/pdf_invoice/invoice.php:92
+msgid "Shipping to Name"
+msgstr "船名"
+
+#: backend/templates/views/pdf_invoice/invoice.php:47
+msgid "Shop Address"
+msgstr "店住所"
+
+#: backend/templates/views/pdf_invoice/settings.php:185
+msgid "Shop Address (Sender Details)"
+msgstr "店アドレス（送信者詳細）"
+
+#: backend/templates/views/pdf_invoice/settings.php:161
+#: backend/templates/views/pdf_invoice/settings.php:468
+#: backend/templates/views/pdf_invoice/settings.php:664
+msgid "Shop Logo"
+msgstr "ショッパー"
+
+#: backend/templates/views/pdf_invoice/settings.php:152
+msgid "Shop Name"
+msgstr "店名"
+
+#: backend/templates/views/product_filter/settings.php:712
+msgid "Show 0 Star Rating?"
+msgstr "ショー0スター格付?"
+
+#: backend/templates/views/product_filter/settings.php:699
+msgid "Show 1 Star Rating?"
+msgstr "見1スター格付?"
+
+#: backend/templates/views/product_filter/settings.php:686
+msgid "Show 2 Star Rating?"
+msgstr "2スター格付?"
+
+#: backend/templates/views/product_filter/settings.php:673
+msgid "Show 3 Star Rating?"
+msgstr "ショーの3つ星の格付?"
+
+#: backend/templates/views/product_filter/settings.php:660
+msgid "Show 4 Star Rating?"
+msgstr "ショーの4つ星の格付?"
+
+#: backend/templates/views/product_filter/settings.php:647
+msgid "Show 5 Star Rating?"
+msgstr "ショー5スター格付?"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:53
+#: backend/templates/views/url_coupon/settings.php:42
+msgid "Show all types"
+msgstr "すべての種類"
+
+#: backend/templates/views/floating_cart/settings.php:376
+msgid "Show Apply Coupon Option"
+msgstr "ショー用クーポンのオプション"
+
+#: backend/templates/views/floating_cart/settings.php:214
+msgid "Show Basket Icon"
+msgstr "ショーバスケットアイコン"
+
+#: backend/templates/views/product_filter/settings.php:179
+msgid "Show Category Filter "
+msgstr ""
+
+#: backend/templates/views/floating_cart/settings.php:225
+msgid "Show Close Icon"
+msgstr "ショー近のアイコン"
+
+#: backend/templates/views/floating_cart/settings.php:343
+msgid "Show Discount Amoun"
+msgstr "ショーの割引Amoun"
+
+#: backend/templates/views/floating_cart/settings.php:908
+msgid "Show Item Count?"
+msgstr "示項目をカウント?"
+
+#: backend/templates/views/product_sticky_bar/settings.php:107
+msgid "Show on Desktop"
+msgstr "ショーデスクトップ"
+
+#: backend/templates/views/product_sticky_bar/settings.php:121
+msgid "Show on Mobile"
+msgstr "ショーモバイル"
+
+#: backend/templates/views/product_sticky_bar/settings.php:150
+msgid "Show Only After Scroll"
+msgstr "ショーの後にスクロール"
+
+#: backend/templates/views/pdf_invoice/settings.php:394
+msgid "Show Order Number as Invoice Number"
+msgstr "ショーの順番として請求書番号"
+
+#: backend/templates/views/product_filter/settings.php:157
+msgid "Show Price Filter"
+msgstr "示価格フィルター"
+
+#: backend/templates/views/floating_cart/settings.php:246
+#: backend/templates/views/product_sticky_bar/settings.php:245
+msgid "Show Product Image"
+msgstr "ソリューションが実現画像"
+
+#: backend/templates/views/product_sticky_bar/settings.php:308
+msgid "Show product image shape (Default: Square)"
+msgstr "ショー製品イメージ形（デフォルト:スクエア)"
+
+#: backend/templates/views/floating_cart/settings.php:257
+msgid "Show Product Name"
+msgstr "ショー製品名"
+
+#: backend/templates/views/floating_cart/settings.php:279
+msgid "Show Product Price Total"
+msgstr "ショー製品価格の合計"
+
+#: backend/templates/views/product_sticky_bar/settings.php:173
+msgid "Show Product Review"
+msgstr "ショーレビュー"
+
+#: backend/templates/views/product_sticky_bar/settings.php:187
+msgid "Show Product Review Count"
+msgstr "示製品のレビュー件数"
+
+#: backend/templates/views/floating_cart/settings.php:268
+msgid "Show Product Unit Price"
+msgstr "ソリューションが実現単価"
+
+#: backend/templates/views/shipping_bar/settings.php:491
+msgid "Show progress bar with free shipping bar."
+msgstr "ショーの進捗バーと送料無料バーがあります。"
+
+#: backend/templates/views/product_filter/settings.php:168
+msgid "Show Rating Filter"
+msgstr "ショーの格付フィルター"
+
+#: backend/templates/views/product_filter/settings.php:146
+msgid "Show Search Filter"
+msgstr "検索フィルター"
+
+#: backend/templates/views/floating_cart/settings.php:354
+msgid "Show Shipping Amount?"
+msgstr "ショーの出荷量とは？"
+
+#: backend/templates/views/product_sticky_bar/settings.php:157
+msgid "Show sticky bar only when user scrolls down in product page"
+msgstr "ショー粘バーの場合のみユーザーの巻下の製品ページ"
+
+#: backend/templates/views/product_sticky_bar/settings.php:256
+msgid "Show Stock Status"
+msgstr "ショー株式の状況"
+
+#: backend/templates/views/product_filter/settings.php:189
+msgid "Show Stock Status Filter"
+msgstr "ショー株式の状況フィルター"
+
+#: backend/templates/views/floating_cart/settings.php:332
+msgid "Show Subtotal Number"
+msgstr "ショー小計数"
+
+#: backend/templates/views/floating_cart/settings.php:365
+msgid "Show Total Cart Number"
+msgstr "総カート番号"
+
+#: backend/templates/views/product_sticky_bar/settings.php:113
+msgid "Show/Hide sticky bar on Desktop"
+msgstr "表示-非表示を切り替える粘着バーをデスクトップ"
+
+#: backend/templates/views/product_sticky_bar/settings.php:180
+msgid "Show/Hide sticky bar on mobile"
+msgstr "表示-非表示を切り替える粘バーモバイル"
+
+#: backend/templates/views/floating_cart/settings.php:381
+msgid "Show/Hide the apply coupon option on the cart menu."
+msgstr "の表示-非表示を切り替える応募券オプションのカートメニューです。"
+
+#: backend/templates/views/floating_cart/settings.php:230
+msgid "Show/Hide the close icon on the cart header."
+msgstr "表示/非表示のアイコンのカートヘッダを表します。"
+
+#: backend/templates/views/floating_cart/settings.php:348
+msgid "Show/Hide the discount amount on the cart menu."
+msgstr "の表示-非表示を切り替える割引金額は、カートメニューです。"
+
+#: backend/templates/views/floating_cart/settings.php:251
+msgid "Show/Hide the product image on the cart menu."
+msgstr "の表示-非表示を切り替える商品のイメージは、カートメニューです。"
+
+#: backend/templates/views/product_sticky_bar/settings.php:250
+msgid "Show/Hide the product image on the sticky bar."
+msgstr "の表示-非表示を切り替える商品のイメージに付箋バーがあります。"
+
+#: backend/templates/views/floating_cart/settings.php:262
+msgid "Show/Hide the product name on the cart menu."
+msgstr "の表示-非表示を切り替える製品名は、カートメニューです。"
+
+#: backend/templates/views/floating_cart/settings.php:284
+msgid "Show/Hide the product price total on the cart menu."
+msgstr "の表示-非表示を切り替える商品価格合計は、カートメニューです。"
+
+#: backend/templates/views/product_sticky_bar/settings.php:227
+msgid "Show/Hide the product quantity update option on the sticky bar."
+msgstr "の表示-非表示を切り替える製品の数量を更新オプションの粘バーがあります。"
+
+#: backend/templates/views/product_sticky_bar/settings.php:194
+msgid "Show/Hide the product review count on the sticky bar."
+msgstr "表示/非表示製品のレビュー件数の粘バーがあります。"
+
+#: backend/templates/views/floating_cart/settings.php:273
+msgid "Show/Hide the product unit price on the cart menu."
+msgstr "の表示-非表示を切り替える製品単価のカートメニューです。"
+
+#: backend/templates/views/floating_cart/settings.php:306
+msgid "Show/Hide the quantity update option on the cart menu."
+msgstr "の表示-非表示を切り替える数量を更新オプションのカートメニューです。"
+
+#: backend/templates/views/floating_cart/settings.php:337
+msgid "Show/Hide the subtotal amount on the cart menu."
+msgstr "の表示-非表示を切り替える計量のカートメニューです。"
+
+#: backend/templates/views/floating_cart/settings.php:370
+msgid "Show/Hide the total cart number on the cart menu."
+msgstr "の表示-非表示を切り替える計カート番号は、カートメニューです。"
+
+#: backend/templates/views/product_sticky_bar/settings.php:239
+msgid "Show/Hide the variable product selection option on the sticky bar"
+msgstr "の表示-非表示を切り替える変数の製品を選択のオプションの粘バー"
+
+#: backend/templates/views/pdf_invoice/settings.php:348
+msgid "Show/Hide VAT & SSN on the checkout page."
+msgstr "表示-非表示を切り替える消費税&SSNのアウトページです。"
+
+#: backend/templates/views/one_click_checkout/settings.php:724
+msgid "Skip shipping details?"
+msgstr "品ろうか。"
+
+#: backend/templates/views/pdf_invoice/invoice.php:114
+msgid "SKU"
+msgstr "SKU"
+
+#: backend/templates/views/floating_cart/settings.php:891
+#: backend/templates/views/product_sticky_bar/settings.php:306
+msgid "Square"
+msgstr "スクエア"
+
+#: backend/templates/views/pdf_invoice/settings.php:523
+msgid "SSN "
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/invoice.php:18
+msgid "SSN:"
+msgstr "SSN:"
+
+#: backend/templates/views/product_sticky_bar/settings.php:134
+msgid "Sticky Bar Position"
+msgstr "付箋のコンテキストメニュー"
+
+#: backend/templates/views/product_filter/settings.php:131
+msgid "Stock Filter"
+msgstr "株式フィルター"
+
+#: backend/templates/views/product_filter/settings.php:837
+msgid "Stock Filter Settings"
+msgstr "株式フィルタの設定"
+
+#: backend/templates/views/product_filter/settings.php:893
+msgid "Stock Status Font Color "
+msgstr ""
+
+#: backend/templates/views/address_book/settings.php:72
+#: backend/templates/views/product_sticky_bar/settings.php:81
+#: backend/templates/views/shipping_bar/settings.php:230
+msgid "Style"
+msgstr "スタイル"
+
+#: backend/templates/views/pdf_invoice/invoice.php:140
+msgid "Subtotal"
+msgstr "小計"
+
+#: backend/templates/views/floating_cart/settings.php:446
+msgid "Subtotal Text"
+msgstr "小文字"
+
+#: backend/templates/views/pdf_invoice/settings.php:424
+msgid "Suffix"
+msgstr "接尾辞"
+
+#: backend/templates/views/shipping_bar/settings.php:128
+msgid "Switch ON to display Shipping Bar on Desktop."
+msgstr "スイッチを表示出荷バーがデスクトップに作成されます。"
+
+#: backend/templates/views/shipping_bar/settings.php:136
+msgid "Switch ON to display Shipping Bar on mobile."
+msgstr "スイッチを表示出荷バーのモバイルコンテンツです。"
+
+#: backend/templates/views/shipping_bar/settings.php:440
+msgid "Text Align of Message"
+msgstr "テキストを揃えのメッセージ"
+
+#: backend/templates/views/shipping_bar/settings.php:409
+msgid "Text Color of Message"
+msgstr "テキストの色のメッセージ"
+
+#: backend/templates/dashboard.php:61
+msgid "This feature is only available in the premium version of wcEazy"
+msgstr "この機能は、プレミアムバージョンのwcEazy"
+
+#: backend/templates/views/one_click_checkout/settings.php:248
+msgid "This text will be shown inside add to cart button."
+msgstr "このテキストの表示内を追加することができます。ボタンを押します。"
+
+#: backend/templates/views/one_click_checkout/settings.php:270
+msgid ""
+"This text will be shown on archive page for the product when the product is "
+"out of stock, leave blank if you want to use default"
+msgstr "このテキストが表示されアーカイブのページを商品にするような行為があった場合、その株式は、空白を使用する場合はデフォルト"
+
+#: backend/templates/views/one_click_checkout/settings.php:259
+msgid ""
+"This text will be shown on the archive page for the variable product, leave "
+"blank if you want to use default text."
+msgstr "このテキストが表示され、アーカイブのページの変数の製品は、空白を使用する場合はデフォルトです。"
+
+#: backend/templates/views/pdf_invoice/settings.php:688
+msgid "To Address"
+msgstr "住所"
+
+#: backend/templates/views/product_sticky_bar/settings.php:128
+msgid "Toggle off if you don/t want the sticky bar on mobile."
+msgstr "切り替えるoffの場合はわからない/tといった粘バーのモバイルコンテンツです。"
+
+#: backend/templates/views/product_sticky_bar/settings.php:140
+#: backend/templates/views/shipping_bar/settings.php:353
+msgid "Top"
+msgstr "トップ"
+
+#: backend/templates/views/floating_cart/settings.php:947
+#: backend/templates/views/floating_cart/settings.php:989
+msgid "Top Left"
+msgstr "トップ左"
+
+#: backend/templates/views/floating_cart/settings.php:950
+#: backend/templates/views/floating_cart/settings.php:992
+msgid "Top Right"
+msgstr "トップ右"
+
+#: backend/templates/views/pdf_invoice/invoice.php:158
+#: backend/templates/views/product_sticky_bar/settings.php:198
+msgid "Total"
+msgstr "合計"
+
+#: backend/templates/views/floating_cart/settings.php:456
+msgid "Total Amount Text"
+msgstr "合計金額をテキスト"
+
+#: backend/templates/views/coupon_generator/settings.php:31
+msgid "Total number of coupons"
+msgstr "数券"
+
+#: backend/templates/views/floating_cart/settings.php:184
+msgid "Total Number Of Items"
+msgstr "総項目数"
+
+#: backend/templates/views/pdf_invoice/invoice.php:118
+msgid "TOTAL PRICE"
+msgstr "合計価格"
+
+#: backend/templates/views/url_coupon/settings.php:72
+msgid "Total z"
+msgstr "総z"
+
+#: backend/templates/views/floating_cart/settings.php:913
+msgid "Turn off if you don/t want to show basket item count."
+msgstr "Offに合わからない/tを示したいバスケット項目数です。"
+
+#: backend/templates/views/floating_cart/settings.php:219
+msgid "Turn off if you don/t want to show the basket icon in the cart header."
+msgstr "Offに合わからない/tたいショー、バスケットアイコンのカートヘッダを表します。"
+
+#: backend/templates/views/floating_cart/settings.php:359
+msgid "Turn off if you don/t want to show the shipping amount on the cart."
+msgstr "Offに合わからない/tたいショーの出荷量をカートに入れます。"
+
+#: backend/templates/views/product_sticky_bar/settings.php:204
+msgid "Turn off Products"
+msgstr "Off製品"
+
+#: backend/templates/views/one_click_checkout/settings.php:196
+msgid "Turn off the \"Keep Shopping\" button."
+msgstr "Offにしてください\"\"ショッピング\"ボタンを押します。"
+
+#: backend/templates/views/product_sticky_bar/settings.php:273
+msgid "Turn off the sticky bar for out-of-stock products."
+msgstr "Offにして粘バーのための製品です。"
+
+#: backend/templates/views/one_click_checkout/settings.php:137
+msgid "Turn on the single page checkout to show the cart menu as well."
+msgstr "を単一ページで精算のカーメニューです。"
+
+#: backend/templates/views/shipping_bar/settings.php:327
+msgid "Turn ON the switch to allow disappear time."
+msgstr "スイッチをONにしてくださきが消えます。"
+
+#: backend/templates/views/address_book/settings.php:89
+msgid "Turn ON the switch to enable address book for billing."
+msgstr "スイッチをONにしてくださをアドレス帳のための販売高です。"
+
+#: backend/templates/views/address_book/settings.php:97
+msgid "Turn ON the switch to enable address book for shipping."
+msgstr "スイッチをONにしてくださをアドレス帳のために運航します。"
+
+#: backend/templates/views/address_book/settings.php:107
+msgid ""
+"Turn ON the switch to enable address field selection for billing on checkout "
+"page."
+msgstr "スイッチをONにしてくださをアドレスフィールド選択のための請求にアウトページです。"
+
+#: backend/templates/views/address_book/settings.php:115
+msgid ""
+"Turn ON the switch to enable address field selection for shipping on "
+"checkout page."
+msgstr "スイッチをONにしてくださをアドレスフィールド選択のための送アウトページです。"
+
+#: backend/templates/views/shipping_bar/settings.php:120
+msgid "Turn ON the switch to enable the Shipping Bar."
+msgstr "スイッチをONにしてくださめのバーがあります。"
+
+#: backend/templates/views/shipping_bar/settings.php:192
+msgid ""
+"Turn on the switch to show the free shipping message in the shopping cart."
+msgstr "スイッチをonに、送料無料でメッセージショッピングカートに入れます。"
+
+#: backend/templates/views/shipping_bar/settings.php:214
+msgid ""
+"Turn ON the switch to show the free shipping notification in checkout "
+"subtotal area."
+msgstr "スイッチをONに、送料無料通知精算計です。"
+
+#: backend/templates/views/one_click_checkout/settings.php:237
+msgid "Turn on to change the button text of add to cart button."
+msgstr "をonに変更ボタンのテキストを追加することができます。ボタンを押します。"
+
+#: backend/templates/views/one_click_checkout/settings.php:223
+msgid "Turn on to enable Quickly add item to shopping cart with Ajax."
+msgstr "Onを素早く商品追加ショッピングカートにAjax."
+
+#: backend/templates/views/floating_cart/settings.php:169
+msgid "Turn on/off the auto-open floating cart menu."
+msgstr "電源のon/offの操作が自動開浮動カートメニューです。"
+
+#: backend/templates/views/one_click_checkout/settings.php:415
+msgid "Turn on/off the buy now button on the product archive page."
+msgstr "電源のon/offの操作がで今すぐ購入\"ボタンの製品アーカイブのページです。"
+
+#: backend/templates/views/one_click_checkout/settings.php:295
+msgid "Turn on/off the buy now button on the product page."
+msgstr "電源のon/offの操作がで今すぐ購入\"ボタンはバーベキューが楽しめます。"
+
+#: backend/templates/views/product_sticky_bar/settings.php:101
+msgid "Turn On/Off the product sticky bar."
+msgstr "電源のOn/Offの操作が商品の付箋バーがあります。"
+
+#: backend/templates/views/address_book/settings.php:71
+#: backend/templates/views/floating_cart/settings.php:133
+msgid "Typography"
+msgstr "タイポグラフィ"
+
+#: backend/templates/views/address_book/settings.php:124
+#: backend/templates/views/floating_cart/settings.php:390
+msgid "Typography Settings"
+msgstr "タイポグラフィの設定"
+
+#: backend/templates/views/bogo_deal/settings.php:56
+msgid "Untitled Rule"
+msgstr "Untitledル"
+
+#: backend/templates/views/pdf_invoice/settings.php:167
+msgid "Upload"
+msgstr "アップロード"
+
+#: backend/templates/views/modules.php:107
+#: backend/templates/views/url_coupon/settings.php:14
+msgid "URL Coupon"
+msgstr "URLクーポン"
+
+#: backend/templates/views/coupon_generator/settings.php:206
+msgid "Usage limit per user"
+msgstr "利用の制限ユーザー"
+
+#: backend/templates/views/coupon_generator/settings.php:70
+msgid "Usage Limits"
+msgstr "利用制限"
+
+#: backend/templates/views/coupon_generator/settings.php:194
+msgid "Usage limits"
+msgstr "利用制限"
+
+#: backend/templates/views/coupon_generator/settings.php:67
+msgid "Usage Restriction"
+msgstr "利用制限"
+
+#: backend/templates/views/coupon_generator/settings.php:116
+msgid "Usage restriction"
+msgstr "利用制限"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:78
+#: backend/templates/views/url_coupon/settings.php:62
+msgid "Usage/Limit"
+msgstr "利用制限"
+
+#: backend/templates/views/pdf_invoice/settings.php:535
+msgid "VAT "
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/invoice.php:19
+msgid "VAT:"
+msgstr "VAT:"
+
+#: modules/one_click_checkout/ModuleUtils.php:139
+msgid "View cart"
+msgstr "カービュー"
+
+#: backend/templates/views/floating_cart/settings.php:416
+msgid "View Cart Button"
+msgstr "Viewカートボタン"
+
+#: backend/templates/views/floating_cart/settings.php:487
+msgid "View Cart Button Url"
+msgstr "ViewカートボタンのUrl"
+
+#: backend/templates/views/floating_cart/settings.php:498
+msgid "View Checkout Button Url"
+msgstr "ビューアウトボタンのUrl"
+
+#: backend/class-wceazy-admin.php:139
+msgid "View wcEazy documentation"
+msgstr "ビュー wcEazy書"
+
+#: backend/class-wceazy-admin.php:140
+msgid "Visit community forums"
+msgstr "訪問地域フォーラム"
+
+#. Author of the plugin/theme
+msgid "wcEazy"
+msgstr "wcEazy"
+
+#. Description of the plugin/theme
+msgid ""
+"wcEazy provides multiple WooCommerce extensions in a single package you'll "
+"ever require."
+msgstr "wcEazyなど多くのWooCommerceの拡張子を一つのパッケージにおすすめします。※"
+
+#: backend/templates/views/url_coupon/url_coupon_tab.php:44
+#: modules/url_coupon/ModuleUtils.php:29
+msgid "wcEazy URL Coupon"
+msgstr "wcEazy URLのクーポン"
+
+#: backend/templates/views/pdf_invoice/settings.php:712
+msgid "Weight"
+msgstr "重量"
+
+#: backend/templates/views/one_click_checkout/settings.php:201
+msgid ""
+"WooCommerce shows a continue shopping button after a product is added to "
+"cart. With this option, you can disable that link so users replace the text "
+"you want to complete the sentence here"
+msgstr ""
+"WooCommerceを示し続けるショッピングボタンの後に製品が追加されます。 "
+"このオプションを有効にするリンクでユーザーの交換をしたいテキストの文はこちら"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:98
+msgid "Yes"
+msgstr "あり"
+
+#: backend/templates/views/shipping_bar/settings.php:149
+msgid "You must select your shipping zone, if not created please create"
+msgstr "を選択してくださいお送料ゾーンのない場合には作成を作成してください"
+
+#: backend/templates/views/coupon_generator/settings.php:109
+msgid "YYY-MM-DD"
+msgstr "YYY-MM-DD"
+
+#: backend/templates/views/pdf_invoice/invoice.php:50
+#: backend/templates/views/pdf_invoice/invoice.php:70
+#: backend/templates/views/pdf_invoice/invoice.php:96
+msgid "Zip Code"
+msgstr "郵便番号"

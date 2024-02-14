@@ -1,0 +1,110 @@
+#wpbody{
+    background: #F6F5FA;
+    margin-left: -20px;
+    min-height: 100vh;
+}
+
+
+
+
+
+
+
+.wceazy_get_pro_popup {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #efeafede;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+.wceazy_get_pro_popup.opened {
+    display: flex;
+}
+.wceazy_get_pro_popup .wceazy_popup_inar{
+    position: absolute;
+    background: #FFFFFF;
+    padding: 80px 40px 80px 40px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0px 4px 20px rgb(0 0 0 / 15%);
+}
+.wceazy_get_pro_popup .wceazy_popup_inar .successes_message p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #6E32C9;
+    margin: 0 0 40px 0;
+    line-height: 35px;
+    text-align: center;
+}
+.wceazy_get_pro_popup .wceazy_popup_inar .wceazy-btn-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+.wceazy_get_pro_popup .wceazy_popup_inar .wceazy-btn-danger {
+    text-decoration: none;
+    border-radius: 5px;
+    background: #FF521D;
+    border: 1px solid #FF521D;
+    color: #fff;
+    font-size: 18px;
+    padding: 18px 20px;
+    cursor: pointer;
+}
+.wceazy_get_pro_popup .wceazy_popup_inar .wceazy-btn-success {
+    text-decoration: none;
+    border-radius: 5px;
+    background: #2e9504;
+    border: 1px solid #389905;
+    color: #fff;
+    font-size: 18px;
+    padding: 18px 20px;
+    cursor: pointer;
+}
+.wceazy_get_pro_popup .wceazy_popup_inar .wceazy-btn-danger:hover,
+.wceazy_get_pro_popup .wceazy_popup_inar .wceazy-btn-success:hover{
+    text-decoration: none;
+    background: #fff;
+    transition: 1s;
+    color: #333;
+}
+
+.wceazy_get_pro_popup .wceazy_popup_inar .wceazy_close_popup {
+    border: 0;
+    outline: 0;
+    position: absolute;
+    top: -13px;
+    right: -21px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 20px rgb(0 0 0 / 15%);
+    background: #FFFFFF url(../img/popup_close.svg) no-repeat;
+    background-size: 11px;
+    background-position-x: center;
+    background-position-y: center;
+    width: 50px;
+    height: 50px;
+}
+.wceazy_module_item{
+    position: relative;
+}
+.wceazy-pro-module{
+    font-weight: 900;
+    position: absolute;
+    top: 12px;
+    right: 0px;
+}
+.pro-tag{
+    background: #DC5167;
+    color: #fff;
+    padding: 12px;
+    border-radius: 0 8px;
+}

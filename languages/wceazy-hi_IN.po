@@ -1,0 +1,3595 @@
+# Copyright (C) 2024 wcEazy
+# This file is distributed under the same license as the wcEazy package.
+msgid ""
+msgstr ""
+"Project-Id-Version: wcEazy 1.1.6\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wceazy\n"
+"POT-Creation-Date: 2024-01-30 10:36:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-01-31 04:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: Hindi\n"
+"Language: hi_IN\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.2"
+
+#: backend/class-wceazy-admin.php:139
+msgid "View wcEazy documentation"
+msgstr "देखें wcEazy प्रलेखन"
+
+#: backend/class-wceazy-admin.php:139
+msgid "Docs"
+msgstr "डॉक्स"
+
+#: backend/class-wceazy-admin.php:140
+msgid "Visit community forums"
+msgstr "समुदाय मंच पर जाएँ"
+
+#: backend/class-wceazy-admin.php:140
+msgid "Community support"
+msgstr "समुदाय का समर्थन"
+
+#: backend/templates/dashboard.php:61
+msgid "This feature is only available in the premium version of wcEazy"
+msgstr "यह सुविधा केवल प्रीमियम संस्करण में उपलब्ध के wcEazy"
+
+#: backend/templates/dashboard.php:63
+msgid "Cancel"
+msgstr "रद्द"
+
+#: backend/templates/dashboard.php:64
+msgid "Get Premium"
+msgstr "प्राप्त प्रीमियम"
+
+#: backend/templates/views/address_book/settings.php:46
+#: backend/templates/views/auto_apply_coupon/settings.php:9
+#: backend/templates/views/bogo_deal/settings.php:9
+#: backend/templates/views/coupon_generator/settings.php:7
+#: backend/templates/views/floating_cart/settings.php:96
+#: backend/templates/views/modules.php:10
+#: backend/templates/views/one_click_checkout/settings.php:70
+#: backend/templates/views/pdf_invoice/settings.php:68
+#: backend/templates/views/product_filter/settings.php:88
+#: backend/templates/views/product_sticky_bar/settings.php:52
+#: backend/templates/views/url_coupon/settings.php:8
+msgid "GET PRO"
+msgstr "प्रो जाओ"
+
+#: backend/templates/views/address_book/settings.php:54
+#: backend/templates/views/modules.php:227
+msgid "Address Book"
+msgstr "पते की किताब"
+
+#: backend/templates/views/address_book/settings.php:55
+#: backend/templates/views/auto_apply_coupon/settings.php:18
+#: backend/templates/views/bogo_deal/settings.php:19
+#: backend/templates/views/coupon_generator/settings.php:14
+#: backend/templates/views/floating_cart/settings.php:106
+#: backend/templates/views/modules.php:56
+#: backend/templates/views/modules.php:76
+#: backend/templates/views/modules.php:96
+#: backend/templates/views/modules.php:116
+#: backend/templates/views/modules.php:136
+#: backend/templates/views/modules.php:156
+#: backend/templates/views/modules.php:176
+#: backend/templates/views/modules.php:196
+#: backend/templates/views/modules.php:216
+#: backend/templates/views/modules.php:236
+#: backend/templates/views/modules.php:256
+#: backend/templates/views/modules.php:278
+#: backend/templates/views/one_click_checkout/settings.php:80
+#: backend/templates/views/pdf_invoice/settings.php:78
+#: backend/templates/views/product_filter/settings.php:98
+#: backend/templates/views/product_sticky_bar/settings.php:61
+#: backend/templates/views/url_coupon/settings.php:15
+msgid "Documentation"
+msgstr "प्रलेखन"
+
+#: backend/templates/views/address_book/settings.php:58
+#: backend/templates/views/auto_apply_coupon/settings.php:21
+#: backend/templates/views/bogo_deal/settings.php:22
+#: backend/templates/views/coupon_generator/settings.php:17
+#: backend/templates/views/floating_cart/settings.php:110
+#: backend/templates/views/one_click_checkout/settings.php:84
+#: backend/templates/views/pdf_invoice/settings.php:82
+#: backend/templates/views/product_filter/settings.php:104
+#: backend/templates/views/product_sticky_bar/settings.php:65
+#: backend/templates/views/url_coupon/settings.php:18
+msgid "Back to all Modules"
+msgstr "वापस करने के लिए सभी मॉड्यूल"
+
+#: backend/templates/views/address_book/settings.php:70
+#: backend/templates/views/coupon_generator/settings.php:64
+#: backend/templates/views/coupon_generator/settings.php:78
+#: backend/templates/views/floating_cart/settings.php:121
+#: backend/templates/views/one_click_checkout/settings.php:96
+#: backend/templates/views/pdf_invoice/settings.php:96
+#: backend/templates/views/product_filter/settings.php:113
+msgid "General"
+msgstr "सामान्य"
+
+#: backend/templates/views/address_book/settings.php:71
+#: backend/templates/views/floating_cart/settings.php:133
+msgid "Typography"
+msgstr "टाइपोग्राफी"
+
+#: backend/templates/views/address_book/settings.php:72
+#: backend/templates/views/product_sticky_bar/settings.php:81
+#: backend/templates/views/shipping_bar/settings.php:230
+msgid "Style"
+msgstr "शैली"
+
+#: backend/templates/views/address_book/settings.php:79
+#: backend/templates/views/floating_cart/settings.php:157
+#: backend/templates/views/one_click_checkout/settings.php:114
+#: backend/templates/views/pdf_invoice/settings.php:147
+#: backend/templates/views/product_filter/settings.php:140
+msgid "General Settings"
+msgstr "सामान्य सेटिंग्स"
+
+#: backend/templates/views/address_book/settings.php:83
+msgid "Address Book on Account Page"
+msgstr "पते की किताब पर खाता पृष्ठ"
+
+#: backend/templates/views/address_book/settings.php:86
+msgid "Enable Billing Address Book"
+msgstr "सक्षम बिलिंग पते की किताब"
+
+#: backend/templates/views/address_book/settings.php:89
+msgid "Turn ON the switch to enable address book for billing."
+msgstr "स्विच पर बारी सक्षम करने के लिए, पते की किताब के लिए बिलिंग."
+
+#: backend/templates/views/address_book/settings.php:94
+msgid "Enable Shipping Address Book"
+msgstr "सक्षम शिपिंग पते की किताब"
+
+#: backend/templates/views/address_book/settings.php:97
+msgid "Turn ON the switch to enable address book for shipping."
+msgstr "स्विच पर बारी सक्षम करने के लिए, पते की किताब के लिए शिपिंग । "
+
+#: backend/templates/views/address_book/settings.php:101
+msgid "Address Field on Checkout Page"
+msgstr "पता फ़ील्ड पर चेकआउट पृष्ठ"
+
+#: backend/templates/views/address_book/settings.php:104
+msgid "Billing Address Field on Checkout?"
+msgstr "बिलिंग पते क्षेत्र पर जांच?"
+
+#: backend/templates/views/address_book/settings.php:107
+msgid ""
+"Turn ON the switch to enable address field selection for billing on checkout "
+"page."
+msgstr ""
+"स्विच पर बारी सक्षम करने के लिए पता फ़ील्ड का चयन बिलिंग के लिए चेकआउट पृष्ठ "
+"पर."
+
+#: backend/templates/views/address_book/settings.php:112
+msgid "Shipping Address Field on Checkout?"
+msgstr "शिपिंग पते क्षेत्र पर जांच?"
+
+#: backend/templates/views/address_book/settings.php:115
+msgid ""
+"Turn ON the switch to enable address field selection for shipping on "
+"checkout page."
+msgstr ""
+"स्विच पर बारी सक्षम करने के लिए पता फ़ील्ड का चयन शिपिंग के लिए चेकआउट पृष्ठ "
+"पर."
+
+#: backend/templates/views/address_book/settings.php:124
+#: backend/templates/views/floating_cart/settings.php:390
+msgid "Typography Settings"
+msgstr "टाइपोग्राफी सेटिंग्स"
+
+#: backend/templates/views/address_book/settings.php:127
+#: backend/templates/views/shipping_bar/settings.php:208
+msgid "Checkout Page"
+msgstr "चेकआउट पृष्ठ"
+
+#: backend/templates/views/address_book/settings.php:130
+msgid "Address Field Label"
+msgstr "पता फ़ील्ड लेबल"
+
+#: backend/templates/views/address_book/settings.php:133
+msgid "Set the address selection field label text on checkout page."
+msgstr "पते को सेट चयन क्षेत्र पर लेबल पाठ चेकआउट पृष्ठ."
+
+#: backend/templates/views/address_book/settings.php:137
+msgid "Account Page"
+msgstr "खाता पृष्ठ"
+
+#: backend/templates/views/address_book/settings.php:140
+msgid "Menu Title"
+msgstr "मेनू शीर्षक"
+
+#: backend/templates/views/address_book/settings.php:143
+msgid "Set the account page menu title for Address Book."
+msgstr "सेट खाता पृष्ठ मेनू शीर्षक के लिए पता पुस्तक."
+
+#: backend/templates/views/address_book/settings.php:148
+msgid "Billing Address Book Headline"
+msgstr "बिलिंग पते की किताब के शीर्षक"
+
+#: backend/templates/views/address_book/settings.php:151
+msgid "Set the headline text of billing address book."
+msgstr "सेट शीर्षक पाठ के साथ बिलिंग पते की किताब है । "
+
+#: backend/templates/views/address_book/settings.php:156
+msgid "Shipping Address Book Headline"
+msgstr "शिपिंग पते की किताब के शीर्षक"
+
+#: backend/templates/views/address_book/settings.php:159
+msgid "Set the headline text of shipping address book."
+msgstr "सेट शीर्षक पाठ के शिपिंग पते की किताब है । "
+
+#: backend/templates/views/address_book/settings.php:164
+msgid "Add Billing Address Button Text"
+msgstr "जोड़ें बिलिंग पते बटन पाठ"
+
+#: backend/templates/views/address_book/settings.php:164
+#: backend/templates/views/address_book/settings.php:181
+#: backend/templates/views/address_book/settings.php:189
+#: backend/templates/views/address_book/settings.php:198
+#: backend/templates/views/address_book/settings.php:206
+#: backend/templates/views/address_book/settings.php:214
+#: backend/templates/views/address_book/settings.php:234
+#: backend/templates/views/address_book/settings.php:245
+#: backend/templates/views/address_book/settings.php:256
+#: backend/templates/views/address_book/settings.php:267
+#: backend/templates/views/address_book/settings.php:279
+#: backend/templates/views/address_book/settings.php:292
+#: backend/templates/views/address_book/settings.php:303
+#: backend/templates/views/address_book/settings.php:314
+#: backend/templates/views/address_book/settings.php:325
+#: backend/templates/views/address_book/settings.php:337
+#: backend/templates/views/coupon_generator/settings.php:37
+#: backend/templates/views/one_click_checkout/settings.php:216
+#: backend/templates/views/one_click_checkout/settings.php:555
+#: backend/templates/views/one_click_checkout/settings.php:572
+#: backend/templates/views/one_click_checkout/settings.php:588
+#: backend/templates/views/one_click_checkout/settings.php:599
+#: backend/templates/views/one_click_checkout/settings.php:610
+#: backend/templates/views/one_click_checkout/settings.php:652
+#: backend/templates/views/one_click_checkout/settings.php:665
+#: backend/templates/views/one_click_checkout/settings.php:679
+#: backend/templates/views/one_click_checkout/settings.php:725
+#: backend/templates/views/pdf_invoice/settings.php:343
+#: backend/templates/views/pdf_invoice/settings.php:354
+#: backend/templates/views/pdf_invoice/settings.php:416
+#: backend/templates/views/pdf_invoice/settings.php:425
+#: backend/templates/views/pdf_invoice/settings.php:524
+#: backend/templates/views/pdf_invoice/settings.php:536
+#: backend/templates/views/product_filter/settings.php:287
+#: backend/templates/views/product_filter/settings.php:302
+#: backend/templates/views/product_filter/settings.php:319
+#: backend/templates/views/product_filter/settings.php:335
+#: backend/templates/views/product_filter/settings.php:351
+#: backend/templates/views/product_filter/settings.php:401
+#: backend/templates/views/product_filter/settings.php:418
+#: backend/templates/views/product_filter/settings.php:436
+#: backend/templates/views/product_filter/settings.php:453
+#: backend/templates/views/product_filter/settings.php:515
+#: backend/templates/views/product_filter/settings.php:532
+#: backend/templates/views/product_filter/settings.php:550
+#: backend/templates/views/product_filter/settings.php:567
+#: backend/templates/views/product_filter/settings.php:615
+#: backend/templates/views/product_filter/settings.php:631
+#: backend/templates/views/product_filter/settings.php:747
+#: backend/templates/views/product_filter/settings.php:764
+#: backend/templates/views/product_filter/settings.php:782
+#: backend/templates/views/product_filter/settings.php:800
+#: backend/templates/views/product_filter/settings.php:818
+#: backend/templates/views/product_filter/settings.php:878
+#: backend/templates/views/product_filter/settings.php:894
+#: backend/templates/views/product_filter/settings.php:911
+#: backend/templates/views/product_filter/settings.php:929
+#: backend/templates/views/product_filter/settings.php:947
+#: backend/templates/views/product_sticky_bar/settings.php:205
+#: backend/templates/views/product_sticky_bar/settings.php:317
+#: backend/templates/views/product_sticky_bar/settings.php:333
+#: backend/templates/views/product_sticky_bar/settings.php:349
+#: backend/templates/views/product_sticky_bar/settings.php:366
+#: backend/templates/views/product_sticky_bar/settings.php:393
+#: backend/templates/views/product_sticky_bar/settings.php:408
+#: backend/templates/views/product_sticky_bar/settings.php:434
+#: backend/templates/views/product_sticky_bar/settings.php:460
+#: backend/templates/views/product_sticky_bar/settings.php:476
+#: backend/templates/views/product_sticky_bar/settings.php:493
+#: backend/templates/views/product_sticky_bar/settings.php:509
+#: backend/templates/views/product_sticky_bar/settings.php:523
+#: backend/templates/views/shipping_bar/settings.php:154
+#: backend/templates/views/shipping_bar/settings.php:167
+#: backend/templates/views/shipping_bar/settings.php:241
+#: backend/templates/views/shipping_bar/settings.php:252
+#: backend/templates/views/shipping_bar/settings.php:263
+#: backend/templates/views/shipping_bar/settings.php:283
+#: backend/templates/views/shipping_bar/settings.php:291
+#: backend/templates/views/shipping_bar/settings.php:299
+#: backend/templates/views/shipping_bar/settings.php:316
+#: backend/templates/views/shipping_bar/settings.php:324
+#: backend/templates/views/shipping_bar/settings.php:332
+#: backend/templates/views/shipping_bar/settings.php:373
+#: backend/templates/views/shipping_bar/settings.php:409
+#: backend/templates/views/shipping_bar/settings.php:420
+#: backend/templates/views/shipping_bar/settings.php:466
+#: backend/templates/views/shipping_bar/settings.php:504
+#: backend/templates/views/shipping_bar/settings.php:515
+#: backend/templates/views/shipping_bar/settings.php:527
+msgid "(Pro)"
+msgstr "(प्रो)"
+
+#: backend/templates/views/address_book/settings.php:167
+msgid "Set the button text of add new billing address."
+msgstr "सेट बटन पाठ जोड़ने के नए बिलिंग पते । "
+
+#: backend/templates/views/address_book/settings.php:173
+msgid "Add Shipping Address Button Text"
+msgstr "शिपिंग पता जोड़ें बटन पाठ"
+
+#: backend/templates/views/address_book/settings.php:176
+msgid "Set the button text of add new shipping address."
+msgstr "सेट बटन पाठ जोड़ने के नए शिपिंग पते । "
+
+#: backend/templates/views/address_book/settings.php:181
+msgid "Billing Address Book Empty Message "
+msgstr ""
+
+#: backend/templates/views/address_book/settings.php:184
+msgid "Set the empty message text of billing address book."
+msgstr "सेट खाली संदेश पाठ के साथ बिलिंग पते की किताब है । "
+
+#: backend/templates/views/address_book/settings.php:189
+msgid "Shipping Address Book Empty Message "
+msgstr ""
+
+#: backend/templates/views/address_book/settings.php:192
+msgid "Set the empty message text of shipping address book."
+msgstr "सेट खाली संदेश पाठ के शिपिंग पते की किताब है । "
+
+#: backend/templates/views/address_book/settings.php:198
+msgid "Address Edit Link Text"
+msgstr "पता संपादित करें लिंक पाठ"
+
+#: backend/templates/views/address_book/settings.php:201
+msgid "Set the address edit link text."
+msgstr "सेट पता संपादित करें कड़ी पाठ."
+
+#: backend/templates/views/address_book/settings.php:206
+msgid "Address Delete Link Text"
+msgstr "पता हटाएं लिंक पाठ"
+
+#: backend/templates/views/address_book/settings.php:209
+msgid "Set the address delete link text."
+msgstr "पते को सेट हटाएं लिंक के पाठ."
+
+#: backend/templates/views/address_book/settings.php:214
+msgid "Address Make Primary Link Text"
+msgstr "पता बनाने के लिए प्राथमिक पाठ लिंक"
+
+#: backend/templates/views/address_book/settings.php:217
+msgid "Set the address make primary link text."
+msgstr "पते को सेट बनाने के लिए प्राथमिक पाठ लिंक."
+
+#: backend/templates/views/address_book/settings.php:228
+#: backend/templates/views/shipping_bar/settings.php:344
+msgid "Customize Styles"
+msgstr "अनुकूलित शैलियों"
+
+#: backend/templates/views/address_book/settings.php:234
+msgid "Add Button Background Color"
+msgstr "जोड़ें बटन पृष्ठभूमि रंग"
+
+#: backend/templates/views/address_book/settings.php:238
+#: backend/templates/views/address_book/settings.php:249
+#: backend/templates/views/address_book/settings.php:260
+#: backend/templates/views/address_book/settings.php:271
+#: backend/templates/views/address_book/settings.php:283
+#: backend/templates/views/address_book/settings.php:296
+#: backend/templates/views/address_book/settings.php:307
+#: backend/templates/views/address_book/settings.php:318
+#: backend/templates/views/address_book/settings.php:329
+#: backend/templates/views/address_book/settings.php:341
+#: backend/templates/views/floating_cart/settings.php:562
+#: backend/templates/views/floating_cart/settings.php:577
+#: backend/templates/views/floating_cart/settings.php:592
+#: backend/templates/views/floating_cart/settings.php:607
+#: backend/templates/views/floating_cart/settings.php:622
+#: backend/templates/views/floating_cart/settings.php:637
+#: backend/templates/views/floating_cart/settings.php:703
+#: backend/templates/views/floating_cart/settings.php:718
+#: backend/templates/views/floating_cart/settings.php:783
+#: backend/templates/views/floating_cart/settings.php:817
+#: backend/templates/views/floating_cart/settings.php:831
+#: backend/templates/views/floating_cart/settings.php:845
+#: backend/templates/views/floating_cart/settings.php:1012
+#: backend/templates/views/floating_cart/settings.php:1026
+#: backend/templates/views/floating_cart/settings.php:1040
+#: backend/templates/views/floating_cart/settings.php:1054
+#: backend/templates/views/one_click_checkout/settings.php:530
+#: backend/templates/views/one_click_checkout/settings.php:545
+#: backend/templates/views/one_click_checkout/settings.php:562
+#: backend/templates/views/one_click_checkout/settings.php:579
+#: backend/templates/views/product_filter/settings.php:293
+#: backend/templates/views/product_filter/settings.php:308
+#: backend/templates/views/product_filter/settings.php:325
+#: backend/templates/views/product_filter/settings.php:341
+#: backend/templates/views/product_filter/settings.php:357
+#: backend/templates/views/product_filter/settings.php:407
+#: backend/templates/views/product_filter/settings.php:425
+#: backend/templates/views/product_filter/settings.php:442
+#: backend/templates/views/product_filter/settings.php:460
+#: backend/templates/views/product_filter/settings.php:521
+#: backend/templates/views/product_filter/settings.php:539
+#: backend/templates/views/product_filter/settings.php:556
+#: backend/templates/views/product_filter/settings.php:574
+#: backend/templates/views/product_filter/settings.php:621
+#: backend/templates/views/product_filter/settings.php:637
+#: backend/templates/views/product_filter/settings.php:753
+#: backend/templates/views/product_filter/settings.php:771
+#: backend/templates/views/product_filter/settings.php:789
+#: backend/templates/views/product_filter/settings.php:807
+#: backend/templates/views/product_filter/settings.php:825
+#: backend/templates/views/product_filter/settings.php:884
+#: backend/templates/views/product_filter/settings.php:900
+#: backend/templates/views/product_filter/settings.php:918
+#: backend/templates/views/product_filter/settings.php:936
+#: backend/templates/views/product_filter/settings.php:954
+#: backend/templates/views/product_sticky_bar/settings.php:323
+#: backend/templates/views/product_sticky_bar/settings.php:339
+#: backend/templates/views/product_sticky_bar/settings.php:356
+#: backend/templates/views/product_sticky_bar/settings.php:372
+#: backend/templates/views/product_sticky_bar/settings.php:399
+#: backend/templates/views/product_sticky_bar/settings.php:415
+#: backend/templates/views/product_sticky_bar/settings.php:440
+#: backend/templates/views/product_sticky_bar/settings.php:466
+#: backend/templates/views/product_sticky_bar/settings.php:482
+#: backend/templates/views/product_sticky_bar/settings.php:499
+#: backend/templates/views/shipping_bar/settings.php:245
+#: backend/templates/views/shipping_bar/settings.php:256
+#: backend/templates/views/shipping_bar/settings.php:267
+#: backend/templates/views/shipping_bar/settings.php:377
+#: backend/templates/views/shipping_bar/settings.php:413
+#: backend/templates/views/shipping_bar/settings.php:424
+#: backend/templates/views/shipping_bar/settings.php:470
+#: backend/templates/views/shipping_bar/settings.php:508
+#: backend/templates/views/shipping_bar/settings.php:519
+#: backend/templates/views/shipping_bar/settings.php:531
+msgid "Select Color"
+msgstr "का चयन करें रंग"
+
+#: backend/templates/views/address_book/settings.php:240
+msgid "Set the add new button background color."
+msgstr "सेट नई जोड़ें बटन पृष्ठभूमि रंग । "
+
+#: backend/templates/views/address_book/settings.php:245
+msgid "Add Button Text Color"
+msgstr "जोड़ें बटन पाठ रंग"
+
+#: backend/templates/views/address_book/settings.php:251
+msgid "Set the add new button text color."
+msgstr "सेट नई जोड़ें बटन पाठ का रंग । "
+
+#: backend/templates/views/address_book/settings.php:256
+msgid "Add Button Background Hover Color"
+msgstr "जोड़ें बटन पृष्ठभूमि मंडराना रंग"
+
+#: backend/templates/views/address_book/settings.php:262
+msgid "Set the add new button background color on hover."
+msgstr "सेट नई जोड़ें बटन पृष्ठभूमि मंडराना पर रंग । "
+
+#: backend/templates/views/address_book/settings.php:267
+msgid "Add Button Text Hover Color"
+msgstr "जोड़ें बटन पाठ मंडराना रंग"
+
+#: backend/templates/views/address_book/settings.php:273
+msgid "Set the add new button text color on hover."
+msgstr "सेट नई जोड़ें बटन पाठ मंडराना पर रंग । "
+
+#: backend/templates/views/address_book/settings.php:279
+msgid "Add Button Border Hover Color"
+msgstr "जोड़ें बटन सीमा मंडराना रंग"
+
+#: backend/templates/views/address_book/settings.php:285
+msgid "Set the add new button border color on hover."
+msgstr "सेट नई जोड़ें बटन सीमा रंग पर मंडराना."
+
+#: backend/templates/views/address_book/settings.php:292
+msgid "Address Card Background Color"
+msgstr "पता कार्ड पृष्ठभूमि रंग"
+
+#: backend/templates/views/address_book/settings.php:298
+msgid "Set the background color of address card."
+msgstr "सेट पृष्ठभूमि रंग के पते पर कार्ड."
+
+#: backend/templates/views/address_book/settings.php:303
+msgid "Address Card Border Color "
+msgstr ""
+
+#: backend/templates/views/address_book/settings.php:309
+msgid "Set the border color of address card."
+msgstr "सेट की सीमा के रंग के पते पर कार्ड."
+
+#: backend/templates/views/address_book/settings.php:314
+msgid "Address Text Color"
+msgstr "पते के पाठ का रंग"
+
+#: backend/templates/views/address_book/settings.php:320
+msgid "Set the text color of address inside address card."
+msgstr "सेट पाठ का रंग पते के अंदर पता कार्ड."
+
+#: backend/templates/views/address_book/settings.php:325
+msgid "Address Card Footer Background Color"
+msgstr "पता कार्ड पाद लेख पृष्ठभूमि रंग"
+
+#: backend/templates/views/address_book/settings.php:331
+msgid "Set the footer background color of address card."
+msgstr "सेट पाद लेख पृष्ठभूमि रंग के पते पर कार्ड."
+
+#: backend/templates/views/address_book/settings.php:337
+msgid "Address Card Link Text Color"
+msgstr "पता कार्ड लिंक पाठ रंग"
+
+#: backend/templates/views/address_book/settings.php:343
+msgid "Set the link text color of address card."
+msgstr "सेट लिंक पाठ रंग के पते पर कार्ड."
+
+#: backend/templates/views/address_book/settings.php:354
+#: backend/templates/views/coupon_generator/settings.php:217
+#: backend/templates/views/floating_cart/settings.php:1063
+#: backend/templates/views/one_click_checkout/settings.php:773
+#: backend/templates/views/pdf_invoice/settings.php:766
+#: backend/templates/views/product_filter/settings.php:970
+#: backend/templates/views/product_sticky_bar/settings.php:538
+#: backend/templates/views/shipping_bar/settings.php:559
+msgid "Save Settings"
+msgstr "सेटिंग्स को बचाने"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:6
+#: backend/templates/views/coupon_generator/settings.php:4
+#: backend/templates/views/one_click_checkout/settings.php:66
+#: backend/templates/views/pdf_invoice/settings.php:64
+#: backend/templates/views/product_sticky_bar/settings.php:48
+#: backend/templates/views/url_coupon/settings.php:5
+msgid "wcEazy"
+msgstr "wcEazy"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:17
+#: backend/templates/views/modules.php:47
+msgid "Auto Apply Coupon"
+msgstr "ऑटो कूपन लागू करें"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:33
+#: backend/templates/views/url_coupon/settings.php:27
+msgid "Per page view"
+msgstr "प्रति पृष्ठ देखें"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:35
+msgid "10"
+msgstr "10"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:36
+msgid "20"
+msgstr "20"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:37
+msgid "30"
+msgstr "30"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:38
+msgid "40"
+msgstr "40"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:39
+msgid "50"
+msgstr "50"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:40
+msgid "60"
+msgstr "60"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:41
+msgid "70"
+msgstr "70"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:42
+msgid "80"
+msgstr "80"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:43
+msgid "90"
+msgstr "90"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:44
+msgid "100"
+msgstr "100"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:47
+msgid "Bulk actions"
+msgstr "थोक कार्यों"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:48
+msgid "Add to auto apply"
+msgstr "जोड़ने के लिए ऑटो लागू"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:49
+msgid "Remove from auto apply"
+msgstr "दूर से ऑटो लागू"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:53
+#: backend/templates/views/url_coupon/settings.php:42
+msgid "Show all types"
+msgstr "दिखाने के सभी प्रकार"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:54
+#: backend/templates/views/bogo_deal/settings.php:75
+#: backend/templates/views/coupon_generator/settings.php:85
+#: backend/templates/views/url_coupon/settings.php:43
+msgid "Percentage discount"
+msgstr "प्रतिशत छूट"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:55
+#: backend/templates/views/coupon_generator/settings.php:86
+#: backend/templates/views/url_coupon/settings.php:44
+msgid "Fixed cart discount"
+msgstr "फिक्स्ड गाड़ी छूट"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:56
+#: backend/templates/views/coupon_generator/settings.php:87
+#: backend/templates/views/url_coupon/settings.php:45
+msgid "Fixed product discount"
+msgstr "फिक्स्ड उत्पाद छूट"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:73
+#: backend/templates/views/url_coupon/settings.php:57
+msgid "Code"
+msgstr "कोड"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:74
+#: backend/templates/views/coupon_generator/settings.php:36
+#: backend/templates/views/url_coupon/settings.php:58
+msgid "Coupon Type"
+msgstr "कूपन के प्रकार"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:75
+#: backend/templates/views/url_coupon/settings.php:59
+msgid "Coupon Amount"
+msgstr "कूपन राशि"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:76
+#: backend/templates/views/url_coupon/settings.php:60
+msgid "Description"
+msgstr "विवरण"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:77
+#: backend/templates/views/url_coupon/settings.php:61
+msgid "Product IDs"
+msgstr "उत्पाद आईडी"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:78
+#: backend/templates/views/url_coupon/settings.php:62
+msgid "Usage/Limit"
+msgstr "उपयोग/सीमा"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:79
+#: backend/templates/views/url_coupon/settings.php:63
+msgid "Expiry Date"
+msgstr "समाप्ति की तारीख"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:80
+msgid "Is Auto Coupon"
+msgstr "ऑटो कूपन"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:81
+#: backend/templates/views/url_coupon/settings.php:65
+msgid "Action"
+msgstr "कार्रवाई"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:95
+msgid "Are you sure?"
+msgstr "आप यकीन कर रहे हैं?"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:97
+msgid "No"
+msgstr "कोई"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:98
+msgid "Yes"
+msgstr "हाँ"
+
+#: backend/templates/views/bogo_deal/settings.php:17
+#: backend/templates/views/modules.php:67
+msgid "BOGO Deal"
+msgstr "BOGO सौदा"
+
+#: backend/templates/views/bogo_deal/settings.php:23
+msgid "Add Rule"
+msgstr "नियम जोड़ें"
+
+#: backend/templates/views/bogo_deal/settings.php:24
+msgid "Save Changes"
+msgstr "परिवर्तन सहेजें"
+
+#: backend/templates/views/bogo_deal/settings.php:35
+msgid "No pricing rule has been created"
+msgstr "कोई मूल्य निर्धारण नियम बनाया गया है"
+
+#: backend/templates/views/bogo_deal/settings.php:36
+msgid "Create First Rule"
+msgstr "बनाने के लिए पहला नियम"
+
+#: backend/templates/views/bogo_deal/settings.php:56
+msgid "Untitled Rule"
+msgstr "शीर्षकहीन नियम"
+
+#: backend/templates/views/bogo_deal/settings.php:66
+msgid "Delete Rule"
+msgstr "हटाने के नियम"
+
+#: backend/templates/views/bogo_deal/settings.php:72
+msgid "Discount Type"
+msgstr "छूट के प्रकार"
+
+#: backend/templates/views/bogo_deal/settings.php:74
+#: backend/templates/views/bogo_deal/settings.php:110
+#: backend/templates/views/bogo_deal/settings.php:128
+#: backend/templates/views/coupon_generator/settings.php:42
+#: backend/templates/views/coupon_generator/settings.php:52
+#: backend/templates/views/coupon_generator/settings.php:84
+#: backend/templates/views/coupon_generator/settings.php:144
+#: backend/templates/views/coupon_generator/settings.php:155
+#: backend/templates/views/coupon_generator/settings.php:166
+#: backend/templates/views/coupon_generator/settings.php:177
+#: backend/templates/views/floating_cart/settings.php:178
+#: backend/templates/views/floating_cart/settings.php:532
+#: backend/templates/views/floating_cart/settings.php:866
+#: backend/templates/views/floating_cart/settings.php:885
+#: backend/templates/views/floating_cart/settings.php:944
+#: backend/templates/views/floating_cart/settings.php:986
+#: backend/templates/views/one_click_checkout/settings.php:682
+#: backend/templates/views/one_click_checkout/settings.php:728
+#: backend/templates/views/pdf_invoice/settings.php:329
+#: backend/templates/views/pdf_invoice/settings.php:357
+#: backend/templates/views/product_filter/settings.php:203
+#: backend/templates/views/product_sticky_bar/settings.php:137
+#: backend/templates/views/product_sticky_bar/settings.php:208
+#: backend/templates/views/shipping_bar/settings.php:144
+#: backend/templates/views/shipping_bar/settings.php:157
+#: backend/templates/views/shipping_bar/settings.php:170
+#: backend/templates/views/shipping_bar/settings.php:200
+#: backend/templates/views/shipping_bar/settings.php:222
+#: backend/templates/views/shipping_bar/settings.php:352
+#: backend/templates/views/shipping_bar/settings.php:364
+#: backend/templates/views/shipping_bar/settings.php:443
+msgid "Please select"
+msgstr "का चयन करें"
+
+#: backend/templates/views/bogo_deal/settings.php:76
+msgid "Fixed discount"
+msgstr "तय की छूट"
+
+#: backend/templates/views/bogo_deal/settings.php:80
+msgid "Discount Amount"
+msgstr "छूट राशि"
+
+#: backend/templates/views/bogo_deal/settings.php:85
+msgid "Products to Buy"
+msgstr "उत्पादों को खरीदने के लिए"
+
+#: backend/templates/views/bogo_deal/settings.php:94
+msgid "Products to Gift"
+msgstr "उत्पादों के लिए उपहार"
+
+#: backend/templates/views/bogo_deal/settings.php:108
+msgid "Productv"
+msgstr "Productv"
+
+#: backend/templates/views/bogo_deal/settings.php:114
+#: backend/templates/views/bogo_deal/settings.php:132
+msgid "Required Quantity"
+msgstr "आवश्यक मात्रा"
+
+#: backend/templates/views/bogo_deal/settings.php:126
+msgid "Product"
+msgstr "उत्पाद"
+
+#: backend/templates/views/coupon_generator/settings.php:13
+#: backend/templates/views/modules.php:87
+msgid "Coupon Generator"
+msgstr "कूपन जनरेटर"
+
+#: backend/templates/views/coupon_generator/settings.php:25
+#: backend/templates/views/pdf_invoice/settings.php:415
+msgid "Prefix"
+msgstr "उपसर्ग"
+
+#: backend/templates/views/coupon_generator/settings.php:26
+msgid "Coupon prefix"
+msgstr "कूपन उपसर्ग"
+
+#: backend/templates/views/coupon_generator/settings.php:30
+msgid "Number of Coupons"
+msgstr "कूपन की संख्या"
+
+#: backend/templates/views/coupon_generator/settings.php:31
+msgid "Total number of coupons"
+msgstr "कुल कूपन की संख्या"
+
+#: backend/templates/views/coupon_generator/settings.php:43
+msgid "Characters"
+msgstr "अक्षर"
+
+#: backend/templates/views/coupon_generator/settings.php:44
+msgid "Numbers (Available in Pro)"
+msgstr "संख्या (प्रो)"
+
+#: backend/templates/views/coupon_generator/settings.php:45
+msgid "Characters & Numbers (Available in Pro)"
+msgstr "अक्षर और संख्या (प्रो)"
+
+#: backend/templates/views/coupon_generator/settings.php:50
+msgid "Coupons Character Length"
+msgstr "कूपन चरित्र की लंबाई"
+
+#: backend/templates/views/coupon_generator/settings.php:67
+msgid "Usage Restriction"
+msgstr "उपयोग प्रतिबंध"
+
+#: backend/templates/views/coupon_generator/settings.php:70
+msgid "Usage Limits"
+msgstr "उपयोग की सीमा"
+
+#: backend/templates/views/coupon_generator/settings.php:82
+msgid "Discount type"
+msgstr "छूट के प्रकार"
+
+#: backend/templates/views/coupon_generator/settings.php:89
+msgid "Choose the specific discount type."
+msgstr "का चयन विशिष्ट छूट के प्रकार."
+
+#: backend/templates/views/coupon_generator/settings.php:93
+msgid "Coupon amount"
+msgstr "कूपन राशि"
+
+#: backend/templates/views/coupon_generator/settings.php:98
+msgid "Allow free shipping"
+msgstr "की अनुमति है नि: शुल्क शिपिंग"
+
+#: backend/templates/views/coupon_generator/settings.php:101
+msgid "Check this box if the coupon grants free shipping. A"
+msgstr "इस बॉक्स को चेक करें यदि कूपन अनुदान नि: शुल्क शिपिंग । एक"
+
+#: backend/templates/views/coupon_generator/settings.php:102
+msgid "free shipping method"
+msgstr "मुफ़्त शिपिंग विधि"
+
+#: backend/templates/views/coupon_generator/settings.php:103
+msgid ""
+"must be enabled in your shipping zone and be set to require \"a valid free "
+"shipping coupon\" (see the \"Free Shipping Requires\" setting)."
+msgstr ""
+"में सक्षम होना चाहिए अपने शिपिंग क्षेत्र और सेट किया जा करने के लिए की "
+"आवश्यकता \"एक वैध नि: शुल्क शिपिंग कूपन\" (देखें \"नि: शुल्क शिपिंग की "
+"आवश्यकता है\" की स्थापना)."
+
+#: backend/templates/views/coupon_generator/settings.php:108
+msgid "Coupon expiry date"
+msgstr "कूपन समाप्ति की तारीख"
+
+#: backend/templates/views/coupon_generator/settings.php:109
+msgid "YYY-MM-DD"
+msgstr "YYY-MM-DD"
+
+#: backend/templates/views/coupon_generator/settings.php:116
+msgid "Usage restriction"
+msgstr "उपयोग प्रतिबंध"
+
+#: backend/templates/views/coupon_generator/settings.php:120
+msgid "Minimum spend"
+msgstr "न्यूनतम खर्च करते हैं"
+
+#: backend/templates/views/coupon_generator/settings.php:121
+msgid "No minimum"
+msgstr "कोई न्यूनतम"
+
+#: backend/templates/views/coupon_generator/settings.php:124
+msgid "Maximum spend"
+msgstr "अधिकतम खर्च"
+
+#: backend/templates/views/coupon_generator/settings.php:125
+msgid "No maximum"
+msgstr "कोई अधिकतम"
+
+#: backend/templates/views/coupon_generator/settings.php:128
+msgid "Individual use only"
+msgstr "केवल व्यक्तिगत उपयोग"
+
+#: backend/templates/views/coupon_generator/settings.php:131
+msgid "If coupon can/t be used with others, mark this box."
+msgstr ""
+"यदि कूपन कर सकते हैं/टी इस्तेमाल किया जा सकता है, दूसरों के साथ निशान इस "
+"बॉक्स."
+
+#: backend/templates/views/coupon_generator/settings.php:135
+msgid "Exclude sale items"
+msgstr "बाहर बिक्री आइटम"
+
+#: backend/templates/views/coupon_generator/settings.php:138
+msgid ""
+"If it/s on sale, skip the coupon. The coupon only applies to regular-priced "
+"items, whether bought alone or in the cart."
+msgstr ""
+"यदि यह/एस, बिक्री पर छोड़ कूपन. कूपन केवल लागू होता है के लिए नियमित रूप से "
+"कीमत, चाहे आइटम खरीदा अकेले या गाड़ी में."
+
+#: backend/templates/views/coupon_generator/settings.php:142
+msgid "Products"
+msgstr "उत्पादों"
+
+#: backend/templates/views/coupon_generator/settings.php:153
+#: backend/templates/views/shipping_bar/settings.php:167
+msgid "Leave out items."
+msgstr "छोड़ बाहर आइटम नहीं है । "
+
+#: backend/templates/views/coupon_generator/settings.php:164
+msgid "Product categories"
+msgstr "उत्पाद श्रेणियाँ"
+
+#: backend/templates/views/coupon_generator/settings.php:175
+msgid "Exclude categories"
+msgstr "बाहर श्रेणियाँ"
+
+#: backend/templates/views/coupon_generator/settings.php:186
+msgid "Allowed emails"
+msgstr "की अनुमति ईमेल"
+
+#: backend/templates/views/coupon_generator/settings.php:187
+msgid "No restrictions"
+msgstr "कोई प्रतिबंध नहीं है"
+
+#: backend/templates/views/coupon_generator/settings.php:194
+msgid "Usage limits"
+msgstr "उपयोग की सीमा"
+
+#: backend/templates/views/coupon_generator/settings.php:198
+msgid "How many times you can use it."
+msgstr "कैसे कई बार आप कर सकते हैं इसे का उपयोग करें."
+
+#: backend/templates/views/coupon_generator/settings.php:202
+msgid "Limit usage to X items"
+msgstr "उपयोग को सीमित करने के लिए X आइटम"
+
+#: backend/templates/views/coupon_generator/settings.php:206
+msgid "Usage limit per user"
+msgstr "उपयोग की सीमा प्रति उपयोगकर्ता"
+
+#: backend/templates/views/coupon_generator/settings.php:230
+msgid "Generating Coupons"
+msgstr "कूपन सृजन"
+
+#: backend/templates/views/coupon_generator/settings.php:234
+msgid "Coupons Generated Successfully!"
+msgstr "कूपन उत्पन्न सफलतापूर्वक!"
+
+#: backend/templates/views/coupon_generator/settings.php:235
+msgid "Export as CSV"
+msgstr "CSV के रूप में निर्यात"
+
+#: backend/templates/views/floating_cart/settings.php:104
+#: backend/templates/views/modules.php:167
+msgid "Floating Cart"
+msgstr "अस्थायी गाड़ी"
+
+#: backend/templates/views/floating_cart/settings.php:124
+msgid "Cart Header"
+msgstr "गाड़ी हैडर"
+
+#: backend/templates/views/floating_cart/settings.php:127
+msgid "Cart Body"
+msgstr "गाड़ी शरीर"
+
+#: backend/templates/views/floating_cart/settings.php:130
+msgid "Cart Footer"
+msgstr "गाड़ी पाद लेख"
+
+#: backend/templates/views/floating_cart/settings.php:136
+msgid "Redirect URLs"
+msgstr "यूआरएल अनुप्रेषित"
+
+#: backend/templates/views/floating_cart/settings.php:139
+#: backend/templates/views/floating_cart/settings.php:513
+msgid "General Style"
+msgstr "सामान्य शैली"
+
+#: backend/templates/views/floating_cart/settings.php:142
+#: backend/templates/views/floating_cart/settings.php:660
+msgid "Header Style"
+msgstr "हैडर शैली"
+
+#: backend/templates/views/floating_cart/settings.php:145
+#: backend/templates/views/floating_cart/settings.php:730
+msgid "Content Style"
+msgstr "सामग्री शैली"
+
+#: backend/templates/views/floating_cart/settings.php:148
+#: backend/templates/views/floating_cart/settings.php:857
+msgid "Basket Style"
+msgstr "टोकरी शैली"
+
+#: backend/templates/views/floating_cart/settings.php:164
+msgid "Enable Auto Open Cart"
+msgstr "सक्षम ऑटो ओपन कार्ट"
+
+#: backend/templates/views/floating_cart/settings.php:169
+msgid "Turn on/off the auto-open floating cart menu."
+msgstr "पर बारी/बंद ऑटो-खुला अस्थायी कार्ट मेनू."
+
+#: backend/templates/views/floating_cart/settings.php:175
+msgid "Basket Count"
+msgstr "टोकरी गिनती"
+
+#: backend/templates/views/floating_cart/settings.php:181
+msgid "Number Of Products"
+msgstr "उत्पादों की संख्या"
+
+#: backend/templates/views/floating_cart/settings.php:184
+msgid "Total Number Of Items"
+msgstr "वस्तुओं की कुल संख्या"
+
+#: backend/templates/views/floating_cart/settings.php:191
+msgid "Select Don't Show Pages"
+msgstr "का चयन दिखाने के लिए नहीं पृष्ठों"
+
+#: backend/templates/views/floating_cart/settings.php:194
+#: backend/templates/views/pdf_invoice/settings.php:306
+msgid " Please select"
+msgstr ""
+
+#: backend/templates/views/floating_cart/settings.php:201
+msgid "Please select pages where you do not show floating cart."
+msgstr "कृपया पृष्ठों का चयन करें, जहां आप दिखाने के लिए नहीं चल कार्ट."
+
+#: backend/templates/views/floating_cart/settings.php:208
+msgid "Header Settings"
+msgstr "हैडर सेटिंग"
+
+#: backend/templates/views/floating_cart/settings.php:214
+msgid "Show Basket Icon"
+msgstr "शो की टोकरी आइकन"
+
+#: backend/templates/views/floating_cart/settings.php:219
+msgid "Turn off if you don/t want to show the basket icon in the cart header."
+msgstr ""
+"बंद यदि आप अपनी/टी दिखाने के लिए चाहते हैं की टोकरी आइकन गाड़ी में हैडर."
+
+#: backend/templates/views/floating_cart/settings.php:225
+msgid "Show Close Icon"
+msgstr "शो बंद आइकन"
+
+#: backend/templates/views/floating_cart/settings.php:230
+msgid "Show/Hide the close icon on the cart header."
+msgstr "दिखाने/छिपाने के पास आइकन पर गाड़ी हैडर."
+
+#: backend/templates/views/floating_cart/settings.php:240
+msgid "Body Settings"
+msgstr "शरीर सेटिंग्स"
+
+#: backend/templates/views/floating_cart/settings.php:246
+#: backend/templates/views/product_sticky_bar/settings.php:245
+msgid "Show Product Image"
+msgstr "उत्पाद छवि दिखाने के लिए"
+
+#: backend/templates/views/floating_cart/settings.php:251
+msgid "Show/Hide the product image on the cart menu."
+msgstr "दिखाएँ/छुपाएँ उत्पाद छवि पर गाड़ी मेनू."
+
+#: backend/templates/views/floating_cart/settings.php:257
+msgid "Show Product Name"
+msgstr "उत्पाद का नाम दिखाने के लिए"
+
+#: backend/templates/views/floating_cart/settings.php:262
+msgid "Show/Hide the product name on the cart menu."
+msgstr "दिखाएँ/छुपाएँ उत्पाद का नाम गाड़ी पर मेनू."
+
+#: backend/templates/views/floating_cart/settings.php:268
+msgid "Show Product Unit Price"
+msgstr "दिखाएँ उत्पाद की इकाई मूल्य"
+
+#: backend/templates/views/floating_cart/settings.php:273
+msgid "Show/Hide the product unit price on the cart menu."
+msgstr "दिखाने/छिपाने के उत्पाद की इकाई मूल्य की गाड़ी पर मेनू."
+
+#: backend/templates/views/floating_cart/settings.php:279
+msgid "Show Product Price Total"
+msgstr "दिखाएँ उत्पाद की कीमत कुल"
+
+#: backend/templates/views/floating_cart/settings.php:284
+msgid "Show/Hide the product price total on the cart menu."
+msgstr "दिखाने/छिपाने के उत्पाद की कीमत पर कुल कार्ट मेनू."
+
+#: backend/templates/views/floating_cart/settings.php:290
+msgid "Allow Deleting Item From Cart"
+msgstr "को हटाने की अनुमति गाड़ी से आइटम"
+
+#: backend/templates/views/floating_cart/settings.php:295
+msgid "Enable/disable the deleting item option on the cart menu."
+msgstr "सक्षम/अक्षम आइटम को हटाने के विकल्प पर गाड़ी मेनू."
+
+#: backend/templates/views/floating_cart/settings.php:301
+msgid "Allow Quantity Update"
+msgstr "की अनुमति मात्रा अद्यतन"
+
+#: backend/templates/views/floating_cart/settings.php:306
+msgid "Show/Hide the quantity update option on the cart menu."
+msgstr "दिखाएँ/छुपाएँ मात्रा अद्यतन विकल्प गाड़ी पर मेनू."
+
+#: backend/templates/views/floating_cart/settings.php:315
+msgid "Footer Settings"
+msgstr "पाद सेटिंग्स"
+
+#: backend/templates/views/floating_cart/settings.php:321
+msgid "Footer Position Fixed"
+msgstr "पाद लेख की स्थिति तय"
+
+#: backend/templates/views/floating_cart/settings.php:326
+msgid "Enable/Disable the fixed footer position on the cart."
+msgstr "सक्षम/अक्षम फिक्स्ड पाद लेख की स्थिति पर गाड़ी."
+
+#: backend/templates/views/floating_cart/settings.php:332
+msgid "Show Subtotal Number"
+msgstr "दिखाने आधा संख्या"
+
+#: backend/templates/views/floating_cart/settings.php:337
+msgid "Show/Hide the subtotal amount on the cart menu."
+msgstr "दिखाने/छिपाने के आधा राशि पर गाड़ी मेनू."
+
+#: backend/templates/views/floating_cart/settings.php:343
+msgid "Show Discount Amoun"
+msgstr "शो छूट अमुन"
+
+#: backend/templates/views/floating_cart/settings.php:348
+msgid "Show/Hide the discount amount on the cart menu."
+msgstr "दिखाएँ/छुपाएँ छूट की राशि पर गाड़ी मेनू."
+
+#: backend/templates/views/floating_cart/settings.php:354
+msgid "Show Shipping Amount?"
+msgstr "शो शिपिंग राशि?"
+
+#: backend/templates/views/floating_cart/settings.php:359
+msgid "Turn off if you don/t want to show the shipping amount on the cart."
+msgstr "बंद यदि आप अपनी/टी दिखाने के लिए चाहते हैं शिपिंग राशि पर गाड़ी."
+
+#: backend/templates/views/floating_cart/settings.php:365
+msgid "Show Total Cart Number"
+msgstr "कुल गाड़ी संख्या"
+
+#: backend/templates/views/floating_cart/settings.php:370
+msgid "Show/Hide the total cart number on the cart menu."
+msgstr "दिखाने/छिपाने के कुल गाड़ी संख्या गाड़ी पर मेनू."
+
+#: backend/templates/views/floating_cart/settings.php:376
+msgid "Show Apply Coupon Option"
+msgstr "शो कूपन लागू करें विकल्प"
+
+#: backend/templates/views/floating_cart/settings.php:381
+msgid "Show/Hide the apply coupon option on the cart menu."
+msgstr "दिखाएँ/छुपाएँ लागू कूपन विकल्प गाड़ी पर मेनू."
+
+#: backend/templates/views/floating_cart/settings.php:396
+msgid "Heading Title"
+msgstr "शीर्षक शीर्षक"
+
+#: backend/templates/views/floating_cart/settings.php:400
+msgid "Customize the heading title for the cart."
+msgstr "अनुकूलित शीर्षक शीर्षक के लिए टोकरी."
+
+#: backend/templates/views/floating_cart/settings.php:406
+msgid "Continue Shopping Button"
+msgstr "खरीदारी जारी रखें बटन"
+
+#: backend/templates/views/floating_cart/settings.php:410
+msgid " Customize the continue shopping button text."
+msgstr ""
+
+#: backend/templates/views/floating_cart/settings.php:416
+msgid "View Cart Button"
+msgstr "कार्ट देखें बटन"
+
+#: backend/templates/views/floating_cart/settings.php:420
+msgid "Customize the view cart button text"
+msgstr "अनुकूलित कार्ट देखें बटन पाठ"
+
+#: backend/templates/views/floating_cart/settings.php:426
+msgid "Checkout Button"
+msgstr "चेकआउट बटन"
+
+#: backend/templates/views/floating_cart/settings.php:430
+msgid "Customize the checkout button text."
+msgstr "अनुकूलित चेकआउट बटन पाठ । "
+
+#: backend/templates/views/floating_cart/settings.php:436
+msgid "Empty Cart Message"
+msgstr "खाली गाड़ी का संदेश"
+
+#: backend/templates/views/floating_cart/settings.php:440
+msgid "Customize the empty cart message for the cart."
+msgstr "अनुकूलित खाली गाड़ी के लिए संदेश गाड़ी."
+
+#: backend/templates/views/floating_cart/settings.php:446
+msgid "Subtotal Text"
+msgstr "आधा पाठ"
+
+#: backend/templates/views/floating_cart/settings.php:450
+msgid "Customize the subtotal text of the cart."
+msgstr "अनुकूलित आधा पाठ की गाड़ी । "
+
+#: backend/templates/views/floating_cart/settings.php:456
+msgid "Total Amount Text"
+msgstr "कुल राशि का पाठ"
+
+#: backend/templates/views/floating_cart/settings.php:460
+msgid "Customize the total amount text of in the cart."
+msgstr "अनुकूलित कुल राशि का पाठ गाड़ी में."
+
+#: backend/templates/views/floating_cart/settings.php:469
+msgid "Redirect URLs Settings"
+msgstr "रीडायरेक्ट Url सेटिंग्स"
+
+#: backend/templates/views/floating_cart/settings.php:475
+msgid "Continue Shopping Button Url"
+msgstr "खरीदारी जारी रखें बटन यूआरएल"
+
+#: backend/templates/views/floating_cart/settings.php:480
+msgid "Set continue shopping button url."
+msgstr "सेट खरीदारी जारी रखें बटन यूआरएल."
+
+#: backend/templates/views/floating_cart/settings.php:487
+msgid "View Cart Button Url"
+msgstr "कार्ट देखें बटन यूआरएल"
+
+#: backend/templates/views/floating_cart/settings.php:492
+msgid "Set view cart details button url."
+msgstr "सेट कार्ट देखें विवरण बटन यूआरएल."
+
+#: backend/templates/views/floating_cart/settings.php:498
+msgid "View Checkout Button Url"
+msgstr "देखें चेकआउट बटन यूआरएल"
+
+#: backend/templates/views/floating_cart/settings.php:503
+msgid "Set view checkout button url."
+msgstr "सेट देखें चेकआउट बटन यूआरएल."
+
+#: backend/templates/views/floating_cart/settings.php:519
+msgid "Cart Width(px)"
+msgstr "गाड़ी चौड़ाई(px)"
+
+#: backend/templates/views/floating_cart/settings.php:523
+msgid "Set your cart width in px (Ex. 460)"
+msgstr "सेट अपनी गाड़ी में चौड़ाई पिक्सल (पूर्व. 460)"
+
+#: backend/templates/views/floating_cart/settings.php:529
+msgid "Cart Open From"
+msgstr "गाड़ी से खुला"
+
+#: backend/templates/views/floating_cart/settings.php:535
+#: backend/templates/views/product_filter/settings.php:209
+#: backend/templates/views/shipping_bar/settings.php:444
+msgid "Left"
+msgstr "छोड़ दिया"
+
+#: backend/templates/views/floating_cart/settings.php:538
+#: backend/templates/views/shipping_bar/settings.php:446
+msgid "Right"
+msgstr "सही"
+
+#: backend/templates/views/floating_cart/settings.php:545
+#: backend/templates/views/product_sticky_bar/settings.php:422
+msgid "Button Font Size"
+msgstr "बटन फ़ॉन्ट आकार"
+
+#: backend/templates/views/floating_cart/settings.php:549
+msgid "Set your all button font size in px (Ex. 16)"
+msgstr "सेट अपने सभी बटन फ़ॉन्ट आकार में पिक्सल (पूर्व. 16)"
+
+#: backend/templates/views/floating_cart/settings.php:555
+#: backend/templates/views/product_sticky_bar/settings.php:407
+msgid "Button Font Color"
+msgstr "बटन फ़ॉन्ट रंग"
+
+#: backend/templates/views/floating_cart/settings.php:564
+msgid "Set font color of all buttons"
+msgstr "सेट फ़ॉन्ट रंग के सभी बटन"
+
+#: backend/templates/views/floating_cart/settings.php:570
+#: backend/templates/views/product_sticky_bar/settings.php:392
+msgid "Button Background Color"
+msgstr "बटन पृष्ठभूमि रंग"
+
+#: backend/templates/views/floating_cart/settings.php:579
+msgid "Set background color of all buttons"
+msgstr "सेट पृष्ठभूमि रंग के सभी बटन"
+
+#: backend/templates/views/floating_cart/settings.php:585
+#: backend/templates/views/product_sticky_bar/settings.php:492
+msgid "Button Hover Font Color"
+msgstr "बटन मंडराना फ़ॉन्ट रंग"
+
+#: backend/templates/views/floating_cart/settings.php:594
+msgid "Set hover font color of all buttons"
+msgstr "सेट मंडराना फ़ॉन्ट रंग के सभी बटन"
+
+#: backend/templates/views/floating_cart/settings.php:600
+msgid "Button Hover Background"
+msgstr "बटन मंडराना पृष्ठभूमि"
+
+#: backend/templates/views/floating_cart/settings.php:609
+msgid "Set hover background color of all buttons"
+msgstr "सेट मंडराना पृष्ठभूमि रंग के सभी बटन"
+
+#: backend/templates/views/floating_cart/settings.php:615
+#: backend/templates/views/product_sticky_bar/settings.php:433
+msgid "Button Border Color"
+msgstr "बटन बॉर्डर रंग"
+
+#: backend/templates/views/floating_cart/settings.php:624
+msgid "Set border color of all buttons"
+msgstr "सेट की सीमा के रंग के सभी बटन"
+
+#: backend/templates/views/floating_cart/settings.php:630
+#: backend/templates/views/product_sticky_bar/settings.php:475
+msgid "Button Border Hover Color"
+msgstr "बटन सीमा मंडराना रंग"
+
+#: backend/templates/views/floating_cart/settings.php:639
+msgid "Set border hover color of all buttons"
+msgstr "निर्धारित सीमा मंडराना रंग के सभी बटन"
+
+#: backend/templates/views/floating_cart/settings.php:645
+msgid "Button Border Radius"
+msgstr "बटन सीमा त्रिज्या"
+
+#: backend/templates/views/floating_cart/settings.php:650
+msgid "Set your all button border raduis (Ex. 4)"
+msgstr "सेट अपने सभी बटन सीमा raduis (पूर्व. 4)"
+
+#: backend/templates/views/floating_cart/settings.php:666
+msgid "Cross Icon Size(px)"
+msgstr "क्रॉस चिह्न आकार(पिक्सल)"
+
+#: backend/templates/views/floating_cart/settings.php:670
+msgid "Set your cart header cross icon in px (Ex. 30)"
+msgstr "सेट अपनी गाड़ी हैडर पार आइकन में पिक्सल (पूर्व. 30)"
+
+#: backend/templates/views/floating_cart/settings.php:676
+msgid "Heading Basket Icon Size(px)"
+msgstr "बढ़ टोकरी आइकन आकार(पिक्सल)"
+
+#: backend/templates/views/floating_cart/settings.php:680
+msgid "Set your cart header basket icon in px (Ex. 30)"
+msgstr "सेट अपनी गाड़ी हैडर टोकरी में आइकन पिक्सल (पूर्व. 30)"
+
+#: backend/templates/views/floating_cart/settings.php:686
+msgid "Heading Font Size(px)"
+msgstr "शीर्षक फ़ॉन्ट आकार(पिक्सल)"
+
+#: backend/templates/views/floating_cart/settings.php:690
+msgid "Set your cart header font size in px (Ex. 24)"
+msgstr "सेट अपनी गाड़ी हैडर फ़ॉन्ट आकार में पिक्सल (पूर्व. 24)"
+
+#: backend/templates/views/floating_cart/settings.php:696
+msgid "Heading Font Color"
+msgstr "शीर्षक फ़ॉन्ट रंग"
+
+#: backend/templates/views/floating_cart/settings.php:705
+msgid "Set your cart header font color."
+msgstr "सेट अपनी गाड़ी हैडर फ़ॉन्ट रंग । "
+
+#: backend/templates/views/floating_cart/settings.php:711
+msgid "Heading Border Bottom Color"
+msgstr "शीर्षक सीमा नीचे रंग"
+
+#: backend/templates/views/floating_cart/settings.php:720
+msgid "Set your cart header border bottom color."
+msgstr "सेट अपनी गाड़ी हैडर सीमा नीचे रंग."
+
+#: backend/templates/views/floating_cart/settings.php:736
+msgid "Product Remove Icon"
+msgstr "उत्पाद निकालें आइकन"
+
+#: backend/templates/views/floating_cart/settings.php:750
+msgid "Please select your delete icon."
+msgstr "का चयन करें अपने चिह्न हटाएँ."
+
+#: backend/templates/views/floating_cart/settings.php:756
+msgid "Product Remove Icon Size(px)"
+msgstr "उत्पाद निकालें आइकन आकार(पिक्सल)"
+
+#: backend/templates/views/floating_cart/settings.php:760
+msgid "Set your cart content delete icon size in px (Ex. 16)"
+msgstr "सेट अपनी गाड़ी सामग्री हटाएं आइकन आकार में पिक्सल (पूर्व. 16)"
+
+#: backend/templates/views/floating_cart/settings.php:766
+msgid "Product Image Width"
+msgstr "उत्पाद छवि चौड़ाई"
+
+#: backend/templates/views/floating_cart/settings.php:770
+msgid "Set your cart content product image width in percent(%) (Ex. 100)"
+msgstr "सेट अपनी गाड़ी सामग्री उत्पाद छवि चौड़ाई में प्रतिशत(%) (उदा । 100)"
+
+#: backend/templates/views/floating_cart/settings.php:776
+msgid "Product Title Color"
+msgstr "उत्पाद शीर्षक रंग"
+
+#: backend/templates/views/floating_cart/settings.php:790
+msgid "Product Title Font Size"
+msgstr "उत्पाद शीर्षक फ़ॉन्ट आकार"
+
+#: backend/templates/views/floating_cart/settings.php:794
+msgid "Set your cart content product title font size in px (Ex. 16)"
+msgstr ""
+"सेट अपनी गाड़ी सामग्री उत्पाद शीर्षक फ़ॉन्ट आकार में पिक्सल (पूर्व. 16)"
+
+#: backend/templates/views/floating_cart/settings.php:800
+msgid "Quantity Box Width"
+msgstr "मात्रा बॉक्स चौड़ाई"
+
+#: backend/templates/views/floating_cart/settings.php:804
+msgid "Set your cart content product quantity input box width in px (Ex. 56)"
+msgstr ""
+"सेट अपनी गाड़ी सामग्री उत्पाद मात्रा इनपुट बॉक्स में चौड़ाई पिक्सल (पूर्व. "
+"56)"
+
+#: backend/templates/views/floating_cart/settings.php:810
+msgid "Quantity Box Border Color"
+msgstr "मात्रा बॉक्स के बॉर्डर का रंग"
+
+#: backend/templates/views/floating_cart/settings.php:824
+msgid "Quantity Box Background Color"
+msgstr "मात्रा बॉक्स पृष्ठभूमि का रंग"
+
+#: backend/templates/views/floating_cart/settings.php:838
+msgid "Quantity Box Text Color"
+msgstr "मात्रा बॉक्स पाठ का रंग"
+
+#: backend/templates/views/floating_cart/settings.php:863
+msgid "Enable Basket d"
+msgstr "सक्षम टोकरी d"
+
+#: backend/templates/views/floating_cart/settings.php:869
+msgid "Always Show"
+msgstr "हमेशा दिखाएँ"
+
+#: backend/templates/views/floating_cart/settings.php:872
+msgid "Always Hide"
+msgstr "हमेशा छिपाने"
+
+#: backend/templates/views/floating_cart/settings.php:875
+msgid "Hide when cart is empty"
+msgstr "जब छिपाने की टोकरी खाली है"
+
+#: backend/templates/views/floating_cart/settings.php:882
+msgid "Basket Shape"
+msgstr "टोकरी के आकार"
+
+#: backend/templates/views/floating_cart/settings.php:888
+#: backend/templates/views/product_sticky_bar/settings.php:303
+msgid "Round"
+msgstr "दौर"
+
+#: backend/templates/views/floating_cart/settings.php:891
+#: backend/templates/views/product_sticky_bar/settings.php:306
+msgid "Square"
+msgstr "वर्ग"
+
+#: backend/templates/views/floating_cart/settings.php:898
+msgid "Basket Icon Size"
+msgstr "टोकरी आइकन आकार"
+
+#: backend/templates/views/floating_cart/settings.php:902
+msgid "Set your basket icon size in px (Ex. 35)"
+msgstr "सेट अपने टोकरी आइकन आकार में पिक्सल (पूर्व. 35)"
+
+#: backend/templates/views/floating_cart/settings.php:908
+msgid "Show Item Count?"
+msgstr "शो आइटम गिनती?"
+
+#: backend/templates/views/floating_cart/settings.php:913
+msgid "Turn off if you don/t want to show basket item count."
+msgstr "बंद यदि आप अपनी/t चाहते हैं दिखाने के लिए टोकरी में आइटम गिनती."
+
+#: backend/templates/views/floating_cart/settings.php:919
+msgid "Basket Icon"
+msgstr "टोकरी आइकन"
+
+#: backend/templates/views/floating_cart/settings.php:935
+msgid "Please select your basket icon."
+msgstr "का चयन करें अपने टोकरी आइकन."
+
+#: backend/templates/views/floating_cart/settings.php:941
+msgid "Basket Position"
+msgstr "टोकरी की स्थिति"
+
+#: backend/templates/views/floating_cart/settings.php:947
+#: backend/templates/views/floating_cart/settings.php:989
+msgid "Top Left"
+msgstr "ऊपर छोड़ दिया"
+
+#: backend/templates/views/floating_cart/settings.php:950
+#: backend/templates/views/floating_cart/settings.php:992
+msgid "Top Right"
+msgstr "शीर्ष सही"
+
+#: backend/templates/views/floating_cart/settings.php:953
+#: backend/templates/views/floating_cart/settings.php:995
+msgid "Bottom Left"
+msgstr "नीचे छोड़ दिया"
+
+#: backend/templates/views/floating_cart/settings.php:956
+#: backend/templates/views/floating_cart/settings.php:998
+msgid "Bottom Right"
+msgstr "नीचे सही"
+
+#: backend/templates/views/floating_cart/settings.php:963
+msgid "Basket Offset (Vertical)"
+msgstr "टोकरी ऑफसेट (ऊर्ध्वाधर)"
+
+#: backend/templates/views/floating_cart/settings.php:967
+msgid "Set your basket vertical offset in px (Ex. 110)"
+msgstr "सेट अपने टोकरी कार्यक्षेत्र ऑफसेट में पिक्सल (पूर्व. 110)"
+
+#: backend/templates/views/floating_cart/settings.php:973
+msgid "Basket Offset (Horizontal)"
+msgstr "टोकरी ऑफसेट (क्षैतिज)"
+
+#: backend/templates/views/floating_cart/settings.php:977
+msgid "Set your basket horizontal offset in px (Ex. 60)"
+msgstr "सेट अपने टोकरी क्षैतिज ऑफसेट में पिक्सल (पूर्व. 60)"
+
+#: backend/templates/views/floating_cart/settings.php:983
+msgid "Basket Count Position"
+msgstr "टोकरी गिनती की स्थिति"
+
+#: backend/templates/views/floating_cart/settings.php:1005
+msgid "Basket Icon Color"
+msgstr "टोकरी चिह्न का रंग"
+
+#: backend/templates/views/floating_cart/settings.php:1019
+msgid "Basket Background Color"
+msgstr "टोकरी पृष्ठभूमि रंग"
+
+#: backend/templates/views/floating_cart/settings.php:1033
+msgid "Basket Count Color"
+msgstr "टोकरी गिनती रंग"
+
+#: backend/templates/views/floating_cart/settings.php:1047
+msgid "Basket Count Background Color"
+msgstr "टोकरी गिनती पृष्ठभूमि का रंग"
+
+#: backend/templates/views/modules.php:18
+msgid "Modules"
+msgstr "मॉड्यूल"
+
+#: backend/templates/views/modules.php:25
+msgid "All"
+msgstr "सभी"
+
+#: backend/templates/views/modules.php:26
+msgid "Active"
+msgstr "सक्रिय"
+
+#: backend/templates/views/modules.php:27
+msgid "Inactive"
+msgstr "निष्क्रिय"
+
+#: backend/templates/views/modules.php:54
+#: backend/templates/views/modules.php:74
+#: backend/templates/views/modules.php:114
+#: backend/templates/views/modules.php:154
+#: backend/templates/views/modules.php:214
+#: backend/templates/views/modules.php:234
+#: backend/templates/views/modules.php:254
+#: backend/templates/views/modules.php:276
+#: backend/templates/views/product_sticky_bar/settings.php:78
+#: backend/templates/views/product_sticky_bar/settings.php:89
+msgid "Settings"
+msgstr "सेटिंग्स"
+
+#: backend/templates/views/modules.php:94
+#: backend/templates/views/modules.php:134
+#: backend/templates/views/modules.php:174
+#: backend/templates/views/modules.php:194
+msgid " Settings"
+msgstr ""
+
+#: backend/templates/views/modules.php:107
+#: backend/templates/views/url_coupon/settings.php:14
+msgid "URL Coupon"
+msgstr "यूआरएल कूपन"
+
+#: backend/templates/views/modules.php:127
+#: backend/templates/views/product_sticky_bar/settings.php:60
+msgid "Product Sticky Bar"
+msgstr "उत्पाद चिपचिपा पट्टी"
+
+#: backend/templates/views/modules.php:147
+#: backend/templates/views/one_click_checkout/settings.php:78
+msgid "One Click Checkout"
+msgstr "एक क्लिक चेकआउट"
+
+#: backend/templates/views/modules.php:187
+#: backend/templates/views/pdf_invoice/settings.php:76
+msgid "PDF Invoice & Packing Slips"
+msgstr "पीडीएफ चालान और पैकिंग निकल जाता है"
+
+#: backend/templates/views/modules.php:207
+msgid "Free Shipping Bar"
+msgstr "मुफ़्त शिपिंग पट्टी"
+
+#: backend/templates/views/modules.php:247
+#: backend/templates/views/product_filter/settings.php:96
+msgid "Product Filter"
+msgstr "उत्पाद फिल्टर"
+
+#: backend/templates/views/modules.php:263
+msgid "Pro"
+msgstr "प्रो"
+
+#: backend/templates/views/modules.php:269
+msgid "Order Cancel"
+msgstr "आदेश रद्द"
+
+#: backend/templates/views/one_click_checkout/settings.php:99
+msgid "Add To Cart"
+msgstr "कार्ट में जोड़ें"
+
+#: backend/templates/views/one_click_checkout/settings.php:102
+msgid "Buy Now Button"
+msgstr "अब खरीदें बटन"
+
+#: backend/templates/views/one_click_checkout/settings.php:105
+msgid "Checkout"
+msgstr "चेकआउट"
+
+#: backend/templates/views/one_click_checkout/settings.php:121
+msgid "Disable Cart Page"
+msgstr "अक्षम कार्ट पृष्ठ"
+
+#: backend/templates/views/one_click_checkout/settings.php:126
+msgid ""
+"Disable the cart page. It will automatically redirect to the checkout page."
+msgstr ""
+"अक्षम की टोकरी पृष्ठ. यह स्वचालित रूप से चेकआउट पृष्ठ पर पुनर्निर्देशित."
+
+#: backend/templates/views/one_click_checkout/settings.php:132
+msgid "Enable single page checkout"
+msgstr "सक्षम एक पृष्ठ चेकआउट"
+
+#: backend/templates/views/one_click_checkout/settings.php:137
+msgid "Turn on the single page checkout to show the cart menu as well."
+msgstr ""
+"पर बारी एक पृष्ठ चेकआउट में दिखाने के लिए गाड़ी मेनू के रूप में अच्छी तरह से."
+
+#: backend/templates/views/one_click_checkout/settings.php:144
+msgid "Enable Redirect on Add to Cart"
+msgstr "सक्षम है अनुप्रेषित पर गाड़ी में जोड़ें"
+
+#: backend/templates/views/one_click_checkout/settings.php:150
+msgid ""
+"After clicking the add to cart button, it will automatically redirect to the "
+"checkout page."
+msgstr ""
+"क्लिक करने के बाद गाड़ी में जोड़ने के लिए बटन, यह स्वचालित रूप से चेकआउट "
+"पृष्ठ पर पुनर्निर्देशित."
+
+#: backend/templates/views/one_click_checkout/settings.php:156
+#: backend/templates/views/one_click_checkout/settings.php:184
+msgid "Redirect to custom url"
+msgstr "पर रीडायरेक्ट करने के लिए कस्टम यूआरएल"
+
+#: backend/templates/views/one_click_checkout/settings.php:162
+msgid ""
+"Redirect to custom url instead of page, so using this you can redirect to "
+"any page."
+msgstr ""
+"पर रीडायरेक्ट करने के लिए कस्टम url के बजाय पृष्ठ है, तो इस का उपयोग कर आप "
+"अनुप्रेषित कर सकते हैं किसी भी पेज के लिए."
+
+#: backend/templates/views/one_click_checkout/settings.php:168
+msgid "Redirect to page"
+msgstr "अनुप्रेषित पृष्ठ"
+
+#: backend/templates/views/one_click_checkout/settings.php:188
+msgid ""
+"Redirect to this any custom url of your website e.g.: http://yourwebsite.com"
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:196
+msgid "Turn off the \"Keep Shopping\" button."
+msgstr "बंद रखने के लिए \"खरीदारी\" बटन."
+
+#: backend/templates/views/one_click_checkout/settings.php:201
+msgid ""
+"WooCommerce shows a continue shopping button after a product is added to "
+"cart. With this option, you can disable that link so users replace the text "
+"you want to complete the sentence here"
+msgstr ""
+"WooCommerce से पता चलता है एक खरीदारी जारी रखें बटन के बाद एक उत्पाद के लिए "
+"जोड़ा गया है गाड़ी. इस विकल्प के साथ, आप कर सकते हैं अक्षम लिंक है कि इतनी "
+"उपयोगकर्ताओं को पाठ की जगह आप चाहते हैं को पूरा करने के लिए वाक्य यहाँ"
+
+#: backend/templates/views/one_click_checkout/settings.php:209
+msgid "Add to Cart Button Settings"
+msgstr "कार्ट में जोड़ें बटन सेटिंग्स"
+
+#: backend/templates/views/one_click_checkout/settings.php:215
+msgid "Quickly add item to shopping cart with Ajax."
+msgstr "जल्दी आइटम जोड़ने के लिए खरीदारी की टोकरी के साथ अजाक्स."
+
+#: backend/templates/views/one_click_checkout/settings.php:223
+msgid "Turn on to enable Quickly add item to shopping cart with Ajax."
+msgstr ""
+"पर बारी सक्षम करने के लिए जल्दी आइटम जोड़ने के लिए खरीदारी की टोकरी के साथ "
+"अजाक्स."
+
+#: backend/templates/views/one_click_checkout/settings.php:231
+msgid "Alter the \"Add to Cart\" button text."
+msgstr "बदल \"गाड़ी में जोड़ें\" बटन पाठ । "
+
+#: backend/templates/views/one_click_checkout/settings.php:237
+msgid "Turn on to change the button text of add to cart button."
+msgstr "पर बारी करने के लिए बटन बदलने के पाठ गाड़ी बटन जोड़ने के लिए."
+
+#: backend/templates/views/one_click_checkout/settings.php:244
+msgid "Add to cart button text"
+msgstr "कार्ट में जोड़ें बटन पाठ"
+
+#: backend/templates/views/one_click_checkout/settings.php:248
+msgid "This text will be shown inside add to cart button."
+msgstr "इस पाठ के अंदर दिखाया जाएगा कार्ट में जोड़ें बटन."
+
+#: backend/templates/views/one_click_checkout/settings.php:255
+msgid "Select options button text"
+msgstr "विकल्प का चयन करें बटन पाठ"
+
+#: backend/templates/views/one_click_checkout/settings.php:259
+msgid ""
+"This text will be shown on the archive page for the variable product, leave "
+"blank if you want to use default text."
+msgstr ""
+"इस पाठ पर दिखाया जाएगा पुरालेख पेज के लिए चर उत्पाद, खाली छोड़ दें यदि आप "
+"चाहते हैं का उपयोग करने के लिए डिफ़ॉल्ट पाठ."
+
+#: backend/templates/views/one_click_checkout/settings.php:266
+msgid "Read more button text"
+msgstr "अधिक बटन पढ़ा पाठ"
+
+#: backend/templates/views/one_click_checkout/settings.php:270
+msgid ""
+"This text will be shown on archive page for the product when the product is "
+"out of stock, leave blank if you want to use default"
+msgstr ""
+"इस पाठ पर दिखाया जाएगा, संग्रह पृष्ठ उत्पाद के लिए जब उत्पाद स्टॉक से बाहर "
+"है, खाली छोड़ दें यदि आप चाहते हैं का उपयोग करने के लिए डिफ़ॉल्ट"
+
+#: backend/templates/views/one_click_checkout/settings.php:281
+msgid "Buy Now Button Settings"
+msgstr "अब खरीदें बटन सेटिंग्स"
+
+#: backend/templates/views/one_click_checkout/settings.php:284
+msgid "Buy Now Button on the Product Page"
+msgstr "अब खरीदें बटन उत्पाद पृष्ठ पर"
+
+#: backend/templates/views/one_click_checkout/settings.php:289
+#: backend/templates/views/one_click_checkout/settings.php:409
+msgid "Enable Buy Now Button"
+msgstr "सक्षम करें अब खरीदें बटन"
+
+#: backend/templates/views/one_click_checkout/settings.php:295
+msgid "Turn on/off the buy now button on the product page."
+msgstr "बंद/पर बारी अब खरीदें बटन उत्पाद पृष्ठ पर."
+
+#: backend/templates/views/one_click_checkout/settings.php:302
+#: backend/templates/views/one_click_checkout/settings.php:422
+msgid "Buy now button label <span style=\"color: #FF521D;\">(Pro)</span>"
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:306
+#: backend/templates/views/one_click_checkout/settings.php:426
+msgid "Buy now button label"
+msgstr "खरीदें अब बटन के लेबल"
+
+#: backend/templates/views/one_click_checkout/settings.php:313
+#: backend/templates/views/one_click_checkout/settings.php:433
+msgid "Redirect to page <span style=\"color: #FF521D;\">(Pro)</span>"
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:329
+#: backend/templates/views/one_click_checkout/settings.php:449
+msgid "Position Of the Button <span style=\"color: #FF521D;\">(Pro)</span>"
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:352
+#: backend/templates/views/one_click_checkout/settings.php:466
+msgid "Buy now button width"
+msgstr "अब खरीदें बटन चौड़ाई"
+
+#: backend/templates/views/one_click_checkout/settings.php:356
+msgid "Buy now button width on product page (PX)."
+msgstr "अब खरीदें बटन चौड़ाई उत्पाद पृष्ठ पर (पिक्सल) है । "
+
+#: backend/templates/views/one_click_checkout/settings.php:363
+#: backend/templates/views/one_click_checkout/settings.php:477
+msgid "Buy now button margin top"
+msgstr "खरीदें अब बटन के शीर्ष मार्जिन"
+
+#: backend/templates/views/one_click_checkout/settings.php:367
+#: backend/templates/views/one_click_checkout/settings.php:481
+msgid "Buy now button margin top (PX)."
+msgstr "अब खरीदें बटन मार्जिन शीर्ष (पिक्सल) है । "
+
+#: backend/templates/views/one_click_checkout/settings.php:374
+#: backend/templates/views/one_click_checkout/settings.php:488
+msgid "Buy now button margin bottom"
+msgstr "अब खरीदें बटन मार्जिन नीचे"
+
+#: backend/templates/views/one_click_checkout/settings.php:378
+#: backend/templates/views/one_click_checkout/settings.php:492
+msgid "Buy now button margin bottom (PX)."
+msgstr "अब खरीदें बटन मार्जिन नीचे (पिक्सल) है । "
+
+#: backend/templates/views/one_click_checkout/settings.php:385
+#: backend/templates/views/one_click_checkout/settings.php:499
+msgid "Buy now button margin left"
+msgstr "अब खरीदें बटन मार्जिन छोड़ दिया"
+
+#: backend/templates/views/one_click_checkout/settings.php:389
+#: backend/templates/views/one_click_checkout/settings.php:503
+msgid "Buy now button margin left (PX)."
+msgstr "अब खरीदें बटन मार्जिन छोड़ दिया (पिक्सल) है । "
+
+#: backend/templates/views/one_click_checkout/settings.php:396
+#: backend/templates/views/one_click_checkout/settings.php:510
+msgid "Buy now button margin right"
+msgstr "अब खरीदें बटन मार्जिन सही"
+
+#: backend/templates/views/one_click_checkout/settings.php:400
+#: backend/templates/views/one_click_checkout/settings.php:514
+msgid "Buy now button margin right (PX)."
+msgstr "अब खरीदें बटन मार्जिन सही (पिक्सल) है । "
+
+#: backend/templates/views/one_click_checkout/settings.php:404
+msgid "Buy Now Button on the Archive Page"
+msgstr "खरीदें अब बटन पर पुरालेख पेज"
+
+#: backend/templates/views/one_click_checkout/settings.php:415
+msgid "Turn on/off the buy now button on the product archive page."
+msgstr "बंद/पर बारी अब खरीदें बटन पर उत्पाद पुरालेख पृष्ठ है."
+
+#: backend/templates/views/one_click_checkout/settings.php:470
+msgid "Buy now button width on product archive page (PX)."
+msgstr "खरीदें अब बटन पर चौड़ाई उत्पाद पुरालेख पेज (पिक्सल) है । "
+
+#: backend/templates/views/one_click_checkout/settings.php:520
+msgid "Buy Now Button design"
+msgstr "अब खरीदें बटन डिजाइन"
+
+#: backend/templates/views/one_click_checkout/settings.php:524
+msgid "Font Color"
+msgstr "फ़ॉन्ट रंग"
+
+#: backend/templates/views/one_click_checkout/settings.php:532
+msgid "Set button font color"
+msgstr "सेट बटन फ़ॉन्ट रंग"
+
+#: backend/templates/views/one_click_checkout/settings.php:539
+#: backend/templates/views/shipping_bar/settings.php:373
+msgid "Background Color"
+msgstr "पृष्ठभूमि रंग"
+
+#: backend/templates/views/one_click_checkout/settings.php:547
+msgid "Set button background color"
+msgstr "सेट बटन पृष्ठभूमि रंग"
+
+#: backend/templates/views/one_click_checkout/settings.php:554
+msgid "Hover Font Color"
+msgstr "मंडराना फ़ॉन्ट रंग"
+
+#: backend/templates/views/one_click_checkout/settings.php:564
+msgid "Set button font color on hover"
+msgstr "सेट बटन पर फ़ॉन्ट रंग मंडराना"
+
+#: backend/templates/views/one_click_checkout/settings.php:571
+msgid "Hover Background Color"
+msgstr "मंडराना पृष्ठभूमि रंग"
+
+#: backend/templates/views/one_click_checkout/settings.php:581
+msgid "Set button background color on hover"
+msgstr "सेट बटन पृष्ठभूमि मंडराना पर रंग"
+
+#: backend/templates/views/one_click_checkout/settings.php:587
+msgid "Padding Top-Bottom"
+msgstr "गद्दी के ऊपर-नीचे"
+
+#: backend/templates/views/one_click_checkout/settings.php:592
+msgid "Buy now button padding top & bottom (PX)"
+msgstr "अब खरीदें बटन गद्दी ऊपर और नीचे (PX)"
+
+#: backend/templates/views/one_click_checkout/settings.php:598
+#: backend/templates/views/shipping_bar/settings.php:400
+msgid "Padding Left-Right"
+msgstr "गद्दी छोड़ दिया-सही"
+
+#: backend/templates/views/one_click_checkout/settings.php:603
+msgid "Buy now button padding left & right (PX)"
+msgstr "अब खरीदें बटन गद्दी छोड़ दिया और सही (PX)"
+
+#: backend/templates/views/one_click_checkout/settings.php:609
+msgid "Border Radius"
+msgstr "सीमा त्रिज्या"
+
+#: backend/templates/views/one_click_checkout/settings.php:615
+msgid "Buy now button border radius (PX)"
+msgstr "अब खरीदें बटन सीमा त्रिज्या (PX)"
+
+#: backend/templates/views/one_click_checkout/settings.php:623
+msgid "Checkout Settings"
+msgstr "चेकआउट सेटिंग्स"
+
+#: backend/templates/views/one_click_checkout/settings.php:629
+msgid "Remove Order comment"
+msgstr "हटाने के क्रम टिप्पणी"
+
+#: backend/templates/views/one_click_checkout/settings.php:634
+msgid "Enable to remove “order comment” from the checkout page."
+msgstr "सक्षम को दूर करने के लिए आदेश \"टिप्पणी\" से चेकआउट पृष्ठ."
+
+#: backend/templates/views/one_click_checkout/settings.php:640
+msgid "Remove coupon form"
+msgstr "निकालें coupon फार्म"
+
+#: backend/templates/views/one_click_checkout/settings.php:645
+msgid "Enable to remove “Coupon Form” from the checkout page"
+msgstr "सक्षम निकालने के लिए \"Coupon रूप से\" चेकआउट पृष्ठ"
+
+#: backend/templates/views/one_click_checkout/settings.php:651
+msgid "Remove policy text"
+msgstr "दूर नीति पाठ"
+
+#: backend/templates/views/one_click_checkout/settings.php:657
+msgid "Enable to remove “Policy Text” from the checkout page."
+msgstr "सक्षम को दूर करने के लिए \"नीति\" पाठ से चेकआउट पृष्ठ."
+
+#: backend/templates/views/one_click_checkout/settings.php:664
+msgid "Remove terms & conditions"
+msgstr "हटाने के नियम एवं शर्तें"
+
+#: backend/templates/views/one_click_checkout/settings.php:670
+msgid "Enable to remove “Terms & Conditions” from the checkout page."
+msgstr "सक्षम को दूर करने के लिए \"नियम और शर्तों\" से चेकआउट पृष्ठ."
+
+#: backend/templates/views/one_click_checkout/settings.php:678
+msgid "Remove billing fields "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:685
+msgid " Billing First Name "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:688
+msgid " Billing Last Name "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:691
+msgid " Billing Address 1 "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:694
+msgid " Billing Address 2 "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:697
+msgid " Billing Country "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:700
+msgid " Billing City "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:703
+msgid " Billing State "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:706
+msgid " Billing Postcode "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:709
+msgid " Billing Company "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:712
+msgid " Billing Phone "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:715
+msgid " Billing Email "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:717
+msgid "Choose the info you want to delete from 'Billing.'"
+msgstr "चुनें आप चाहते जानकारी को नष्ट करने से 'बिलिंग।'"
+
+#: backend/templates/views/one_click_checkout/settings.php:724
+msgid "Skip shipping details?"
+msgstr "छोड़ शिपिंग विवरण?"
+
+#: backend/templates/views/one_click_checkout/settings.php:731
+msgid "Shipping First Name"
+msgstr "शिपिंग पहला नाम"
+
+#: backend/templates/views/one_click_checkout/settings.php:734
+msgid "Shipping Last Name"
+msgstr "शिपिंग अंतिम नाम"
+
+#: backend/templates/views/one_click_checkout/settings.php:737
+msgid "Shipping Address 1"
+msgstr "शिपिंग पते 1"
+
+#: backend/templates/views/one_click_checkout/settings.php:740
+msgid "Shipping Address 2"
+msgstr "शिपिंग पते 2"
+
+#: backend/templates/views/one_click_checkout/settings.php:743
+msgid "Shipping Country"
+msgstr "शिपिंग देश"
+
+#: backend/templates/views/one_click_checkout/settings.php:746
+msgid "Shipping City"
+msgstr "शिपिंग शहर"
+
+#: backend/templates/views/one_click_checkout/settings.php:749
+msgid "Shipping State"
+msgstr "नौवहन राज्य"
+
+#: backend/templates/views/one_click_checkout/settings.php:752
+msgid "Shipping Postcode"
+msgstr "शिपिंग पिन कोड"
+
+#: backend/templates/views/one_click_checkout/settings.php:755
+msgid "Shipping Company"
+msgstr "शिपिंग कंपनी"
+
+#: backend/templates/views/one_click_checkout/settings.php:758
+msgid "Choose which information you want to delete from the Shipping Section."
+msgstr "चुनें जो आप चाहते हैं कि जानकारी को नष्ट करने से शिपिंग अनुभाग."
+
+#: backend/templates/views/pdf_invoice/invoice.php:7
+#: backend/templates/views/pdf_invoice/invoice.php:14
+msgid "INVOICE"
+msgstr "चालान"
+
+#: backend/templates/views/pdf_invoice/invoice.php:15
+msgid "Invoice Date:"
+msgstr "चालान की तारीख:"
+
+#: backend/templates/views/pdf_invoice/invoice.php:16
+msgid "Order No.:"
+msgstr "क्रम No.:"
+
+#: backend/templates/views/pdf_invoice/invoice.php:17
+msgid "Order Date:"
+msgstr "आदेश की तारीख:"
+
+#: backend/templates/views/pdf_invoice/invoice.php:18
+msgid "SSN:"
+msgstr "एसएसएन:"
+
+#: backend/templates/views/pdf_invoice/invoice.php:19
+msgid "VAT:"
+msgstr "वैट:"
+
+#: backend/templates/views/pdf_invoice/invoice.php:39
+#: backend/templates/views/pdf_invoice/settings.php:676
+msgid "From Address"
+msgstr "से पता"
+
+#: backend/templates/views/pdf_invoice/invoice.php:46
+msgid "Name of the shop"
+msgstr "दुकान का नाम"
+
+#: backend/templates/views/pdf_invoice/invoice.php:47
+msgid "Shop Address"
+msgstr "दुकान का पता"
+
+#: backend/templates/views/pdf_invoice/invoice.php:48
+#: backend/templates/views/pdf_invoice/invoice.php:68
+#: backend/templates/views/pdf_invoice/invoice.php:94
+#: backend/templates/views/pdf_invoice/settings.php:214
+msgid "City"
+msgstr "शहर"
+
+#: backend/templates/views/pdf_invoice/invoice.php:49
+#: backend/templates/views/pdf_invoice/invoice.php:69
+#: backend/templates/views/pdf_invoice/invoice.php:95
+msgid "Country"
+msgstr "देश"
+
+#: backend/templates/views/pdf_invoice/invoice.php:50
+#: backend/templates/views/pdf_invoice/invoice.php:70
+#: backend/templates/views/pdf_invoice/invoice.php:96
+msgid "Zip Code"
+msgstr "ज़िप कोड"
+
+#: backend/templates/views/pdf_invoice/invoice.php:58
+#: backend/templates/views/pdf_invoice/invoice.php:67
+#: backend/templates/views/pdf_invoice/settings.php:557
+msgid "Billing Address"
+msgstr "बिलिंग पता"
+
+#: backend/templates/views/pdf_invoice/invoice.php:66
+msgid "Billing to Name"
+msgstr "बिलिंग नाम करने के लिए"
+
+#: backend/templates/views/pdf_invoice/invoice.php:73
+msgid "Biller Email Address"
+msgstr "बिलर ईमेल पते"
+
+#: backend/templates/views/pdf_invoice/invoice.php:76
+msgid "Biller Phone Number "
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/invoice.php:85
+#: backend/templates/views/pdf_invoice/invoice.php:93
+#: backend/templates/views/pdf_invoice/settings.php:568
+msgid "Shipping Address"
+msgstr "शिपिंग पता"
+
+#: backend/templates/views/pdf_invoice/invoice.php:92
+msgid "Shipping to Name"
+msgstr "शिपिंग नाम करने के लिए"
+
+#: backend/templates/views/pdf_invoice/invoice.php:114
+msgid "SKU"
+msgstr "SKU"
+
+#: backend/templates/views/pdf_invoice/invoice.php:115
+msgid "PRODUCT"
+msgstr "उत्पाद"
+
+#: backend/templates/views/pdf_invoice/invoice.php:116
+msgid "QUANTITY"
+msgstr "मात्रा"
+
+#: backend/templates/views/pdf_invoice/invoice.php:117
+msgid "PRICE"
+msgstr "कीमत"
+
+#: backend/templates/views/pdf_invoice/invoice.php:118
+msgid "TOTAL PRICE"
+msgstr "कुल कीमत"
+
+#: backend/templates/views/pdf_invoice/invoice.php:121
+msgid "001"
+msgstr "001"
+
+#: backend/templates/views/pdf_invoice/invoice.php:122
+#: backend/templates/views/pdf_invoice/invoice.php:129
+msgid "Name of the product"
+msgstr "उत्पाद का नाम"
+
+#: backend/templates/views/pdf_invoice/invoice.php:123
+msgid "1"
+msgstr "001"
+
+#: backend/templates/views/pdf_invoice/invoice.php:124
+#: backend/templates/views/pdf_invoice/invoice.php:125
+msgid "$0.00"
+msgstr "$0.00"
+
+#: backend/templates/views/pdf_invoice/invoice.php:140
+msgid "Subtotal"
+msgstr "उप-योग"
+
+#: backend/templates/views/pdf_invoice/invoice.php:141
+msgid "Shipping"
+msgstr "शिपिंग"
+
+#: backend/templates/views/pdf_invoice/invoice.php:142
+msgid "Discount"
+msgstr "छूट"
+
+#: backend/templates/views/pdf_invoice/invoice.php:143
+msgid "Fee"
+msgstr "शुल्क"
+
+#: backend/templates/views/pdf_invoice/invoice.php:158
+#: backend/templates/views/product_sticky_bar/settings.php:198
+msgid "Total"
+msgstr "कुल"
+
+#: backend/templates/views/pdf_invoice/invoice.php:173
+msgid "Payment Method: COD"
+msgstr "भुगतान की विधि: कॉड"
+
+#: backend/templates/views/pdf_invoice/invoice.php:178
+msgid "Customer Note:"
+msgstr "ग्राहक ध्यान दें:"
+
+#: backend/templates/views/pdf_invoice/invoice.php:189
+msgid "Custom Footer Text"
+msgstr "कस्टम पाद लेख पाठ"
+
+#: backend/templates/views/pdf_invoice/settings.php:93
+#: backend/templates/views/pdf_invoice/settings.php:114
+msgid "PDF Document"
+msgstr "पीडीएफ दस्तावेज़"
+
+#: backend/templates/views/pdf_invoice/settings.php:99
+msgid "Invoice"
+msgstr "चालान"
+
+#: backend/templates/views/pdf_invoice/settings.php:102
+msgid "Customize Invoice"
+msgstr "अनुकूलित चालान"
+
+#: backend/templates/views/pdf_invoice/settings.php:105
+msgid "Label Tailoring"
+msgstr "लेबल सिलाई"
+
+#: backend/templates/views/pdf_invoice/settings.php:121
+msgid "Deactivate Invoice "
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/settings.php:126
+msgid "Enable/Disable the invoice on the PDF document."
+msgstr "सक्षम/अक्षम पर चालान पीडीएफ दस्तावेज़."
+
+#: backend/templates/views/pdf_invoice/settings.php:132
+msgid "Deactivate Shipping Label"
+msgstr "निष्क्रिय शिपिंग लेबल"
+
+#: backend/templates/views/pdf_invoice/settings.php:137
+msgid "Enable/Disable the invoice on the PDF document"
+msgstr "सक्षम/अक्षम पर चालान पीडीएफ दस्तावेज़"
+
+#: backend/templates/views/pdf_invoice/settings.php:152
+msgid "Shop Name"
+msgstr "दुकान का नाम"
+
+#: backend/templates/views/pdf_invoice/settings.php:161
+#: backend/templates/views/pdf_invoice/settings.php:468
+#: backend/templates/views/pdf_invoice/settings.php:664
+msgid "Shop Logo"
+msgstr "दुकान लोगो"
+
+#: backend/templates/views/pdf_invoice/settings.php:167
+msgid "Upload"
+msgstr "अपलोड"
+
+#: backend/templates/views/pdf_invoice/settings.php:170
+msgid "Recommended image size 150px X 60px"
+msgstr "की सिफारिश की छवि का आकार 150px X 60px"
+
+#: backend/templates/views/pdf_invoice/settings.php:177
+msgid "Footer Info"
+msgstr "पाद लेख जानकारी"
+
+#: backend/templates/views/pdf_invoice/settings.php:181
+msgid "Enter invoice footer info"
+msgstr "दर्ज चालान पाद लेख जानकारी"
+
+#: backend/templates/views/pdf_invoice/settings.php:185
+msgid "Shop Address (Sender Details)"
+msgstr "दुकान के पते (प्रेषक का विवरण)"
+
+#: backend/templates/views/pdf_invoice/settings.php:188
+msgid "Sender Name"
+msgstr "प्रेषक का नाम"
+
+#: backend/templates/views/pdf_invoice/settings.php:197
+msgid "Address Line 1"
+msgstr "पता पंक्ति 1"
+
+#: backend/templates/views/pdf_invoice/settings.php:206
+msgid "Address Line 2"
+msgstr "पता पंक्ति 2"
+
+#: backend/templates/views/pdf_invoice/settings.php:234
+msgid "Postal Code"
+msgstr "डाक कोड"
+
+#: backend/templates/views/pdf_invoice/settings.php:243
+msgid "Country/State"
+msgstr "देश/राज्य"
+
+#: backend/templates/views/pdf_invoice/settings.php:260
+msgid "Hey, please select"
+msgstr "अरे, कृपया चयन करें"
+
+#: backend/templates/views/pdf_invoice/settings.php:278
+msgid "Contact Number"
+msgstr "संपर्क नंबर"
+
+#: backend/templates/views/pdf_invoice/settings.php:299
+msgid "Other Settings"
+msgstr "अन्य सेटिंग्स"
+
+#: backend/templates/views/pdf_invoice/settings.php:303
+msgid "How do you want to view the PDF?"
+msgstr "कैसे क्या आप चाहते हैं को देखने के लिए पीडीएफ?"
+
+#: backend/templates/views/pdf_invoice/settings.php:309
+msgid "Open The PDF in a New Window"
+msgstr "पीडीएफ खुला एक नई विंडो में"
+
+#: backend/templates/views/pdf_invoice/settings.php:312
+msgid "Direct Download"
+msgstr "डायरेक्ट डाउनलोड"
+
+#: backend/templates/views/pdf_invoice/settings.php:321
+msgid "Invoice Settings"
+msgstr "चालान सेटिंग्स"
+
+#: backend/templates/views/pdf_invoice/settings.php:326
+msgid "Disable for Order Status"
+msgstr "के लिए अक्षम आदेश की स्थिति"
+
+#: backend/templates/views/pdf_invoice/settings.php:336
+msgid "Choose the order status that you want to disable the invoice"
+msgstr "का चयन आदेश की स्थिति है कि आप को निष्क्रिय करना चाहते हैं चालान"
+
+#: backend/templates/views/pdf_invoice/settings.php:342
+msgid "Enable VAT & SSN on Checkout "
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/settings.php:348
+msgid "Show/Hide VAT & SSN on the checkout page."
+msgstr "दिखाने/छिपाने के वैट और एसएसएन चेकआउट पृष्ठ पर."
+
+#: backend/templates/views/pdf_invoice/settings.php:353
+msgid "Attach to Email"
+msgstr "संलग्न करने के लिए ईमेल"
+
+#: backend/templates/views/pdf_invoice/settings.php:360
+msgid "New Order (Admin Email)"
+msgstr "नए आदेश (व्यवस्थापक ईमेल)"
+
+#: backend/templates/views/pdf_invoice/settings.php:363
+msgid "Cancelled Order"
+msgstr "रद्द आदेश"
+
+#: backend/templates/views/pdf_invoice/settings.php:366
+msgid "Failed Order"
+msgstr "आदेश में विफल रहा है"
+
+#: backend/templates/views/pdf_invoice/settings.php:369
+msgid "On-Hold Order"
+msgstr "पर पकड़ के क्रम"
+
+#: backend/templates/views/pdf_invoice/settings.php:372
+msgid "Processing Order"
+msgstr "प्रसंस्करण के आदेश"
+
+#: backend/templates/views/pdf_invoice/settings.php:375
+msgid "Complete Order"
+msgstr "पूरा आदेश"
+
+#: backend/templates/views/pdf_invoice/settings.php:378
+msgid "Refunded Order"
+msgstr "वापस आदेश"
+
+#: backend/templates/views/pdf_invoice/settings.php:381
+msgid "Partially Refunded Order"
+msgstr "आंशिक रूप से वापस आदेश"
+
+#: backend/templates/views/pdf_invoice/settings.php:384
+msgid "Customer Invoice"
+msgstr "ग्राहक चालान"
+
+#: backend/templates/views/pdf_invoice/settings.php:386
+msgid "Pick when you/d like the bill sent by email."
+msgstr "लेने के लिए जब आप/d की तरह बिल भेजा है ईमेल के द्वारा."
+
+#: backend/templates/views/pdf_invoice/settings.php:390
+#: backend/templates/views/pdf_invoice/settings.php:479
+msgid "Invoice Number"
+msgstr "चालान नंबर"
+
+#: backend/templates/views/pdf_invoice/settings.php:394
+msgid "Show Order Number as Invoice Number"
+msgstr "दिखाने के क्रम संख्या के रूप में चालान संख्या"
+
+#: backend/templates/views/pdf_invoice/settings.php:400
+msgid "Enable to show the order number as the invoice number."
+msgstr "सक्षम करने के लिए दिखाने के क्रम संख्या के रूप में चालान संख्या."
+
+#: backend/templates/views/pdf_invoice/settings.php:406
+msgid "Invoice Start Number"
+msgstr "चालान नंबर शुरू"
+
+#: backend/templates/views/pdf_invoice/settings.php:410
+msgid "Set your invoice start number."
+msgstr "सेट अपने चालान शुरू संख्या."
+
+#: backend/templates/views/pdf_invoice/settings.php:424
+msgid "Suffix"
+msgstr "प्रत्यय"
+
+#: backend/templates/views/pdf_invoice/settings.php:438
+msgid "Invoice Customization"
+msgstr "चालान अनुकूलन"
+
+#: backend/templates/views/pdf_invoice/settings.php:457
+msgid "Document Title"
+msgstr "दस्तावेज़ शीर्षक"
+
+#: backend/templates/views/pdf_invoice/settings.php:490
+#: backend/templates/views/pdf_invoice/settings.php:700
+msgid "Order Number"
+msgstr "क्रम संख्या"
+
+#: backend/templates/views/pdf_invoice/settings.php:501
+msgid "Invoice Date"
+msgstr "चालान की तारीख"
+
+#: backend/templates/views/pdf_invoice/settings.php:512
+msgid "Order Date"
+msgstr "आदेश की तारीख"
+
+#: backend/templates/views/pdf_invoice/settings.php:523
+msgid "SSN "
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/settings.php:535
+msgid "VAT "
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/settings.php:579
+#: backend/templates/views/pdf_invoice/settings.php:736
+#: backend/templates/views/pdf_invoice/settings.php:748
+msgid "Email"
+msgstr "ईमेल"
+
+#: backend/templates/views/pdf_invoice/settings.php:590
+msgid "Phone Number"
+msgstr "फोन नंबर"
+
+#: backend/templates/views/pdf_invoice/settings.php:601
+msgid "Payment Method"
+msgstr "भुगतान की विधि"
+
+#: backend/templates/views/pdf_invoice/settings.php:612
+msgid "Customer Note"
+msgstr "ग्राहक ध्यान दें"
+
+#: backend/templates/views/pdf_invoice/settings.php:623
+msgid "Footer"
+msgstr "पाद लेख"
+
+#: backend/templates/views/pdf_invoice/settings.php:646
+msgid "Shipping Label Customization"
+msgstr "शिपिंग लेबल अनुकूलन"
+
+#: backend/templates/views/pdf_invoice/settings.php:688
+msgid "To Address"
+msgstr "पता करने के लिए"
+
+#: backend/templates/views/pdf_invoice/settings.php:712
+msgid "Weight"
+msgstr "वजन"
+
+#: backend/templates/views/pdf_invoice/settings.php:724
+msgid "Shipping Date"
+msgstr "शिपिंग तारीख"
+
+#: backend/templates/views/product_filter/settings.php:27
+#: modules/product_filter/template.php:28
+#: modules/product_filter/template.php:31
+msgid "Search Product"
+msgstr "खोज उत्पाद"
+
+#: backend/templates/views/product_filter/settings.php:31
+msgid "Search by Product Name"
+msgstr "उत्पाद नाम से खोज"
+
+#: backend/templates/views/product_filter/settings.php:37
+msgid "Filter By Price"
+msgstr "कीमत द्वारा फ़िल्टर"
+
+#: backend/templates/views/product_filter/settings.php:38
+msgid "Min"
+msgstr "मिन"
+
+#: backend/templates/views/product_filter/settings.php:39
+msgid "Max"
+msgstr "अधिकतम"
+
+#: backend/templates/views/product_filter/settings.php:46
+#: modules/product_filter/template.php:46
+msgid "Filter By Rating"
+msgstr "द्वारा फ़िल्टर रेटिंग"
+
+#: backend/templates/views/product_filter/settings.php:47
+#: modules/product_filter/template.php:47
+msgid "And Up"
+msgstr "और"
+
+#: backend/templates/views/product_filter/settings.php:58
+#: modules/product_filter/template.php:58
+msgid "Filter By Category"
+msgstr "श्रेणी द्वारा फ़िल्टर"
+
+#: backend/templates/views/product_filter/settings.php:66
+#: modules/product_filter/template.php:66
+msgid "Filter By Stock"
+msgstr "फ़िल्टर द्वारा शेयर"
+
+#: backend/templates/views/product_filter/settings.php:67
+#: modules/product_filter/template.php:67
+msgid "In Stock"
+msgstr "स्टॉक में"
+
+#: backend/templates/views/product_filter/settings.php:68
+#: modules/product_filter/template.php:68
+msgid "Out of Stock"
+msgstr "स्टॉक से बाहर"
+
+#: backend/templates/views/product_filter/settings.php:116
+#: backend/templates/views/product_filter/settings.php:218
+msgid "Product Settings"
+msgstr "उत्पाद सेटिंग्स"
+
+#: backend/templates/views/product_filter/settings.php:119
+msgid "Search Filter"
+msgstr "खोज फ़िल्टर"
+
+#: backend/templates/views/product_filter/settings.php:122
+msgid "Price Filter"
+msgstr "कीमत फिल्टर"
+
+#: backend/templates/views/product_filter/settings.php:125
+msgid "Rating Filter"
+msgstr "रेटिंग फिल्टर"
+
+#: backend/templates/views/product_filter/settings.php:128
+msgid "Category Filter"
+msgstr "श्रेणी फिल्टर"
+
+#: backend/templates/views/product_filter/settings.php:131
+msgid "Stock Filter"
+msgstr "शेयर फिल्टर"
+
+#: backend/templates/views/product_filter/settings.php:146
+msgid "Show Search Filter"
+msgstr "दिखाएँ खोज फ़िल्टर"
+
+#: backend/templates/views/product_filter/settings.php:151
+msgid "Enable/Disable the search filter on the sidebar."
+msgstr "सक्षम करें/निष्क्रिय खोज फिल्टर पर साइडबार."
+
+#: backend/templates/views/product_filter/settings.php:157
+msgid "Show Price Filter"
+msgstr "शो की कीमत फिल्टर"
+
+#: backend/templates/views/product_filter/settings.php:162
+msgid "Enable/Disable the price filter on the sidebar."
+msgstr "सक्षम/अक्षम कीमत फिल्टर पर साइडबार."
+
+#: backend/templates/views/product_filter/settings.php:168
+msgid "Show Rating Filter"
+msgstr "शो रेटिंग फिल्टर"
+
+#: backend/templates/views/product_filter/settings.php:173
+msgid "Enable/Disable the rating filter on the sidebar."
+msgstr "सक्षम/अक्षम रेटिंग फिल्टर पर साइडबार."
+
+#: backend/templates/views/product_filter/settings.php:179
+msgid "Show Category Filter "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:184
+msgid "Enable/Disable the category filter on the sidebar."
+msgstr "सक्षम/अक्षम श्रेणी फिल्टर पर साइडबार."
+
+#: backend/templates/views/product_filter/settings.php:189
+msgid "Show Stock Status Filter"
+msgstr "दिखाने के लिए स्टॉक की स्थिति फिल्टर"
+
+#: backend/templates/views/product_filter/settings.php:194
+msgid "Enable/Disable the stock status filter on the sidebar. "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:200
+msgid "Filter Sidebar Position"
+msgstr "फिल्टर साइडबार स्थिति"
+
+#: backend/templates/views/product_filter/settings.php:206
+msgid "Right "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:224
+msgid "Max Product Per Page"
+msgstr "मैक्स उत्पाद प्रति पृष्ठ"
+
+#: backend/templates/views/product_filter/settings.php:228
+msgid "Set maximum number of products can be showed in a page."
+msgstr "निर्धारित अधिकतम उत्पादों की संख्या में दिखाया जा सकता है । "
+
+#: backend/templates/views/product_filter/settings.php:235
+msgid "\"Add to Cart\" Button Text"
+msgstr "\"गाड़ी में जोड़ें\" बटन पाठ"
+
+#: backend/templates/views/product_filter/settings.php:239
+msgid "Set the \"Add to Cart\" button text."
+msgstr "सेट \"गाड़ी में जोड़ें\" बटन पाठ । "
+
+#: backend/templates/views/product_filter/settings.php:245
+msgid "\"Select Options\" Button Text"
+msgstr "\"विकल्प का चयन करें\" बटन पाठ"
+
+#: backend/templates/views/product_filter/settings.php:249
+msgid "Set the \"Select Options\" button text for variable products."
+msgstr "सेट \"विकल्प का चयन करें\" बटन के लिए पाठ चर उत्पादों."
+
+#: backend/templates/views/product_filter/settings.php:255
+msgid "\"Stock Out\" Button Text"
+msgstr "\"स्टॉक से बाहर\" बटन पाठ"
+
+#: backend/templates/views/product_filter/settings.php:259
+msgid "Set the \"Stock Out\" button text for stock out products."
+msgstr "सेट \"स्टॉक से बाहर\" बटन पाठ के लिए शेयर उत्पादों को बाहर."
+
+#: backend/templates/views/product_filter/settings.php:266
+msgid "\"Previous Page\" Button Text"
+msgstr "\"पिछले पृष्ठ\" बटन पाठ"
+
+#: backend/templates/views/product_filter/settings.php:270
+msgid "Set the \"Previous Page\" button text."
+msgstr "सेट \"पिछले पृष्ठ\" बटन पाठ । "
+
+#: backend/templates/views/product_filter/settings.php:277
+msgid "\"Next Page\" Button Text"
+msgstr "\"अगले पृष्ठ\" बटन पाठ"
+
+#: backend/templates/views/product_filter/settings.php:281
+msgid "Set the \"Next Page\" button text."
+msgstr "सेट \"अगले पृष्ठ\" बटन पाठ । "
+
+#: backend/templates/views/product_filter/settings.php:286
+msgid "Action Button Background Color"
+msgstr "कार्रवाई बटन पृष्ठभूमि रंग"
+
+#: backend/templates/views/product_filter/settings.php:295
+msgid ""
+"Set background color of Add to Cart, Select Option and Stock Out button."
+msgstr ""
+"सेट पृष्ठभूमि रंग की गाड़ी में जोड़ने के लिए, विकल्प का चयन करें और शेयर बटन "
+"बाहर."
+
+#: backend/templates/views/product_filter/settings.php:301
+msgid "Action Button Font Color"
+msgstr "कार्रवाई बटन फ़ॉन्ट रंग"
+
+#: backend/templates/views/product_filter/settings.php:310
+msgid "Set text color of Add to Cart, Select Option and Stock Out button."
+msgstr ""
+"सेट पाठ का रंग की गाड़ी में जोड़ने के लिए, विकल्प का चयन करें और शेयर बटन "
+"बाहर."
+
+#: backend/templates/views/product_filter/settings.php:318
+msgid "Pagination Button Border Color"
+msgstr "पृष्ठ पर अंक लगाना बटन बॉर्डर रंग"
+
+#: backend/templates/views/product_filter/settings.php:327
+msgid "Set border color of Previous Page and Next Page buttons."
+msgstr "सेट की सीमा के रंग के पिछले पृष्ठ और अगले पृष्ठ पर बटन । "
+
+#: backend/templates/views/product_filter/settings.php:334
+msgid "Pagination Button Font Color"
+msgstr "पृष्ठ पर अंक लगाना बटन फ़ॉन्ट रंग"
+
+#: backend/templates/views/product_filter/settings.php:343
+msgid "Set text color of Previous Page and Next Page buttons."
+msgstr "सेट पाठ का रंग पिछला पृष्ठ और अगले पृष्ठ पर बटन । "
+
+#: backend/templates/views/product_filter/settings.php:350
+msgid "Product Loader Color"
+msgstr "उत्पाद लोडर रंग"
+
+#: backend/templates/views/product_filter/settings.php:359
+msgid "Set the color of product loader animation."
+msgstr "का रंग सेट करें उत्पाद लोडर एनीमेशन."
+
+#: backend/templates/views/product_filter/settings.php:370
+msgid "Search Filter Settings"
+msgstr "खोज फ़िल्टर सेटिंग्स"
+
+#: backend/templates/views/product_filter/settings.php:378
+#: backend/templates/views/product_filter/settings.php:480
+#: backend/templates/views/product_filter/settings.php:594
+#: backend/templates/views/product_filter/settings.php:734
+#: backend/templates/views/product_filter/settings.php:844
+msgid "Label Text"
+msgstr "लेबल पाठ"
+
+#: backend/templates/views/product_filter/settings.php:382
+msgid "Set the Search Filter Label text."
+msgstr "सेट खोज फिल्टर लेबल पाठ है । "
+
+#: backend/templates/views/product_filter/settings.php:389
+msgid "Placeholder Text"
+msgstr "प्लेसहोल्डर पाठ"
+
+#: backend/templates/views/product_filter/settings.php:393
+msgid "Set the Search Field input placeholder text."
+msgstr "सेट खोज के क्षेत्र इनपुट प्लेसहोल्डर पाठ."
+
+#: backend/templates/views/product_filter/settings.php:400
+#: backend/templates/views/product_filter/settings.php:514
+msgid "Label Font Color"
+msgstr "लेबल फ़ॉन्ट रंग"
+
+#: backend/templates/views/product_filter/settings.php:409
+msgid "Set text color of label of the search filter."
+msgstr "सेट पाठ का रंग के लेबल खोज फ़िल्टर."
+
+#: backend/templates/views/product_filter/settings.php:417
+msgid "Input Field Border Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:427
+msgid "Set border color of input field of the search filter."
+msgstr "सेट की सीमा के रंग के इनपुट क्षेत्र के लिए खोज फिल्टर । "
+
+#: backend/templates/views/product_filter/settings.php:435
+msgid "Input Field Background Color"
+msgstr "इनपुट क्षेत्र पृष्ठभूमि रंग"
+
+#: backend/templates/views/product_filter/settings.php:444
+msgid "Set background color of input field of the search filter."
+msgstr "सेट पृष्ठभूमि रंग के इनपुट क्षेत्र के लिए खोज फिल्टर । "
+
+#: backend/templates/views/product_filter/settings.php:452
+msgid "Input Field Text Color"
+msgstr "इनपुट क्षेत्र पाठ का रंग"
+
+#: backend/templates/views/product_filter/settings.php:462
+msgid "Set text color of input field of the search filter."
+msgstr "सेट पाठ का रंग इनपुट क्षेत्र के लिए खोज फिल्टर । "
+
+#: backend/templates/views/product_filter/settings.php:472
+msgid "Price Filter Settings"
+msgstr "कीमत फिल्टर सेटिंग्स"
+
+#: backend/templates/views/product_filter/settings.php:484
+msgid "Set the Price Filter Label text."
+msgstr "मूल्य निर्धारित फिल्टर लेबल पाठ है । "
+
+#: backend/templates/views/product_filter/settings.php:491
+msgid "Min Placeholder Text"
+msgstr "मिन प्लेसहोल्डर पाठ"
+
+#: backend/templates/views/product_filter/settings.php:495
+msgid "Set the Minimum Price Field input placeholder text."
+msgstr "निर्धारित न्यूनतम मूल्य क्षेत्र इनपुट प्लेसहोल्डर पाठ."
+
+#: backend/templates/views/product_filter/settings.php:503
+msgid "Max Placeholder Text"
+msgstr "अधिकतम प्लेसहोल्डर पाठ"
+
+#: backend/templates/views/product_filter/settings.php:507
+msgid "Set the Maximum Price Field input placeholder text."
+msgstr "निर्धारित अधिकतम मूल्य क्षेत्र इनपुट प्लेसहोल्डर पाठ."
+
+#: backend/templates/views/product_filter/settings.php:523
+msgid "Set text color of label of the price filter."
+msgstr "सेट पाठ रंग के लेबल की कीमत फिल्टर."
+
+#: backend/templates/views/product_filter/settings.php:531
+msgid "Input Field Border Color"
+msgstr "इनपुट क्षेत्र के बॉर्डर का रंग"
+
+#: backend/templates/views/product_filter/settings.php:541
+msgid "Set border color of input field of the price filter."
+msgstr "सेट की सीमा के रंग के इनपुट क्षेत्र के मूल्य फिल्टर."
+
+#: backend/templates/views/product_filter/settings.php:549
+msgid "Input Field Background Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:558
+msgid "Set background color of input field of the price filter."
+msgstr "सेट पृष्ठभूमि रंग के इनपुट क्षेत्र के मूल्य फिल्टर."
+
+#: backend/templates/views/product_filter/settings.php:566
+msgid "Input Field Text Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:576
+msgid "Set text color of input field of the price filter."
+msgstr "सेट पाठ का रंग इनपुट क्षेत्र के मूल्य फिल्टर."
+
+#: backend/templates/views/product_filter/settings.php:586
+msgid "Rating Filter Settings"
+msgstr "रेटिंग फिल्टर सेटिंग्स"
+
+#: backend/templates/views/product_filter/settings.php:598
+msgid "Set the Rating Filter Label text."
+msgstr "दर्ज़ा सेट फिल्टर लेबल पाठ है । "
+
+#: backend/templates/views/product_filter/settings.php:604
+msgid "\"And Up\" Text"
+msgstr "\"और\" पाठ"
+
+#: backend/templates/views/product_filter/settings.php:608
+msgid "Set the \"And Up\" text shown beside ratings."
+msgstr "सेट \"और\" पाठ के बगल में दिखाए जाते रेटिंग्स."
+
+#: backend/templates/views/product_filter/settings.php:614
+#: backend/templates/views/product_filter/settings.php:746
+#: backend/templates/views/product_filter/settings.php:877
+msgid "Label Font Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:623
+msgid "Set text color of label of the rating filter."
+msgstr "सेट पाठ का रंग के लेबल रेटिंग फिल्टर."
+
+#: backend/templates/views/product_filter/settings.php:630
+msgid "\"And Up\" Font Color"
+msgstr "\"और\" फ़ॉन्ट रंग"
+
+#: backend/templates/views/product_filter/settings.php:639
+msgid "Set text color of \"And Up\" text shown beside ratings."
+msgstr "सेट पाठ का रंग \"और\" पाठ के बगल में दिखाए जाते रेटिंग्स."
+
+#: backend/templates/views/product_filter/settings.php:647
+msgid "Show 5 Star Rating?"
+msgstr "शो 5 स्टार रेटिंग?"
+
+#: backend/templates/views/product_filter/settings.php:652
+msgid "Please turn off if you do not want to show the 5 star rating filter."
+msgstr ""
+"बंद चालू करें यदि आप नहीं चाहते हैं दिखाने के लिए 5 स्टार रेटिंग फिल्टर."
+
+#: backend/templates/views/product_filter/settings.php:660
+msgid "Show 4 Star Rating?"
+msgstr "दिखाने के लिए 4 स्टार रेटिंग?"
+
+#: backend/templates/views/product_filter/settings.php:665
+msgid "Please turn off if you do not want to show the 4 star rating filter."
+msgstr ""
+"बंद चालू करें यदि आप नहीं चाहते हैं दिखाने के लिए 4 स्टार रेटिंग फिल्टर."
+
+#: backend/templates/views/product_filter/settings.php:673
+msgid "Show 3 Star Rating?"
+msgstr "दिखाने के लिए 3 स्टार रेटिंग?"
+
+#: backend/templates/views/product_filter/settings.php:678
+msgid "Please turn off if you do not want to show the 3 star rating filter."
+msgstr ""
+"बंद चालू करें यदि आप नहीं चाहते हैं दिखाने के लिए 3 स्टार रेटिंग फिल्टर."
+
+#: backend/templates/views/product_filter/settings.php:686
+msgid "Show 2 Star Rating?"
+msgstr "शो 2 स्टार रेटिंग?"
+
+#: backend/templates/views/product_filter/settings.php:691
+msgid "Please turn off if you do not want to show the 2 star rating filter."
+msgstr ""
+"बंद चालू करें यदि आप नहीं चाहते हैं दिखाने के लिए 2 स्टार रेटिंग फिल्टर."
+
+#: backend/templates/views/product_filter/settings.php:699
+msgid "Show 1 Star Rating?"
+msgstr "शो 1 स्टार रेटिंग?"
+
+#: backend/templates/views/product_filter/settings.php:704
+msgid "Please turn off if you do not want to show the 1 star rating filter."
+msgstr ""
+"बंद चालू करें यदि आप नहीं चाहते हैं दिखाने के लिए 1 स्टार रेटिंग फिल्टर."
+
+#: backend/templates/views/product_filter/settings.php:712
+msgid "Show 0 Star Rating?"
+msgstr "शो में 0 स्टार रेटिंग?"
+
+#: backend/templates/views/product_filter/settings.php:717
+msgid "Please turn off if you do not want to show the 0 star rating filter."
+msgstr ""
+"बंद चालू करें यदि आप नहीं चाहते हैं दिखाने के लिए 0 स्टार रेटिंग फिल्टर."
+
+#: backend/templates/views/product_filter/settings.php:727
+msgid "Category Filter Settings"
+msgstr "श्रेणी फिल्टर सेटिंग्स"
+
+#: backend/templates/views/product_filter/settings.php:738
+msgid "Set the Category Filter Label text."
+msgstr "सेट श्रेणी फिल्टर लेबल पाठ है । "
+
+#: backend/templates/views/product_filter/settings.php:755
+msgid "Set text color of label of the category filter."
+msgstr "सेट पाठ का रंग लेबल के श्रेणी फिल्टर । "
+
+#: backend/templates/views/product_filter/settings.php:763
+msgid "Category Font Color"
+msgstr "श्रेणी के फ़ॉन्ट रंग"
+
+#: backend/templates/views/product_filter/settings.php:773
+msgid "Set text color of category name."
+msgstr "सेट पाठ का रंग श्रेणी का नाम है । "
+
+#: backend/templates/views/product_filter/settings.php:781
+msgid "Checkbox Unchecked Background Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:791
+#: backend/templates/views/product_filter/settings.php:920
+msgid "Set the background color of checkbox on unchecked state."
+msgstr "पृष्ठभूमि का रंग सेट करें चेकबॉक्स पर अनियंत्रित राज्य है । "
+
+#: backend/templates/views/product_filter/settings.php:799
+msgid "Checkbox Unchecked Border Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:809
+#: backend/templates/views/product_filter/settings.php:938
+msgid "Set the border color of checkbox on unchecked state."
+msgstr "सेट की सीमा के रंग के चेकबॉक्स पर अनियंत्रित राज्य है । "
+
+#: backend/templates/views/product_filter/settings.php:817
+#: backend/templates/views/product_filter/settings.php:946
+msgid "Checkbox Checked Background Color"
+msgstr "चेकबॉक्स की जाँच की पृष्ठभूमि का रंग"
+
+#: backend/templates/views/product_filter/settings.php:827
+#: backend/templates/views/product_filter/settings.php:956
+msgid "Set the background color of checkbox on checked state."
+msgstr "पृष्ठभूमि का रंग सेट करें पर चेकबॉक्स की जाँच की राज्य."
+
+#: backend/templates/views/product_filter/settings.php:837
+msgid "Stock Filter Settings"
+msgstr "शेयर फिल्टर सेटिंग्स"
+
+#: backend/templates/views/product_filter/settings.php:848
+msgid "Set the Stock Filter Label text."
+msgstr "शेयर सेट फिल्टर लेबल पाठ है । "
+
+#: backend/templates/views/product_filter/settings.php:855
+msgid "\"In Stock\" Text"
+msgstr "\"स्टॉक में\" पाठ"
+
+#: backend/templates/views/product_filter/settings.php:859
+msgid "Set the \"In Stock\" option text."
+msgstr "सेट में \"शेयर\" विकल्प के साथ पाठ."
+
+#: backend/templates/views/product_filter/settings.php:866
+msgid "\"Out of Stock\" Text"
+msgstr "\"स्टॉक से बाहर\" पाठ"
+
+#: backend/templates/views/product_filter/settings.php:870
+msgid "Set the \"Out of Stock\" option text."
+msgstr "सेट से बाहर \"शेयर\" विकल्प के साथ पाठ."
+
+#: backend/templates/views/product_filter/settings.php:886
+msgid "Set text color of label of the stock filter."
+msgstr "सेट पाठ का रंग लेबल के शेयर फिल्टर । "
+
+#: backend/templates/views/product_filter/settings.php:893
+msgid "Stock Status Font Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:902
+msgid "Set text color of stock status name."
+msgstr "सेट पाठ का रंग स्टॉक की स्थिति का नाम है । "
+
+#: backend/templates/views/product_filter/settings.php:910
+msgid "Checkbox Unchecked Background Color"
+msgstr "चेकबॉक्स अचिह्नित पृष्ठभूमि रंग"
+
+#: backend/templates/views/product_filter/settings.php:928
+msgid "Checkbox Unchecked Border Color"
+msgstr "चेकबॉक्स अचिह्नित बॉर्डर का रंग"
+
+#: backend/templates/views/product_sticky_bar/settings.php:96
+msgid "Enable Sticky Bar"
+msgstr "सक्षम चिपचिपा पट्टी"
+
+#: backend/templates/views/product_sticky_bar/settings.php:101
+msgid "Turn On/Off the product sticky bar."
+msgstr "पर/बंद उत्पाद चिपचिपा पट्टी."
+
+#: backend/templates/views/product_sticky_bar/settings.php:107
+msgid "Show on Desktop"
+msgstr "पर दिखाने के डेस्कटॉप"
+
+#: backend/templates/views/product_sticky_bar/settings.php:113
+msgid "Show/Hide sticky bar on Desktop"
+msgstr "दिखाएँ/छुपाएँ पर स्टिकी बार के डेस्कटॉप"
+
+#: backend/templates/views/product_sticky_bar/settings.php:121
+msgid "Show on Mobile"
+msgstr "पर दिखाने के लिए मोबाइल"
+
+#: backend/templates/views/product_sticky_bar/settings.php:128
+msgid "Toggle off if you don/t want the sticky bar on mobile."
+msgstr "टॉगल करें बंद अगर तुम नहीं करोगे/t चाहते हैं स्टिकी बार मोबाइल पर."
+
+#: backend/templates/views/product_sticky_bar/settings.php:134
+msgid "Sticky Bar Position"
+msgstr "चिपचिपा पट्टी स्थिति"
+
+#: backend/templates/views/product_sticky_bar/settings.php:140
+#: backend/templates/views/shipping_bar/settings.php:353
+msgid "Top"
+msgstr "शीर्ष"
+
+#: backend/templates/views/product_sticky_bar/settings.php:143
+#: backend/templates/views/shipping_bar/settings.php:354
+msgid "Bottom"
+msgstr "नीचे"
+
+#: backend/templates/views/product_sticky_bar/settings.php:150
+msgid "Show Only After Scroll"
+msgstr "शो के बाद ही स्क्रॉल"
+
+#: backend/templates/views/product_sticky_bar/settings.php:157
+msgid "Show sticky bar only when user scrolls down in product page"
+msgstr ""
+"दिखाने के लिए चिपचिपा पट्टी केवल जब उपयोगकर्ता स्क्रॉल नीचे में उत्पाद पृष्ठ"
+
+#: backend/templates/views/product_sticky_bar/settings.php:163
+msgid "Scroll Pixels"
+msgstr "स्क्रॉल पिक्सल"
+
+#: backend/templates/views/product_sticky_bar/settings.php:167
+msgid ""
+"Display a bar on the product page when the user scrolls a certain distance. "
+"It only activates if the \"Scroll Pixels\" option is turned on, with a "
+"default setting of 180 pixels."
+msgstr ""
+"एक बार प्रदर्शित उत्पाद पृष्ठ पर जब उपयोगकर्ता स्क्रॉल से एक निश्चित दूरी है "
+"। यह केवल सक्रिय है अगर स्क्रॉल \"पिक्सल\" विकल्प चालू है, के साथ एक "
+"डिफ़ॉल्ट सेटिंग के 180 पिक्सल है । "
+
+#: backend/templates/views/product_sticky_bar/settings.php:173
+msgid "Show Product Review"
+msgstr "दिखाने के उत्पाद की समीक्षा"
+
+#: backend/templates/views/product_sticky_bar/settings.php:180
+msgid "Show/Hide sticky bar on mobile"
+msgstr "दिखाएँ/छुपाएँ पर स्टिकी बार मोबाइल"
+
+#: backend/templates/views/product_sticky_bar/settings.php:187
+msgid "Show Product Review Count"
+msgstr "दिखाएँ उत्पाद की समीक्षा का भरोसा"
+
+#: backend/templates/views/product_sticky_bar/settings.php:194
+msgid "Show/Hide the product review count on the sticky bar."
+msgstr "दिखाएँ/छुपाएँ उत्पाद समीक्षा पर भरोसा चिपचिपा पट्टी."
+
+#: backend/templates/views/product_sticky_bar/settings.php:204
+msgid "Turn off Products"
+msgstr "बंद उत्पादों"
+
+#: backend/templates/views/product_sticky_bar/settings.php:216
+msgid "Select the products where you do not want to show the sticky bar"
+msgstr ""
+"उत्पादों का चयन करें जहां आप नहीं चाहते हैं दिखाने के लिए चिपचिपा पट्टी"
+
+#: backend/templates/views/product_sticky_bar/settings.php:222
+msgid "Enable Update Product Qty"
+msgstr "सक्षम अद्यतन उत्पाद मात्रा"
+
+#: backend/templates/views/product_sticky_bar/settings.php:227
+msgid "Show/Hide the product quantity update option on the sticky bar."
+msgstr "दिखाएँ/छुपाएँ उत्पाद मात्रा अद्यतन विकल्प पर स्टिकी बार."
+
+#: backend/templates/views/product_sticky_bar/settings.php:234
+msgid "Enable Variable Product"
+msgstr "सक्षम चर उत्पाद"
+
+#: backend/templates/views/product_sticky_bar/settings.php:239
+msgid "Show/Hide the variable product selection option on the sticky bar"
+msgstr "दिखाएँ/छुपाएँ चर उत्पाद का चयन विकल्प पर स्टिकी बार"
+
+#: backend/templates/views/product_sticky_bar/settings.php:250
+msgid "Show/Hide the product image on the sticky bar."
+msgstr "दिखाएँ/छुपाएँ उत्पाद छवि पर स्टिकी बार."
+
+#: backend/templates/views/product_sticky_bar/settings.php:256
+msgid "Show Stock Status"
+msgstr "दिखाने के लिए स्टॉक की स्थिति"
+
+#: backend/templates/views/product_sticky_bar/settings.php:261
+msgid "Please turn off if you don't want to show stock quantity on sticky bar"
+msgstr ""
+"बंद चालू करें यदि आप नहीं चाहते हैं दिखाने के लिए स्टॉक की मात्रा पर स्टिकी "
+"बार"
+
+#: backend/templates/views/product_sticky_bar/settings.php:267
+msgid "Hide Sticky bar (Product Out of Stock)"
+msgstr "छिपाने चिपचिपा पट्टी (उत्पाद स्टॉक से बाहर)"
+
+#: backend/templates/views/product_sticky_bar/settings.php:273
+msgid "Turn off the sticky bar for out-of-stock products."
+msgstr "बंद चिपचिपा पट्टी के लिए बाहर के शेयर उत्पादों है । "
+
+#: backend/templates/views/product_sticky_bar/settings.php:281
+msgid "Bar Style"
+msgstr "पट्टी शैली"
+
+#: backend/templates/views/product_sticky_bar/settings.php:286
+msgid "Height"
+msgstr "ऊंचाई"
+
+#: backend/templates/views/product_sticky_bar/settings.php:290
+msgid "Set sticky bar height in pixel(Ex.150) - Default 100px."
+msgstr "सेट चिपचिपा पट्टी में ऊंचाई पिक्सेल(पूर्व.150) - डिफ़ॉल्ट 100px."
+
+#: backend/templates/views/product_sticky_bar/settings.php:297
+msgid "Product Image Shape"
+msgstr "उत्पाद छवि आकार"
+
+#: backend/templates/views/product_sticky_bar/settings.php:308
+msgid "Show product image shape (Default: Square)"
+msgstr "दिखाएँ उत्पाद छवि आकार (डिफ़ॉल्ट: वर्ग)"
+
+#: backend/templates/views/product_sticky_bar/settings.php:316
+msgid "Product Title Color "
+msgstr ""
+
+#: backend/templates/views/product_sticky_bar/settings.php:332
+msgid "Product Rating Color "
+msgstr ""
+
+#: backend/templates/views/product_sticky_bar/settings.php:348
+msgid "Product Rating Count Color"
+msgstr "उत्पाद रेटिंग गिनती रंग"
+
+#: backend/templates/views/product_sticky_bar/settings.php:365
+msgid "Product Price Color"
+msgstr "उत्पाद मूल्य का रंग"
+
+#: backend/templates/views/product_sticky_bar/settings.php:381
+msgid "Product Price Font Size"
+msgstr "उत्पाद की कीमत फ़ॉन्ट आकार"
+
+#: backend/templates/views/product_sticky_bar/settings.php:385
+msgid "Set sticky bar product price font size (Ex. 17)"
+msgstr "सेट चिपचिपा पट्टी उत्पाद की कीमत फ़ॉन्ट आकार (पूर्व. 17)"
+
+#: backend/templates/views/product_sticky_bar/settings.php:426
+msgid "Set sticky bar add to cart button font size (Ex. 14)"
+msgstr "सेट चिपचिपा पट्टी जोड़ने के लिए गाड़ी बटन फ़ॉन्ट आकार (पूर्व. 14)"
+
+#: backend/templates/views/product_sticky_bar/settings.php:448
+msgid "Button Border Width"
+msgstr "बटन सीमा चौड़ाई"
+
+#: backend/templates/views/product_sticky_bar/settings.php:452
+msgid "Set sticky bar add to cart button border width (Ex. 1)"
+msgstr "सेट चिपचिपा पट्टी गाड़ी बटन जोड़ने के लिए सीमा चौड़ाई (पूर्व. 1)"
+
+#: backend/templates/views/product_sticky_bar/settings.php:459
+msgid "Button Background Hover Color "
+msgstr ""
+
+#: backend/templates/views/product_sticky_bar/settings.php:508
+msgid "Button Padding Left-Right "
+msgstr ""
+
+#: backend/templates/views/product_sticky_bar/settings.php:514
+msgid ""
+"Adjust space around the add to cart button in the sticky bar (Default: 30)."
+msgstr ""
+"समायोजित अंतरिक्ष के आसपास गाड़ी बटन को जोड़ने में चिपचिपा पट्टी (डिफ़ॉल्ट: "
+"30)."
+
+#: backend/templates/views/product_sticky_bar/settings.php:522
+msgid "Button Padding Top-Bottom"
+msgstr "बटन गद्दी के ऊपर-नीचे"
+
+#: backend/templates/views/product_sticky_bar/settings.php:528
+msgid "Set sticky bar add to cart button top-bottom padding (Default: 10)"
+msgstr "सेट चिपचिपा पट्टी कार्ट में जोड़ें बटन ऊपर-नीचे गद्दी (डिफ़ॉल्ट: 10)"
+
+#: backend/templates/views/shipping_bar/settings.php:120
+msgid "Turn ON the switch to enable the Shipping Bar."
+msgstr "स्विच पर बारी करने के लिए सक्षम शिपिंग बार."
+
+#: backend/templates/views/shipping_bar/settings.php:125
+msgid "Display in Desktop"
+msgstr "प्रदर्शन में डेस्कटॉप"
+
+#: backend/templates/views/shipping_bar/settings.php:128
+msgid "Switch ON to display Shipping Bar on Desktop."
+msgstr "स्विच पर प्रदर्शित करने के लिए शिपिंग पट्टी पर डेस्कटॉप."
+
+#: backend/templates/views/shipping_bar/settings.php:133
+msgid "Display in Mobile"
+msgstr "प्रदर्शन में मोबाइल"
+
+#: backend/templates/views/shipping_bar/settings.php:136
+msgid "Switch ON to display Shipping Bar on mobile."
+msgstr "स्विच पर प्रदर्शित करने के लिए शिपिंग बार मोबाइल पर."
+
+#: backend/templates/views/shipping_bar/settings.php:141
+msgid "Select Shipping Zone"
+msgstr "का चयन करें शिपिंग क्षेत्र"
+
+#: backend/templates/views/shipping_bar/settings.php:149
+msgid "You must select your shipping zone, if not created please create"
+msgstr ""
+"आप का चयन करना होगा अपने शिपिंग क्षेत्र है, अगर नहीं बनाया बनाने के लिए कृपया"
+
+#: backend/templates/views/shipping_bar/settings.php:149
+msgid "Here"
+msgstr "यहाँ"
+
+#: backend/templates/views/shipping_bar/settings.php:154
+msgid "Exclude Pages"
+msgstr "पृष्ठों को बाहर"
+
+#: backend/templates/views/shipping_bar/settings.php:162
+msgid "Select the pages where you don't want to show the Free Shipping Bar."
+msgstr ""
+"का चयन करें पृष्ठों जहाँ आप नहीं चाहते हैं दिखाने के लिए नि: शुल्क शिपिंग "
+"बार."
+
+#: backend/templates/views/shipping_bar/settings.php:175
+msgid ""
+"Select the products for which you don't want to allow Free Shipping Bar."
+msgstr ""
+"उत्पादों का चयन करें जिसके लिए आप नहीं चाहते हैं अनुमति देने के लिए नि: "
+"शुल्क शिपिंग बार."
+
+#: backend/templates/views/shipping_bar/settings.php:183
+msgid "Cart & Checkout Page Settings"
+msgstr "गाड़ी और चेकआउट पृष्ठ सेटिंग्स"
+
+#: backend/templates/views/shipping_bar/settings.php:186
+msgid "Cart Page"
+msgstr "कार्ट पृष्ठ"
+
+#: backend/templates/views/shipping_bar/settings.php:189
+msgid "Cart Total"
+msgstr "गाड़ी में कुल"
+
+#: backend/templates/views/shipping_bar/settings.php:192
+msgid ""
+"Turn on the switch to show the free shipping message in the shopping cart."
+msgstr ""
+"स्विच पर बारी दिखाने के लिए नि: शुल्क शिपिंग संदेश में खरीदारी की टोकरी."
+
+#: backend/templates/views/shipping_bar/settings.php:197
+msgid "Choose spot on cart page."
+msgstr "चुनें स्थान कार्ट पृष्ठ पर."
+
+#: backend/templates/views/shipping_bar/settings.php:201
+#: backend/templates/views/shipping_bar/settings.php:223
+msgid "Before shipping block"
+msgstr "शिपिंग से पहले ब्लॉक"
+
+#: backend/templates/views/shipping_bar/settings.php:202
+#: backend/templates/views/shipping_bar/settings.php:224
+msgid "After shipping block"
+msgstr "शिपिंग के बाद ब्लॉक"
+
+#: backend/templates/views/shipping_bar/settings.php:204
+msgid "Select position of the free shipping notification in cart page."
+msgstr "की स्थिति का चयन नि: शुल्क शिपिंग अधिसूचना में कार्ट पृष्ठ."
+
+#: backend/templates/views/shipping_bar/settings.php:211
+msgid "Display in Total Cost Area"
+msgstr "प्रदर्शन में कुल लागत क्षेत्र"
+
+#: backend/templates/views/shipping_bar/settings.php:214
+msgid ""
+"Turn ON the switch to show the free shipping notification in checkout "
+"subtotal area."
+msgstr ""
+"स्विच पर बारी दिखाने के लिए नि: शुल्क शिपिंग अधिसूचना में चेकआउट आधा क्षेत्र "
+"है."
+
+#: backend/templates/views/shipping_bar/settings.php:219
+msgid "Select Position on Checkout Page"
+msgstr "चयन करें स्थिति चेकआउट पृष्ठ पर"
+
+#: backend/templates/views/shipping_bar/settings.php:226
+msgid ""
+"Select position where the free shipping notification will be displayed on "
+"checkout page."
+msgstr ""
+"का चयन करें जहां स्थिति को नि: शुल्क शिपिंग अधिसूचना प्रदर्शित किया जाएगा "
+"चेकआउट पृष्ठ पर."
+
+#: backend/templates/views/shipping_bar/settings.php:233
+msgid "Headline Text"
+msgstr "शीर्षक पाठ"
+
+#: backend/templates/views/shipping_bar/settings.php:236
+msgid "Enter cart & checkout page free shipping progress bar headline text."
+msgstr "दर्ज की टोकरी और चेकआउट पृष्ठ मुफ़्त शिपिंग प्रगति पट्टी शीर्षक पाठ."
+
+#: backend/templates/views/shipping_bar/settings.php:241
+#: backend/templates/views/shipping_bar/settings.php:504
+msgid "Progress Bar's Background"
+msgstr "प्रगति पट्टी की पृष्ठभूमि"
+
+#: backend/templates/views/shipping_bar/settings.php:247
+#: backend/templates/views/shipping_bar/settings.php:510
+msgid "Set your progress bar's background color."
+msgstr "सेट अपने प्रगति पट्टी की पृष्ठभूमि का रंग."
+
+#: backend/templates/views/shipping_bar/settings.php:252
+#: backend/templates/views/shipping_bar/settings.php:515
+msgid "Progress Bar's Color"
+msgstr "प्रगति पट्टी के रंग"
+
+#: backend/templates/views/shipping_bar/settings.php:258
+#: backend/templates/views/shipping_bar/settings.php:521
+msgid "Set your free shipping bar's progress color."
+msgstr "सेट अपने मुफ़्त शिपिंग पट्टी की प्रगति का रंग । "
+
+#: backend/templates/views/shipping_bar/settings.php:263
+#: backend/templates/views/shipping_bar/settings.php:527
+msgid "Progress Bar's Text Color"
+msgstr "प्रगति पट्टी के पाठ का रंग"
+
+#: backend/templates/views/shipping_bar/settings.php:269
+#: backend/templates/views/shipping_bar/settings.php:533
+msgid "Set your free shipping bar's progress text color."
+msgstr "सेट अपने मुफ़्त शिपिंग पट्टी की प्रगति पाठ का रंग । "
+
+#: backend/templates/views/shipping_bar/settings.php:278
+msgid "Customize Messages"
+msgstr "संदेशों को अनुकूलित"
+
+#: backend/templates/views/shipping_bar/settings.php:283
+msgid "Message on Zero Order Amount"
+msgstr "संदेश पर शून्य आदेश राशि"
+
+#: backend/templates/views/shipping_bar/settings.php:286
+msgid ""
+"\"Empty Cart in Shipping Zone: Add items to qualify for Free Shipping "
+"({minimum_order}).\""
+msgstr ""
+
+#: backend/templates/views/shipping_bar/settings.php:291
+msgid "Message on Partially Completed Order Amount"
+msgstr "संदेश पर आंशिक रूप से पूरा आदेश राशि"
+
+#: backend/templates/views/shipping_bar/settings.php:294
+msgid ""
+"Shipping Alert: Add {missing_amount} for Free Shipping (Min. order: "
+"{minimum_order}, Current total: {cart_total})."
+msgstr ""
+
+#: backend/templates/views/shipping_bar/settings.php:299
+msgid "Message on Completed Order Amount"
+msgstr "संदेश पर पूरा आदेश राशि"
+
+#: backend/templates/views/shipping_bar/settings.php:302
+msgid ""
+"Free Shipping Alert: Your order qualifies! Click {checkout_page} to proceed."
+msgstr ""
+
+#: backend/templates/views/shipping_bar/settings.php:312
+msgid "Effect Settings"
+msgstr "प्रभाव सेटिंग्स"
+
+#: backend/templates/views/shipping_bar/settings.php:316
+msgid "Initial Delay Time"
+msgstr "प्रारंभिक देरी समय"
+
+#: backend/templates/views/shipping_bar/settings.php:319
+msgid ""
+"Set the time delay for Free Shipping Bar to decide when it appears in "
+"milliseconds."
+msgstr ""
+"निर्धारित समय की देरी के लिए नि: शुल्क शिपिंग पट्टी करने के लिए तय है, जब यह "
+"प्रतीत होता है मिलीसेकेंड में."
+
+#: backend/templates/views/shipping_bar/settings.php:324
+msgid "Allow Disappear Time"
+msgstr "अनुमति देते समय गायब हो जाते हैं"
+
+#: backend/templates/views/shipping_bar/settings.php:327
+msgid "Turn ON the switch to allow disappear time."
+msgstr "स्विच पर बारी करने के लिए अनुमति देते गायब हो समय."
+
+#: backend/templates/views/shipping_bar/settings.php:332
+msgid "Set Disappear Time"
+msgstr "निर्धारित समय गायब हो जाते हैं"
+
+#: backend/templates/views/shipping_bar/settings.php:335
+msgid ""
+"Set disappear time in milliseconds. The Free Shipping Bar will disappear "
+"according to your setting time."
+msgstr ""
+"सेट गायब हो मिलीसेकेंड में समय. नि: शुल्क नौवहन पट्टी गायब हो जाएगा के "
+"अनुसार, अपनी स्थापना के समय."
+
+#: backend/templates/views/shipping_bar/settings.php:349
+msgid "Shipping Bar Position"
+msgstr "शिपिंग पट्टी स्थिति"
+
+#: backend/templates/views/shipping_bar/settings.php:361
+msgid "Shipping Bar Layout"
+msgstr "शिपिंग पट्टी लेआउट"
+
+#: backend/templates/views/shipping_bar/settings.php:365
+msgid "Layout 1"
+msgstr "लेआउट 1"
+
+#: backend/templates/views/shipping_bar/settings.php:366
+msgid "Layout 2"
+msgstr "2 लेआउट"
+
+#: backend/templates/views/shipping_bar/settings.php:368
+msgid "Choose layout to auto fill other style configurations."
+msgstr "लेआउट का चयन करने के लिए ऑटो भरने अन्य शैली विन्यास."
+
+#: backend/templates/views/shipping_bar/settings.php:379
+msgid "Set your free shipping bar background color."
+msgstr "सेट अपने मुफ़्त शिपिंग पट्टी पृष्ठभूमि रंग । "
+
+#: backend/templates/views/shipping_bar/settings.php:384
+msgid "Padding Top"
+msgstr "गद्दी टॉप"
+
+#: backend/templates/views/shipping_bar/settings.php:387
+msgid "Set your free shipping bar's top padding."
+msgstr "सेट अपने मुफ़्त शिपिंग पट्टी के शीर्ष गद्दी । "
+
+#: backend/templates/views/shipping_bar/settings.php:392
+msgid "Padding Bottom"
+msgstr "गद्दी के नीचे"
+
+#: backend/templates/views/shipping_bar/settings.php:395
+msgid "Set your free shipping bar's bottom padding."
+msgstr "सेट अपने मुफ़्त शिपिंग पट्टी के नीचे padding."
+
+#: backend/templates/views/shipping_bar/settings.php:403
+msgid "Set your free shipping bar's left and right padding."
+msgstr "सेट अपने मुफ़्त शिपिंग पट्टी के बाएँ और दाएँ padding."
+
+#: backend/templates/views/shipping_bar/settings.php:409
+msgid "Text Color of Message"
+msgstr "पाठ रंग के लिए संदेश"
+
+#: backend/templates/views/shipping_bar/settings.php:415
+msgid "Set your free shipping bar's message text color."
+msgstr "सेट अपने मुफ़्त शिपिंग पट्टी के संदेश पाठ का रंग । "
+
+#: backend/templates/views/shipping_bar/settings.php:420
+msgid "Link Color on Message"
+msgstr "लिंक रंग पर संदेश"
+
+#: backend/templates/views/shipping_bar/settings.php:426
+msgid "Set your free shipping bar's message link text color."
+msgstr "सेट अपने मुफ़्त शिपिंग पट्टी के संदेश लिंक पाठ का रंग । "
+
+#: backend/templates/views/shipping_bar/settings.php:431
+msgid "Font Size of Message"
+msgstr "फ़ॉन्ट आकार का संदेश"
+
+#: backend/templates/views/shipping_bar/settings.php:434
+msgid "Set your free shipping bar's message font size."
+msgstr "सेट अपने मुफ़्त शिपिंग पट्टी के संदेश का फ़ॉन्ट आकार । "
+
+#: backend/templates/views/shipping_bar/settings.php:440
+msgid "Text Align of Message"
+msgstr "पाठ पंक्ति के संदेश"
+
+#: backend/templates/views/shipping_bar/settings.php:445
+msgid "Center"
+msgstr "केंद्र"
+
+#: backend/templates/views/shipping_bar/settings.php:452
+msgid "Shipping Bar Close Icon"
+msgstr "शिपिंग पट्टी चिह्न बंद"
+
+#: backend/templates/views/shipping_bar/settings.php:461
+msgid "Please select your close icon of shipping bar."
+msgstr "कृपया चयन करें-अपने चिह्न की शिपिंग बार."
+
+#: backend/templates/views/shipping_bar/settings.php:466
+msgid "Close Icon Color"
+msgstr "करीब चिह्न का रंग"
+
+#: backend/templates/views/shipping_bar/settings.php:472
+msgid "Set your free shipping bar's close icon color."
+msgstr "सेट अपने मुफ़्त शिपिंग पट्टी के पास चिह्न का रंग."
+
+#: backend/templates/views/shipping_bar/settings.php:478
+msgid "Close Icon Size"
+msgstr "करीब आइकन आकार"
+
+#: backend/templates/views/shipping_bar/settings.php:481
+msgid "Set your free shipping bar's close icon size."
+msgstr "सेट अपने मुफ़्त शिपिंग पट्टी के पास आइकन आकार."
+
+#: backend/templates/views/shipping_bar/settings.php:485
+msgid "Progress Bar Style"
+msgstr "प्रगति पट्टी शैली"
+
+#: backend/templates/views/shipping_bar/settings.php:488
+msgid "Enable Progress Bar"
+msgstr "प्रगति पट्टी सक्षम करें"
+
+#: backend/templates/views/shipping_bar/settings.php:491
+msgid "Show progress bar with free shipping bar."
+msgstr "दिखाने के लिए प्रगति पट्टी के साथ नि: शुल्क नौवहन पट्टी."
+
+#: backend/templates/views/shipping_bar/settings.php:496
+msgid "Progress Bar's Top Margin"
+msgstr "प्रगति पट्टी के शीर्ष मार्जिन"
+
+#: backend/templates/views/shipping_bar/settings.php:499
+msgid "Set your free shipping bar progress margin top."
+msgstr "सेट अपने मुफ़्त शिपिंग पट्टी प्रगति मार्जिन शीर्ष."
+
+#: backend/templates/views/shipping_bar/settings.php:538
+msgid "Progress Bar's Font Size"
+msgstr "प्रगति पट्टी के फ़ॉन्ट आकार"
+
+#: backend/templates/views/shipping_bar/settings.php:541
+msgid "Set your free shipping bar progress font size."
+msgstr "सेट अपने मुफ़्त शिपिंग पट्टी प्रगति फ़ॉन्ट आकार । "
+
+#: backend/templates/views/shipping_bar/settings.php:546
+msgid "Progress Bar's Border Radius"
+msgstr "प्रगति पट्टी की सीमा त्रिज्या"
+
+#: backend/templates/views/shipping_bar/settings.php:549
+msgid "Set your free shipping bar progress border radius."
+msgstr "सेट अपने मुफ़्त शिपिंग पट्टी प्रगति सीमा त्रिज्या । "
+
+#: backend/templates/views/url_coupon/settings.php:49
+msgid "Search"
+msgstr "खोज"
+
+#: backend/templates/views/url_coupon/settings.php:64
+msgid "Is URL Coupon"
+msgstr "यूआरएल है कूपन"
+
+#: backend/templates/views/url_coupon/settings.php:72
+msgid "Total z"
+msgstr "कुल z"
+
+#: backend/templates/views/url_coupon/url_coupon_tab.php:44
+#: modules/url_coupon/ModuleUtils.php:29
+msgid "wcEazy URL Coupon"
+msgstr "wcEazy यूआरएल कूपन"
+
+#: backend/templates/views/url_coupon/url_coupon_tab.php:45
+msgid ""
+"Let your customers apply this coupon by visiting a URL. This coupon "
+"generates a unique coupon URL that can be used in all kind of scenarios (eg. "
+"email marketing, live chat support, blog links)."
+msgstr ""
+"चलो अपने ग्राहकों को इस कूपन लागू जाकर एक URL. इस कूपन उत्पन्न करता है एक "
+"अद्वितीय कूपन कि यूआरएल में इस्तेमाल किया जा सकता परिदृश्यों के सभी प्रकार "
+"के (जैसे । ईमेल विपणन, लाइव चैट के लिए समर्थन, ब्लॉग लिंक)."
+
+#: modules/one_click_checkout/ModuleUtils.php:139
+msgid "View cart"
+msgstr "कार्ट देखें"
+
+#: modules/url_coupon/ModuleUtils.php:170
+msgid "Please first add the product to the cart and then apply the URL coupon."
+msgstr ""
+"कृपया पहले जोड़ें करने के लिए उत्पाद की टोकरी को लागू करें और URL कूपन."
+
+#. Plugin URI of the plugin/theme
+msgid "https://wceazy.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"wcEazy provides multiple WooCommerce extensions in a single package you'll "
+"ever require."
+msgstr ""
+"wcEazy प्रदान करता है कई WooCommerce एक्सटेंशन में एक ही पैकेज में आप कभी भी "
+"आवश्यकता होती है । "

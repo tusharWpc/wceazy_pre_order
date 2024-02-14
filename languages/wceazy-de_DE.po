@@ -1,0 +1,3637 @@
+# Copyright (C) 2024 wcEazy
+# This file is distributed under the same license as the wcEazy package.
+msgid ""
+msgstr ""
+"Project-Id-Version: wcEazy 1.1.6\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wceazy\n"
+"POT-Creation-Date: 2024-01-30 10:36:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-01-31 04:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.2"
+
+#: backend/class-wceazy-admin.php:139
+msgid "View wcEazy documentation"
+msgstr "Ansicht wcEazy Dokumentation"
+
+#: backend/class-wceazy-admin.php:139
+msgid "Docs"
+msgstr "Docs"
+
+#: backend/class-wceazy-admin.php:140
+msgid "Visit community forums"
+msgstr "Besuchen Sie community-Foren"
+
+#: backend/class-wceazy-admin.php:140
+msgid "Community support"
+msgstr "Community-support"
+
+#: backend/templates/dashboard.php:61
+msgid "This feature is only available in the premium version of wcEazy"
+msgstr "Diese Funktion ist nur verfügbar in der premium-version von wcEazy"
+
+#: backend/templates/dashboard.php:63
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: backend/templates/dashboard.php:64
+msgid "Get Premium"
+msgstr "Get Premium"
+
+#: backend/templates/views/address_book/settings.php:46
+#: backend/templates/views/auto_apply_coupon/settings.php:9
+#: backend/templates/views/bogo_deal/settings.php:9
+#: backend/templates/views/coupon_generator/settings.php:7
+#: backend/templates/views/floating_cart/settings.php:96
+#: backend/templates/views/modules.php:10
+#: backend/templates/views/one_click_checkout/settings.php:70
+#: backend/templates/views/pdf_invoice/settings.php:68
+#: backend/templates/views/product_filter/settings.php:88
+#: backend/templates/views/product_sticky_bar/settings.php:52
+#: backend/templates/views/url_coupon/settings.php:8
+msgid "GET PRO"
+msgstr "PRO"
+
+#: backend/templates/views/address_book/settings.php:54
+#: backend/templates/views/modules.php:227
+msgid "Address Book"
+msgstr "Adressbuch"
+
+#: backend/templates/views/address_book/settings.php:55
+#: backend/templates/views/auto_apply_coupon/settings.php:18
+#: backend/templates/views/bogo_deal/settings.php:19
+#: backend/templates/views/coupon_generator/settings.php:14
+#: backend/templates/views/floating_cart/settings.php:106
+#: backend/templates/views/modules.php:56
+#: backend/templates/views/modules.php:76
+#: backend/templates/views/modules.php:96
+#: backend/templates/views/modules.php:116
+#: backend/templates/views/modules.php:136
+#: backend/templates/views/modules.php:156
+#: backend/templates/views/modules.php:176
+#: backend/templates/views/modules.php:196
+#: backend/templates/views/modules.php:216
+#: backend/templates/views/modules.php:236
+#: backend/templates/views/modules.php:256
+#: backend/templates/views/modules.php:278
+#: backend/templates/views/one_click_checkout/settings.php:80
+#: backend/templates/views/pdf_invoice/settings.php:78
+#: backend/templates/views/product_filter/settings.php:98
+#: backend/templates/views/product_sticky_bar/settings.php:61
+#: backend/templates/views/url_coupon/settings.php:15
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: backend/templates/views/address_book/settings.php:58
+#: backend/templates/views/auto_apply_coupon/settings.php:21
+#: backend/templates/views/bogo_deal/settings.php:22
+#: backend/templates/views/coupon_generator/settings.php:17
+#: backend/templates/views/floating_cart/settings.php:110
+#: backend/templates/views/one_click_checkout/settings.php:84
+#: backend/templates/views/pdf_invoice/settings.php:82
+#: backend/templates/views/product_filter/settings.php:104
+#: backend/templates/views/product_sticky_bar/settings.php:65
+#: backend/templates/views/url_coupon/settings.php:18
+msgid "Back to all Modules"
+msgstr "Zurück zu allen Modulen"
+
+#: backend/templates/views/address_book/settings.php:70
+#: backend/templates/views/coupon_generator/settings.php:64
+#: backend/templates/views/coupon_generator/settings.php:78
+#: backend/templates/views/floating_cart/settings.php:121
+#: backend/templates/views/one_click_checkout/settings.php:96
+#: backend/templates/views/pdf_invoice/settings.php:96
+#: backend/templates/views/product_filter/settings.php:113
+msgid "General"
+msgstr "Allgemeine"
+
+#: backend/templates/views/address_book/settings.php:71
+#: backend/templates/views/floating_cart/settings.php:133
+msgid "Typography"
+msgstr "Typografie"
+
+#: backend/templates/views/address_book/settings.php:72
+#: backend/templates/views/product_sticky_bar/settings.php:81
+#: backend/templates/views/shipping_bar/settings.php:230
+msgid "Style"
+msgstr "Stil"
+
+#: backend/templates/views/address_book/settings.php:79
+#: backend/templates/views/floating_cart/settings.php:157
+#: backend/templates/views/one_click_checkout/settings.php:114
+#: backend/templates/views/pdf_invoice/settings.php:147
+#: backend/templates/views/product_filter/settings.php:140
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: backend/templates/views/address_book/settings.php:83
+msgid "Address Book on Account Page"
+msgstr "Adressbuch auf der Account-Seite"
+
+#: backend/templates/views/address_book/settings.php:86
+msgid "Enable Billing Address Book"
+msgstr "Aktivieren Rechnungsadresse Buch"
+
+#: backend/templates/views/address_book/settings.php:89
+msgid "Turn ON the switch to enable address book for billing."
+msgstr "Schalten Sie den Schalter zu aktivieren Adressbuch für die Abrechnung."
+
+#: backend/templates/views/address_book/settings.php:94
+msgid "Enable Shipping Address Book"
+msgstr "Aktivieren Versand Adresse Buch"
+
+#: backend/templates/views/address_book/settings.php:97
+msgid "Turn ON the switch to enable address book for shipping."
+msgstr "Schalten Sie den Schalter zu aktivieren Adressbuch für den Versand."
+
+#: backend/templates/views/address_book/settings.php:101
+msgid "Address Field on Checkout Page"
+msgstr "Das Feld Adresse auf Kasse Seite"
+
+#: backend/templates/views/address_book/settings.php:104
+msgid "Billing Address Field on Checkout?"
+msgstr "Rechnungsadresse Feld Kasse?"
+
+#: backend/templates/views/address_book/settings.php:107
+msgid ""
+"Turn ON the switch to enable address field selection for billing on checkout "
+"page."
+msgstr ""
+"Schalten Sie den Schalter zu aktivieren-Adresse Feldauswahl für die "
+"Abrechnung bei checkout-Seite."
+
+#: backend/templates/views/address_book/settings.php:112
+msgid "Shipping Address Field on Checkout?"
+msgstr "Versand Adresse-Feld auf der Kasse?"
+
+#: backend/templates/views/address_book/settings.php:115
+msgid ""
+"Turn ON the switch to enable address field selection for shipping on "
+"checkout page."
+msgstr ""
+"Schalten Sie den Schalter zu aktivieren-Adresse Feldauswahl für die "
+"Schifffahrt auf der checkout-Seite."
+
+#: backend/templates/views/address_book/settings.php:124
+#: backend/templates/views/floating_cart/settings.php:390
+msgid "Typography Settings"
+msgstr "Typografie-Einstellungen"
+
+#: backend/templates/views/address_book/settings.php:127
+#: backend/templates/views/shipping_bar/settings.php:208
+msgid "Checkout Page"
+msgstr "Checkout-Seite"
+
+#: backend/templates/views/address_book/settings.php:130
+msgid "Address Field Label"
+msgstr "Adressfeld Label"
+
+#: backend/templates/views/address_book/settings.php:133
+msgid "Set the address selection field label text on checkout page."
+msgstr "Die Adresse, Auswahl-field label text auf der checkout-Seite."
+
+#: backend/templates/views/address_book/settings.php:137
+msgid "Account Page"
+msgstr "- Konto-Seite"
+
+#: backend/templates/views/address_book/settings.php:140
+msgid "Menu Title"
+msgstr "Menü-Titel"
+
+#: backend/templates/views/address_book/settings.php:143
+msgid "Set the account page menu title for Address Book."
+msgstr "Legen Sie die account-Seite Menü-Titel für Adressbuch."
+
+#: backend/templates/views/address_book/settings.php:148
+msgid "Billing Address Book Headline"
+msgstr "Billing Address Book Headline"
+
+#: backend/templates/views/address_book/settings.php:151
+msgid "Set the headline text of billing address book."
+msgstr "Legen Sie die überschrift text der Rechnungsadresse Buch."
+
+#: backend/templates/views/address_book/settings.php:156
+msgid "Shipping Address Book Headline"
+msgstr "Shipping Address Book Headline"
+
+#: backend/templates/views/address_book/settings.php:159
+msgid "Set the headline text of shipping address book."
+msgstr "Legen Sie die überschrift text der Versand Adresse Buch."
+
+#: backend/templates/views/address_book/settings.php:164
+msgid "Add Billing Address Button Text"
+msgstr "Fügen Sie Rechnungsadresse Button Text"
+
+#: backend/templates/views/address_book/settings.php:164
+#: backend/templates/views/address_book/settings.php:181
+#: backend/templates/views/address_book/settings.php:189
+#: backend/templates/views/address_book/settings.php:198
+#: backend/templates/views/address_book/settings.php:206
+#: backend/templates/views/address_book/settings.php:214
+#: backend/templates/views/address_book/settings.php:234
+#: backend/templates/views/address_book/settings.php:245
+#: backend/templates/views/address_book/settings.php:256
+#: backend/templates/views/address_book/settings.php:267
+#: backend/templates/views/address_book/settings.php:279
+#: backend/templates/views/address_book/settings.php:292
+#: backend/templates/views/address_book/settings.php:303
+#: backend/templates/views/address_book/settings.php:314
+#: backend/templates/views/address_book/settings.php:325
+#: backend/templates/views/address_book/settings.php:337
+#: backend/templates/views/coupon_generator/settings.php:37
+#: backend/templates/views/one_click_checkout/settings.php:216
+#: backend/templates/views/one_click_checkout/settings.php:555
+#: backend/templates/views/one_click_checkout/settings.php:572
+#: backend/templates/views/one_click_checkout/settings.php:588
+#: backend/templates/views/one_click_checkout/settings.php:599
+#: backend/templates/views/one_click_checkout/settings.php:610
+#: backend/templates/views/one_click_checkout/settings.php:652
+#: backend/templates/views/one_click_checkout/settings.php:665
+#: backend/templates/views/one_click_checkout/settings.php:679
+#: backend/templates/views/one_click_checkout/settings.php:725
+#: backend/templates/views/pdf_invoice/settings.php:343
+#: backend/templates/views/pdf_invoice/settings.php:354
+#: backend/templates/views/pdf_invoice/settings.php:416
+#: backend/templates/views/pdf_invoice/settings.php:425
+#: backend/templates/views/pdf_invoice/settings.php:524
+#: backend/templates/views/pdf_invoice/settings.php:536
+#: backend/templates/views/product_filter/settings.php:287
+#: backend/templates/views/product_filter/settings.php:302
+#: backend/templates/views/product_filter/settings.php:319
+#: backend/templates/views/product_filter/settings.php:335
+#: backend/templates/views/product_filter/settings.php:351
+#: backend/templates/views/product_filter/settings.php:401
+#: backend/templates/views/product_filter/settings.php:418
+#: backend/templates/views/product_filter/settings.php:436
+#: backend/templates/views/product_filter/settings.php:453
+#: backend/templates/views/product_filter/settings.php:515
+#: backend/templates/views/product_filter/settings.php:532
+#: backend/templates/views/product_filter/settings.php:550
+#: backend/templates/views/product_filter/settings.php:567
+#: backend/templates/views/product_filter/settings.php:615
+#: backend/templates/views/product_filter/settings.php:631
+#: backend/templates/views/product_filter/settings.php:747
+#: backend/templates/views/product_filter/settings.php:764
+#: backend/templates/views/product_filter/settings.php:782
+#: backend/templates/views/product_filter/settings.php:800
+#: backend/templates/views/product_filter/settings.php:818
+#: backend/templates/views/product_filter/settings.php:878
+#: backend/templates/views/product_filter/settings.php:894
+#: backend/templates/views/product_filter/settings.php:911
+#: backend/templates/views/product_filter/settings.php:929
+#: backend/templates/views/product_filter/settings.php:947
+#: backend/templates/views/product_sticky_bar/settings.php:205
+#: backend/templates/views/product_sticky_bar/settings.php:317
+#: backend/templates/views/product_sticky_bar/settings.php:333
+#: backend/templates/views/product_sticky_bar/settings.php:349
+#: backend/templates/views/product_sticky_bar/settings.php:366
+#: backend/templates/views/product_sticky_bar/settings.php:393
+#: backend/templates/views/product_sticky_bar/settings.php:408
+#: backend/templates/views/product_sticky_bar/settings.php:434
+#: backend/templates/views/product_sticky_bar/settings.php:460
+#: backend/templates/views/product_sticky_bar/settings.php:476
+#: backend/templates/views/product_sticky_bar/settings.php:493
+#: backend/templates/views/product_sticky_bar/settings.php:509
+#: backend/templates/views/product_sticky_bar/settings.php:523
+#: backend/templates/views/shipping_bar/settings.php:154
+#: backend/templates/views/shipping_bar/settings.php:167
+#: backend/templates/views/shipping_bar/settings.php:241
+#: backend/templates/views/shipping_bar/settings.php:252
+#: backend/templates/views/shipping_bar/settings.php:263
+#: backend/templates/views/shipping_bar/settings.php:283
+#: backend/templates/views/shipping_bar/settings.php:291
+#: backend/templates/views/shipping_bar/settings.php:299
+#: backend/templates/views/shipping_bar/settings.php:316
+#: backend/templates/views/shipping_bar/settings.php:324
+#: backend/templates/views/shipping_bar/settings.php:332
+#: backend/templates/views/shipping_bar/settings.php:373
+#: backend/templates/views/shipping_bar/settings.php:409
+#: backend/templates/views/shipping_bar/settings.php:420
+#: backend/templates/views/shipping_bar/settings.php:466
+#: backend/templates/views/shipping_bar/settings.php:504
+#: backend/templates/views/shipping_bar/settings.php:515
+#: backend/templates/views/shipping_bar/settings.php:527
+msgid "(Pro)"
+msgstr "(Pro)"
+
+#: backend/templates/views/address_book/settings.php:167
+msgid "Set the button text of add new billing address."
+msgstr "Die Schaltfläche text hinzufügen, neue Rechnungsadresse."
+
+#: backend/templates/views/address_book/settings.php:173
+msgid "Add Shipping Address Button Text"
+msgstr "Hinzufügen Von Lieferadresse Button Text"
+
+#: backend/templates/views/address_book/settings.php:176
+msgid "Set the button text of add new shipping address."
+msgstr "Die Schaltfläche text hinzufügen neuer Verschiffen Adresse."
+
+#: backend/templates/views/address_book/settings.php:181
+msgid "Billing Address Book Empty Message "
+msgstr ""
+
+#: backend/templates/views/address_book/settings.php:184
+msgid "Set the empty message text of billing address book."
+msgstr "Legen Sie die leere Nachricht text der Rechnungsadresse Buch."
+
+#: backend/templates/views/address_book/settings.php:189
+msgid "Shipping Address Book Empty Message "
+msgstr ""
+
+#: backend/templates/views/address_book/settings.php:192
+msgid "Set the empty message text of shipping address book."
+msgstr "Legen Sie die leere Nachricht text von Lieferadresse Buch."
+
+#: backend/templates/views/address_book/settings.php:198
+msgid "Address Edit Link Text"
+msgstr "- Adresse Bearbeiten \" Link-Text"
+
+#: backend/templates/views/address_book/settings.php:201
+msgid "Set the address edit link text."
+msgstr "Stellen Sie die Adresse Bearbeiten \" link-text."
+
+#: backend/templates/views/address_book/settings.php:206
+msgid "Address Delete Link Text"
+msgstr "Adresse Löschen-Link-Text"
+
+#: backend/templates/views/address_book/settings.php:209
+msgid "Set the address delete link text."
+msgstr "Stellen Sie die Adresse löschen-link text."
+
+#: backend/templates/views/address_book/settings.php:214
+msgid "Address Make Primary Link Text"
+msgstr "Adresse Machen Primären Link Text"
+
+#: backend/templates/views/address_book/settings.php:217
+msgid "Set the address make primary link text."
+msgstr "Die Adresse, machen primäre link-text."
+
+#: backend/templates/views/address_book/settings.php:228
+#: backend/templates/views/shipping_bar/settings.php:344
+msgid "Customize Styles"
+msgstr "Anpassen Stile"
+
+#: backend/templates/views/address_book/settings.php:234
+msgid "Add Button Background Color"
+msgstr "Schaltfläche Hinzufügen Hintergrund Farbe"
+
+#: backend/templates/views/address_book/settings.php:238
+#: backend/templates/views/address_book/settings.php:249
+#: backend/templates/views/address_book/settings.php:260
+#: backend/templates/views/address_book/settings.php:271
+#: backend/templates/views/address_book/settings.php:283
+#: backend/templates/views/address_book/settings.php:296
+#: backend/templates/views/address_book/settings.php:307
+#: backend/templates/views/address_book/settings.php:318
+#: backend/templates/views/address_book/settings.php:329
+#: backend/templates/views/address_book/settings.php:341
+#: backend/templates/views/floating_cart/settings.php:562
+#: backend/templates/views/floating_cart/settings.php:577
+#: backend/templates/views/floating_cart/settings.php:592
+#: backend/templates/views/floating_cart/settings.php:607
+#: backend/templates/views/floating_cart/settings.php:622
+#: backend/templates/views/floating_cart/settings.php:637
+#: backend/templates/views/floating_cart/settings.php:703
+#: backend/templates/views/floating_cart/settings.php:718
+#: backend/templates/views/floating_cart/settings.php:783
+#: backend/templates/views/floating_cart/settings.php:817
+#: backend/templates/views/floating_cart/settings.php:831
+#: backend/templates/views/floating_cart/settings.php:845
+#: backend/templates/views/floating_cart/settings.php:1012
+#: backend/templates/views/floating_cart/settings.php:1026
+#: backend/templates/views/floating_cart/settings.php:1040
+#: backend/templates/views/floating_cart/settings.php:1054
+#: backend/templates/views/one_click_checkout/settings.php:530
+#: backend/templates/views/one_click_checkout/settings.php:545
+#: backend/templates/views/one_click_checkout/settings.php:562
+#: backend/templates/views/one_click_checkout/settings.php:579
+#: backend/templates/views/product_filter/settings.php:293
+#: backend/templates/views/product_filter/settings.php:308
+#: backend/templates/views/product_filter/settings.php:325
+#: backend/templates/views/product_filter/settings.php:341
+#: backend/templates/views/product_filter/settings.php:357
+#: backend/templates/views/product_filter/settings.php:407
+#: backend/templates/views/product_filter/settings.php:425
+#: backend/templates/views/product_filter/settings.php:442
+#: backend/templates/views/product_filter/settings.php:460
+#: backend/templates/views/product_filter/settings.php:521
+#: backend/templates/views/product_filter/settings.php:539
+#: backend/templates/views/product_filter/settings.php:556
+#: backend/templates/views/product_filter/settings.php:574
+#: backend/templates/views/product_filter/settings.php:621
+#: backend/templates/views/product_filter/settings.php:637
+#: backend/templates/views/product_filter/settings.php:753
+#: backend/templates/views/product_filter/settings.php:771
+#: backend/templates/views/product_filter/settings.php:789
+#: backend/templates/views/product_filter/settings.php:807
+#: backend/templates/views/product_filter/settings.php:825
+#: backend/templates/views/product_filter/settings.php:884
+#: backend/templates/views/product_filter/settings.php:900
+#: backend/templates/views/product_filter/settings.php:918
+#: backend/templates/views/product_filter/settings.php:936
+#: backend/templates/views/product_filter/settings.php:954
+#: backend/templates/views/product_sticky_bar/settings.php:323
+#: backend/templates/views/product_sticky_bar/settings.php:339
+#: backend/templates/views/product_sticky_bar/settings.php:356
+#: backend/templates/views/product_sticky_bar/settings.php:372
+#: backend/templates/views/product_sticky_bar/settings.php:399
+#: backend/templates/views/product_sticky_bar/settings.php:415
+#: backend/templates/views/product_sticky_bar/settings.php:440
+#: backend/templates/views/product_sticky_bar/settings.php:466
+#: backend/templates/views/product_sticky_bar/settings.php:482
+#: backend/templates/views/product_sticky_bar/settings.php:499
+#: backend/templates/views/shipping_bar/settings.php:245
+#: backend/templates/views/shipping_bar/settings.php:256
+#: backend/templates/views/shipping_bar/settings.php:267
+#: backend/templates/views/shipping_bar/settings.php:377
+#: backend/templates/views/shipping_bar/settings.php:413
+#: backend/templates/views/shipping_bar/settings.php:424
+#: backend/templates/views/shipping_bar/settings.php:470
+#: backend/templates/views/shipping_bar/settings.php:508
+#: backend/templates/views/shipping_bar/settings.php:519
+#: backend/templates/views/shipping_bar/settings.php:531
+msgid "Select Color"
+msgstr "Wählen Sie Die Farbe"
+
+#: backend/templates/views/address_book/settings.php:240
+msgid "Set the add new button background color."
+msgstr "Legen Sie die Schaltfläche neu hinzufügen hintergrund Farbe."
+
+#: backend/templates/views/address_book/settings.php:245
+msgid "Add Button Text Color"
+msgstr "Hinzufügen Button Text Farbe"
+
+#: backend/templates/views/address_book/settings.php:251
+msgid "Set the add new button text color."
+msgstr "Set add new button text Farbe."
+
+#: backend/templates/views/address_book/settings.php:256
+msgid "Add Button Background Hover Color"
+msgstr "Schaltfläche Hinzufügen Hintergrund Hover-Farbe"
+
+#: backend/templates/views/address_book/settings.php:262
+msgid "Set the add new button background color on hover."
+msgstr "Legen Sie die Schaltfläche neu hinzufügen hintergrund Farbe auf hover."
+
+#: backend/templates/views/address_book/settings.php:267
+msgid "Add Button Text Hover Color"
+msgstr "Schaltfläche Hinzufügen-Text-Hover-Farbe"
+
+#: backend/templates/views/address_book/settings.php:273
+msgid "Set the add new button text color on hover."
+msgstr "Legen Sie die Schaltfläche neu hinzufügen Textfarbe auf hover."
+
+#: backend/templates/views/address_book/settings.php:279
+msgid "Add Button Border Hover Color"
+msgstr "Schaltfläche Hinzufügen Grenze Hover-Farbe"
+
+#: backend/templates/views/address_book/settings.php:285
+msgid "Set the add new button border color on hover."
+msgstr "Set add new button border color on hover."
+
+#: backend/templates/views/address_book/settings.php:292
+msgid "Address Card Background Color"
+msgstr "Adresse Karte Hintergrund Farbe"
+
+#: backend/templates/views/address_book/settings.php:298
+msgid "Set the background color of address card."
+msgstr "Legen Sie die Hintergrundfarbe Adresse Karte."
+
+#: backend/templates/views/address_book/settings.php:303
+msgid "Address Card Border Color "
+msgstr ""
+
+#: backend/templates/views/address_book/settings.php:309
+msgid "Set the border color of address card."
+msgstr "Legen Sie die Rahmenfarbe der Adresse Karte."
+
+#: backend/templates/views/address_book/settings.php:314
+msgid "Address Text Color"
+msgstr "Adresse Text Farbe"
+
+#: backend/templates/views/address_book/settings.php:320
+msgid "Set the text color of address inside address card."
+msgstr "Legen Sie die text-Farbe-Adresse Adresse innerhalb card."
+
+#: backend/templates/views/address_book/settings.php:325
+msgid "Address Card Footer Background Color"
+msgstr "Address-Card-Footer Background Color"
+
+#: backend/templates/views/address_book/settings.php:331
+msgid "Set the footer background color of address card."
+msgstr "Legen Sie die Fußzeile, hintergrund Farbe der Adresse Karte."
+
+#: backend/templates/views/address_book/settings.php:337
+msgid "Address Card Link Text Color"
+msgstr "Adresse, Karte Link-Text Farbe"
+
+#: backend/templates/views/address_book/settings.php:343
+msgid "Set the link text color of address card."
+msgstr "Legen Sie die link-text Farbe-Adresse Karte."
+
+#: backend/templates/views/address_book/settings.php:354
+#: backend/templates/views/coupon_generator/settings.php:217
+#: backend/templates/views/floating_cart/settings.php:1063
+#: backend/templates/views/one_click_checkout/settings.php:773
+#: backend/templates/views/pdf_invoice/settings.php:766
+#: backend/templates/views/product_filter/settings.php:970
+#: backend/templates/views/product_sticky_bar/settings.php:538
+#: backend/templates/views/shipping_bar/settings.php:559
+msgid "Save Settings"
+msgstr "Einstellungen Speichern"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:6
+#: backend/templates/views/coupon_generator/settings.php:4
+#: backend/templates/views/one_click_checkout/settings.php:66
+#: backend/templates/views/pdf_invoice/settings.php:64
+#: backend/templates/views/product_sticky_bar/settings.php:48
+#: backend/templates/views/url_coupon/settings.php:5
+msgid "wcEazy"
+msgstr "wcEazy"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:17
+#: backend/templates/views/modules.php:47
+msgid "Auto Apply Coupon"
+msgstr "Auto-Gutschein Einlösen"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:33
+#: backend/templates/views/url_coupon/settings.php:27
+msgid "Per page view"
+msgstr "Pro Seite anzeigen"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:35
+msgid "10"
+msgstr "10"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:36
+msgid "20"
+msgstr "20"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:37
+msgid "30"
+msgstr "30"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:38
+msgid "40"
+msgstr "40"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:39
+msgid "50"
+msgstr "50"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:40
+msgid "60"
+msgstr "60"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:41
+msgid "70"
+msgstr "70"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:42
+msgid "80"
+msgstr "80"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:43
+msgid "90"
+msgstr "90"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:44
+msgid "100"
+msgstr "100"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:47
+msgid "Bulk actions"
+msgstr "Bulk-Aktionen"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:48
+msgid "Add to auto apply"
+msgstr "Hinzufügen zu auto-anwenden"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:49
+msgid "Remove from auto apply"
+msgstr "Entfernen von auto-anwenden"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:53
+#: backend/templates/views/url_coupon/settings.php:42
+msgid "Show all types"
+msgstr "Zeigen Sie alle Arten"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:54
+#: backend/templates/views/bogo_deal/settings.php:75
+#: backend/templates/views/coupon_generator/settings.php:85
+#: backend/templates/views/url_coupon/settings.php:43
+msgid "Percentage discount"
+msgstr "Prozentsatz Rabatt"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:55
+#: backend/templates/views/coupon_generator/settings.php:86
+#: backend/templates/views/url_coupon/settings.php:44
+msgid "Fixed cart discount"
+msgstr "Feste Warenkorb Rabatt"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:56
+#: backend/templates/views/coupon_generator/settings.php:87
+#: backend/templates/views/url_coupon/settings.php:45
+msgid "Fixed product discount"
+msgstr "Feste Produkt Rabatt"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:73
+#: backend/templates/views/url_coupon/settings.php:57
+msgid "Code"
+msgstr "Code"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:74
+#: backend/templates/views/coupon_generator/settings.php:36
+#: backend/templates/views/url_coupon/settings.php:58
+msgid "Coupon Type"
+msgstr "Gutschein-Typ"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:75
+#: backend/templates/views/url_coupon/settings.php:59
+msgid "Coupon Amount"
+msgstr "Gutschein-Betrag"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:76
+#: backend/templates/views/url_coupon/settings.php:60
+msgid "Description"
+msgstr "Beschreibung"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:77
+#: backend/templates/views/url_coupon/settings.php:61
+msgid "Product IDs"
+msgstr "Produkt-IDs"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:78
+#: backend/templates/views/url_coupon/settings.php:62
+msgid "Usage/Limit"
+msgstr "Usage/Limit"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:79
+#: backend/templates/views/url_coupon/settings.php:63
+msgid "Expiry Date"
+msgstr "Ablaufdatum"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:80
+msgid "Is Auto Coupon"
+msgstr "Auto-Gutschein -"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:81
+#: backend/templates/views/url_coupon/settings.php:65
+msgid "Action"
+msgstr "Aktion"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:95
+msgid "Are you sure?"
+msgstr "Sind Sie sicher?"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:97
+msgid "No"
+msgstr "Keine"
+
+#: backend/templates/views/auto_apply_coupon/settings.php:98
+msgid "Yes"
+msgstr "Ja"
+
+#: backend/templates/views/bogo_deal/settings.php:17
+#: backend/templates/views/modules.php:67
+msgid "BOGO Deal"
+msgstr "BOGO Deal"
+
+#: backend/templates/views/bogo_deal/settings.php:23
+msgid "Add Rule"
+msgstr "Regel Hinzufügen"
+
+#: backend/templates/views/bogo_deal/settings.php:24
+msgid "Save Changes"
+msgstr "Änderungen Speichern"
+
+#: backend/templates/views/bogo_deal/settings.php:35
+msgid "No pricing rule has been created"
+msgstr "Keine pricing-Regel erstellt worden ist"
+
+#: backend/templates/views/bogo_deal/settings.php:36
+msgid "Create First Rule"
+msgstr "Erstellen Sie Die Erste Regel"
+
+#: backend/templates/views/bogo_deal/settings.php:56
+msgid "Untitled Rule"
+msgstr "Untitled-Regel"
+
+#: backend/templates/views/bogo_deal/settings.php:66
+msgid "Delete Rule"
+msgstr "Regel Löschen"
+
+#: backend/templates/views/bogo_deal/settings.php:72
+msgid "Discount Type"
+msgstr "Rabatt-Typ"
+
+#: backend/templates/views/bogo_deal/settings.php:74
+#: backend/templates/views/bogo_deal/settings.php:110
+#: backend/templates/views/bogo_deal/settings.php:128
+#: backend/templates/views/coupon_generator/settings.php:42
+#: backend/templates/views/coupon_generator/settings.php:52
+#: backend/templates/views/coupon_generator/settings.php:84
+#: backend/templates/views/coupon_generator/settings.php:144
+#: backend/templates/views/coupon_generator/settings.php:155
+#: backend/templates/views/coupon_generator/settings.php:166
+#: backend/templates/views/coupon_generator/settings.php:177
+#: backend/templates/views/floating_cart/settings.php:178
+#: backend/templates/views/floating_cart/settings.php:532
+#: backend/templates/views/floating_cart/settings.php:866
+#: backend/templates/views/floating_cart/settings.php:885
+#: backend/templates/views/floating_cart/settings.php:944
+#: backend/templates/views/floating_cart/settings.php:986
+#: backend/templates/views/one_click_checkout/settings.php:682
+#: backend/templates/views/one_click_checkout/settings.php:728
+#: backend/templates/views/pdf_invoice/settings.php:329
+#: backend/templates/views/pdf_invoice/settings.php:357
+#: backend/templates/views/product_filter/settings.php:203
+#: backend/templates/views/product_sticky_bar/settings.php:137
+#: backend/templates/views/product_sticky_bar/settings.php:208
+#: backend/templates/views/shipping_bar/settings.php:144
+#: backend/templates/views/shipping_bar/settings.php:157
+#: backend/templates/views/shipping_bar/settings.php:170
+#: backend/templates/views/shipping_bar/settings.php:200
+#: backend/templates/views/shipping_bar/settings.php:222
+#: backend/templates/views/shipping_bar/settings.php:352
+#: backend/templates/views/shipping_bar/settings.php:364
+#: backend/templates/views/shipping_bar/settings.php:443
+msgid "Please select"
+msgstr "Bitte wählen Sie"
+
+#: backend/templates/views/bogo_deal/settings.php:76
+msgid "Fixed discount"
+msgstr "Fester Rabatt"
+
+#: backend/templates/views/bogo_deal/settings.php:80
+msgid "Discount Amount"
+msgstr "Rabatt-Betrag"
+
+#: backend/templates/views/bogo_deal/settings.php:85
+msgid "Products to Buy"
+msgstr "Produkte zu Kaufen"
+
+#: backend/templates/views/bogo_deal/settings.php:94
+msgid "Products to Gift"
+msgstr "Produkte zu Geschenk"
+
+#: backend/templates/views/bogo_deal/settings.php:108
+msgid "Productv"
+msgstr "Productv"
+
+#: backend/templates/views/bogo_deal/settings.php:114
+#: backend/templates/views/bogo_deal/settings.php:132
+msgid "Required Quantity"
+msgstr "Benötigte Stückzahl"
+
+#: backend/templates/views/bogo_deal/settings.php:126
+msgid "Product"
+msgstr "Produkt"
+
+#: backend/templates/views/coupon_generator/settings.php:13
+#: backend/templates/views/modules.php:87
+msgid "Coupon Generator"
+msgstr "Gutschein-Generator"
+
+#: backend/templates/views/coupon_generator/settings.php:25
+#: backend/templates/views/pdf_invoice/settings.php:415
+msgid "Prefix"
+msgstr "Prefix"
+
+#: backend/templates/views/coupon_generator/settings.php:26
+msgid "Coupon prefix"
+msgstr "Gutschein-Präfix"
+
+#: backend/templates/views/coupon_generator/settings.php:30
+msgid "Number of Coupons"
+msgstr "Anzahl der Gutscheine"
+
+#: backend/templates/views/coupon_generator/settings.php:31
+msgid "Total number of coupons"
+msgstr "Gesamtzahl der Kupons"
+
+#: backend/templates/views/coupon_generator/settings.php:43
+msgid "Characters"
+msgstr "Zeichen"
+
+#: backend/templates/views/coupon_generator/settings.php:44
+msgid "Numbers (Available in Pro)"
+msgstr "Zahlen (Erhältlich in Pro)"
+
+#: backend/templates/views/coupon_generator/settings.php:45
+msgid "Characters & Numbers (Available in Pro)"
+msgstr "Zeichen & Zahlen (Erhältlich in Pro)"
+
+#: backend/templates/views/coupon_generator/settings.php:50
+msgid "Coupons Character Length"
+msgstr "Coupons Zeichen Länge"
+
+#: backend/templates/views/coupon_generator/settings.php:67
+msgid "Usage Restriction"
+msgstr "Nutzungsbeschränkung"
+
+#: backend/templates/views/coupon_generator/settings.php:70
+msgid "Usage Limits"
+msgstr "Nutzungsbeschränkungen"
+
+#: backend/templates/views/coupon_generator/settings.php:82
+msgid "Discount type"
+msgstr "Rabatt-Typ"
+
+#: backend/templates/views/coupon_generator/settings.php:89
+msgid "Choose the specific discount type."
+msgstr "Wählen Sie den speziellen Rabatt geben."
+
+#: backend/templates/views/coupon_generator/settings.php:93
+msgid "Coupon amount"
+msgstr "Gutschein-Betrag"
+
+#: backend/templates/views/coupon_generator/settings.php:98
+msgid "Allow free shipping"
+msgstr "Erlauben, kostenloser Versand"
+
+#: backend/templates/views/coupon_generator/settings.php:101
+msgid "Check this box if the coupon grants free shipping. A"
+msgstr ""
+"Aktivieren Sie dieses Kontrollkästchen, wenn der Gutschein gewährt "
+"kostenloser Versand. Ein"
+
+#: backend/templates/views/coupon_generator/settings.php:102
+msgid "free shipping method"
+msgstr "kostenloser Versand Methode"
+
+#: backend/templates/views/coupon_generator/settings.php:103
+msgid ""
+"must be enabled in your shipping zone and be set to require \"a valid free "
+"shipping coupon\" (see the \"Free Shipping Requires\" setting)."
+msgstr ""
+"muss aktiviert werden, Ihre Liefer-zone und festgelegt werden kann, müssen "
+"ein Gültiger gratis-Versand-Gutschein\" (siehe \"Kostenloser Versand "
+"Erfordert\" - Einstellung)."
+
+#: backend/templates/views/coupon_generator/settings.php:108
+msgid "Coupon expiry date"
+msgstr "Gutschein-Ablaufdatum"
+
+#: backend/templates/views/coupon_generator/settings.php:109
+msgid "YYY-MM-DD"
+msgstr "YYY-MM-DD"
+
+#: backend/templates/views/coupon_generator/settings.php:116
+msgid "Usage restriction"
+msgstr "Nutzungsbeschränkung"
+
+#: backend/templates/views/coupon_generator/settings.php:120
+msgid "Minimum spend"
+msgstr "Mindestbestellwert"
+
+#: backend/templates/views/coupon_generator/settings.php:121
+msgid "No minimum"
+msgstr "Kein Mindestbestellwert"
+
+#: backend/templates/views/coupon_generator/settings.php:124
+msgid "Maximum spend"
+msgstr "Maximale verbringen"
+
+#: backend/templates/views/coupon_generator/settings.php:125
+msgid "No maximum"
+msgstr "Kein maximum"
+
+#: backend/templates/views/coupon_generator/settings.php:128
+msgid "Individual use only"
+msgstr "Einzelne verwenden nur"
+
+#: backend/templates/views/coupon_generator/settings.php:131
+msgid "If coupon can/t be used with others, mark this box."
+msgstr ""
+"Wenn der Gutschein kann/t verwendet werden mit anderen, markieren Sie dieses "
+"Kontrollkästchen."
+
+#: backend/templates/views/coupon_generator/settings.php:135
+msgid "Exclude sale items"
+msgstr "Ausschließen, Verkauf Artikel"
+
+#: backend/templates/views/coupon_generator/settings.php:138
+msgid ""
+"If it/s on sale, skip the coupon. The coupon only applies to regular-priced "
+"items, whether bought alone or in the cart."
+msgstr ""
+"Wenn es/s im Verkauf ist, überspringen Sie die coupon. Der Gutschein gilt "
+"nur für die regular-priced items, ob allein gekauft oder in den Warenkorb "
+"gelegt."
+
+#: backend/templates/views/coupon_generator/settings.php:142
+msgid "Products"
+msgstr "Produkte"
+
+#: backend/templates/views/coupon_generator/settings.php:153
+#: backend/templates/views/shipping_bar/settings.php:167
+msgid "Leave out items."
+msgstr "Lassen Sie sich Gegenstände."
+
+#: backend/templates/views/coupon_generator/settings.php:164
+msgid "Product categories"
+msgstr "Produkt-Kategorien"
+
+#: backend/templates/views/coupon_generator/settings.php:175
+msgid "Exclude categories"
+msgstr "Ausschließen Kategorien"
+
+#: backend/templates/views/coupon_generator/settings.php:186
+msgid "Allowed emails"
+msgstr "Erlaubt E-Mails"
+
+#: backend/templates/views/coupon_generator/settings.php:187
+msgid "No restrictions"
+msgstr "Keine Einschränkungen"
+
+#: backend/templates/views/coupon_generator/settings.php:194
+msgid "Usage limits"
+msgstr "Nutzungsbeschränkungen"
+
+#: backend/templates/views/coupon_generator/settings.php:198
+msgid "How many times you can use it."
+msgstr "Wie viele mal Sie es verwenden können."
+
+#: backend/templates/views/coupon_generator/settings.php:202
+msgid "Limit usage to X items"
+msgstr "Beschränken die Nutzung auf X-Elemente"
+
+#: backend/templates/views/coupon_generator/settings.php:206
+msgid "Usage limit per user"
+msgstr "Limit pro user"
+
+#: backend/templates/views/coupon_generator/settings.php:230
+msgid "Generating Coupons"
+msgstr "Generieren Coupons"
+
+#: backend/templates/views/coupon_generator/settings.php:234
+msgid "Coupons Generated Successfully!"
+msgstr "Gutscheine Erfolgreich Generiert!"
+
+#: backend/templates/views/coupon_generator/settings.php:235
+msgid "Export as CSV"
+msgstr "Als CSV exportieren"
+
+#: backend/templates/views/floating_cart/settings.php:104
+#: backend/templates/views/modules.php:167
+msgid "Floating Cart"
+msgstr "Floating Cart"
+
+#: backend/templates/views/floating_cart/settings.php:124
+msgid "Cart Header"
+msgstr "Cart Header"
+
+#: backend/templates/views/floating_cart/settings.php:127
+msgid "Cart Body"
+msgstr "Warenkorb Körper"
+
+#: backend/templates/views/floating_cart/settings.php:130
+msgid "Cart Footer"
+msgstr "Warenkorb Fußzeile"
+
+#: backend/templates/views/floating_cart/settings.php:136
+msgid "Redirect URLs"
+msgstr "Redirect URLs"
+
+#: backend/templates/views/floating_cart/settings.php:139
+#: backend/templates/views/floating_cart/settings.php:513
+msgid "General Style"
+msgstr "General Stil"
+
+#: backend/templates/views/floating_cart/settings.php:142
+#: backend/templates/views/floating_cart/settings.php:660
+msgid "Header Style"
+msgstr "- Header-Style -"
+
+#: backend/templates/views/floating_cart/settings.php:145
+#: backend/templates/views/floating_cart/settings.php:730
+msgid "Content Style"
+msgstr "Content-Style -"
+
+#: backend/templates/views/floating_cart/settings.php:148
+#: backend/templates/views/floating_cart/settings.php:857
+msgid "Basket Style"
+msgstr "Korb-Stil"
+
+#: backend/templates/views/floating_cart/settings.php:164
+msgid "Enable Auto Open Cart"
+msgstr "Aktivieren Sie Die Auto Open Cart"
+
+#: backend/templates/views/floating_cart/settings.php:169
+msgid "Turn on/off the auto-open floating cart menu."
+msgstr "Turn on/off the auto-open floating cart-Menü."
+
+#: backend/templates/views/floating_cart/settings.php:175
+msgid "Basket Count"
+msgstr "Korb Zählen"
+
+#: backend/templates/views/floating_cart/settings.php:181
+msgid "Number Of Products"
+msgstr "Anzahl Der Produkte"
+
+#: backend/templates/views/floating_cart/settings.php:184
+msgid "Total Number Of Items"
+msgstr "Gesamtzahl Der Elemente"
+
+#: backend/templates/views/floating_cart/settings.php:191
+msgid "Select Don't Show Pages"
+msgstr "Wählen Sie nicht Anzeigen-Seiten"
+
+#: backend/templates/views/floating_cart/settings.php:194
+#: backend/templates/views/pdf_invoice/settings.php:306
+msgid " Please select"
+msgstr ""
+
+#: backend/templates/views/floating_cart/settings.php:201
+msgid "Please select pages where you do not show floating cart."
+msgstr ""
+"Bitte wählen Sie Seiten, auf denen Sie sich nicht zeigen, floating cart."
+
+#: backend/templates/views/floating_cart/settings.php:208
+msgid "Header Settings"
+msgstr "Header Einstellungen"
+
+#: backend/templates/views/floating_cart/settings.php:214
+msgid "Show Basket Icon"
+msgstr "Warenkorb Anzeigen Symbol"
+
+#: backend/templates/views/floating_cart/settings.php:219
+msgid "Turn off if you don/t want to show the basket icon in the cart header."
+msgstr ""
+"Ausschalten, wenn Sie don/t möchten, um zu zeigen das Warenkorb-Symbol in "
+"der Warenkorb-header."
+
+#: backend/templates/views/floating_cart/settings.php:225
+msgid "Show Close Icon"
+msgstr "Karte Schließen-Symbol"
+
+#: backend/templates/views/floating_cart/settings.php:230
+msgid "Show/Hide the close icon on the cart header."
+msgstr "Ein - /Ausblenden des Symbol \"schließen\" auf der Warenkorb-header."
+
+#: backend/templates/views/floating_cart/settings.php:240
+msgid "Body Settings"
+msgstr "Körper-Einstellungen"
+
+#: backend/templates/views/floating_cart/settings.php:246
+#: backend/templates/views/product_sticky_bar/settings.php:245
+msgid "Show Product Image"
+msgstr "Zeigen Produkt Bild"
+
+#: backend/templates/views/floating_cart/settings.php:251
+msgid "Show/Hide the product image on the cart menu."
+msgstr "Ein - /Ausblenden der Produkt Bild auf das Warenkorb-Menü."
+
+#: backend/templates/views/floating_cart/settings.php:257
+msgid "Show Product Name"
+msgstr "Zeigen Produkt Name"
+
+#: backend/templates/views/floating_cart/settings.php:262
+msgid "Show/Hide the product name on the cart menu."
+msgstr "Ein - /Ausblenden des Produktnamens auf das Warenkorb-Menü."
+
+#: backend/templates/views/floating_cart/settings.php:268
+msgid "Show Product Unit Price"
+msgstr "Zeigen Produkt Einheit Preis"
+
+#: backend/templates/views/floating_cart/settings.php:273
+msgid "Show/Hide the product unit price on the cart menu."
+msgstr "Ein - /Ausblenden die Produkt Einheit Preis auf das Warenkorb-Menü."
+
+#: backend/templates/views/floating_cart/settings.php:279
+msgid "Show Product Price Total"
+msgstr "Zeigen Produkt Preis Gesamt"
+
+#: backend/templates/views/floating_cart/settings.php:284
+msgid "Show/Hide the product price total on the cart menu."
+msgstr ""
+"Ein - /Ausblenden der Preis des Produkts insgesamt auf das Warenkorb-Menü."
+
+#: backend/templates/views/floating_cart/settings.php:290
+msgid "Allow Deleting Item From Cart"
+msgstr "Erlauben Sie Element Löschen Aus Dem Warenkorb"
+
+#: backend/templates/views/floating_cart/settings.php:295
+msgid "Enable/disable the deleting item option on the cart menu."
+msgstr ""
+"Aktivieren/deaktivieren Sie das Element löschen-option auf das Warenkorb-"
+"Menü."
+
+#: backend/templates/views/floating_cart/settings.php:301
+msgid "Allow Quantity Update"
+msgstr "Erlauben Quantität Update"
+
+#: backend/templates/views/floating_cart/settings.php:306
+msgid "Show/Hide the quantity update option on the cart menu."
+msgstr "Ein - /Ausblenden der Menge update-option auf das Warenkorb-Menü."
+
+#: backend/templates/views/floating_cart/settings.php:315
+msgid "Footer Settings"
+msgstr "Footer Einstellungen"
+
+#: backend/templates/views/floating_cart/settings.php:321
+msgid "Footer Position Fixed"
+msgstr "Footer-Position Behoben"
+
+#: backend/templates/views/floating_cart/settings.php:326
+msgid "Enable/Disable the fixed footer position on the cart."
+msgstr ""
+"Aktivieren/Deaktivieren Sie die Feste Fußzeile die position in den Warenkorb "
+"gelegt."
+
+#: backend/templates/views/floating_cart/settings.php:332
+msgid "Show Subtotal Number"
+msgstr "Zeigen Zwischensumme Anzahl"
+
+#: backend/templates/views/floating_cart/settings.php:337
+msgid "Show/Hide the subtotal amount on the cart menu."
+msgstr "Ein - /Ausblenden des Zwischensumme Betrag auf das Warenkorb-Menü."
+
+#: backend/templates/views/floating_cart/settings.php:343
+msgid "Show Discount Amoun"
+msgstr "Show Rabatt Amoun"
+
+#: backend/templates/views/floating_cart/settings.php:348
+msgid "Show/Hide the discount amount on the cart menu."
+msgstr "Ein - /Ausblenden der Rabatt-Betrag auf das Warenkorb-Menü."
+
+#: backend/templates/views/floating_cart/settings.php:354
+msgid "Show Shipping Amount?"
+msgstr "Zeigen Sie Versandkosten?"
+
+#: backend/templates/views/floating_cart/settings.php:359
+msgid "Turn off if you don/t want to show the shipping amount on the cart."
+msgstr ""
+"Ausschalten, wenn Sie don/t möchten, um zu zeigen, betragen die "
+"Versandkosten in den Warenkorb gelegt."
+
+#: backend/templates/views/floating_cart/settings.php:365
+msgid "Show Total Cart Number"
+msgstr "Zeigen Insgesamt Warenkorb Nummer"
+
+#: backend/templates/views/floating_cart/settings.php:370
+msgid "Show/Hide the total cart number on the cart menu."
+msgstr "Ein - /Ausblenden des Gesamt Warenkorb Nummer auf der Warenkorb-Menü."
+
+#: backend/templates/views/floating_cart/settings.php:376
+msgid "Show Apply Coupon Option"
+msgstr "Karte Gelten Die Gutschein-Option"
+
+#: backend/templates/views/floating_cart/settings.php:381
+msgid "Show/Hide the apply coupon option on the cart menu."
+msgstr "Show/Hide gelten die Gutschein-option auf das Warenkorb-Menü."
+
+#: backend/templates/views/floating_cart/settings.php:396
+msgid "Heading Title"
+msgstr "Bezeichnung Titel"
+
+#: backend/templates/views/floating_cart/settings.php:400
+msgid "Customize the heading title for the cart."
+msgstr "Passen Sie die überschrift Titel für den Warenkorb gelegt."
+
+#: backend/templates/views/floating_cart/settings.php:406
+msgid "Continue Shopping Button"
+msgstr "Weiter Einkaufen Button"
+
+#: backend/templates/views/floating_cart/settings.php:410
+msgid " Customize the continue shopping button text."
+msgstr ""
+
+#: backend/templates/views/floating_cart/settings.php:416
+msgid "View Cart Button"
+msgstr "Ansicht Warenkorb Button"
+
+#: backend/templates/views/floating_cart/settings.php:420
+msgid "Customize the view cart button text"
+msgstr "Passen Sie die Ansicht Warenkorb button text"
+
+#: backend/templates/views/floating_cart/settings.php:426
+msgid "Checkout Button"
+msgstr "Checkout-Taste"
+
+#: backend/templates/views/floating_cart/settings.php:430
+msgid "Customize the checkout button text."
+msgstr "Passen Sie den checkout-button-text."
+
+#: backend/templates/views/floating_cart/settings.php:436
+msgid "Empty Cart Message"
+msgstr "Korb Leeren Nachricht"
+
+#: backend/templates/views/floating_cart/settings.php:440
+msgid "Customize the empty cart message for the cart."
+msgstr "Passen Sie den Korb leeren Nachricht für den Warenkorb gelegt."
+
+#: backend/templates/views/floating_cart/settings.php:446
+msgid "Subtotal Text"
+msgstr "Subtotal-Text"
+
+#: backend/templates/views/floating_cart/settings.php:450
+msgid "Customize the subtotal text of the cart."
+msgstr "Anpassen der subtotal-text den Warenkorb gelegt."
+
+#: backend/templates/views/floating_cart/settings.php:456
+msgid "Total Amount Text"
+msgstr "Gesamtbetrag Text"
+
+#: backend/templates/views/floating_cart/settings.php:460
+msgid "Customize the total amount text of in the cart."
+msgstr "Anpassen der Gesamtbetrag, den text in den Warenkorb."
+
+#: backend/templates/views/floating_cart/settings.php:469
+msgid "Redirect URLs Settings"
+msgstr "Redirect-URLs Einstellungen"
+
+#: backend/templates/views/floating_cart/settings.php:475
+msgid "Continue Shopping Button Url"
+msgstr "Weiter Einkaufen Button-Url"
+
+#: backend/templates/views/floating_cart/settings.php:480
+msgid "Set continue shopping button url."
+msgstr "Set button Einkauf fortsetzen url."
+
+#: backend/templates/views/floating_cart/settings.php:487
+msgid "View Cart Button Url"
+msgstr "View Cart Button-Url"
+
+#: backend/templates/views/floating_cart/settings.php:492
+msgid "Set view cart details button url."
+msgstr "View cart button details-url."
+
+#: backend/templates/views/floating_cart/settings.php:498
+msgid "View Checkout Button Url"
+msgstr "- Ansicht Die Schaltfläche \"Kasse\" Url"
+
+#: backend/templates/views/floating_cart/settings.php:503
+msgid "Set view checkout button url."
+msgstr "View checkout-button-url."
+
+#: backend/templates/views/floating_cart/settings.php:519
+msgid "Cart Width(px)"
+msgstr "Warenkorb Breite(px)"
+
+#: backend/templates/views/floating_cart/settings.php:523
+msgid "Set your cart width in px (Ex. 460)"
+msgstr "Stellen Sie Ihren Warenkorb Breite in px (Ex. 460)"
+
+#: backend/templates/views/floating_cart/settings.php:529
+msgid "Cart Open From"
+msgstr "Warenkorb Öffnen Von"
+
+#: backend/templates/views/floating_cart/settings.php:535
+#: backend/templates/views/product_filter/settings.php:209
+#: backend/templates/views/shipping_bar/settings.php:444
+msgid "Left"
+msgstr "Links"
+
+#: backend/templates/views/floating_cart/settings.php:538
+#: backend/templates/views/shipping_bar/settings.php:446
+msgid "Right"
+msgstr "Rechts"
+
+#: backend/templates/views/floating_cart/settings.php:545
+#: backend/templates/views/product_sticky_bar/settings.php:422
+msgid "Button Font Size"
+msgstr "Button Font Size"
+
+#: backend/templates/views/floating_cart/settings.php:549
+msgid "Set your all button font size in px (Ex. 16)"
+msgstr "Stellen Sie Ihren all-Taste die Schriftgröße in px (Ex. 16)"
+
+#: backend/templates/views/floating_cart/settings.php:555
+#: backend/templates/views/product_sticky_bar/settings.php:407
+msgid "Button Font Color"
+msgstr "Schaltfläche Schriftart Farbe"
+
+#: backend/templates/views/floating_cart/settings.php:564
+msgid "Set font color of all buttons"
+msgstr "Set schriftart Farbe aller Tasten"
+
+#: backend/templates/views/floating_cart/settings.php:570
+#: backend/templates/views/product_sticky_bar/settings.php:392
+msgid "Button Background Color"
+msgstr "Schaltfläche Hintergrundfarbe"
+
+#: backend/templates/views/floating_cart/settings.php:579
+msgid "Set background color of all buttons"
+msgstr "Set hintergrund Farbe aller Tasten"
+
+#: backend/templates/views/floating_cart/settings.php:585
+#: backend/templates/views/product_sticky_bar/settings.php:492
+msgid "Button Hover Font Color"
+msgstr "Button Hover-Schriftfarbe"
+
+#: backend/templates/views/floating_cart/settings.php:594
+msgid "Set hover font color of all buttons"
+msgstr "Set die hover-Schriftfarbe auf alle Tasten"
+
+#: backend/templates/views/floating_cart/settings.php:600
+msgid "Button Hover Background"
+msgstr "Button Hover-Hintergrund"
+
+#: backend/templates/views/floating_cart/settings.php:609
+msgid "Set hover background color of all buttons"
+msgstr "Set die hover-Hintergrundfarbe aller Tasten"
+
+#: backend/templates/views/floating_cart/settings.php:615
+#: backend/templates/views/product_sticky_bar/settings.php:433
+msgid "Button Border Color"
+msgstr "Schaltfläche Rahmenfarbe"
+
+#: backend/templates/views/floating_cart/settings.php:624
+msgid "Set border color of all buttons"
+msgstr "Set Grenze Farbe aller Tasten"
+
+#: backend/templates/views/floating_cart/settings.php:630
+#: backend/templates/views/product_sticky_bar/settings.php:475
+msgid "Button Border Hover Color"
+msgstr "Button Border Hover Color"
+
+#: backend/templates/views/floating_cart/settings.php:639
+msgid "Set border hover color of all buttons"
+msgstr "- Set border-hover-Farbe aller Tasten"
+
+#: backend/templates/views/floating_cart/settings.php:645
+msgid "Button Border Radius"
+msgstr "Taste Rand Radius"
+
+#: backend/templates/views/floating_cart/settings.php:650
+msgid "Set your all button border raduis (Ex. 4)"
+msgstr "Legen Sie Ihre alle-Schaltfläche Grenze raduis (Ex. 4)"
+
+#: backend/templates/views/floating_cart/settings.php:666
+msgid "Cross Icon Size(px)"
+msgstr "Kreuz-Icon-Size(px)"
+
+#: backend/templates/views/floating_cart/settings.php:670
+msgid "Set your cart header cross icon in px (Ex. 30)"
+msgstr "Set your cart header-Kreuz-Symbol in px (Ex. 30)"
+
+#: backend/templates/views/floating_cart/settings.php:676
+msgid "Heading Basket Icon Size(px)"
+msgstr "Überschrift Warenkorb-Symbol Size(px)"
+
+#: backend/templates/views/floating_cart/settings.php:680
+msgid "Set your cart header basket icon in px (Ex. 30)"
+msgstr "Set your cart header-Korb-Symbol in px (Ex. 30)"
+
+#: backend/templates/views/floating_cart/settings.php:686
+msgid "Heading Font Size(px)"
+msgstr "Heading Font Size(px)"
+
+#: backend/templates/views/floating_cart/settings.php:690
+msgid "Set your cart header font size in px (Ex. 24)"
+msgstr "Set your cart header Schriftgröße in px (Ex. 24)"
+
+#: backend/templates/views/floating_cart/settings.php:696
+msgid "Heading Font Color"
+msgstr "Heading Font Color"
+
+#: backend/templates/views/floating_cart/settings.php:705
+msgid "Set your cart header font color."
+msgstr "Set your cart header-schriftart-Farbe."
+
+#: backend/templates/views/floating_cart/settings.php:711
+msgid "Heading Border Bottom Color"
+msgstr "Überschrift Border-Bottom-Color"
+
+#: backend/templates/views/floating_cart/settings.php:720
+msgid "Set your cart header border bottom color."
+msgstr "Set your cart header-border-bottom-color."
+
+#: backend/templates/views/floating_cart/settings.php:736
+msgid "Product Remove Icon"
+msgstr "Produkt Symbol Entfernen"
+
+#: backend/templates/views/floating_cart/settings.php:750
+msgid "Please select your delete icon."
+msgstr "Wählen Sie bitte das Symbol \"löschen\"."
+
+#: backend/templates/views/floating_cart/settings.php:756
+msgid "Product Remove Icon Size(px)"
+msgstr "Produkt Entfernen, Icon Size(px)"
+
+#: backend/templates/views/floating_cart/settings.php:760
+msgid "Set your cart content delete icon size in px (Ex. 16)"
+msgstr "Stellen Sie Ihren Warenkorb-Inhalt löschen-Symbol Größe in px (Ex. 16)"
+
+#: backend/templates/views/floating_cart/settings.php:766
+msgid "Product Image Width"
+msgstr "Produkt Bild Breite"
+
+#: backend/templates/views/floating_cart/settings.php:770
+msgid "Set your cart content product image width in percent(%) (Ex. 100)"
+msgstr ""
+"Stellen Sie Ihren Warenkorb-Inhalt-Produkt Bild-Breite in Prozent(%) (Ex. "
+"100)"
+
+#: backend/templates/views/floating_cart/settings.php:776
+msgid "Product Title Color"
+msgstr "Produkt-Titel Farbe"
+
+#: backend/templates/views/floating_cart/settings.php:790
+msgid "Product Title Font Size"
+msgstr "Produkt-Titel Schriftgröße"
+
+#: backend/templates/views/floating_cart/settings.php:794
+msgid "Set your cart content product title font size in px (Ex. 16)"
+msgstr ""
+"Stellen Sie Ihren Warenkorb-Inhalt Produkt-Titel Schriftgröße in px (Ex. 16)"
+
+#: backend/templates/views/floating_cart/settings.php:800
+msgid "Quantity Box Width"
+msgstr "Menge Box-Breite"
+
+#: backend/templates/views/floating_cart/settings.php:804
+msgid "Set your cart content product quantity input box width in px (Ex. 56)"
+msgstr ""
+"Stellen Sie Ihren Warenkorb-Inhalt, Produkt, Menge input-box-Breite in px "
+"(Ex. 56)"
+
+#: backend/templates/views/floating_cart/settings.php:810
+msgid "Quantity Box Border Color"
+msgstr "Menge Box Border Color"
+
+#: backend/templates/views/floating_cart/settings.php:824
+msgid "Quantity Box Background Color"
+msgstr "Menge Box Hintergrund Farbe"
+
+#: backend/templates/views/floating_cart/settings.php:838
+msgid "Quantity Box Text Color"
+msgstr "Menge Box-Text-Farbe"
+
+#: backend/templates/views/floating_cart/settings.php:863
+msgid "Enable Basket d"
+msgstr "Aktivieren Korb d"
+
+#: backend/templates/views/floating_cart/settings.php:869
+msgid "Always Show"
+msgstr "Immer Zeigen"
+
+#: backend/templates/views/floating_cart/settings.php:872
+msgid "Always Hide"
+msgstr "Immer Ausblenden"
+
+#: backend/templates/views/floating_cart/settings.php:875
+msgid "Hide when cart is empty"
+msgstr "Ausblenden, wenn Warenkorb ist leer"
+
+#: backend/templates/views/floating_cart/settings.php:882
+msgid "Basket Shape"
+msgstr "Korb Form"
+
+#: backend/templates/views/floating_cart/settings.php:888
+#: backend/templates/views/product_sticky_bar/settings.php:303
+msgid "Round"
+msgstr "Runde"
+
+#: backend/templates/views/floating_cart/settings.php:891
+#: backend/templates/views/product_sticky_bar/settings.php:306
+msgid "Square"
+msgstr "Square"
+
+#: backend/templates/views/floating_cart/settings.php:898
+msgid "Basket Icon Size"
+msgstr "Korb Größe"
+
+#: backend/templates/views/floating_cart/settings.php:902
+msgid "Set your basket icon size in px (Ex. 35)"
+msgstr "Stellen Sie Ihren Warenkorb-Symbol Größe in px (Ex. 35)"
+
+#: backend/templates/views/floating_cart/settings.php:908
+msgid "Show Item Count?"
+msgstr "Show Item-Count?"
+
+#: backend/templates/views/floating_cart/settings.php:913
+msgid "Turn off if you don/t want to show basket item count."
+msgstr "Ausschalten, wenn Sie don/t möchten, um zu zeigen, Korb item-count."
+
+#: backend/templates/views/floating_cart/settings.php:919
+msgid "Basket Icon"
+msgstr "Korb-Symbol"
+
+#: backend/templates/views/floating_cart/settings.php:935
+msgid "Please select your basket icon."
+msgstr "Bitte wählen Sie Ihre Warenkorb-Symbol."
+
+#: backend/templates/views/floating_cart/settings.php:941
+msgid "Basket Position"
+msgstr "Korb-Position"
+
+#: backend/templates/views/floating_cart/settings.php:947
+#: backend/templates/views/floating_cart/settings.php:989
+msgid "Top Left"
+msgstr "Top Links"
+
+#: backend/templates/views/floating_cart/settings.php:950
+#: backend/templates/views/floating_cart/settings.php:992
+msgid "Top Right"
+msgstr "Oben Rechts"
+
+#: backend/templates/views/floating_cart/settings.php:953
+#: backend/templates/views/floating_cart/settings.php:995
+msgid "Bottom Left"
+msgstr "Unten Links"
+
+#: backend/templates/views/floating_cart/settings.php:956
+#: backend/templates/views/floating_cart/settings.php:998
+msgid "Bottom Right"
+msgstr "Unten Rechts"
+
+#: backend/templates/views/floating_cart/settings.php:963
+msgid "Basket Offset (Vertical)"
+msgstr "Korb-Offset (Vertikal)"
+
+#: backend/templates/views/floating_cart/settings.php:967
+msgid "Set your basket vertical offset in px (Ex. 110)"
+msgstr "Stellen Sie Ihren Warenkorb vertikaler Versatz in Pixel (Ex. 110)"
+
+#: backend/templates/views/floating_cart/settings.php:973
+msgid "Basket Offset (Horizontal)"
+msgstr "Korb-Offset (Horizontal)"
+
+#: backend/templates/views/floating_cart/settings.php:977
+msgid "Set your basket horizontal offset in px (Ex. 60)"
+msgstr "Stellen Sie Ihren Warenkorb horizontal offset in px (Ex. 60)"
+
+#: backend/templates/views/floating_cart/settings.php:983
+msgid "Basket Count Position"
+msgstr "Korb Count Position"
+
+#: backend/templates/views/floating_cart/settings.php:1005
+msgid "Basket Icon Color"
+msgstr "Korb Farbe"
+
+#: backend/templates/views/floating_cart/settings.php:1019
+msgid "Basket Background Color"
+msgstr "Korb Hintergrund Farbe"
+
+#: backend/templates/views/floating_cart/settings.php:1033
+msgid "Basket Count Color"
+msgstr "Korb Count Farbe"
+
+#: backend/templates/views/floating_cart/settings.php:1047
+msgid "Basket Count Background Color"
+msgstr "Korb Count-Background-Color -"
+
+#: backend/templates/views/modules.php:18
+msgid "Modules"
+msgstr "Module"
+
+#: backend/templates/views/modules.php:25
+msgid "All"
+msgstr "Alle"
+
+#: backend/templates/views/modules.php:26
+msgid "Active"
+msgstr "Active"
+
+#: backend/templates/views/modules.php:27
+msgid "Inactive"
+msgstr "Inaktiv"
+
+#: backend/templates/views/modules.php:54
+#: backend/templates/views/modules.php:74
+#: backend/templates/views/modules.php:114
+#: backend/templates/views/modules.php:154
+#: backend/templates/views/modules.php:214
+#: backend/templates/views/modules.php:234
+#: backend/templates/views/modules.php:254
+#: backend/templates/views/modules.php:276
+#: backend/templates/views/product_sticky_bar/settings.php:78
+#: backend/templates/views/product_sticky_bar/settings.php:89
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: backend/templates/views/modules.php:94
+#: backend/templates/views/modules.php:134
+#: backend/templates/views/modules.php:174
+#: backend/templates/views/modules.php:194
+msgid " Settings"
+msgstr ""
+
+#: backend/templates/views/modules.php:107
+#: backend/templates/views/url_coupon/settings.php:14
+msgid "URL Coupon"
+msgstr "URL Gutschein"
+
+#: backend/templates/views/modules.php:127
+#: backend/templates/views/product_sticky_bar/settings.php:60
+msgid "Product Sticky Bar"
+msgstr "Produkt-Sticky Bar"
+
+#: backend/templates/views/modules.php:147
+#: backend/templates/views/one_click_checkout/settings.php:78
+msgid "One Click Checkout"
+msgstr "Ein Klicken Checkout"
+
+#: backend/templates/views/modules.php:187
+#: backend/templates/views/pdf_invoice/settings.php:76
+msgid "PDF Invoice & Packing Slips"
+msgstr "PDF Rechnungen & Lieferscheine"
+
+#: backend/templates/views/modules.php:207
+msgid "Free Shipping Bar"
+msgstr "Kostenloser Versand Bar"
+
+#: backend/templates/views/modules.php:247
+#: backend/templates/views/product_filter/settings.php:96
+msgid "Product Filter"
+msgstr "Produkt-Filter"
+
+#: backend/templates/views/modules.php:263
+msgid "Pro"
+msgstr "Pro"
+
+#: backend/templates/views/modules.php:269
+msgid "Order Cancel"
+msgstr "Bestellung Stornieren"
+
+#: backend/templates/views/one_click_checkout/settings.php:99
+msgid "Add To Cart"
+msgstr "Add To Cart"
+
+#: backend/templates/views/one_click_checkout/settings.php:102
+msgid "Buy Now Button"
+msgstr "Jetzt Kaufen-Button"
+
+#: backend/templates/views/one_click_checkout/settings.php:105
+msgid "Checkout"
+msgstr "Checkout"
+
+#: backend/templates/views/one_click_checkout/settings.php:121
+msgid "Disable Cart Page"
+msgstr "Deaktivieren Cart Page"
+
+#: backend/templates/views/one_click_checkout/settings.php:126
+msgid ""
+"Disable the cart page. It will automatically redirect to the checkout page."
+msgstr ""
+"Deaktivieren Sie die Warenkorb-Seite. Es wird automatisch umgeleitet auf der "
+"checkout-Seite."
+
+#: backend/templates/views/one_click_checkout/settings.php:132
+msgid "Enable single page checkout"
+msgstr "Aktivieren von single-page-checkout"
+
+#: backend/templates/views/one_click_checkout/settings.php:137
+msgid "Turn on the single page checkout to show the cart menu as well."
+msgstr "Drehen auf der einzigen Seite zur Kasse, um zeigen die Warenkorb-Menü."
+
+#: backend/templates/views/one_click_checkout/settings.php:144
+msgid "Enable Redirect on Add to Cart"
+msgstr "Aktivieren der Umleitung auf Hinzufügen zu Warenkorb"
+
+#: backend/templates/views/one_click_checkout/settings.php:150
+msgid ""
+"After clicking the add to cart button, it will automatically redirect to the "
+"checkout page."
+msgstr ""
+"Nach dem Klick auf die Schaltfläche in den Warenkorb, wird automatisch eine "
+"Umleitung auf der checkout-Seite."
+
+#: backend/templates/views/one_click_checkout/settings.php:156
+#: backend/templates/views/one_click_checkout/settings.php:184
+msgid "Redirect to custom url"
+msgstr "Redirect to custom url"
+
+#: backend/templates/views/one_click_checkout/settings.php:162
+msgid ""
+"Redirect to custom url instead of page, so using this you can redirect to "
+"any page."
+msgstr ""
+"Umleiten benutzerdefinierte url anstelle der Seite, so kann man dadurch "
+"redirect auf eine Seite."
+
+#: backend/templates/views/one_click_checkout/settings.php:168
+msgid "Redirect to page"
+msgstr "Umleiten zu Seite"
+
+#: backend/templates/views/one_click_checkout/settings.php:188
+msgid ""
+"Redirect to this any custom url of your website e.g.: http://yourwebsite.com"
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:196
+msgid "Turn off the \"Keep Shopping\" button."
+msgstr "Schalten Sie die \"weiter Einkaufen\" Taste."
+
+#: backend/templates/views/one_click_checkout/settings.php:201
+msgid ""
+"WooCommerce shows a continue shopping button after a product is added to "
+"cart. With this option, you can disable that link so users replace the text "
+"you want to complete the sentence here"
+msgstr ""
+"WooCommerce zeigt ein Einkauf fortsetzen-Schaltfläche nachdem Sie ein "
+"Produkt in Ihren Warenkorb gelegt. Mit dieser option können Sie deaktivieren,"
+" dass link so users ersetzen Sie den text, den Sie wollen, um den Satz zu "
+"vervollständigen hier"
+
+#: backend/templates/views/one_click_checkout/settings.php:209
+msgid "Add to Cart Button Settings"
+msgstr "Add to Cart-Taste-Einstellungen"
+
+#: backend/templates/views/one_click_checkout/settings.php:215
+msgid "Quickly add item to shopping cart with Ajax."
+msgstr "Schnell den Einkaufswagen mit Ajax."
+
+#: backend/templates/views/one_click_checkout/settings.php:223
+msgid "Turn on to enable Quickly add item to shopping cart with Ajax."
+msgstr "Schalten Sie zum aktivieren der Schnell den Einkaufswagen mit Ajax."
+
+#: backend/templates/views/one_click_checkout/settings.php:231
+msgid "Alter the \"Add to Cart\" button text."
+msgstr "Ändern Sie die \"Add zu Warenkorb\" button-text."
+
+#: backend/templates/views/one_click_checkout/settings.php:237
+msgid "Turn on to change the button text of add to cart button."
+msgstr ""
+"Schalten Sie zum ändern der Schaltfläche text hinzufügen in den Warenkorb "
+"button."
+
+#: backend/templates/views/one_click_checkout/settings.php:244
+msgid "Add to cart button text"
+msgstr "Add to cart button text"
+
+#: backend/templates/views/one_click_checkout/settings.php:248
+msgid "This text will be shown inside add to cart button."
+msgstr "Dieser text wird angezeigt, innerhalb add to cart button."
+
+#: backend/templates/views/one_click_checkout/settings.php:255
+msgid "Select options button text"
+msgstr "Wählen Sie die Schaltfläche Optionen text"
+
+#: backend/templates/views/one_click_checkout/settings.php:259
+msgid ""
+"This text will be shown on the archive page for the variable product, leave "
+"blank if you want to use default text."
+msgstr ""
+"Dieser text wird angezeigt, auf der Archiv-Seite für die variable Produkt, "
+"lassen Sie dieses Feld leer, wenn Sie möchten, um Standardtext zu verwenden."
+
+#: backend/templates/views/one_click_checkout/settings.php:266
+msgid "Read more button text"
+msgstr "Lesen Sie mehr button-text"
+
+#: backend/templates/views/one_click_checkout/settings.php:270
+msgid ""
+"This text will be shown on archive page for the product when the product is "
+"out of stock, leave blank if you want to use default"
+msgstr ""
+"Dieser text wird angezeigt, auf der Archiv-Seite der Produkt wenn die "
+"Produkt ist ausverkauft, lassen Sie das Feld leer, wenn Sie verwenden "
+"möchten Standard"
+
+#: backend/templates/views/one_click_checkout/settings.php:281
+msgid "Buy Now Button Settings"
+msgstr "Jetzt Kaufen-Button-Einstellungen"
+
+#: backend/templates/views/one_click_checkout/settings.php:284
+msgid "Buy Now Button on the Product Page"
+msgstr "Jetzt kaufen-Button auf der Produkt-Seite"
+
+#: backend/templates/views/one_click_checkout/settings.php:289
+#: backend/templates/views/one_click_checkout/settings.php:409
+msgid "Enable Buy Now Button"
+msgstr "Aktivieren Sie Jetzt Kaufen-Button"
+
+#: backend/templates/views/one_click_checkout/settings.php:295
+msgid "Turn on/off the buy now button on the product page."
+msgstr ""
+"Aktivieren/deaktivieren Sie den \" jetzt kaufen-button auf der Produkt-Seite."
+
+#: backend/templates/views/one_click_checkout/settings.php:302
+#: backend/templates/views/one_click_checkout/settings.php:422
+msgid "Buy now button label <span style=\"color: #FF521D;\">(Pro)</span>"
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:306
+#: backend/templates/views/one_click_checkout/settings.php:426
+msgid "Buy now button label"
+msgstr "Jetzt kaufen-button-label"
+
+#: backend/templates/views/one_click_checkout/settings.php:313
+#: backend/templates/views/one_click_checkout/settings.php:433
+msgid "Redirect to page <span style=\"color: #FF521D;\">(Pro)</span>"
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:329
+#: backend/templates/views/one_click_checkout/settings.php:449
+msgid "Position Of the Button <span style=\"color: #FF521D;\">(Pro)</span>"
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:352
+#: backend/templates/views/one_click_checkout/settings.php:466
+msgid "Buy now button width"
+msgstr "Jetzt kaufen-button-Breite"
+
+#: backend/templates/views/one_click_checkout/settings.php:356
+msgid "Buy now button width on product page (PX)."
+msgstr "Jetzt kaufen-button-Breite auf der Produkt-Seite (PX)."
+
+#: backend/templates/views/one_click_checkout/settings.php:363
+#: backend/templates/views/one_click_checkout/settings.php:477
+msgid "Buy now button margin top"
+msgstr "Jetzt kaufen-button-margin-top"
+
+#: backend/templates/views/one_click_checkout/settings.php:367
+#: backend/templates/views/one_click_checkout/settings.php:481
+msgid "Buy now button margin top (PX)."
+msgstr "Jetzt kaufen-button-margin-top - (PX)."
+
+#: backend/templates/views/one_click_checkout/settings.php:374
+#: backend/templates/views/one_click_checkout/settings.php:488
+msgid "Buy now button margin bottom"
+msgstr "Jetzt kaufen-button-margin-bottom"
+
+#: backend/templates/views/one_click_checkout/settings.php:378
+#: backend/templates/views/one_click_checkout/settings.php:492
+msgid "Buy now button margin bottom (PX)."
+msgstr "Jetzt kaufen-button-margin-bottom (PX)."
+
+#: backend/templates/views/one_click_checkout/settings.php:385
+#: backend/templates/views/one_click_checkout/settings.php:499
+msgid "Buy now button margin left"
+msgstr "Jetzt kaufen-button-margin-left"
+
+#: backend/templates/views/one_click_checkout/settings.php:389
+#: backend/templates/views/one_click_checkout/settings.php:503
+msgid "Buy now button margin left (PX)."
+msgstr "Jetzt kaufen-button-margin-Links (PX)."
+
+#: backend/templates/views/one_click_checkout/settings.php:396
+#: backend/templates/views/one_click_checkout/settings.php:510
+msgid "Buy now button margin right"
+msgstr "Jetzt kaufen-button-Marge rechts"
+
+#: backend/templates/views/one_click_checkout/settings.php:400
+#: backend/templates/views/one_click_checkout/settings.php:514
+msgid "Buy now button margin right (PX)."
+msgstr "Jetzt kaufen-button-Marge rechts (PX)."
+
+#: backend/templates/views/one_click_checkout/settings.php:404
+msgid "Buy Now Button on the Archive Page"
+msgstr "Jetzt kaufen-Button auf der Archiv-Seite"
+
+#: backend/templates/views/one_click_checkout/settings.php:415
+msgid "Turn on/off the buy now button on the product archive page."
+msgstr ""
+"Aktivieren/deaktivieren Sie den \" jetzt kaufen-button auf der Produkt-"
+"Archiv-Seite."
+
+#: backend/templates/views/one_click_checkout/settings.php:470
+msgid "Buy now button width on product archive page (PX)."
+msgstr "Jetzt kaufen-button-Breite über Produkt archive-Seite (PX)."
+
+#: backend/templates/views/one_click_checkout/settings.php:520
+msgid "Buy Now Button design"
+msgstr "Jetzt kaufen-Button-design"
+
+#: backend/templates/views/one_click_checkout/settings.php:524
+msgid "Font Color"
+msgstr "Font Color"
+
+#: backend/templates/views/one_click_checkout/settings.php:532
+msgid "Set button font color"
+msgstr "Set-Taste schriftart Farbe"
+
+#: backend/templates/views/one_click_checkout/settings.php:539
+#: backend/templates/views/shipping_bar/settings.php:373
+msgid "Background Color"
+msgstr "Hintergrundfarbe"
+
+#: backend/templates/views/one_click_checkout/settings.php:547
+msgid "Set button background color"
+msgstr "Set button background color"
+
+#: backend/templates/views/one_click_checkout/settings.php:554
+msgid "Hover Font Color"
+msgstr "Hover-Schriftfarbe"
+
+#: backend/templates/views/one_click_checkout/settings.php:564
+msgid "Set button font color on hover"
+msgstr "Set-Taste font color on hover"
+
+#: backend/templates/views/one_click_checkout/settings.php:571
+msgid "Hover Background Color"
+msgstr "Hover-Hintergrundfarbe"
+
+#: backend/templates/views/one_click_checkout/settings.php:581
+msgid "Set button background color on hover"
+msgstr "Set button background color on hover"
+
+#: backend/templates/views/one_click_checkout/settings.php:587
+msgid "Padding Top-Bottom"
+msgstr "Polsterung Top-Bottom"
+
+#: backend/templates/views/one_click_checkout/settings.php:592
+msgid "Buy now button padding top & bottom (PX)"
+msgstr "Jetzt kaufen-button-Polsterung oben und unten (PX)"
+
+#: backend/templates/views/one_click_checkout/settings.php:598
+#: backend/templates/views/shipping_bar/settings.php:400
+msgid "Padding Left-Right"
+msgstr "Polsterung Links-Rechts"
+
+#: backend/templates/views/one_click_checkout/settings.php:603
+msgid "Buy now button padding left & right (PX)"
+msgstr "Jetzt kaufen-button-padding-left & right (PX)"
+
+#: backend/templates/views/one_click_checkout/settings.php:609
+msgid "Border Radius"
+msgstr "Border-Radius"
+
+#: backend/templates/views/one_click_checkout/settings.php:615
+msgid "Buy now button border radius (PX)"
+msgstr "Jetzt kaufen-button-border-radius (PX)"
+
+#: backend/templates/views/one_click_checkout/settings.php:623
+msgid "Checkout Settings"
+msgstr "Checkout Einstellungen"
+
+#: backend/templates/views/one_click_checkout/settings.php:629
+msgid "Remove Order comment"
+msgstr "Entfernen, Um Kommentar"
+
+#: backend/templates/views/one_click_checkout/settings.php:634
+msgid "Enable to remove “order comment” from the checkout page."
+msgstr "Aktivieren entfernen \", um Kommentar\" aus dem checkout-Seite."
+
+#: backend/templates/views/one_click_checkout/settings.php:640
+msgid "Remove coupon form"
+msgstr "Entfernen coupon Formular"
+
+#: backend/templates/views/one_click_checkout/settings.php:645
+msgid "Enable to remove “Coupon Form” from the checkout page"
+msgstr "Aktivieren, entfernen Sie \"Coupon-Form\" von der checkout-Seite"
+
+#: backend/templates/views/one_click_checkout/settings.php:651
+msgid "Remove policy text"
+msgstr "Entfernen Richtlinie text"
+
+#: backend/templates/views/one_click_checkout/settings.php:657
+msgid "Enable to remove “Policy Text” from the checkout page."
+msgstr "Aktivieren entfernen-Politik \"Text\" aus dem checkout-Seite."
+
+#: backend/templates/views/one_click_checkout/settings.php:664
+msgid "Remove terms & conditions"
+msgstr "Entfernen Geschäftsbedingungen"
+
+#: backend/templates/views/one_click_checkout/settings.php:670
+msgid "Enable to remove “Terms & Conditions” from the checkout page."
+msgstr ""
+"Aktivieren Sie zum entfernen von \"Terms & Conditions\" aus dem checkout-"
+"Seite."
+
+#: backend/templates/views/one_click_checkout/settings.php:678
+msgid "Remove billing fields "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:685
+msgid " Billing First Name "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:688
+msgid " Billing Last Name "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:691
+msgid " Billing Address 1 "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:694
+msgid " Billing Address 2 "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:697
+msgid " Billing Country "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:700
+msgid " Billing City "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:703
+msgid " Billing State "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:706
+msgid " Billing Postcode "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:709
+msgid " Billing Company "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:712
+msgid " Billing Phone "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:715
+msgid " Billing Email "
+msgstr ""
+
+#: backend/templates/views/one_click_checkout/settings.php:717
+msgid "Choose the info you want to delete from 'Billing.'"
+msgstr "Wählen Sie die Informationen, die Sie löschen möchten, aus 'Billing.'"
+
+#: backend/templates/views/one_click_checkout/settings.php:724
+msgid "Skip shipping details?"
+msgstr "Überspringen Sie die Versand details?"
+
+#: backend/templates/views/one_click_checkout/settings.php:731
+msgid "Shipping First Name"
+msgstr "Versand Vorname"
+
+#: backend/templates/views/one_click_checkout/settings.php:734
+msgid "Shipping Last Name"
+msgstr "Versand Nachname"
+
+#: backend/templates/views/one_click_checkout/settings.php:737
+msgid "Shipping Address 1"
+msgstr "Versand Adresse 1"
+
+#: backend/templates/views/one_click_checkout/settings.php:740
+msgid "Shipping Address 2"
+msgstr "Versand Adresse 2"
+
+#: backend/templates/views/one_click_checkout/settings.php:743
+msgid "Shipping Country"
+msgstr "Versand-Land"
+
+#: backend/templates/views/one_click_checkout/settings.php:746
+msgid "Shipping City"
+msgstr "Versand Der Stadt"
+
+#: backend/templates/views/one_click_checkout/settings.php:749
+msgid "Shipping State"
+msgstr "Versand Staat"
+
+#: backend/templates/views/one_click_checkout/settings.php:752
+msgid "Shipping Postcode"
+msgstr "Versand-Postleitzahl"
+
+#: backend/templates/views/one_click_checkout/settings.php:755
+msgid "Shipping Company"
+msgstr "Reederei"
+
+#: backend/templates/views/one_click_checkout/settings.php:758
+msgid "Choose which information you want to delete from the Shipping Section."
+msgstr ""
+"Wählen Sie, welche Informationen Sie löschen möchten, aus dem Abschnitt "
+"Versand."
+
+#: backend/templates/views/pdf_invoice/invoice.php:7
+#: backend/templates/views/pdf_invoice/invoice.php:14
+msgid "INVOICE"
+msgstr "RECHNUNG"
+
+#: backend/templates/views/pdf_invoice/invoice.php:15
+msgid "Invoice Date:"
+msgstr "Rechnung Datum:"
+
+#: backend/templates/views/pdf_invoice/invoice.php:16
+msgid "Order No.:"
+msgstr "Bestell-Nr.:"
+
+#: backend/templates/views/pdf_invoice/invoice.php:17
+msgid "Order Date:"
+msgstr "Bestell-Datum:"
+
+#: backend/templates/views/pdf_invoice/invoice.php:18
+msgid "SSN:"
+msgstr "Sozialversicherungsnummer:"
+
+#: backend/templates/views/pdf_invoice/invoice.php:19
+msgid "VAT:"
+msgstr "MwSt:"
+
+#: backend/templates/views/pdf_invoice/invoice.php:39
+#: backend/templates/views/pdf_invoice/settings.php:676
+msgid "From Address"
+msgstr "Von Adresse"
+
+#: backend/templates/views/pdf_invoice/invoice.php:46
+msgid "Name of the shop"
+msgstr "Name des Shops"
+
+#: backend/templates/views/pdf_invoice/invoice.php:47
+msgid "Shop Address"
+msgstr "Shop-Adresse"
+
+#: backend/templates/views/pdf_invoice/invoice.php:48
+#: backend/templates/views/pdf_invoice/invoice.php:68
+#: backend/templates/views/pdf_invoice/invoice.php:94
+#: backend/templates/views/pdf_invoice/settings.php:214
+msgid "City"
+msgstr "Stadt"
+
+#: backend/templates/views/pdf_invoice/invoice.php:49
+#: backend/templates/views/pdf_invoice/invoice.php:69
+#: backend/templates/views/pdf_invoice/invoice.php:95
+msgid "Country"
+msgstr "Land"
+
+#: backend/templates/views/pdf_invoice/invoice.php:50
+#: backend/templates/views/pdf_invoice/invoice.php:70
+#: backend/templates/views/pdf_invoice/invoice.php:96
+msgid "Zip Code"
+msgstr "Zip Code"
+
+#: backend/templates/views/pdf_invoice/invoice.php:58
+#: backend/templates/views/pdf_invoice/invoice.php:67
+#: backend/templates/views/pdf_invoice/settings.php:557
+msgid "Billing Address"
+msgstr "Rechnungsadresse"
+
+#: backend/templates/views/pdf_invoice/invoice.php:66
+msgid "Billing to Name"
+msgstr "Billing Name"
+
+#: backend/templates/views/pdf_invoice/invoice.php:73
+msgid "Biller Email Address"
+msgstr "Biller E-Mail-Adresse"
+
+#: backend/templates/views/pdf_invoice/invoice.php:76
+msgid "Biller Phone Number "
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/invoice.php:85
+#: backend/templates/views/pdf_invoice/invoice.php:93
+#: backend/templates/views/pdf_invoice/settings.php:568
+msgid "Shipping Address"
+msgstr "Versand Adresse"
+
+#: backend/templates/views/pdf_invoice/invoice.php:92
+msgid "Shipping to Name"
+msgstr "Versand nach Namen"
+
+#: backend/templates/views/pdf_invoice/invoice.php:114
+msgid "SKU"
+msgstr "SKU"
+
+#: backend/templates/views/pdf_invoice/invoice.php:115
+msgid "PRODUCT"
+msgstr "PRODUKT"
+
+#: backend/templates/views/pdf_invoice/invoice.php:116
+msgid "QUANTITY"
+msgstr "MENGE"
+
+#: backend/templates/views/pdf_invoice/invoice.php:117
+msgid "PRICE"
+msgstr "PREIS"
+
+#: backend/templates/views/pdf_invoice/invoice.php:118
+msgid "TOTAL PRICE"
+msgstr "TOTAL PREIS"
+
+#: backend/templates/views/pdf_invoice/invoice.php:121
+msgid "001"
+msgstr "001"
+
+#: backend/templates/views/pdf_invoice/invoice.php:122
+#: backend/templates/views/pdf_invoice/invoice.php:129
+msgid "Name of the product"
+msgstr "Name des Produkts"
+
+#: backend/templates/views/pdf_invoice/invoice.php:123
+msgid "1"
+msgstr "001"
+
+#: backend/templates/views/pdf_invoice/invoice.php:124
+#: backend/templates/views/pdf_invoice/invoice.php:125
+msgid "$0.00"
+msgstr "$0.00"
+
+#: backend/templates/views/pdf_invoice/invoice.php:140
+msgid "Subtotal"
+msgstr "Zwischensumme"
+
+#: backend/templates/views/pdf_invoice/invoice.php:141
+msgid "Shipping"
+msgstr "Versand"
+
+#: backend/templates/views/pdf_invoice/invoice.php:142
+msgid "Discount"
+msgstr "Rabatt"
+
+#: backend/templates/views/pdf_invoice/invoice.php:143
+msgid "Fee"
+msgstr "Gebühr"
+
+#: backend/templates/views/pdf_invoice/invoice.php:158
+#: backend/templates/views/product_sticky_bar/settings.php:198
+msgid "Total"
+msgstr "Total"
+
+#: backend/templates/views/pdf_invoice/invoice.php:173
+msgid "Payment Method: COD"
+msgstr "Zahlung Methode: COD"
+
+#: backend/templates/views/pdf_invoice/invoice.php:178
+msgid "Customer Note:"
+msgstr "Kunden Hinweis:"
+
+#: backend/templates/views/pdf_invoice/invoice.php:189
+msgid "Custom Footer Text"
+msgstr "Custom Footer Text"
+
+#: backend/templates/views/pdf_invoice/settings.php:93
+#: backend/templates/views/pdf_invoice/settings.php:114
+msgid "PDF Document"
+msgstr "PDF-Dokument"
+
+#: backend/templates/views/pdf_invoice/settings.php:99
+msgid "Invoice"
+msgstr "Rechnung"
+
+#: backend/templates/views/pdf_invoice/settings.php:102
+msgid "Customize Invoice"
+msgstr "Rechnung Anpassen"
+
+#: backend/templates/views/pdf_invoice/settings.php:105
+msgid "Label Tailoring"
+msgstr "Label Schneiderei"
+
+#: backend/templates/views/pdf_invoice/settings.php:121
+msgid "Deactivate Invoice "
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/settings.php:126
+msgid "Enable/Disable the invoice on the PDF document."
+msgstr "Aktivieren/Deaktivieren der Rechnung auf das PDF-Dokument."
+
+#: backend/templates/views/pdf_invoice/settings.php:132
+msgid "Deactivate Shipping Label"
+msgstr "Deaktivieren Versand-Label"
+
+#: backend/templates/views/pdf_invoice/settings.php:137
+msgid "Enable/Disable the invoice on the PDF document"
+msgstr "Aktivieren/Deaktivieren der Rechnung auf das PDF-Dokument"
+
+#: backend/templates/views/pdf_invoice/settings.php:152
+msgid "Shop Name"
+msgstr "Shop Name"
+
+#: backend/templates/views/pdf_invoice/settings.php:161
+#: backend/templates/views/pdf_invoice/settings.php:468
+#: backend/templates/views/pdf_invoice/settings.php:664
+msgid "Shop Logo"
+msgstr "Shop-Logo"
+
+#: backend/templates/views/pdf_invoice/settings.php:167
+msgid "Upload"
+msgstr "Upload"
+
+#: backend/templates/views/pdf_invoice/settings.php:170
+msgid "Recommended image size 150px X 60px"
+msgstr "Empfohlen Bild Größe 150px X 60px"
+
+#: backend/templates/views/pdf_invoice/settings.php:177
+msgid "Footer Info"
+msgstr "Footer-Info"
+
+#: backend/templates/views/pdf_invoice/settings.php:181
+msgid "Enter invoice footer info"
+msgstr "Geben Sie Rechnung footer-info"
+
+#: backend/templates/views/pdf_invoice/settings.php:185
+msgid "Shop Address (Sender Details)"
+msgstr "Shop-Adresse (Absender)"
+
+#: backend/templates/views/pdf_invoice/settings.php:188
+msgid "Sender Name"
+msgstr "Absender Name"
+
+#: backend/templates/views/pdf_invoice/settings.php:197
+msgid "Address Line 1"
+msgstr "Adresse Zeile 1"
+
+#: backend/templates/views/pdf_invoice/settings.php:206
+msgid "Address Line 2"
+msgstr "Adresse Zeile 2"
+
+#: backend/templates/views/pdf_invoice/settings.php:234
+msgid "Postal Code"
+msgstr "PLZ"
+
+#: backend/templates/views/pdf_invoice/settings.php:243
+msgid "Country/State"
+msgstr "Land/Staat"
+
+#: backend/templates/views/pdf_invoice/settings.php:260
+msgid "Hey, please select"
+msgstr "Hey, bitte wählen Sie"
+
+#: backend/templates/views/pdf_invoice/settings.php:278
+msgid "Contact Number"
+msgstr "- Kontakt-Nummer"
+
+#: backend/templates/views/pdf_invoice/settings.php:299
+msgid "Other Settings"
+msgstr "Andere Einstellungen"
+
+#: backend/templates/views/pdf_invoice/settings.php:303
+msgid "How do you want to view the PDF?"
+msgstr "Wie wollen Sie die PDF-Datei anzeigen?"
+
+#: backend/templates/views/pdf_invoice/settings.php:309
+msgid "Open The PDF in a New Window"
+msgstr "Öffnen Sie Das PDF in einem Neuen Fenster"
+
+#: backend/templates/views/pdf_invoice/settings.php:312
+msgid "Direct Download"
+msgstr "Direct Download"
+
+#: backend/templates/views/pdf_invoice/settings.php:321
+msgid "Invoice Settings"
+msgstr "Rechnung-Einstellungen"
+
+#: backend/templates/views/pdf_invoice/settings.php:326
+msgid "Disable for Order Status"
+msgstr "Disable (deaktivieren), Um den Status"
+
+#: backend/templates/views/pdf_invoice/settings.php:336
+msgid "Choose the order status that you want to disable the invoice"
+msgstr "Wählen Sie status aus, den Sie deaktivieren möchten die Rechnung"
+
+#: backend/templates/views/pdf_invoice/settings.php:342
+msgid "Enable VAT & SSN on Checkout "
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/settings.php:348
+msgid "Show/Hide VAT & SSN on the checkout page."
+msgstr "Show/Hide MwSt & SSN auf der checkout-Seite."
+
+#: backend/templates/views/pdf_invoice/settings.php:353
+msgid "Attach to Email"
+msgstr "An E-Mail Anhängen"
+
+#: backend/templates/views/pdf_invoice/settings.php:360
+msgid "New Order (Admin Email)"
+msgstr "New Order (Admin E-Mail)"
+
+#: backend/templates/views/pdf_invoice/settings.php:363
+msgid "Cancelled Order"
+msgstr "Bestellung Storniert"
+
+#: backend/templates/views/pdf_invoice/settings.php:366
+msgid "Failed Order"
+msgstr "Fehlgeschlagen, Um"
+
+#: backend/templates/views/pdf_invoice/settings.php:369
+msgid "On-Hold Order"
+msgstr "On-Hold-Order"
+
+#: backend/templates/views/pdf_invoice/settings.php:372
+msgid "Processing Order"
+msgstr "Auftragsdatenverarbeitung"
+
+#: backend/templates/views/pdf_invoice/settings.php:375
+msgid "Complete Order"
+msgstr "Bestellung Abschließen"
+
+#: backend/templates/views/pdf_invoice/settings.php:378
+msgid "Refunded Order"
+msgstr "Erstattet Bestellung"
+
+#: backend/templates/views/pdf_invoice/settings.php:381
+msgid "Partially Refunded Order"
+msgstr "Teilweise Erstattet, Um"
+
+#: backend/templates/views/pdf_invoice/settings.php:384
+msgid "Customer Invoice"
+msgstr "Kunden-Rechnung"
+
+#: backend/templates/views/pdf_invoice/settings.php:386
+msgid "Pick when you/d like the bill sent by email."
+msgstr "Pick, wenn Sie/d wie die Rechnung per E-Mail gesendet."
+
+#: backend/templates/views/pdf_invoice/settings.php:390
+#: backend/templates/views/pdf_invoice/settings.php:479
+msgid "Invoice Number"
+msgstr "Rechnungsnummer"
+
+#: backend/templates/views/pdf_invoice/settings.php:394
+msgid "Show Order Number as Invoice Number"
+msgstr "Zeigen Bestellnummer als Rechnungsnummer"
+
+#: backend/templates/views/pdf_invoice/settings.php:400
+msgid "Enable to show the order number as the invoice number."
+msgstr "Aktivieren, um die Bestellnummer als Rechnungsnummer."
+
+#: backend/templates/views/pdf_invoice/settings.php:406
+msgid "Invoice Start Number"
+msgstr "Rechnung, Start-Nummer"
+
+#: backend/templates/views/pdf_invoice/settings.php:410
+msgid "Set your invoice start number."
+msgstr "Setzen Sie Ihre Rechnung Nummer beginnen."
+
+#: backend/templates/views/pdf_invoice/settings.php:424
+msgid "Suffix"
+msgstr "Suffix"
+
+#: backend/templates/views/pdf_invoice/settings.php:438
+msgid "Invoice Customization"
+msgstr "Rechnung Customization"
+
+#: backend/templates/views/pdf_invoice/settings.php:457
+msgid "Document Title"
+msgstr "Dokument Titel"
+
+#: backend/templates/views/pdf_invoice/settings.php:490
+#: backend/templates/views/pdf_invoice/settings.php:700
+msgid "Order Number"
+msgstr "Bestellnummer"
+
+#: backend/templates/views/pdf_invoice/settings.php:501
+msgid "Invoice Date"
+msgstr "Rechnungsdatum"
+
+#: backend/templates/views/pdf_invoice/settings.php:512
+msgid "Order Date"
+msgstr "Bestell-Datum"
+
+#: backend/templates/views/pdf_invoice/settings.php:523
+msgid "SSN "
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/settings.php:535
+msgid "VAT "
+msgstr ""
+
+#: backend/templates/views/pdf_invoice/settings.php:579
+#: backend/templates/views/pdf_invoice/settings.php:736
+#: backend/templates/views/pdf_invoice/settings.php:748
+msgid "Email"
+msgstr "E-Mail"
+
+#: backend/templates/views/pdf_invoice/settings.php:590
+msgid "Phone Number"
+msgstr "Telefonnummer"
+
+#: backend/templates/views/pdf_invoice/settings.php:601
+msgid "Payment Method"
+msgstr "Zahlung Methode"
+
+#: backend/templates/views/pdf_invoice/settings.php:612
+msgid "Customer Note"
+msgstr "Kunden Hinweis"
+
+#: backend/templates/views/pdf_invoice/settings.php:623
+msgid "Footer"
+msgstr "Fußzeile"
+
+#: backend/templates/views/pdf_invoice/settings.php:646
+msgid "Shipping Label Customization"
+msgstr "Shipping Label Customization"
+
+#: backend/templates/views/pdf_invoice/settings.php:688
+msgid "To Address"
+msgstr "Adresse"
+
+#: backend/templates/views/pdf_invoice/settings.php:712
+msgid "Weight"
+msgstr "Gewicht"
+
+#: backend/templates/views/pdf_invoice/settings.php:724
+msgid "Shipping Date"
+msgstr "Versand Datum"
+
+#: backend/templates/views/product_filter/settings.php:27
+#: modules/product_filter/template.php:28
+#: modules/product_filter/template.php:31
+msgid "Search Product"
+msgstr "Suche Produkt"
+
+#: backend/templates/views/product_filter/settings.php:31
+msgid "Search by Product Name"
+msgstr "Suche nach Produktnamen"
+
+#: backend/templates/views/product_filter/settings.php:37
+msgid "Filter By Price"
+msgstr "Filtern Nach Preis"
+
+#: backend/templates/views/product_filter/settings.php:38
+msgid "Min"
+msgstr "Min"
+
+#: backend/templates/views/product_filter/settings.php:39
+msgid "Max"
+msgstr "Max"
+
+#: backend/templates/views/product_filter/settings.php:46
+#: modules/product_filter/template.php:46
+msgid "Filter By Rating"
+msgstr "Filter By Rating"
+
+#: backend/templates/views/product_filter/settings.php:47
+#: modules/product_filter/template.php:47
+msgid "And Up"
+msgstr "Und Bis"
+
+#: backend/templates/views/product_filter/settings.php:58
+#: modules/product_filter/template.php:58
+msgid "Filter By Category"
+msgstr "Nach Kategorie Filtern"
+
+#: backend/templates/views/product_filter/settings.php:66
+#: modules/product_filter/template.php:66
+msgid "Filter By Stock"
+msgstr "Filter By Stock"
+
+#: backend/templates/views/product_filter/settings.php:67
+#: modules/product_filter/template.php:67
+msgid "In Stock"
+msgstr "In Stock"
+
+#: backend/templates/views/product_filter/settings.php:68
+#: modules/product_filter/template.php:68
+msgid "Out of Stock"
+msgstr "Out of Stock"
+
+#: backend/templates/views/product_filter/settings.php:116
+#: backend/templates/views/product_filter/settings.php:218
+msgid "Product Settings"
+msgstr "Produkt Einstellungen"
+
+#: backend/templates/views/product_filter/settings.php:119
+msgid "Search Filter"
+msgstr "Suche Filtern"
+
+#: backend/templates/views/product_filter/settings.php:122
+msgid "Price Filter"
+msgstr "Preis-Filter"
+
+#: backend/templates/views/product_filter/settings.php:125
+msgid "Rating Filter"
+msgstr "Rating Filter"
+
+#: backend/templates/views/product_filter/settings.php:128
+msgid "Category Filter"
+msgstr "Kategorie-Filter"
+
+#: backend/templates/views/product_filter/settings.php:131
+msgid "Stock Filter"
+msgstr "Lager-Filter"
+
+#: backend/templates/views/product_filter/settings.php:146
+msgid "Show Search Filter"
+msgstr "Suche Anzeigen Filtern"
+
+#: backend/templates/views/product_filter/settings.php:151
+msgid "Enable/Disable the search filter on the sidebar."
+msgstr "Aktivieren/Deaktivieren Sie den Suchfilter in der Seitenleiste."
+
+#: backend/templates/views/product_filter/settings.php:157
+msgid "Show Price Filter"
+msgstr "Show Filter Preis"
+
+#: backend/templates/views/product_filter/settings.php:162
+msgid "Enable/Disable the price filter on the sidebar."
+msgstr "Aktivieren/Deaktivieren der Preis filter auf der sidebar."
+
+#: backend/templates/views/product_filter/settings.php:168
+msgid "Show Rating Filter"
+msgstr "Show Rating Filter"
+
+#: backend/templates/views/product_filter/settings.php:173
+msgid "Enable/Disable the rating filter on the sidebar."
+msgstr "Aktivieren/Deaktivieren der rating-filter auf der sidebar."
+
+#: backend/templates/views/product_filter/settings.php:179
+msgid "Show Category Filter "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:184
+msgid "Enable/Disable the category filter on the sidebar."
+msgstr "Aktivieren/Deaktivieren Sie die Kategorie-filter auf der sidebar."
+
+#: backend/templates/views/product_filter/settings.php:189
+msgid "Show Stock Status Filter"
+msgstr "Karte Lager Status Filter"
+
+#: backend/templates/views/product_filter/settings.php:194
+msgid "Enable/Disable the stock status filter on the sidebar. "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:200
+msgid "Filter Sidebar Position"
+msgstr "Filter Sidebar Position"
+
+#: backend/templates/views/product_filter/settings.php:206
+msgid "Right "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:224
+msgid "Max Product Per Page"
+msgstr "Max Produkt Pro Seite"
+
+#: backend/templates/views/product_filter/settings.php:228
+msgid "Set maximum number of products can be showed in a page."
+msgstr ""
+"Festlegen der maximalen Anzahl der Produkte können Sie zeigten auf einer "
+"Seite."
+
+#: backend/templates/views/product_filter/settings.php:235
+msgid "\"Add to Cart\" Button Text"
+msgstr "\"Hinzufügen zu Warenkorb\" Taste, Text"
+
+#: backend/templates/views/product_filter/settings.php:239
+msgid "Set the \"Add to Cart\" button text."
+msgstr "Legen Sie die \"Add zu Warenkorb\" button-text."
+
+#: backend/templates/views/product_filter/settings.php:245
+msgid "\"Select Options\" Button Text"
+msgstr "\"Select Options\" Button-Text"
+
+#: backend/templates/views/product_filter/settings.php:249
+msgid "Set the \"Select Options\" button text for variable products."
+msgstr "Legen Sie die \"Select Options\" button-text für variable Produkte."
+
+#: backend/templates/views/product_filter/settings.php:255
+msgid "\"Stock Out\" Button Text"
+msgstr "\"Stock-Out\" Button Text"
+
+#: backend/templates/views/product_filter/settings.php:259
+msgid "Set the \"Stock Out\" button text for stock out products."
+msgstr "Legen Sie die \"Stock-Out\" button-text für Lager Produkte."
+
+#: backend/templates/views/product_filter/settings.php:266
+msgid "\"Previous Page\" Button Text"
+msgstr "\"Previous Page\" Button-Text"
+
+#: backend/templates/views/product_filter/settings.php:270
+msgid "Set the \"Previous Page\" button text."
+msgstr "Legen Sie die \"Vorherige Seite\" - Taste text."
+
+#: backend/templates/views/product_filter/settings.php:277
+msgid "\"Next Page\" Button Text"
+msgstr "\"Next Page\" Button-Text"
+
+#: backend/templates/views/product_filter/settings.php:281
+msgid "Set the \"Next Page\" button text."
+msgstr "Legen Sie die \"Next Page\" button-text."
+
+#: backend/templates/views/product_filter/settings.php:286
+msgid "Action Button Background Color"
+msgstr "Aktion Taste Hintergrund Farbe"
+
+#: backend/templates/views/product_filter/settings.php:295
+msgid ""
+"Set background color of Add to Cart, Select Option and Stock Out button."
+msgstr ""
+"Set hintergrund Farbe in den Warenkorb legen, Wählen Sie die Option und "
+"Lager-Out-button."
+
+#: backend/templates/views/product_filter/settings.php:301
+msgid "Action Button Font Color"
+msgstr "Action-Button Schriftart Farbe"
+
+#: backend/templates/views/product_filter/settings.php:310
+msgid "Set text color of Add to Cart, Select Option and Stock Out button."
+msgstr ""
+"Set text Farbe in den Warenkorb legen, Wählen Sie die Option und Lager-Out-"
+"button."
+
+#: backend/templates/views/product_filter/settings.php:318
+msgid "Pagination Button Border Color"
+msgstr "Die Paginierung Schaltfläche Rahmenfarbe"
+
+#: backend/templates/views/product_filter/settings.php:327
+msgid "Set border color of Previous Page and Next Page buttons."
+msgstr "Set Grenze Farbe Vorherige Seite und Nächste Seite Tasten."
+
+#: backend/templates/views/product_filter/settings.php:334
+msgid "Pagination Button Font Color"
+msgstr "Paginierung-Taste Schriftart Farbe"
+
+#: backend/templates/views/product_filter/settings.php:343
+msgid "Set text color of Previous Page and Next Page buttons."
+msgstr "Set text Farbe, Vorherige Seite und Nächste Seite Tasten."
+
+#: backend/templates/views/product_filter/settings.php:350
+msgid "Product Loader Color"
+msgstr "Produkt Farbe Loader"
+
+#: backend/templates/views/product_filter/settings.php:359
+msgid "Set the color of product loader animation."
+msgstr "Die Farbe von Produkt-loader-animation."
+
+#: backend/templates/views/product_filter/settings.php:370
+msgid "Search Filter Settings"
+msgstr "Suchen-Filter-Einstellungen"
+
+#: backend/templates/views/product_filter/settings.php:378
+#: backend/templates/views/product_filter/settings.php:480
+#: backend/templates/views/product_filter/settings.php:594
+#: backend/templates/views/product_filter/settings.php:734
+#: backend/templates/views/product_filter/settings.php:844
+msgid "Label Text"
+msgstr "Label Text"
+
+#: backend/templates/views/product_filter/settings.php:382
+msgid "Set the Search Filter Label text."
+msgstr "Bei der Suche die Filter Label text."
+
+#: backend/templates/views/product_filter/settings.php:389
+msgid "Placeholder Text"
+msgstr "Platzhalter Text"
+
+#: backend/templates/views/product_filter/settings.php:393
+msgid "Set the Search Field input placeholder text."
+msgstr "Legen Sie die Suchfeld-input-placeholder-text."
+
+#: backend/templates/views/product_filter/settings.php:400
+#: backend/templates/views/product_filter/settings.php:514
+msgid "Label Font Color"
+msgstr "Label Font Color"
+
+#: backend/templates/views/product_filter/settings.php:409
+msgid "Set text color of label of the search filter."
+msgstr "Set text Farbe von Etikett des such-filter."
+
+#: backend/templates/views/product_filter/settings.php:417
+msgid "Input Field Border Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:427
+msgid "Set border color of input field of the search filter."
+msgstr "Set Grenze Farbe Eingabefeld der such-filter."
+
+#: backend/templates/views/product_filter/settings.php:435
+msgid "Input Field Background Color"
+msgstr "Eingabefeld Hintergrundfarbe"
+
+#: backend/templates/views/product_filter/settings.php:444
+msgid "Set background color of input field of the search filter."
+msgstr "Set hintergrund Farbe Eingabefeld der such-filter."
+
+#: backend/templates/views/product_filter/settings.php:452
+msgid "Input Field Text Color"
+msgstr "Eingabefeld Text Farbe"
+
+#: backend/templates/views/product_filter/settings.php:462
+msgid "Set text color of input field of the search filter."
+msgstr "Set text Farbe Eingabefeld der such-filter."
+
+#: backend/templates/views/product_filter/settings.php:472
+msgid "Price Filter Settings"
+msgstr "Preis-Filter-Einstellungen"
+
+#: backend/templates/views/product_filter/settings.php:484
+msgid "Set the Price Filter Label text."
+msgstr "Legen Sie die Preis-Filter-Label text."
+
+#: backend/templates/views/product_filter/settings.php:491
+msgid "Min Placeholder Text"
+msgstr "Min Platzhalter Text"
+
+#: backend/templates/views/product_filter/settings.php:495
+msgid "Set the Minimum Price Field input placeholder text."
+msgstr "Die Mindest-Preis-Field-input-placeholder-text."
+
+#: backend/templates/views/product_filter/settings.php:503
+msgid "Max Placeholder Text"
+msgstr "Max Platzhalter Text"
+
+#: backend/templates/views/product_filter/settings.php:507
+msgid "Set the Maximum Price Field input placeholder text."
+msgstr "Legen Sie den Maximalen Preis, den Bereich Eingabe Platzhalter text."
+
+#: backend/templates/views/product_filter/settings.php:523
+msgid "Set text color of label of the price filter."
+msgstr "Set text Farbe der Beschriftung der Preis filtern."
+
+#: backend/templates/views/product_filter/settings.php:531
+msgid "Input Field Border Color"
+msgstr "Input Feld Grenze Farbe"
+
+#: backend/templates/views/product_filter/settings.php:541
+msgid "Set border color of input field of the price filter."
+msgstr "Set Grenze Farbe des Eingabe-Feld für die Preis-filter."
+
+#: backend/templates/views/product_filter/settings.php:549
+msgid "Input Field Background Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:558
+msgid "Set background color of input field of the price filter."
+msgstr "Set Hintergrundfarbe des Eingabefeldes der Preis filtern."
+
+#: backend/templates/views/product_filter/settings.php:566
+msgid "Input Field Text Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:576
+msgid "Set text color of input field of the price filter."
+msgstr "Set text Farbe des Eingabe-Feld für die Preis-filter."
+
+#: backend/templates/views/product_filter/settings.php:586
+msgid "Rating Filter Settings"
+msgstr "Rating-Filter-Einstellungen"
+
+#: backend/templates/views/product_filter/settings.php:598
+msgid "Set the Rating Filter Label text."
+msgstr "Legen Sie die Rating-Filter-Label text."
+
+#: backend/templates/views/product_filter/settings.php:604
+msgid "\"And Up\" Text"
+msgstr "\"Und Bis\" Text"
+
+#: backend/templates/views/product_filter/settings.php:608
+msgid "Set the \"And Up\" text shown beside ratings."
+msgstr "Legen Sie die \"Und Bis\" der text erscheint neben Bewertungen."
+
+#: backend/templates/views/product_filter/settings.php:614
+#: backend/templates/views/product_filter/settings.php:746
+#: backend/templates/views/product_filter/settings.php:877
+msgid "Label Font Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:623
+msgid "Set text color of label of the rating filter."
+msgstr "Set text Farbe der Beschriftung der rating-filter."
+
+#: backend/templates/views/product_filter/settings.php:630
+msgid "\"And Up\" Font Color"
+msgstr "\"Und Bis\" Font Color"
+
+#: backend/templates/views/product_filter/settings.php:639
+msgid "Set text color of \"And Up\" text shown beside ratings."
+msgstr "Set text Farbe \"Und Bis\" der text erscheint neben Bewertungen."
+
+#: backend/templates/views/product_filter/settings.php:647
+msgid "Show 5 Star Rating?"
+msgstr "Show 5-Sterne-Bewertung?"
+
+#: backend/templates/views/product_filter/settings.php:652
+msgid "Please turn off if you do not want to show the 5 star rating filter."
+msgstr ""
+"Bitte ausschalten, wenn Sie nicht wollen, zu zeigen, die 5-Sterne-Bewertung "
+"filtern."
+
+#: backend/templates/views/product_filter/settings.php:660
+msgid "Show 4 Star Rating?"
+msgstr "Show 4-Sterne-Bewertung?"
+
+#: backend/templates/views/product_filter/settings.php:665
+msgid "Please turn off if you do not want to show the 4 star rating filter."
+msgstr ""
+"Bitte ausschalten, wenn Sie nicht möchten, dass die 4-Sterne-Bewertung "
+"filtern."
+
+#: backend/templates/views/product_filter/settings.php:673
+msgid "Show 3 Star Rating?"
+msgstr "Show 3-Sterne-Bewertung?"
+
+#: backend/templates/views/product_filter/settings.php:678
+msgid "Please turn off if you do not want to show the 3 star rating filter."
+msgstr ""
+"Bitte ausschalten, wenn Sie nicht wollen, zu zeigen, die 3-Sterne-Bewertung "
+"filtern."
+
+#: backend/templates/views/product_filter/settings.php:686
+msgid "Show 2 Star Rating?"
+msgstr "Karte 2-Sterne-Bewertung?"
+
+#: backend/templates/views/product_filter/settings.php:691
+msgid "Please turn off if you do not want to show the 2 star rating filter."
+msgstr ""
+"Bitte ausschalten, wenn Sie nicht wollen, um zu zeigen, das 2-Sterne-"
+"Bewertung filtern."
+
+#: backend/templates/views/product_filter/settings.php:699
+msgid "Show 1 Star Rating?"
+msgstr "Zeige 1-Sterne-Bewertung?"
+
+#: backend/templates/views/product_filter/settings.php:704
+msgid "Please turn off if you do not want to show the 1 star rating filter."
+msgstr ""
+"Bitte ausschalten, wenn Sie nicht wollen, um zu zeigen, das 1-Sterne-"
+"Bewertung filtern."
+
+#: backend/templates/views/product_filter/settings.php:712
+msgid "Show 0 Star Rating?"
+msgstr "Zeigen 0 Star Rating?"
+
+#: backend/templates/views/product_filter/settings.php:717
+msgid "Please turn off if you do not want to show the 0 star rating filter."
+msgstr ""
+"Bitte ausschalten, wenn Sie nicht wollen, um zu zeigen, das 0-Sterne-"
+"Bewertung filtern."
+
+#: backend/templates/views/product_filter/settings.php:727
+msgid "Category Filter Settings"
+msgstr "Kategorie-Filter-Einstellungen"
+
+#: backend/templates/views/product_filter/settings.php:738
+msgid "Set the Category Filter Label text."
+msgstr "Legen Sie die Kategorie-Filter-Label text."
+
+#: backend/templates/views/product_filter/settings.php:755
+msgid "Set text color of label of the category filter."
+msgstr "Set text Farbe von Etikett der Kategorie-filter."
+
+#: backend/templates/views/product_filter/settings.php:763
+msgid "Category Font Color"
+msgstr "Kategorie Schriftfarbe"
+
+#: backend/templates/views/product_filter/settings.php:773
+msgid "Set text color of category name."
+msgstr "Set text Farbe der name der Kategorie."
+
+#: backend/templates/views/product_filter/settings.php:781
+msgid "Checkbox Unchecked Background Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:791
+#: backend/templates/views/product_filter/settings.php:920
+msgid "Set the background color of checkbox on unchecked state."
+msgstr "Legen Sie die Hintergrundfarbe der checkbox auf ungeprüften Zustand."
+
+#: backend/templates/views/product_filter/settings.php:799
+msgid "Checkbox Unchecked Border Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:809
+#: backend/templates/views/product_filter/settings.php:938
+msgid "Set the border color of checkbox on unchecked state."
+msgstr "Legen Sie die Rahmenfarbe der checkbox auf ungeprüften Zustand."
+
+#: backend/templates/views/product_filter/settings.php:817
+#: backend/templates/views/product_filter/settings.php:946
+msgid "Checkbox Checked Background Color"
+msgstr "Checkbox Überprüft Hintergrundfarbe"
+
+#: backend/templates/views/product_filter/settings.php:827
+#: backend/templates/views/product_filter/settings.php:956
+msgid "Set the background color of checkbox on checked state."
+msgstr "Legen Sie die Hintergrundfarbe der checkbox auf aktivierten Zustand."
+
+#: backend/templates/views/product_filter/settings.php:837
+msgid "Stock Filter Settings"
+msgstr "Lager-Filter-Einstellungen"
+
+#: backend/templates/views/product_filter/settings.php:848
+msgid "Set the Stock Filter Label text."
+msgstr "Legen Sie den Filter, Lager Label text."
+
+#: backend/templates/views/product_filter/settings.php:855
+msgid "\"In Stock\" Text"
+msgstr "\"In Stock\" Text"
+
+#: backend/templates/views/product_filter/settings.php:859
+msgid "Set the \"In Stock\" option text."
+msgstr "Legen Sie die \"Vorrätig\" - option text."
+
+#: backend/templates/views/product_filter/settings.php:866
+msgid "\"Out of Stock\" Text"
+msgstr "\"Out of Stock\" Text"
+
+#: backend/templates/views/product_filter/settings.php:870
+msgid "Set the \"Out of Stock\" option text."
+msgstr "Legen Sie den \"Out of Stock\" - option text."
+
+#: backend/templates/views/product_filter/settings.php:886
+msgid "Set text color of label of the stock filter."
+msgstr "Set text Farbe der Beschriftung der Lager-filter."
+
+#: backend/templates/views/product_filter/settings.php:893
+msgid "Stock Status Font Color "
+msgstr ""
+
+#: backend/templates/views/product_filter/settings.php:902
+msgid "Set text color of stock status name."
+msgstr "Set text Farbe auf Lager status name."
+
+#: backend/templates/views/product_filter/settings.php:910
+msgid "Checkbox Unchecked Background Color"
+msgstr "Checkbox Nicht Aktiviert Hintergrundfarbe"
+
+#: backend/templates/views/product_filter/settings.php:928
+msgid "Checkbox Unchecked Border Color"
+msgstr "Checkbox Nicht Aktiviert Rahmenfarbe"
+
+#: backend/templates/views/product_sticky_bar/settings.php:96
+msgid "Enable Sticky Bar"
+msgstr "Aktivieren Sie Sticky Bar"
+
+#: backend/templates/views/product_sticky_bar/settings.php:101
+msgid "Turn On/Off the product sticky bar."
+msgstr "Drehen Auf/Off die Produkt-sticky bar."
+
+#: backend/templates/views/product_sticky_bar/settings.php:107
+msgid "Show on Desktop"
+msgstr "Show Desktop"
+
+#: backend/templates/views/product_sticky_bar/settings.php:113
+msgid "Show/Hide sticky bar on Desktop"
+msgstr "Show/Hide sticky-Leiste auf dem Desktop"
+
+#: backend/templates/views/product_sticky_bar/settings.php:121
+msgid "Show on Mobile"
+msgstr "Karte auf Mobilen"
+
+#: backend/templates/views/product_sticky_bar/settings.php:128
+msgid "Toggle off if you don/t want the sticky bar on mobile."
+msgstr "Toggle off wenn Sie don/t möchten die sticky bar auf mobile."
+
+#: backend/templates/views/product_sticky_bar/settings.php:134
+msgid "Sticky Bar Position"
+msgstr "Sticky Bar Position"
+
+#: backend/templates/views/product_sticky_bar/settings.php:140
+#: backend/templates/views/shipping_bar/settings.php:353
+msgid "Top"
+msgstr "Top"
+
+#: backend/templates/views/product_sticky_bar/settings.php:143
+#: backend/templates/views/shipping_bar/settings.php:354
+msgid "Bottom"
+msgstr "Unten"
+
+#: backend/templates/views/product_sticky_bar/settings.php:150
+msgid "Show Only After Scroll"
+msgstr "Zeigen Erst Nach Scrollen"
+
+#: backend/templates/views/product_sticky_bar/settings.php:157
+msgid "Show sticky bar only when user scrolls down in product page"
+msgstr ""
+"Show-sticky-bar, nur wenn der Benutzer scrollt nach unten in Produkt Seite"
+
+#: backend/templates/views/product_sticky_bar/settings.php:163
+msgid "Scroll Pixels"
+msgstr "Blättern Pixel"
+
+#: backend/templates/views/product_sticky_bar/settings.php:167
+msgid ""
+"Display a bar on the product page when the user scrolls a certain distance. "
+"It only activates if the \"Scroll Pixels\" option is turned on, with a "
+"default setting of 180 pixels."
+msgstr ""
+"Display eine bar auf der Produkt-Seite, wenn der Benutzer blättert eine "
+"gewisse Distanz. Es wird nur aktiviert, wenn die \"Scroll-Pixel\" option "
+"eingeschaltet ist, mit einer Standardeinstellung von 180 Pixeln."
+
+#: backend/templates/views/product_sticky_bar/settings.php:173
+msgid "Show Product Review"
+msgstr "Zeigen Produkt Bewertung"
+
+#: backend/templates/views/product_sticky_bar/settings.php:180
+msgid "Show/Hide sticky bar on mobile"
+msgstr "Show/Hide sticky bar auf mobilen"
+
+#: backend/templates/views/product_sticky_bar/settings.php:187
+msgid "Show Product Review Count"
+msgstr "Show Product Review Count"
+
+#: backend/templates/views/product_sticky_bar/settings.php:194
+msgid "Show/Hide the product review count on the sticky bar."
+msgstr "Ein - /Ausblenden des Produkt-review-count auf der sticky bar."
+
+#: backend/templates/views/product_sticky_bar/settings.php:204
+msgid "Turn off Products"
+msgstr "Deaktivieren Produkte"
+
+#: backend/templates/views/product_sticky_bar/settings.php:216
+msgid "Select the products where you do not want to show the sticky bar"
+msgstr ""
+"Wählen Sie die Produkte aus, wo Sie wollen nicht zu zeigen, die sticky bar"
+
+#: backend/templates/views/product_sticky_bar/settings.php:222
+msgid "Enable Update Product Qty"
+msgstr "Aktivieren Aktualisieren Die Produkt Menge"
+
+#: backend/templates/views/product_sticky_bar/settings.php:227
+msgid "Show/Hide the product quantity update option on the sticky bar."
+msgstr "Ein - /Ausblenden die Produkt Menge update-option auf der sticky bar."
+
+#: backend/templates/views/product_sticky_bar/settings.php:234
+msgid "Enable Variable Product"
+msgstr "Ermöglichen Variable Produkt"
+
+#: backend/templates/views/product_sticky_bar/settings.php:239
+msgid "Show/Hide the variable product selection option on the sticky bar"
+msgstr ""
+"Ein - /Ausblenden der Variablen Produkt-Auswahl option auf der sticky bar"
+
+#: backend/templates/views/product_sticky_bar/settings.php:250
+msgid "Show/Hide the product image on the sticky bar."
+msgstr "Ein - /Ausblenden der Produkt Bild auf der sticky bar."
+
+#: backend/templates/views/product_sticky_bar/settings.php:256
+msgid "Show Stock Status"
+msgstr "Karte Lager Status"
+
+#: backend/templates/views/product_sticky_bar/settings.php:261
+msgid "Please turn off if you don't want to show stock quantity on sticky bar"
+msgstr ""
+"Bitte ausschalten, wenn Sie nicht wollen, zu zeigen Lagerbestand auf sticky "
+"bar"
+
+#: backend/templates/views/product_sticky_bar/settings.php:267
+msgid "Hide Sticky bar (Product Out of Stock)"
+msgstr "Hide Sticky bar (Produkt vergriffen)"
+
+#: backend/templates/views/product_sticky_bar/settings.php:273
+msgid "Turn off the sticky bar for out-of-stock products."
+msgstr "Turn off the sticky bar für out-von-Lager Produkte."
+
+#: backend/templates/views/product_sticky_bar/settings.php:281
+msgid "Bar Style"
+msgstr "Bar-Stil"
+
+#: backend/templates/views/product_sticky_bar/settings.php:286
+msgid "Height"
+msgstr "Höhe"
+
+#: backend/templates/views/product_sticky_bar/settings.php:290
+msgid "Set sticky bar height in pixel(Ex.150) - Default 100px."
+msgstr "Set sticky bar Höhe in pixel(Ex.150) - Default 100px."
+
+#: backend/templates/views/product_sticky_bar/settings.php:297
+msgid "Product Image Shape"
+msgstr "Produkt Bild Form"
+
+#: backend/templates/views/product_sticky_bar/settings.php:308
+msgid "Show product image shape (Default: Square)"
+msgstr "Zeigen Produkt Bild-Form (Standard: Square)"
+
+#: backend/templates/views/product_sticky_bar/settings.php:316
+msgid "Product Title Color "
+msgstr ""
+
+#: backend/templates/views/product_sticky_bar/settings.php:332
+msgid "Product Rating Color "
+msgstr ""
+
+#: backend/templates/views/product_sticky_bar/settings.php:348
+msgid "Product Rating Count Color"
+msgstr "Produkt Bewertung Count Farbe"
+
+#: backend/templates/views/product_sticky_bar/settings.php:365
+msgid "Product Price Color"
+msgstr "Produkt-Preis-Farbe"
+
+#: backend/templates/views/product_sticky_bar/settings.php:381
+msgid "Product Price Font Size"
+msgstr "Produkt Preis Schriftgröße"
+
+#: backend/templates/views/product_sticky_bar/settings.php:385
+msgid "Set sticky bar product price font size (Ex. 17)"
+msgstr "Set sticky bar Produkt Preis Schriftgröße (Ex. 17)"
+
+#: backend/templates/views/product_sticky_bar/settings.php:426
+msgid "Set sticky bar add to cart button font size (Ex. 14)"
+msgstr "Set sticky bar hinzufügen in den Warenkorb button font size (Ex. 14)"
+
+#: backend/templates/views/product_sticky_bar/settings.php:448
+msgid "Button Border Width"
+msgstr "Taste Grenze Breite"
+
+#: backend/templates/views/product_sticky_bar/settings.php:452
+msgid "Set sticky bar add to cart button border width (Ex. 1)"
+msgstr "Set sticky bar hinzufügen in den Warenkorb button border width (Ex. 1)"
+
+#: backend/templates/views/product_sticky_bar/settings.php:459
+msgid "Button Background Hover Color "
+msgstr ""
+
+#: backend/templates/views/product_sticky_bar/settings.php:508
+msgid "Button Padding Left-Right "
+msgstr ""
+
+#: backend/templates/views/product_sticky_bar/settings.php:514
+msgid ""
+"Adjust space around the add to cart button in the sticky bar (Default: 30)."
+msgstr ""
+"Passen Sie den Raum um sich herum die Schaltfläche in den Warenkorb in der "
+"sticky bar (Standard: 30)."
+
+#: backend/templates/views/product_sticky_bar/settings.php:522
+msgid "Button Padding Top-Bottom"
+msgstr "Button-Padding-Top-Bottom"
+
+#: backend/templates/views/product_sticky_bar/settings.php:528
+msgid "Set sticky bar add to cart button top-bottom padding (Default: 10)"
+msgstr ""
+"Set sticky bar hinzufügen in den Warenkorb button oben-unten-Polsterung "
+"(Standard: 10)"
+
+#: backend/templates/views/shipping_bar/settings.php:120
+msgid "Turn ON the switch to enable the Shipping Bar."
+msgstr "Drehen AUF die Schalter zu aktivieren die Verschiffen Bar."
+
+#: backend/templates/views/shipping_bar/settings.php:125
+msgid "Display in Desktop"
+msgstr "Die Anzeige im Desktop -"
+
+#: backend/templates/views/shipping_bar/settings.php:128
+msgid "Switch ON to display Shipping Bar on Desktop."
+msgstr "Schalten Sie zur Anzeige der Versand-Leiste auf dem Desktop."
+
+#: backend/templates/views/shipping_bar/settings.php:133
+msgid "Display in Mobile"
+msgstr "Anzeige in Mobile"
+
+#: backend/templates/views/shipping_bar/settings.php:136
+msgid "Switch ON to display Shipping Bar on mobile."
+msgstr "Schalten Sie zur Anzeige der Versand-Leiste auf dem Handy."
+
+#: backend/templates/views/shipping_bar/settings.php:141
+msgid "Select Shipping Zone"
+msgstr "Wählen Sie Versand Zone"
+
+#: backend/templates/views/shipping_bar/settings.php:149
+msgid "You must select your shipping zone, if not created please create"
+msgstr ""
+"Sie müssen wählen Sie Ihre Liefer-zone, wenn nicht erstellt erstellen Sie "
+"bitte"
+
+#: backend/templates/views/shipping_bar/settings.php:149
+msgid "Here"
+msgstr "Hier"
+
+#: backend/templates/views/shipping_bar/settings.php:154
+msgid "Exclude Pages"
+msgstr "Seiten Ausschließen"
+
+#: backend/templates/views/shipping_bar/settings.php:162
+msgid "Select the pages where you don't want to show the Free Shipping Bar."
+msgstr ""
+"Wählen Sie die Seiten, auf denen Sie nicht wollen, zu zeigen die "
+"versandkostenfrei-Bar."
+
+#: backend/templates/views/shipping_bar/settings.php:175
+msgid ""
+"Select the products for which you don't want to allow Free Shipping Bar."
+msgstr ""
+"Wählen Sie die Produkte aus, für die Sie nicht zulassen möchten, dass Free "
+"Shipping Bar."
+
+#: backend/templates/views/shipping_bar/settings.php:183
+msgid "Cart & Checkout Page Settings"
+msgstr "Cart & Checkout-Seite Einstellungen"
+
+#: backend/templates/views/shipping_bar/settings.php:186
+msgid "Cart Page"
+msgstr "Einkaufswagen"
+
+#: backend/templates/views/shipping_bar/settings.php:189
+msgid "Cart Total"
+msgstr "Cart Total"
+
+#: backend/templates/views/shipping_bar/settings.php:192
+msgid ""
+"Turn on the switch to show the free shipping message in the shopping cart."
+msgstr ""
+"Schalten Sie den Schalter, um zu zeigen, das gratis-Versand Mitteilung in "
+"den Warenkorb legen."
+
+#: backend/templates/views/shipping_bar/settings.php:197
+msgid "Choose spot on cart page."
+msgstr "Wählen Sie vor Ort auf Warenkorb-Seite."
+
+#: backend/templates/views/shipping_bar/settings.php:201
+#: backend/templates/views/shipping_bar/settings.php:223
+msgid "Before shipping block"
+msgstr "Vor dem Versand zu blockieren"
+
+#: backend/templates/views/shipping_bar/settings.php:202
+#: backend/templates/views/shipping_bar/settings.php:224
+msgid "After shipping block"
+msgstr "Nach dem Versand blockieren"
+
+#: backend/templates/views/shipping_bar/settings.php:204
+msgid "Select position of the free shipping notification in cart page."
+msgstr ""
+"Wählen Sie die position der freies Verschiffen Benachrichtigung in der "
+"Warenkorb-Seite."
+
+#: backend/templates/views/shipping_bar/settings.php:211
+msgid "Display in Total Cost Area"
+msgstr "Anzeige-in Total-Cost-Bereich"
+
+#: backend/templates/views/shipping_bar/settings.php:214
+msgid ""
+"Turn ON the switch to show the free shipping notification in checkout "
+"subtotal area."
+msgstr ""
+"Schalten Sie den Schalter, um zu zeigen, das gratis-Versand Mitteilung in "
+"der Kaufabwicklung Teilsumme Bereich."
+
+#: backend/templates/views/shipping_bar/settings.php:219
+msgid "Select Position on Checkout Page"
+msgstr "Wählen Sie die Position auf der Checkout-Seite"
+
+#: backend/templates/views/shipping_bar/settings.php:226
+msgid ""
+"Select position where the free shipping notification will be displayed on "
+"checkout page."
+msgstr ""
+"Wählen Sie die position, wo der Kostenlose Versand wird eine "
+"Benachrichtigung angezeigt werden auf der checkout-Seite."
+
+#: backend/templates/views/shipping_bar/settings.php:233
+msgid "Headline Text"
+msgstr "Headline Text"
+
+#: backend/templates/views/shipping_bar/settings.php:236
+msgid "Enter cart & checkout page free shipping progress bar headline text."
+msgstr ""
+"Geben cart & checkout-Seite kostenloser Versand Fortschritt bar headline-"
+"text."
+
+#: backend/templates/views/shipping_bar/settings.php:241
+#: backend/templates/views/shipping_bar/settings.php:504
+msgid "Progress Bar's Background"
+msgstr "Fortschrittsbalken Hintergrund"
+
+#: backend/templates/views/shipping_bar/settings.php:247
+#: backend/templates/views/shipping_bar/settings.php:510
+msgid "Set your progress bar's background color."
+msgstr "Stellen Sie Ihre Statusleiste hintergrund Farbe."
+
+#: backend/templates/views/shipping_bar/settings.php:252
+#: backend/templates/views/shipping_bar/settings.php:515
+msgid "Progress Bar's Color"
+msgstr "Fortschritt Bar Farbe"
+
+#: backend/templates/views/shipping_bar/settings.php:258
+#: backend/templates/views/shipping_bar/settings.php:521
+msgid "Set your free shipping bar's progress color."
+msgstr "Stellen Sie Ihre free shipping bar Fortschritt Farbe."
+
+#: backend/templates/views/shipping_bar/settings.php:263
+#: backend/templates/views/shipping_bar/settings.php:527
+msgid "Progress Bar's Text Color"
+msgstr "Fortschritt Bar Text Farbe"
+
+#: backend/templates/views/shipping_bar/settings.php:269
+#: backend/templates/views/shipping_bar/settings.php:533
+msgid "Set your free shipping bar's progress text color."
+msgstr "Stellen Sie Ihre free shipping bar progress-text-Farbe."
+
+#: backend/templates/views/shipping_bar/settings.php:278
+msgid "Customize Messages"
+msgstr "Anpassen Von Nachrichten"
+
+#: backend/templates/views/shipping_bar/settings.php:283
+msgid "Message on Zero Order Amount"
+msgstr "Nachricht auf Null Bestellung Menge"
+
+#: backend/templates/views/shipping_bar/settings.php:286
+msgid ""
+"\"Empty Cart in Shipping Zone: Add items to qualify for Free Shipping "
+"({minimum_order}).\""
+msgstr ""
+
+#: backend/templates/views/shipping_bar/settings.php:291
+msgid "Message on Partially Completed Order Amount"
+msgstr "Nachricht an Teilweise Ausgefüllte Bestellung Menge"
+
+#: backend/templates/views/shipping_bar/settings.php:294
+msgid ""
+"Shipping Alert: Add {missing_amount} for Free Shipping (Min. order: "
+"{minimum_order}, Current total: {cart_total})."
+msgstr ""
+
+#: backend/templates/views/shipping_bar/settings.php:299
+msgid "Message on Completed Order Amount"
+msgstr "Meldung über Abgeschlossene Bestellung Menge"
+
+#: backend/templates/views/shipping_bar/settings.php:302
+msgid ""
+"Free Shipping Alert: Your order qualifies! Click {checkout_page} to proceed."
+msgstr ""
+
+#: backend/templates/views/shipping_bar/settings.php:312
+msgid "Effect Settings"
+msgstr "Effekt Einstellungen"
+
+#: backend/templates/views/shipping_bar/settings.php:316
+msgid "Initial Delay Time"
+msgstr "Initial Delay Time"
+
+#: backend/templates/views/shipping_bar/settings.php:319
+msgid ""
+"Set the time delay for Free Shipping Bar to decide when it appears in "
+"milliseconds."
+msgstr ""
+"Legen Sie die Zeitverzögerung für Free Shipping Bar zu entscheiden, wenn es "
+"angezeigt wird, in Millisekunden."
+
+#: backend/templates/views/shipping_bar/settings.php:324
+msgid "Allow Disappear Time"
+msgstr "Erlauben Verschwinden Der Zeit"
+
+#: backend/templates/views/shipping_bar/settings.php:327
+msgid "Turn ON the switch to allow disappear time."
+msgstr "Schalten Sie den Schalter AUF erlauben verschwindet die Zeit."
+
+#: backend/templates/views/shipping_bar/settings.php:332
+msgid "Set Disappear Time"
+msgstr "Verschwindet Die Zeit"
+
+#: backend/templates/views/shipping_bar/settings.php:335
+msgid ""
+"Set disappear time in milliseconds. The Free Shipping Bar will disappear "
+"according to your setting time."
+msgstr ""
+"Verschwindet die Zeit in Millisekunden an. Der Kostenlose Versand-Leiste "
+"verschwindet nach Ihre Einstellung Zeit."
+
+#: backend/templates/views/shipping_bar/settings.php:349
+msgid "Shipping Bar Position"
+msgstr "Versand Bar Position"
+
+#: backend/templates/views/shipping_bar/settings.php:361
+msgid "Shipping Bar Layout"
+msgstr "Versand Bar-Layout"
+
+#: backend/templates/views/shipping_bar/settings.php:365
+msgid "Layout 1"
+msgstr "Layout 1"
+
+#: backend/templates/views/shipping_bar/settings.php:366
+msgid "Layout 2"
+msgstr "Layout 2"
+
+#: backend/templates/views/shipping_bar/settings.php:368
+msgid "Choose layout to auto fill other style configurations."
+msgstr "Wählen Sie layout, um die auto fill-anderen-Stil-Konfigurationen."
+
+#: backend/templates/views/shipping_bar/settings.php:379
+msgid "Set your free shipping bar background color."
+msgstr "Stellen Sie Ihre free shipping bar hintergrund Farbe."
+
+#: backend/templates/views/shipping_bar/settings.php:384
+msgid "Padding Top"
+msgstr "Padding-Top"
+
+#: backend/templates/views/shipping_bar/settings.php:387
+msgid "Set your free shipping bar's top padding."
+msgstr "Stellen Sie Ihre free shipping bar top-Polsterung."
+
+#: backend/templates/views/shipping_bar/settings.php:392
+msgid "Padding Bottom"
+msgstr "Padding-Bottom"
+
+#: backend/templates/views/shipping_bar/settings.php:395
+msgid "Set your free shipping bar's bottom padding."
+msgstr "Stellen Sie Ihre free shipping bar unten-Polsterung."
+
+#: backend/templates/views/shipping_bar/settings.php:403
+msgid "Set your free shipping bar's left and right padding."
+msgstr "Stellen Sie Ihre free shipping bar der linke und Rechte Polsterung."
+
+#: backend/templates/views/shipping_bar/settings.php:409
+msgid "Text Color of Message"
+msgstr "Text-Nachricht"
+
+#: backend/templates/views/shipping_bar/settings.php:415
+msgid "Set your free shipping bar's message text color."
+msgstr "Stellen Sie Ihre free shipping bar-Nachricht-text-Farbe."
+
+#: backend/templates/views/shipping_bar/settings.php:420
+msgid "Link Color on Message"
+msgstr "Link Farbe auf die Nachricht"
+
+#: backend/templates/views/shipping_bar/settings.php:426
+msgid "Set your free shipping bar's message link text color."
+msgstr "Stellen Sie Ihre free shipping bar message link text Farbe."
+
+#: backend/templates/views/shipping_bar/settings.php:431
+msgid "Font Size of Message"
+msgstr "Schriftgröße der Nachricht"
+
+#: backend/templates/views/shipping_bar/settings.php:434
+msgid "Set your free shipping bar's message font size."
+msgstr "Stellen Sie Ihre free shipping bar message schriftart Größe."
+
+#: backend/templates/views/shipping_bar/settings.php:440
+msgid "Text Align of Message"
+msgstr "Text Ausrichten der Nachricht"
+
+#: backend/templates/views/shipping_bar/settings.php:445
+msgid "Center"
+msgstr "Center"
+
+#: backend/templates/views/shipping_bar/settings.php:452
+msgid "Shipping Bar Close Icon"
+msgstr "Liefer-Bar In Der Nähe-Symbol"
+
+#: backend/templates/views/shipping_bar/settings.php:461
+msgid "Please select your close icon of shipping bar."
+msgstr "Bitte wählen Sie Ihre schließen-Symbol für den Versand-bar."
+
+#: backend/templates/views/shipping_bar/settings.php:466
+msgid "Close Icon Color"
+msgstr "Schließen-Symbol-Farbe"
+
+#: backend/templates/views/shipping_bar/settings.php:472
+msgid "Set your free shipping bar's close icon color."
+msgstr "Stellen Sie Ihre free shipping bar schließen-Symbol-Farbe."
+
+#: backend/templates/views/shipping_bar/settings.php:478
+msgid "Close Icon Size"
+msgstr "Schließen-Symbol Größe"
+
+#: backend/templates/views/shipping_bar/settings.php:481
+msgid "Set your free shipping bar's close icon size."
+msgstr "Stellen Sie Ihre free shipping bar schließen-Symbol Größe."
+
+#: backend/templates/views/shipping_bar/settings.php:485
+msgid "Progress Bar Style"
+msgstr "Fortschritt Bar Stil"
+
+#: backend/templates/views/shipping_bar/settings.php:488
+msgid "Enable Progress Bar"
+msgstr "Aktivieren Sie Den Fortschritt Bar"
+
+#: backend/templates/views/shipping_bar/settings.php:491
+msgid "Show progress bar with free shipping bar."
+msgstr "Show progress bar mit kostenlosem Versand bar."
+
+#: backend/templates/views/shipping_bar/settings.php:496
+msgid "Progress Bar's Top Margin"
+msgstr "Fortschritt Bar Top Margin"
+
+#: backend/templates/views/shipping_bar/settings.php:499
+msgid "Set your free shipping bar progress margin top."
+msgstr "Stellen Sie Ihre free shipping bar Fortschritt Rand oben."
+
+#: backend/templates/views/shipping_bar/settings.php:538
+msgid "Progress Bar's Font Size"
+msgstr "Fortschritt Bar Schriftart Größe"
+
+#: backend/templates/views/shipping_bar/settings.php:541
+msgid "Set your free shipping bar progress font size."
+msgstr "Stellen Sie Ihre free shipping bar Fortschritt schriftart Größe."
+
+#: backend/templates/views/shipping_bar/settings.php:546
+msgid "Progress Bar's Border Radius"
+msgstr "Fortschritt Bar Border-Radius"
+
+#: backend/templates/views/shipping_bar/settings.php:549
+msgid "Set your free shipping bar progress border radius."
+msgstr "Stellen Sie Ihre free shipping bar progress-border-radius."
+
+#: backend/templates/views/url_coupon/settings.php:49
+msgid "Search"
+msgstr "Suche"
+
+#: backend/templates/views/url_coupon/settings.php:64
+msgid "Is URL Coupon"
+msgstr "URL Gutschein"
+
+#: backend/templates/views/url_coupon/settings.php:72
+msgid "Total z"
+msgstr "Insgesamt z"
+
+#: backend/templates/views/url_coupon/url_coupon_tab.php:44
+#: modules/url_coupon/ModuleUtils.php:29
+msgid "wcEazy URL Coupon"
+msgstr "wcEazy URL Gutschein"
+
+#: backend/templates/views/url_coupon/url_coupon_tab.php:45
+msgid ""
+"Let your customers apply this coupon by visiting a URL. This coupon "
+"generates a unique coupon URL that can be used in all kind of scenarios (eg. "
+"email marketing, live chat support, blog links)."
+msgstr ""
+"Lassen Sie Ihre Kunden gilt dieser Gutschein durch den Besuch einer URL. "
+"Dieser Gutschein erzeugt eine eindeutige Gutschein-URL, die verwendet werden "
+"können in alle Arten von Szenarien (zB. E-Mail-marketing, live-chat-support, "
+"blog-links)."
+
+#: modules/one_click_checkout/ModuleUtils.php:139
+msgid "View cart"
+msgstr "Warenkorb anzeigen"
+
+#: modules/url_coupon/ModuleUtils.php:170
+msgid "Please first add the product to the cart and then apply the URL coupon."
+msgstr ""
+"Bitte zuerst fügen Sie die Produkt zu die Warenkorb, und wenden Sie dann die "
+"URL-Gutschein."
+
+#. Plugin URI of the plugin/theme
+msgid "https://wceazy.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"wcEazy provides multiple WooCommerce extensions in a single package you'll "
+"ever require."
+msgstr ""
+"wcEazy bietet mehrere WooCommerce-Erweiterungen in einem einzigen Paket, die "
+"Sie jemals benötigen."

@@ -1,0 +1,266 @@
+/* ===============
+URL Coupon
+================ */
+#wceazy_url_coupon{
+    display: none;
+}
+
+
+.wceazy_url_coupon_header {
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 50px;
+    flex-direction: row;
+    column-gap: 10px;
+    box-shadow: 0 13px 22px -5px rgb(0 0 0 / 6%);
+}
+.wceazy_url_coupon_header .wceazy_header_part_left p {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0px;
+    position: relative;
+}
+.wceazy_url_coupon_header .wceazy_header_part_left p span {
+    position: absolute;
+    top: 0;
+    right: -60px;
+    background: #6E32C9;
+    padding: 0px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: normal;
+}
+.wceazy_url_coupon_header .wceazy_header_part_right a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+.wceazy_url_coupon_header .wceazy_header_part_right a.wceazy_get_pro {
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    background: #f94017;
+    padding: 10px 25px;
+    border-radius: 3px;
+    transition: 0.1s;
+}
+.wceazy_url_coupon_header .wceazy_header_part_right a.wceazy_get_pro:hover {
+    background: #ac2809;
+}
+
+
+
+
+
+
+
+
+.wceazy_url_coupon_page_title{
+    margin: 20px 53px 0 53px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    border-bottom: 1px solid #DDD8EE;
+}
+
+.wceazy_url_coupon_page_title .page_title_part_left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.wceazy_url_coupon_page_title .page_title_part_left h2 {
+    position: relative;
+    font-size: 30px;
+    line-height: 35px;
+    margin: 25px 0;
+}
+.wceazy_url_coupon_page_title .page_title_part_left h2:after {
+    position: absolute;
+    content: "";
+    background: #6E32C9;
+    top: auto;
+    bottom: -26px;
+    width: 100%;
+    height: 2px;
+    left: 0;
+}
+
+.wceazy_url_coupon_page_title .page_title_part_left a {
+    margin-left: 100px;
+    color: #6E32C9;
+    margin-top: 15px;
+    font-size: 15px;
+    display: block;
+}
+.wceazy_url_coupon_page_title .page_title_part_right button.wceazy_url_coupon_back_to_dashboard_btn {
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    color: #FF521D;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all .3s;
+    background: #F6F5FA url("../../img/wceazy_back_to_dashboard.svg") no-repeat;
+    background-size: 14px;
+    background-position-x: 10px;
+    background-position-y: center;
+    padding: 5px 10px 5px 30px;
+}
+
+
+
+.wceazy_url_coupon_container{
+    padding: 50px 50px;
+}
+
+
+
+.wceazy_url_coupon_table_top_actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 30px 0;
+}
+.wceazy_url_coupon_table_top_actions input[type=color],
+.wceazy_url_coupon_table_top_actions input[type=date],
+.wceazy_url_coupon_table_top_actions input[type=datetime-local],
+.wceazy_url_coupon_table_top_actions input[type=datetime],
+.wceazy_url_coupon_table_top_actions input[type=email],
+.wceazy_url_coupon_table_top_actions input[type=month],
+.wceazy_url_coupon_table_top_actions input[type=number],
+.wceazy_url_coupon_table_top_actions input[type=password],
+.wceazy_url_coupon_table_top_actions input[type=search],
+.wceazy_url_coupon_table_top_actions input[type=tel],
+.wceazy_url_coupon_table_top_actions input[type=text],
+.wceazy_url_coupon_table_top_actions input[type=time],
+.wceazy_url_coupon_table_top_actions input[type=url],
+.wceazy_url_coupon_table_top_actions input[type=week],
+.wceazy_url_coupon_table_top_actions select,
+.wceazy_url_coupon_table_top_actions textarea {
+    box-shadow: 0 0 0 transparent;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid #BDCEF1;
+    background-color: #fff;
+    color: #2c3338;
+}
+.wceazy_url_coupon_table_top_actions select{
+    padding: 7px 15px;
+    border-color: #BDCEF1;
+}
+
+
+
+.wceazy_url_coupon_table_top_actions .wceazy_url_coupon_top_actions_part_left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wceazy_url_coupon_table_top_actions .wceazy_url_coupon_top_actions_part_left p{
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+.wceazy_url_coupon_table {
+    background: #fff;
+    border: 1px solid #BDCEF1 !important;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 4%);
+    border-radius: 5px;
+    margin-bottom: 30px !important;
+}
+.wceazy_url_coupon_table thead th{
+    font-weight: 500 !important;
+    font-size: 14px;
+    text-align: center;
+}
+.wceazy_url_coupon_table td{
+    font-size: 14px;
+    line-height: unset;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 10px !important;
+}
+.wceazy_url_coupon_table tbody th.check-column{
+    padding: 20px 0 0 3px;
+}
+.wceazy_url_coupon_table thead td,
+.wceazy_url_coupon_table thead th {
+    text-align: center !important;
+    border-bottom: 1px solid #BDCEF1 !important;
+}
+.wceazy_url_coupon_table tbody tr {
+    background-color: #ffffff;
+}
+.wceazy_url_coupon_table>tbody>:nth-child(odd){
+    background-color: #a7bce54d;
+}
+.wceazy_url_coupon_container .dataTables_wrapper .dataTables_filter{
+    display: none;
+}
+.wceazy_url_coupon_container .dataTables_wrapper .dataTables_info{
+    display: none;
+}
+
+.wceazy_url_coupon_container .dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+.wceazy_url_coupon_container .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.wceazy_url_coupon_container .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #fff !important;
+    border: 1px solid #6E32C9 !important;
+    background: #6E32C9 !important;
+    border-radius: 5px !important;
+}
+
+.wceazy_url_coupon_table span.text-success{
+    color: #fff;
+    font-weight: 600;
+    background: green;
+    padding: 2px 15px;
+    border-radius: 3px;
+}
+.wceazy_url_coupon_table span.text-warning{
+    color: #fff;
+    font-weight: 600;
+    background: #FF4A62;
+    padding: 2px 15px;
+    border-radius: 3px;
+}
+
+
+.wceazy_url_coupon_table .wceazy_url_coupon_table_row_action{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wceazy_url_coupon_table .wceazy_url_coupon_edit_apply_btn {
+    margin: 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #FFFFFF url(../../img/modules/url_coupon/edit_coupon.svg) no-repeat;
+    background-size: 11px;
+    background-position-x: center;
+    background-position-y: center;
+    border-radius: 5px;
+    width: 34px;
+    height: 29px;
+    display: inline-block;
+}
+.wceazy_url_coupon_table .even .wceazy_url_coupon_edit_apply_btn {
+    background-color: #F2E4F9;
+}

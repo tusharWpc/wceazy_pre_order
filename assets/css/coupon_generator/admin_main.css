@@ -1,0 +1,438 @@
+/* ===============
+Auto Apply Coupon
+================ */
+#wceazy_coupon_generator{
+    display: none;
+}
+
+
+.wceazy_coupon_generator_header {
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 50px;
+    flex-direction: row;
+    column-gap: 10px;
+    box-shadow: 0 13px 22px -5px rgb(0 0 0 / 6%);
+}
+.wceazy_coupon_generator_header .wceazy_header_part_left p {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0px;
+    position: relative;
+}
+.wceazy_coupon_generator_header .wceazy_header_part_left p span {
+    position: absolute;
+    top: 0;
+    right: -60px;
+    background: #6E32C9;
+    padding: 0px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: normal;
+}
+.wceazy_coupon_generator_header .wceazy_header_part_right a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+.wceazy_coupon_generator_header .wceazy_header_part_right a.wceazy_get_pro {
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    background: #f94017;
+    padding: 10px 25px;
+    border-radius: 3px;
+    transition: 0.1s;
+}
+.wceazy_coupon_generator_header .wceazy_header_part_right a.wceazy_get_pro:hover {
+    background: #ac2809;
+}
+
+
+
+
+
+
+
+
+.wceazy_coupon_generator_page_title{
+    margin: 20px 53px 0 53px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    border-bottom: 1px solid #DDD8EE;
+}
+
+.wceazy_coupon_generator_page_title .page_title_part_left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.wceazy_coupon_generator_page_title .page_title_part_left h2 {
+    position: relative;
+    font-size: 30px;
+    line-height: 35px;
+    margin: 25px 0;
+}
+.wceazy_coupon_generator_page_title .page_title_part_left h2:after {
+    position: absolute;
+    content: "";
+    background: #6E32C9;
+    top: auto;
+    bottom: -26px;
+    width: 100%;
+    height: 2px;
+    left: 0;
+}
+
+.wceazy_coupon_generator_page_title .page_title_part_left a {
+    margin-left: 100px;
+    color: #6E32C9;
+    margin-top: 15px;
+    font-size: 15px;
+    display: block;
+}
+.wceazy_coupon_generator_page_title .page_title_part_right button.wceazy_coupon_generator_back_to_dashboard_btn {
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    color: #FF521D;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all .3s;
+    background: #F6F5FA url("../../img/wceazy_back_to_dashboard.svg") no-repeat;
+    background-size: 14px;
+    background-position-x: 10px;
+    background-position-y: center;
+    padding: 5px 10px 5px 30px;
+}
+
+
+
+.wceazy_coupon_generator_container{
+    padding: 50px 50px;
+}
+
+
+
+
+.wceazy_coupon_generator_top_action {
+    background-color: #ffff;
+    padding: 30px 2px 60px 2px;
+    border-radius: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+
+
+/* Input Field Customization */
+.wceazy_coupon_generator_field_group_flex{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 20%;
+    max-width: 33.333333%;
+    margin: 30px 24px 0 24px;
+}
+.wceazy_coupon_generator_field_group label,
+.wceazy_coupon_generator_field_group_flex label{
+    color: #191D23;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    display:block;
+}
+.wceazy_coupon_generator_field_group .wceazy_coupon_generator_text_field,
+.wceazy_coupon_generator_field_group_flex .wceazy_coupon_generator_text_field{
+    padding: 12px 8px;
+    margin-top: 20px;
+    background: #FFFFFF;
+    border: 1px solid #BDCEF1;
+    border-radius: 8px;
+    width: 100%;
+}
+.wceazy_coupon_generator_field_group .wceazy_coupon_generator_select_field,
+.wceazy_coupon_generator_field_group_flex .wceazy_coupon_generator_select_field{
+    padding: 12px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    width: 100%;
+    border: 1px solid #BDCEF1;
+    color:#5b5b5bf5 !important;
+    font-size: 15px !important;
+}
+
+
+
+
+/* Select2 Customization */
+
+.wceazy_coupon_generator_select2_label {
+    margin-bottom: 20px;
+}
+#wceazy_coupon_generator .select2-container {
+    display: block;
+}
+#wceazy_coupon_generator .select2-container--default .select2-selection--multiple .select2-selection__choice{
+    padding: 5px;
+    padding-left: 20px;
+}
+#wceazy_coupon_generator .select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
+    top: 3px;
+}
+#wceazy_coupon_generator .select2-container--default .select2-selection--multiple{
+    padding: 12px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    width: 100%;
+    border: 1px solid #BDCEF1;
+    color:#5b5b5bf5 !important;
+    font-size: 15px !important;
+}
+#wceazy_coupon_generator .select2-container .select2-selection--single{
+    height: 50px;
+}
+#wceazy_coupon_generator .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 50px;
+}
+#wceazy_coupon_generator .select2-container--default .select2-selection--single .select2-selection__arrow {
+    top:13px;
+}
+
+#wceazy_coupon_generator .select2-container--default .select2-selection--single,
+#wceazy_coupon_generator .select2-container--open .select2-dropdown {
+    border: 1px solid #BDCEF1;
+    border-radius: 5px;
+}
+
+
+
+
+.wceazy_coupon_generator_tab{
+    margin: 65px 0 0 0;
+    display: flex;
+    padding-top: 5px;
+}
+
+
+
+
+
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_left {
+    width: 20% ;
+    height: 200px;
+    border-top: 1px solid #DDD8EE;
+}
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_left .coupon_data_tabs .tab_item {
+    padding: 10px 56px;
+    cursor: pointer;
+    border-bottom: 1px solid #DDD8EE;
+}
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_left .coupon_data_tabs .tab_item{
+    border-left: 4px solid transparent;
+    transition: .3s;
+}
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_left .coupon_data_tabs .tab_item:hover {
+    background-color: #FFFF;
+    border-left: 4px solid #6E32C9;
+    transition: .3s;
+}
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_left .coupon_data_tabs .tab_item:hover h1 {
+    color:#6E32C9;
+}
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_left .coupon_data_tabs .tab_item h1 {
+    color: #050505;
+    font-weight: 600;
+    font-size: 18px;
+}
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_left .coupon_data_tabs .tab_item_active {
+    background-color: #FFFF;
+    border-left: 4px solid #6E32C9;
+    transition: .3s;
+}
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_left .coupon_data_tabs .tab_item_active  h1{
+    color:#6E32C9;
+}
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_left .coupon_data_tabs .tab_item_active {
+    background-color: #FFFF;
+    border-left: 4px solid #6E32C9;
+    transition: .3s;
+}
+
+
+
+
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_right {
+    width: 80%;
+    background: #ffffff;
+    padding: 50px 50px 60px 50px;
+}
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_right .tab_body_title{
+    border-bottom: 1px solid #E3E0ED;
+    padding-bottom: 15px;
+}
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_right .tab_body_title h1{
+    font-size: 28px;
+    color: #6E32C9;
+    font-weight: 700;
+}
+
+  .tab_body_form {
+    margin-left:55px
+}
+
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_right .tab_body_form .wceazy_coupon_generator_field_group .wceazy_coupon_generator_text_field {
+    width: 50%;
+}
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_right .tab_body_form .wceazy_coupon_generator_field_group .wceazy_coupon_generator_select_field {
+    margin-top: 15px;
+    width: 50% !important;
+    max-width: 50%;
+    color:#5b5b5bf5 !important;
+    font-size: 15px !important;
+}
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_right .tab_body_form .wceazy_coupon_generator_field_group .wceazy_coupon_generator_select_field option {
+    margin-top: 20px;
+}
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_right .tab_body_form .wceazy_coupon_generator_field_group .wceazy_coupon_checkbox {
+    margin-top: 20px;
+}
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_right .tab_body_form .wceazy_coupon_generator_field_group .wceazy_coupon_checkbox .description{
+    font-size: 14px;
+    line-height: 25px;
+}
+.wceazy_coupon_generator_tab .wceazy_coupon_generator_tab_part_right .tab_body_form .wceazy_coupon_generator_field_group{
+    margin-top: 38px;
+}
+
+
+
+
+
+.wceazy_coupon_generator_bottom_button_section{
+    display: flex;
+    justify-content: right;
+    margin-top: 60px;
+}
+.wceazy_coupon_generator_bottom_button_section button{
+    text-decoration: none;
+    background-color: #6E32C9;
+    padding: 17px 30px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: 0.3s;
+    border:  1px solid transparent
+}
+.wceazy_coupon_generator_bottom_button_section button:hover{
+    border:  1px solid #6E32C9;
+    background: transparent;
+    color: #6E32C9 ;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Popup Styles */
+.wceazy_coupon_generator_popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #efeafede;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+}
+.wceazy_coupon_generator_popup.wceazy_coupon_generator_popup_opened{
+    opacity: 1;
+    visibility: visible;
+}
+
+.wceazy_coupon_generator_popup .wceazy_coupon_generator_popup_inner{
+    position: absolute;
+    background: #D4C9F9;
+    padding: 120px 100px 80px 100px;
+    border-radius: 5px;
+}
+
+
+.wceazy_coupon_generator_popup .generating_coupon p {
+    font-size: 36px;
+    font-weight: bold;
+    color: #6E32C9;
+    margin: 0;
+    line-height: 60px;
+}
+.wceazy_coupon_generator_popup .generating_coupon img {
+    width: 40%;
+}
+
+
+
+.wceazy_coupon_generator_popup .successes_message p {
+    font-size: 36px;
+    font-weight: bold;
+    color: #6E32C9;
+    margin: 0 0 40px 0;
+    line-height: 60px;
+}
+.wceazy_coupon_generator_popup .successes_message .wceazy_coupon_generator_popup_export_btn{
+    text-decoration: none;
+    background-color: #6E32C9;
+    padding: 17px 30px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: 0.3s;
+    border:  1px solid transparent
+}
+.wceazy_coupon_generator_popup .successes_message .wceazy_coupon_generator_popup_export_btn:hover{
+    border:  1px solid #6E32C9;
+    background: transparent;
+    color: #6E32C9 ;
+    cursor: pointer;
+}
+.wceazy_coupon_generator_popup .wceazy_close_popup {
+    border: 0;
+    outline: 0;
+    position: absolute;
+    top: -13px;
+    right: -21px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 20px rgb(0 0 0 / 15%);
+    background: #FFFFFF url(../../img/modules/coupon_generator/popup_close.svg) no-repeat;
+    background-size: 11px;
+    background-position-x: center;
+    background-position-y: center;
+    width: 50px;
+    height: 50px;
+}
