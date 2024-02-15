@@ -22,13 +22,8 @@ if (!class_exists ('WcEazyAddressBookUtils')) {
             if(!empty($post_data)){
                 update_option( 'wceazy_address_book_settings', json_encode($post_data) );
             }
-        }
-
-
-
-
-
-
+        } 
+        
 
         public function wc_address_book_add_to_menu( $items ) {
 

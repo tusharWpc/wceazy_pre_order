@@ -1,5 +1,5 @@
 
-function wceazy_pre_order_init(host){
+function wceazy_pre_order_init(host) {
     wceazy_hide_all()
     jQuery("#wceazy_pre_order").show();
 
@@ -10,7 +10,7 @@ function wceazy_pre_order_init(host){
 }
 
 
-function wceazy_pre_order_init_select2(){
+function wceazy_pre_order_init_select2() {
     var wceazy_pre_order_shipping_zone = jQuery('.wceazy_pre_order_shipping_zone select')
     var wceazy_pre_order_dont_show_pages = jQuery('.wceazy_pre_order_dont_show_pages select')
     var wceazy_pre_order_exclude_products = jQuery('.wceazy_pre_order_exclude_products select')
@@ -19,13 +19,13 @@ function wceazy_pre_order_init_select2(){
     var wceazy_pre_order_position = jQuery('.wceazy_pre_order_position select')
     var wceazy_pre_order_msg_text_align = jQuery('.wceazy_pre_order_msg_text_align select')
 
-    if (wceazy_pre_order_shipping_zone.data('select2')) { wceazy_pre_order_shipping_zone.select2('destroy');}
-    if (wceazy_pre_order_dont_show_pages.data('select2')) { wceazy_pre_order_dont_show_pages.select2('destroy');}
-    if (wceazy_pre_order_exclude_products.data('select2')) { wceazy_pre_order_exclude_products.select2('destroy');}
-    if (wceazy_pre_order_position_cart_subtotal.data('select2')) { wceazy_pre_order_position_cart_subtotal.select2('destroy');}
-    if (wceazy_pre_order_position_checkout_subtotal.data('select2')) { wceazy_pre_order_position_checkout_subtotal.select2('destroy');}
-    if (wceazy_pre_order_position.data('select2')) { wceazy_pre_order_position.select2('destroy');}
-    if (wceazy_pre_order_msg_text_align.data('select2')) { wceazy_pre_order_msg_text_align.select2('destroy');}
+    if (wceazy_pre_order_shipping_zone.data('select2')) { wceazy_pre_order_shipping_zone.select2('destroy'); }
+    if (wceazy_pre_order_dont_show_pages.data('select2')) { wceazy_pre_order_dont_show_pages.select2('destroy'); }
+    if (wceazy_pre_order_exclude_products.data('select2')) { wceazy_pre_order_exclude_products.select2('destroy'); }
+    if (wceazy_pre_order_position_cart_subtotal.data('select2')) { wceazy_pre_order_position_cart_subtotal.select2('destroy'); }
+    if (wceazy_pre_order_position_checkout_subtotal.data('select2')) { wceazy_pre_order_position_checkout_subtotal.select2('destroy'); }
+    if (wceazy_pre_order_position.data('select2')) { wceazy_pre_order_position.select2('destroy'); }
+    if (wceazy_pre_order_msg_text_align.data('select2')) { wceazy_pre_order_msg_text_align.select2('destroy'); }
 
     wceazy_pre_order_shipping_zone.select2();
     wceazy_pre_order_dont_show_pages.select2();
@@ -37,17 +37,17 @@ function wceazy_pre_order_init_select2(){
 }
 
 
-function wceazy_pre_order_selection_changed(){
-    if(jQuery(".wceazy_pre_order_allow_disappear_time input[type='checkbox']:checked").length > 0){
+function wceazy_pre_order_selection_changed() {
+    if (jQuery(".wceazy_pre_order_allow_disappear_time input[type='checkbox']:checked").length > 0) {
         jQuery(".wceazy_pre_order_disappear_time").show()
-    }else{
+    } else {
         jQuery(".wceazy_pre_order_disappear_time").hide()
     }
 }
 
-function wceazy_pre_order_layout_auto_fill(){
+function wceazy_pre_order_layout_auto_fill() {
     var layout_value = jQuery(".wceazy_pre_order_layout select").val()
-    if(layout_value == "1"){
+    if (layout_value == "1") {
         jQuery(".wceazy_pre_order_bg input").val("#0A9663")
         jQuery(".wceazy_pre_order_padding_top input").val("10")
         jQuery(".wceazy_pre_order_padding_bottom input").val("10")
@@ -64,7 +64,7 @@ function wceazy_pre_order_layout_auto_fill(){
         jQuery(".wceazy_pre_order_progress_text_color input").val("#ffffff")
         jQuery(".wceazy_pre_order_progress_font_size input").val("15")
         jQuery(".wceazy_pre_order_progress_border_radius input").val("20")
-    }else if(layout_value == "2"){
+    } else if (layout_value == "2") {
         jQuery(".wceazy_pre_order_bg input").val("#580A96")
         jQuery(".wceazy_pre_order_padding_top input").val("10")
         jQuery(".wceazy_pre_order_padding_bottom input").val("0")
@@ -86,7 +86,7 @@ function wceazy_pre_order_layout_auto_fill(){
 }
 
 
-function wceazy_pre_order_init_icon_field(host){
+function wceazy_pre_order_init_icon_field(host) {
     var wceazy_pre_order_remove_icon = jQuery('.wceazy_pre_order_remove_icon')
 
 
@@ -98,18 +98,17 @@ function wceazy_pre_order_init_icon_field(host){
     });
 
 
-    jQuery(wceazy_pre_order_remove_icon).find(".icon_1").css("background", "transparent url("+host+"assets/img/modules/pre_order/delete_icon_1.svg) no-repeat center center / 16px")
-    jQuery(wceazy_pre_order_remove_icon).find(".icon_2").css("background", "transparent url("+host+"assets/img/modules/pre_order/delete_icon_2.svg) no-repeat center center / 16px")
-    jQuery(wceazy_pre_order_remove_icon).find(".icon_3").css("background", "transparent url("+host+"assets/img/modules/pre_order/delete_icon_3.svg) no-repeat center center / 16px")
-    jQuery(wceazy_pre_order_remove_icon).find(".icon_4").css("background", "transparent url("+host+"assets/img/modules/pre_order/delete_icon_4.svg) no-repeat center center / 16px")
-    jQuery(wceazy_pre_order_remove_icon).find(".icon_5").css("background", "transparent url("+host+"assets/img/modules/pre_order/delete_icon_5.svg) no-repeat center center / 16px")
+    jQuery(wceazy_pre_order_remove_icon).find(".icon_1").css("background", "transparent url(" + host + "assets/img/modules/pre_order/delete_icon_1.svg) no-repeat center center / 16px")
+    jQuery(wceazy_pre_order_remove_icon).find(".icon_2").css("background", "transparent url(" + host + "assets/img/modules/pre_order/delete_icon_2.svg) no-repeat center center / 16px")
+    jQuery(wceazy_pre_order_remove_icon).find(".icon_3").css("background", "transparent url(" + host + "assets/img/modules/pre_order/delete_icon_3.svg) no-repeat center center / 16px")
+    jQuery(wceazy_pre_order_remove_icon).find(".icon_4").css("background", "transparent url(" + host + "assets/img/modules/pre_order/delete_icon_4.svg) no-repeat center center / 16px")
+    jQuery(wceazy_pre_order_remove_icon).find(".icon_5").css("background", "transparent url(" + host + "assets/img/modules/pre_order/delete_icon_5.svg) no-repeat center center / 16px")
 
 
 
 }
 
-
-function wceazy_pre_order_tab_init(){
+function wceazy_pre_order_tab_init() {
     jQuery(".wceazy_pre_order_container .coupon_tab_body").hide();
     jQuery(".wceazy_pre_order_container .coupon_tab_body[data-id='tab_general']").show();
     jQuery(".wceazy_pre_order_container .coupon_data_tabs .tab_item").unbind("click");
@@ -179,7 +178,7 @@ function wceazy_pre_order_save() {
 
 
 
-    let jQuerypost_data = {'action': 'wceazy_pre_order_save', 'data': jQuerypostData};
+    let jQuerypost_data = { 'action': 'wceazy_pre_order_save', 'data': jQuerypostData };
 
     jQuery.ajax({
         url: ajaxurl, type: "POST", data: jQuerypost_data,

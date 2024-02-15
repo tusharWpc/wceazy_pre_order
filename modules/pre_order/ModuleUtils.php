@@ -98,27 +98,3 @@ public function wceazy_customSimpleFieldsSave( $post_id ) {
  }
 }
 ?>
-
-
-
-<style>
-#wceazy_pre_order_sb_<?php echo esc_attr($unique_id) ?> {
-    --wceazy_pre_order_sb_bar_bg: <?php echo $wceazy_sb_pre_order_progress_bar_bg;
-    ?>;
-    --wceazy_pre_order_sb_bar_progress_bg: <?php echo $wceazy_sb_pre_order_progress_color;
-    ?>;
-    --wceazy_pre_order_sb_bar_text_color: <?php echo $wceazy_sb_pre_order_progress_text_color;
-    ?>;
-}
-</style>
-
-  <tr class="cart-total-wceazy-sb"> 
-    <td data-title="total-volume">
-        <div id="wceazy_pre_order_sb_<?php echo esc_attr($unique_id);?>"
-            class="wceazy_pre_order_sb_progress_container">
-            <div class="bar-holder">
-                
-            </div>
-        </div>
-    </td>
-</tr>  

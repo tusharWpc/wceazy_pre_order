@@ -1,5 +1,5 @@
 
-function wceazy_coupon_generator_init(host){
+function wceazy_coupon_generator_init(host) {
     wceazy_hide_all()
     jQuery("#wceazy_coupon_generator").show();
 
@@ -8,7 +8,7 @@ function wceazy_coupon_generator_init(host){
 }
 
 
-function wceazy_coupon_generator_init_select2(){
+function wceazy_coupon_generator_init_select2() {
     var wceazy_coupon_generator_coupon_type = jQuery('.wceazy_coupon_generator_coupon_type select')
     var wceazy_coupon_generator_coupon_length = jQuery('.wceazy_coupon_generator_coupon_length select')
     var wceazy_coupon_generator_discount_type = jQuery('.wceazy_coupon_generator_discount_type select')
@@ -17,13 +17,13 @@ function wceazy_coupon_generator_init_select2(){
     var wceazy_coupon_generator_product_categories = jQuery('.wceazy_coupon_generator_product_categories select')
     var wceazy_coupon_generator_exclude_product_categories = jQuery('.wceazy_coupon_generator_exclude_product_categories select')
 
-    if (wceazy_coupon_generator_coupon_type.data('select2')) { wceazy_coupon_generator_coupon_type.select2('destroy');}
-    if (wceazy_coupon_generator_coupon_length.data('select2')) { wceazy_coupon_generator_coupon_length.select2('destroy');}
-    if (wceazy_coupon_generator_discount_type.data('select2')) { wceazy_coupon_generator_discount_type.select2('destroy');}
-    if (wceazy_coupon_generator_product_ids.data('select2')) { wceazy_coupon_generator_product_ids.select2('destroy');}
-    if (wceazy_coupon_generator_exclude_product_ids.data('select2')) { wceazy_coupon_generator_exclude_product_ids.select2('destroy');}
-    if (wceazy_coupon_generator_product_categories.data('select2')) { wceazy_coupon_generator_product_categories.select2('destroy');}
-    if (wceazy_coupon_generator_exclude_product_categories.data('select2')) { wceazy_coupon_generator_exclude_product_categories.select2('destroy');}
+    if (wceazy_coupon_generator_coupon_type.data('select2')) { wceazy_coupon_generator_coupon_type.select2('destroy'); }
+    if (wceazy_coupon_generator_coupon_length.data('select2')) { wceazy_coupon_generator_coupon_length.select2('destroy'); }
+    if (wceazy_coupon_generator_discount_type.data('select2')) { wceazy_coupon_generator_discount_type.select2('destroy'); }
+    if (wceazy_coupon_generator_product_ids.data('select2')) { wceazy_coupon_generator_product_ids.select2('destroy'); }
+    if (wceazy_coupon_generator_exclude_product_ids.data('select2')) { wceazy_coupon_generator_exclude_product_ids.select2('destroy'); }
+    if (wceazy_coupon_generator_product_categories.data('select2')) { wceazy_coupon_generator_product_categories.select2('destroy'); }
+    if (wceazy_coupon_generator_exclude_product_categories.data('select2')) { wceazy_coupon_generator_exclude_product_categories.select2('destroy'); }
 
     wceazy_coupon_generator_coupon_type.select2();
     wceazy_coupon_generator_coupon_length.select2();
@@ -35,7 +35,7 @@ function wceazy_coupon_generator_init_select2(){
 }
 
 
-function wceazy_coupon_generator_tab_init(){
+function wceazy_coupon_generator_tab_init() {
     jQuery(".wceazy_coupon_generator_container .coupon_tab_body").hide();
     jQuery(".wceazy_coupon_generator_container .coupon_tab_body[data-id='coupon_tab_general']").show();
     jQuery(".wceazy_coupon_generator_container .coupon_data_tabs .tab_item").unbind("click");
@@ -59,7 +59,7 @@ function wceazy_coupon_generator_removeChar(item) {
     item.value = val;
 }
 
-function wceazy_coupon_generator_close_popup(){
+function wceazy_coupon_generator_close_popup() {
     jQuery('.wceazy_coupon_generator_popup').removeClass('wceazy_coupon_generator_popup_opened');
 }
 
@@ -93,7 +93,7 @@ function wceazy_submit_coupon_generator() {
 
     };
 
-    let jQuerypost_data = {'action': 'wceazy_coupon_generator_generate', 'data': jQuerypostData};
+    let jQuerypost_data = { 'action': 'wceazy_coupon_generator_generate', 'data': jQuerypostData };
 
     jQuery.ajax({
         url: ajaxurl, type: "POST", data: jQuerypost_data,
@@ -102,7 +102,7 @@ function wceazy_submit_coupon_generator() {
             var obj = JSON.parse(data);
             if (obj.status == 'true') {
                 var totalCoupon = obj.coupons.length;
-                if ( totalCoupon > 0) {
+                if (totalCoupon > 0) {
                     jQuery('.wceazy_coupon_generator_popup .generating_coupon').hide();
                     jQuery('.wceazy_coupon_generator_popup .successes_message').show();
                     jQuery('.wceazy_coupon_generator_popup .coupon_count').text(totalCoupon);

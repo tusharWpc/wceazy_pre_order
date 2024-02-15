@@ -259,7 +259,7 @@
                         <input type="checkbox" onchange="wceazy_update_module_status(this)"
                             <?php echo ($this->settings->getModuleStatus("pre_order") == 1 ? "checked" : ""); ?>>
                         <span class="slider round"></span>
-                    </label> 
+                    </label>
 
                     <div class="settings_btn <?php echo ($this->settings->getModuleStatus("pre_order") == 1 ? "active" : ""); ?>"
                         onclick="wceazy_start_module_settings(`<?php echo esc_url(WCEAZY_URL); ?>`, this)">
@@ -343,7 +343,7 @@
         </div>
     </div>
 </div>
-</div>
+
 <div class="wceazy_modules_popup">
     <div class="wceazy_modules_popup_inner">
         <img src="<?php echo WCEAZY_IMG_DIR . 'popup_spinner.svg' ?>" alt="">

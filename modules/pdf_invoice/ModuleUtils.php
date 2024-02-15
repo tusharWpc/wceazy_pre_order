@@ -136,6 +136,7 @@ if (!class_exists ('WcEazyPdfInvoiceUtils')) {
                 ), $checkout->get_value( 'wceazy_pdf_invoice_vat_id' ));
             }
         }
+        
         public function wceazy_save_ssn_vat_fields($order_id){
             $wceazy_pdf_invoice_settings = get_option('wceazy_pdf_invoice_settings', False);
             $wceazy_pi_settings = $wceazy_pdf_invoice_settings ? json_decode($wceazy_pdf_invoice_settings, true) : array();
@@ -199,103 +200,182 @@ if (!class_exists ('WcEazyPdfInvoiceUtils')) {
             ob_start (); ?>
 
 
-            <table width="100%" border="0" cellspacing="0" cellpadding="30"><tr><td>
+<table width="100%" border="0" cellspacing="0" cellpadding="30">
+    <tr>
+        <td>
 
-                        <table width="100%" border="0" cellspacing="6" cellpadding="4">
-                            <?php if($wceazy_pi_enable_invoice_title == "yes") { ?>
-                            <tr class="wceazy_pi_emulator_invoice_title"><td style="color: #6E32C9; font-size: 25px; font-weight: bold;">INVOICE</td></tr>
-                            <?php } ?>
+            <table width="100%" border="0" cellspacing="6" cellpadding="4">
+                <?php if($wceazy_pi_enable_invoice_title == "yes") { ?>
+                <tr class="wceazy_pi_emulator_invoice_title">
+                    <td style="color: #6E32C9; font-size: 25px; font-weight: bold;">INVOICE</td>
+                </tr>
+                <?php } ?>
+                <tr>
+                    <td width="50%" valign="top">
+                        <?php if($wceazy_pi_enable_shop_logo == "yes") { ?>
+                        <img class="wceazy_pi_emulator_shop_logo" width="90px"
+                            src="<?php echo $wceazy_pi_shop_logo; ?>" />
+                        <?php } ?>
+                    </td>
+                    <td width="50%" valign="top" align="right">
+                        <?php if($wceazy_pi_enable_invoice_number == "yes") { ?><p
+                            class="wceazy_pi_emulator_invoice_number" style="font-size: 12px;">INVOICE
+                            <b>#<?php echo $this->generate_invoice_number($order->get_order_number ());?></b></p>
+                        <?php } ?>
+                        <?php if($wceazy_pi_enable_invoice_date == "yes") { ?><p class="wceazy_pi_emulator_invoice_date"
+                            style="font-size: 10px;">Invoice Date: <b><?php echo date ('Y/m/d'); ?></b></p><?php } ?>
+                        <?php if($wceazy_pi_enable_order_number == "yes") { ?><p class="wceazy_pi_emulator_order_number"
+                            style="font-size: 10px;">Order No.: <b><?php echo $order->get_order_number(); ?></b></p>
+                        <?php } ?>
+                        <?php if($wceazy_pi_enable_order_date == "yes") { ?><p class="wceazy_pi_emulator_order_date"
+                            style="font-size: 10px;">Order Date:
+                            <b><?php echo date ('Y/m/d', strtotime ($order->get_date_created ())); ?></b></p><?php } ?>
+                        <?php if($wceazy_pi_enable_ssn_id == "yes") { ?><p class="wceazy_pi_emulator_ssn_id"
+                            style="font-size: 10px;">SSN:
+                            <b><?php echo get_post_meta($order->get_id(), 'wceazy_pdf_invoice_ssn_id', true);?></b></p>
+                        <?php } ?>
+                        <?php if($wceazy_pi_enable_vat_id == "yes") { ?><p class="wceazy_pi_emulator_vat_id"
+                            style="font-size: 10px;">VAT:
+                            <b><?php echo get_post_meta($order->get_id(), 'wceazy_pdf_invoice_vat_id', true);?></b></p>
+                        <?php } ?>
+                    </td>
+                </tr>
+            </table>
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom: 1px solid #cccccc;">
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                <tr>
+                    <?php if($wceazy_pi_enable_from_address == "yes") { ?>
+                    <td class="wceazy_pi_emulator_from_address" width="33.33%" valign="top">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="10"
+                            style="background-color: #F6F5FA;">
                             <tr>
-                                <td width="50%" valign="top">
-                                    <?php if($wceazy_pi_enable_shop_logo == "yes") { ?>
-                                    <img class="wceazy_pi_emulator_shop_logo" width="90px" src="<?php echo $wceazy_pi_shop_logo; ?>" />
+                                <td style="font-size: 10px;"><b>From Address</b></td>
+                            </tr>
+                        </table>
+
+                        <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td>
+                                    <p style="font-size: 10px;"><?php echo $wceazy_pi_sender_name; ?></p>
+                                    <p style="font-size: 10px;"><?php echo $wceazy_pi_address_line_one; ?></p>
+                                    <p style="font-size: 10px;"><?php echo $wceazy_pi_address_city; ?></p>
+                                    <p style="font-size: 10px;">
+                                        <?php echo WC ()->countries->states[$country][$state]; ?></p>
+                                    <p style="font-size: 10px;"><?php echo WC ()->countries->countries[$country]; ?></p>
+                                    <p style="font-size: 10px;"><?php echo $wceazy_pi_postal_code; ?></p>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                    <?php } ?>
+                    <?php if($wceazy_pi_enable_billing_address == "yes" && !empty($billing_aadress)) { ?>
+                    <td class="wceazy_pi_emulator_billing_address" width="33.33%" valign="top">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="10"
+                            style="background-color: #F6F5FA;">
+                            <tr>
+                                <td style="font-size: 10px;"><b>Billing Address</b></td>
+                            </tr>
+                        </table>
+
+                        <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td>
+                                    <p style="font-size: 10px;"><?php echo $billing_aadress['first_name']; ?></p>
+                                    <p style="font-size: 10px;"><?php echo $billing_aadress['address_1']; ?></p>
+                                    <p style="font-size: 10px;"><?php echo $billing_aadress['city']; ?></p>
+                                    <p style="font-size: 10px;">
+                                        <?php echo !empty($billing_aadress['country']) && !empty($billing_aadress['state']) ? WC ()->countries->states[$billing_aadress['country']][$billing_aadress['state']] : ''; ?>
+                                    </p>
+                                    <p style="font-size: 10px;">
+                                        <?php echo !empty($billing_aadress['country']) ? WC ()->countries->countries[$billing_aadress['country']] : ''; ?>
+                                    </p>
+                                    <p style="font-size: 10px;"><?php echo $billing_aadress['postcode']; ?></p>
+
+                                    <?php if($wceazy_pi_enable_email == "yes") { ?>
+                                    <p class="wceazy_pi_emulator_email" style="font-size: 10px;">
+                                        <?php echo $billing_aadress['email']; ?></p>
+                                    <?php } ?>
+                                    <?php if($wceazy_pi_enable_phone == "yes") { ?>
+                                    <p class="wceazy_pi_emulator_phone" style="font-size: 10px;">
+                                        <?php echo $billing_aadress['phone']; ?></p>
                                     <?php } ?>
                                 </td>
-                                <td width="50%" valign="top" align="right">
-                                <?php if($wceazy_pi_enable_invoice_number == "yes") { ?><p class="wceazy_pi_emulator_invoice_number" style="font-size: 12px;">INVOICE <b>#<?php echo $this->generate_invoice_number($order->get_order_number ());?></b></p><?php } ?>
-                                <?php if($wceazy_pi_enable_invoice_date == "yes") { ?><p class="wceazy_pi_emulator_invoice_date" style="font-size: 10px;">Invoice Date: <b><?php echo date ('Y/m/d'); ?></b></p><?php } ?>
-                                <?php if($wceazy_pi_enable_order_number == "yes") { ?><p class="wceazy_pi_emulator_order_number" style="font-size: 10px;">Order No.: <b><?php echo $order->get_order_number(); ?></b></p><?php } ?>
-                                <?php if($wceazy_pi_enable_order_date == "yes") { ?><p class="wceazy_pi_emulator_order_date" style="font-size: 10px;">Order Date: <b><?php echo date ('Y/m/d', strtotime ($order->get_date_created ())); ?></b></p><?php } ?>
-                                <?php if($wceazy_pi_enable_ssn_id == "yes") { ?><p class="wceazy_pi_emulator_ssn_id" style="font-size: 10px;">SSN: <b><?php echo get_post_meta($order->get_id(), 'wceazy_pdf_invoice_ssn_id', true);?></b></p><?php } ?>
-                                <?php if($wceazy_pi_enable_vat_id == "yes") { ?><p class="wceazy_pi_emulator_vat_id" style="font-size: 10px;">VAT: <b><?php echo get_post_meta($order->get_id(), 'wceazy_pdf_invoice_vat_id', true);?></b></p><?php } ?>
-                                </td>
                             </tr>
                         </table>
 
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-bottom: 1px solid #cccccc;"><tr><td></td></tr></table>
-                        <table width="100%" border="0" cellspacing="0" cellpadding="5"><tr><td></td></tr></table>
-
-
-                        <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                    </td>
+                    <?php } ?>
+                    <?php if($wceazy_pi_enable_shipping_address == "yes" && !empty($shipping_aadress)) { ?>
+                    <td class="wceazy_pi_emulator_shipping_address" width="33.33%" valign="top">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="10"
+                            style="background-color: #F6F5FA;">
                             <tr>
-                                <?php if($wceazy_pi_enable_from_address == "yes") { ?>
-                                <td class="wceazy_pi_emulator_from_address" width="33.33%" valign="top">
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="background-color: #F6F5FA;"><tr><td style="font-size: 10px;"><b>From Address</b></td></tr></table>
-
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="5"><tr><td>
-                                        <p style="font-size: 10px;"><?php echo $wceazy_pi_sender_name; ?></p>
-                                        <p style="font-size: 10px;"><?php echo $wceazy_pi_address_line_one; ?></p>
-                                        <p style="font-size: 10px;"><?php echo $wceazy_pi_address_city; ?></p>
-                                        <p style="font-size: 10px;"><?php echo WC ()->countries->states[$country][$state]; ?></p>
-                                        <p style="font-size: 10px;"><?php echo WC ()->countries->countries[$country]; ?></p>
-                                        <p style="font-size: 10px;"><?php echo $wceazy_pi_postal_code; ?></p>
-                                    </td></tr></table>
-
-                                </td>
-                                <?php } ?>
-                                <?php if($wceazy_pi_enable_billing_address == "yes" && !empty($billing_aadress)) { ?>
-                                <td class="wceazy_pi_emulator_billing_address" width="33.33%" valign="top">
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="background-color: #F6F5FA;"><tr><td style="font-size: 10px;"><b>Billing Address</b></td></tr></table>
-
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="5"><tr><td>
-                                                <p style="font-size: 10px;"><?php echo $billing_aadress['first_name']; ?></p>
-                                                <p style="font-size: 10px;"><?php echo $billing_aadress['address_1']; ?></p>
-                                                <p style="font-size: 10px;"><?php echo $billing_aadress['city']; ?></p>
-                                                <p style="font-size: 10px;"><?php echo !empty($billing_aadress['country']) && !empty($billing_aadress['state']) ? WC ()->countries->states[$billing_aadress['country']][$billing_aadress['state']] : ''; ?></p>
-                                                <p style="font-size: 10px;"><?php echo !empty($billing_aadress['country']) ? WC ()->countries->countries[$billing_aadress['country']] : ''; ?></p>
-                                                <p style="font-size: 10px;"><?php echo $billing_aadress['postcode']; ?></p>
-
-                                                <?php if($wceazy_pi_enable_email == "yes") { ?>
-                                                <p class="wceazy_pi_emulator_email" style="font-size: 10px;"><?php echo $billing_aadress['email']; ?></p>
-                                                <?php } ?>
-                                                <?php if($wceazy_pi_enable_phone == "yes") { ?>
-                                                <p class="wceazy_pi_emulator_phone" style="font-size: 10px;"><?php echo $billing_aadress['phone']; ?></p>
-                                                <?php } ?>
-                                            </td></tr></table>
-
-                                </td>
-                                <?php } ?>
-                                <?php if($wceazy_pi_enable_shipping_address == "yes" && !empty($shipping_aadress)) { ?>
-                                <td class="wceazy_pi_emulator_shipping_address" width="33.33%" valign="top">
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="background-color: #F6F5FA;"><tr><td style="font-size: 10px;"><b>Shipping Address</b></td></tr></table>
-
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="5"><tr><td>
-                                                <p style="font-size: 10px;"><?php echo $shipping_aadress['first_name']; ?></p>
-                                                <p style="font-size: 10px;"><?php echo $shipping_aadress['address_1']; ?></p>
-                                                <p style="font-size: 10px;"><?php echo $shipping_aadress['city']; ?></p>
-                                                <p style="font-size: 10px;"><?php echo !empty($shipping_aadress['country']) && !empty($shipping_aadress['state']) ? WC ()->countries->states[$shipping_aadress['country']][$shipping_aadress['state']] : ''; ?></p>
-                                                <p style="font-size: 10px;"><?php echo !empty($shipping_aadress['country']) ? WC ()->countries->countries[$shipping_aadress['country']] : ''; ?></p>
-                                                <p style="font-size: 10px;"><?php echo $shipping_aadress['postcode']; ?></p>
-                                            </td></tr></table>
-                                </td>
-                                <?php } ?>
+                                <td style="font-size: 10px;"><b>Shipping Address</b></td>
                             </tr>
                         </table>
 
-
-                        <table width="100%" border="0" cellspacing="0" cellpadding="5"><tr><td></td></tr></table>
-
-
-                        <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="5">
                             <tr>
-                                <td style="background-color: #F6F5FA; border-bottom: 1px solid #cccccc; border-top: 1px solid #cccccc; font-size: 10px;"><b>SKU</b></td>
-                                <td style="background-color: #F6F5FA; border-bottom: 1px solid #cccccc; border-top: 1px solid #cccccc; font-size: 10px;"><b>PRODUCT</b></td>
-                                <td style="background-color: #F6F5FA; border-bottom: 1px solid #cccccc; border-top: 1px solid #cccccc; font-size: 10px;"><b>QUANTITY</b></td>
-                                <td style="background-color: #F6F5FA; border-bottom: 1px solid #cccccc; border-top: 1px solid #cccccc; font-size: 10px;"><b>PRICE</b></td>
-                                <td style="background-color: #F6F5FA; border-bottom: 1px solid #cccccc; border-top: 1px solid #cccccc; font-size: 10px;"><b>TOTAL PRICE</b></td>
+                                <td>
+                                    <p style="font-size: 10px;"><?php echo $shipping_aadress['first_name']; ?></p>
+                                    <p style="font-size: 10px;"><?php echo $shipping_aadress['address_1']; ?></p>
+                                    <p style="font-size: 10px;"><?php echo $shipping_aadress['city']; ?></p>
+                                    <p style="font-size: 10px;">
+                                        <?php echo !empty($shipping_aadress['country']) && !empty($shipping_aadress['state']) ? WC ()->countries->states[$shipping_aadress['country']][$shipping_aadress['state']] : ''; ?>
+                                    </p>
+                                    <p style="font-size: 10px;">
+                                        <?php echo !empty($shipping_aadress['country']) ? WC ()->countries->countries[$shipping_aadress['country']] : ''; ?>
+                                    </p>
+                                    <p style="font-size: 10px;"><?php echo $shipping_aadress['postcode']; ?></p>
+                                </td>
                             </tr>
+                        </table>
+                    </td>
+                    <?php } ?>
+                </tr>
+            </table>
 
-                            <?php
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                <tr>
+                    <td
+                        style="background-color: #F6F5FA; border-bottom: 1px solid #cccccc; border-top: 1px solid #cccccc; font-size: 10px;">
+                        <b>SKU</b></td>
+                    <td
+                        style="background-color: #F6F5FA; border-bottom: 1px solid #cccccc; border-top: 1px solid #cccccc; font-size: 10px;">
+                        <b>PRODUCT</b></td>
+                    <td
+                        style="background-color: #F6F5FA; border-bottom: 1px solid #cccccc; border-top: 1px solid #cccccc; font-size: 10px;">
+                        <b>QUANTITY</b></td>
+                    <td
+                        style="background-color: #F6F5FA; border-bottom: 1px solid #cccccc; border-top: 1px solid #cccccc; font-size: 10px;">
+                        <b>PRICE</b></td>
+                    <td
+                        style="background-color: #F6F5FA; border-bottom: 1px solid #cccccc; border-top: 1px solid #cccccc; font-size: 10px;">
+                        <b>TOTAL PRICE</b></td>
+                </tr>
+
+                <?php
                             $order_items = $order->get_items ();
                             if (!empty($order_items)) {
                                 foreach ($order_items as $key => $item) {
@@ -303,66 +383,95 @@ if (!class_exists ('WcEazyPdfInvoiceUtils')) {
                                     $product = $item->get_product ();
                                     ?>
 
-                                    <tr>
-                                        <td style="border-bottom: 1px solid #cccccc; font-size: 10px;" valign="middle"><?php echo $product->get_sku (); ?></td>
-                                        <td style="border-bottom: 1px solid #cccccc; font-size: 10px;" valign="middle"><?php echo $item_data['name']; ?></td>
-                                        <td style="border-bottom: 1px solid #cccccc; font-size: 10px;" valign="middle"><?php echo $item_data['quantity']; ?></td>
-                                        <td style="border-bottom: 1px solid #cccccc; font-size: 10px;" valign="middle"><?php echo wc_price($product->get_price ()); ?></td>
-                                        <td style="border-bottom: 1px solid #cccccc; font-size: 10px;" valign="middle"><?php echo wc_price($item_data['subtotal']); ?></td>
-                                    </tr>
-                                <?php }
+                <tr>
+                    <td style="border-bottom: 1px solid #cccccc; font-size: 10px;" valign="middle">
+                        <?php echo $product->get_sku (); ?></td>
+                    <td style="border-bottom: 1px solid #cccccc; font-size: 10px;" valign="middle">
+                        <?php echo $item_data['name']; ?></td>
+                    <td style="border-bottom: 1px solid #cccccc; font-size: 10px;" valign="middle">
+                        <?php echo $item_data['quantity']; ?></td>
+                    <td style="border-bottom: 1px solid #cccccc; font-size: 10px;" valign="middle">
+                        <?php echo wc_price($product->get_price ()); ?></td>
+                    <td style="border-bottom: 1px solid #cccccc; font-size: 10px;" valign="middle">
+                        <?php echo wc_price($item_data['subtotal']); ?></td>
+                </tr>
+                <?php }
                             } else { ?>
-                                <tr><td colspan="5" style="text-align: center;">No item found!</td></tr>
-                            <?php } ?>
+                <tr>
+                    <td colspan="5" style="text-align: center;">No item found!</td>
+                </tr>
+                <?php } ?>
 
 
-                            <tr>
-                                <td style="border-bottom: 1px solid #cccccc;" valign="middle">&nbsp;</td>
-                                <td style="border-bottom: 1px solid #cccccc;" valign="middle">&nbsp;</td>
-                                <td style="border-bottom: 1px solid #cccccc;" valign="middle">&nbsp;</td>
-                                <td style="border-bottom: 1px solid #cccccc;" valign="middle" align="right">
-                                    <p style="font-size: 11px;">Subtotal</p>
-                                    <p style="font-size: 11px;">Shipping</p>
-                                    <p style="font-size: 11px;">Discount</p>
-                                    <p style="font-size: 11px;">Fee</p>
-                                </td>
-                                <td style="border-bottom: 1px solid #cccccc;" valign="middle">
-                                    <p style="font-size: 11px;"><?php echo wc_price($order->get_subtotal ()); ?></p>
-                                    <p style="font-size: 11px;"><?php echo wc_price($order->get_shipping_total ()); ?></p>
-                                    <p style="font-size: 11px;"><?php echo wc_price($order->get_discount_total ()); ?></p>
-                                    <p style="font-size: 11px;"><?php echo wc_price($fee_total + $fee_total_tax); ?></p>
-                                </td>
-                            </tr>
+                <tr>
+                    <td style="border-bottom: 1px solid #cccccc;" valign="middle">&nbsp;</td>
+                    <td style="border-bottom: 1px solid #cccccc;" valign="middle">&nbsp;</td>
+                    <td style="border-bottom: 1px solid #cccccc;" valign="middle">&nbsp;</td>
+                    <td style="border-bottom: 1px solid #cccccc;" valign="middle" align="right">
+                        <p style="font-size: 11px;">Subtotal</p>
+                        <p style="font-size: 11px;">Shipping</p>
+                        <p style="font-size: 11px;">Discount</p>
+                        <p style="font-size: 11px;">Fee</p>
+                    </td>
+                    <td style="border-bottom: 1px solid #cccccc;" valign="middle">
+                        <p style="font-size: 11px;"><?php echo wc_price($order->get_subtotal ()); ?></p>
+                        <p style="font-size: 11px;"><?php echo wc_price($order->get_shipping_total ()); ?></p>
+                        <p style="font-size: 11px;"><?php echo wc_price($order->get_discount_total ()); ?></p>
+                        <p style="font-size: 11px;"><?php echo wc_price($fee_total + $fee_total_tax); ?></p>
+                    </td>
+                </tr>
 
-                            <tr>
-                                <td style="border-bottom: 1px solid #cccccc;" valign="middle">&nbsp;</td>
-                                <td style="border-bottom: 1px solid #cccccc;" valign="middle">&nbsp;</td>
-                                <td style="border-bottom: 1px solid #cccccc;" valign="middle">&nbsp;</td>
-                                <td style="border-bottom: 1px solid #cccccc;" valign="middle" align="right">
-                                    <p style="font-size: 13px;">Total</p>
-                                </td>
-                                <td style="border-bottom: 1px solid #cccccc;" valign="middle">
-                                    <p style="font-size: 13px;"><?php echo wc_price($order->get_total ()); ?></p>
-                                </td>
-                            </tr>
-                        </table>
+                <tr>
+                    <td style="border-bottom: 1px solid #cccccc;" valign="middle">&nbsp;</td>
+                    <td style="border-bottom: 1px solid #cccccc;" valign="middle">&nbsp;</td>
+                    <td style="border-bottom: 1px solid #cccccc;" valign="middle">&nbsp;</td>
+                    <td style="border-bottom: 1px solid #cccccc;" valign="middle" align="right">
+                        <p style="font-size: 13px;">Total</p>
+                    </td>
+                    <td style="border-bottom: 1px solid #cccccc;" valign="middle">
+                        <p style="font-size: 13px;"><?php echo wc_price($order->get_total ()); ?></p>
+                    </td>
+                </tr>
+            </table>
 
-                        <table width="100%" border="0" cellspacing="5" cellpadding="0"><tr><td></td></tr></table>
-                        <?php if($wceazy_pi_enable_payment_method == "yes") { ?>
-                        <table class="wceazy_pi_emulator_payment_method" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>Payment Method: <?php echo $order->get_payment_method (); ?></td></tr></table>
-                        <?php } ?>
-                        <?php if($wceazy_pi_enable_customer_note == "yes") { ?>
-                        <table class="wceazy_pi_emulator_customer_note" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>Customer Note:<br><?php echo $order->get_customer_note (); ?></td></tr></table>
-                        <?php } ?>
-                        <table width="100%" border="0" cellspacing="10" cellpadding="0"><tr><td></td></tr></table>
-                        <?php if($wceazy_pi_enable_footer == "yes") { ?>
-                        <table class="wceazy_pi_emulator_footer" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td align="center"><?php echo $wceazy_pi_footer_info; ?></td></tr></table>
-                        <?php } ?>
+            <table width="100%" border="0" cellspacing="5" cellpadding="0">
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+            <?php if($wceazy_pi_enable_payment_method == "yes") { ?>
+            <table class="wceazy_pi_emulator_payment_method" width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>Payment Method: <?php echo $order->get_payment_method (); ?></td>
+                </tr>
+            </table>
+            <?php } ?>
+            <?php if($wceazy_pi_enable_customer_note == "yes") { ?>
+            <table class="wceazy_pi_emulator_customer_note" width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>Customer Note:<br><?php echo $order->get_customer_note (); ?></td>
+                </tr>
+            </table>
+            <?php } ?>
+            <table width="100%" border="0" cellspacing="10" cellpadding="0">
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+            <?php if($wceazy_pi_enable_footer == "yes") { ?>
+            <table class="wceazy_pi_emulator_footer" width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td align="center"><?php echo $wceazy_pi_footer_info; ?></td>
+                </tr>
+            </table>
+            <?php } ?>
 
-                    </td></tr></table>
+        </td>
+    </tr>
+</table>
 
 
-            <?php
+<?php
             $pdf_content = ob_get_clean ();
             return $pdf_content;
         }
@@ -404,76 +513,116 @@ if (!class_exists ('WcEazyPdfInvoiceUtils')) {
             ob_start (); ?>
 
 
-            <table width="100%" border="0" cellspacing="0" cellpadding="30"><tr><td>
+<table width="100%" border="0" cellspacing="0" cellpadding="30">
+    <tr>
+        <td>
 
-                        <table width="100%" border="0" cellspacing="6" cellpadding="4">
+            <table width="100%" border="0" cellspacing="6" cellpadding="4">
+                <tr>
+                    <td width="50%" valign="top">
+                        <?php if($wceazy_pi_enable_shipping_shop_logo == "yes") { ?>
+                        <img class="wceazy_pi_emulator_shop_logo" width="90px"
+                            src="<?php echo $wceazy_pi_shop_logo; ?>" />
+                        <?php } ?>
+                    </td>
+                    <td width="50%" valign="top" align="right">
+                        <?php if($wceazy_pi_enable_shipping_order_number == "yes") { ?><p
+                            class="wceazy_pi_emulator_shipping_order_number" style="font-size: 10px;">Order No.:
+                            <b><?php echo $order->get_order_number(); ?></b></p><?php } ?>
+                        <?php if($wceazy_pi_enable_shipping_weight == "yes") { ?><p
+                            class="wceazy_pi_emulator_shipping_weight" style="font-size: 10px;">Weight:
+                            <b><?php echo $total_weight." ".get_option ('woocommerce_weight_unit'); ?></b></p><?php } ?>
+                        <?php if($wceazy_pi_enable_shipping_date == "yes") { ?><p
+                            class="wceazy_pi_emulator_shipping_date" style="font-size: 10px;">Shipping Date:
+                            <b><?php echo date ('Y/m/d') ?></b></p><?php } ?>
+                    </td>
+                </tr>
+            </table>
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="4">
+                <tr>
+                    <?php if($wceazy_pi_enable_shipping_from_address == "yes") { ?>
+                    <td class="wceazy_pi_emulator_shipping_from_address" width="50%" valign="top">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="10"
+                            style="background-color: #F6F5FA;">
                             <tr>
-                                <td width="50%" valign="top">
-                                    <?php if($wceazy_pi_enable_shipping_shop_logo == "yes") { ?>
-                                        <img class="wceazy_pi_emulator_shop_logo" width="90px" src="<?php echo $wceazy_pi_shop_logo; ?>" />
+                                <td style="font-size: 10px;"><b>From</b></td>
+                            </tr>
+                        </table>
+
+                        <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td>
+                                    <p style="font-size: 10px;"><?php echo $wceazy_pi_sender_name; ?></p>
+                                    <p style="font-size: 10px;"><?php echo $wceazy_pi_address_line_one; ?></p>
+                                    <p style="font-size: 10px;"><?php echo $wceazy_pi_address_city; ?></p>
+                                    <p style="font-size: 10px;">
+                                        <?php echo WC ()->countries->states[$country][$state]; ?></p>
+                                    <p style="font-size: 10px;"><?php echo WC ()->countries->countries[$country]; ?></p>
+                                    <p style="font-size: 10px;"><?php echo $wceazy_pi_postal_code; ?></p>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                    <?php } ?>
+                    <?php if($wceazy_pi_enable_shipping_to_address == "yes") { ?>
+                    <td class="wceazy_pi_emulator_shipping_to_address" width="50%" valign="top">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="10"
+                            style="background-color: #F6F5FA;">
+                            <tr>
+                                <td style="font-size: 10px;"><b>To</b></td>
+                            </tr>
+                        </table>
+
+                        <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                            <tr>
+                                <td>
+                                    <p style="font-size: 10px;"><?php echo $shipping_aadress['first_name']; ?></p>
+                                    <p style="font-size: 10px;"><?php echo $shipping_aadress['address_1']; ?></p>
+                                    <p style="font-size: 10px;"><?php echo $shipping_aadress['city']; ?></p>
+                                    <p style="font-size: 10px;">
+                                        <?php echo !empty($shipping_aadress['country']) && !empty($shipping_aadress['state']) ? WC ()->countries->states[$shipping_aadress['country']][$shipping_aadress['state']] : ''; ?>
+                                    </p>
+                                    <p style="font-size: 10px;">
+                                        <?php echo !empty($shipping_aadress['country']) ? WC ()->countries->countries[$shipping_aadress['country']] : ''; ?>
+                                    </p>
+                                    <p style="font-size: 10px;"><?php echo $shipping_aadress['postcode']; ?></p>
+
+                                    <?php if($wceazy_pi_enable_shipping_email == "yes") { ?>
+                                    <p class="wceazy_pi_emulator_shipping_email" style="font-size: 10px;">
+                                        <?php echo $billing_aadress['email']; ?></p>
                                     <?php } ?>
-                                </td>
-                                <td width="50%" valign="top" align="right">
-                                    <?php if($wceazy_pi_enable_shipping_order_number == "yes") { ?><p class="wceazy_pi_emulator_shipping_order_number" style="font-size: 10px;">Order No.: <b><?php echo $order->get_order_number(); ?></b></p><?php } ?>
-                                    <?php if($wceazy_pi_enable_shipping_weight == "yes") { ?><p class="wceazy_pi_emulator_shipping_weight" style="font-size: 10px;">Weight: <b><?php echo $total_weight." ".get_option ('woocommerce_weight_unit'); ?></b></p><?php } ?>
-                                    <?php if($wceazy_pi_enable_shipping_date == "yes") { ?><p class="wceazy_pi_emulator_shipping_date" style="font-size: 10px;">Shipping Date: <b><?php echo date ('Y/m/d') ?></b></p><?php } ?>
+                                    <?php if($wceazy_pi_enable_shipping_phone == "yes") { ?>
+                                    <p class="wceazy_pi_emulator_shipping_phone" style="font-size: 10px;">
+                                        <?php echo $billing_aadress['phone']; ?></p>
+                                    <?php } ?>
+
+
                                 </td>
                             </tr>
                         </table>
 
-                        <table width="100%" border="0" cellspacing="0" cellpadding="5"><tr><td></td></tr></table>
+                    </td>
+                    <?php } ?>
+                </tr>
+            </table>
 
-
-                        <table width="100%" border="0" cellspacing="0" cellpadding="4">
-                            <tr>
-                                <?php if($wceazy_pi_enable_shipping_from_address == "yes") { ?>
-                                <td class="wceazy_pi_emulator_shipping_from_address" width="50%" valign="top">
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="background-color: #F6F5FA;"><tr><td style="font-size: 10px;"><b>From</b></td></tr></table>
-
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="5"><tr><td>
-                                                <p style="font-size: 10px;"><?php echo $wceazy_pi_sender_name; ?></p>
-                                                <p style="font-size: 10px;"><?php echo $wceazy_pi_address_line_one; ?></p>
-                                                <p style="font-size: 10px;"><?php echo $wceazy_pi_address_city; ?></p>
-                                                <p style="font-size: 10px;"><?php echo WC ()->countries->states[$country][$state]; ?></p>
-                                                <p style="font-size: 10px;"><?php echo WC ()->countries->countries[$country]; ?></p>
-                                                <p style="font-size: 10px;"><?php echo $wceazy_pi_postal_code; ?></p>
-                                            </td></tr></table>
-
-                                </td>
-                                <?php } ?>
-                                <?php if($wceazy_pi_enable_shipping_to_address == "yes") { ?>
-                                <td class="wceazy_pi_emulator_shipping_to_address" width="50%" valign="top">
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="10" style="background-color: #F6F5FA;"><tr><td style="font-size: 10px;"><b>To</b></td></tr></table>
-
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="5"><tr><td>
-                                                <p style="font-size: 10px;"><?php echo $shipping_aadress['first_name']; ?></p>
-                                                <p style="font-size: 10px;"><?php echo $shipping_aadress['address_1']; ?></p>
-                                                <p style="font-size: 10px;"><?php echo $shipping_aadress['city']; ?></p>
-                                                <p style="font-size: 10px;"><?php echo !empty($shipping_aadress['country']) && !empty($shipping_aadress['state']) ? WC ()->countries->states[$shipping_aadress['country']][$shipping_aadress['state']] : ''; ?></p>
-                                                <p style="font-size: 10px;"><?php echo !empty($shipping_aadress['country']) ? WC ()->countries->countries[$shipping_aadress['country']] : ''; ?></p>
-                                                <p style="font-size: 10px;"><?php echo $shipping_aadress['postcode']; ?></p>
-
-                                                <?php if($wceazy_pi_enable_shipping_email == "yes") { ?>
-                                                    <p class="wceazy_pi_emulator_shipping_email" style="font-size: 10px;"><?php echo $billing_aadress['email']; ?></p>
-                                                <?php } ?>
-                                                <?php if($wceazy_pi_enable_shipping_phone == "yes") { ?>
-                                                    <p class="wceazy_pi_emulator_shipping_phone" style="font-size: 10px;"><?php echo $billing_aadress['phone']; ?></p>
-                                                <?php } ?>
-
-
-                                            </td></tr></table>
-
-                                </td>
-                                <?php } ?>
-                            </tr>
-                        </table>
-
-                    </td></tr></table>
+        </td>
+    </tr>
+</table>
 
 
 
 
-            <?php
+<?php
             $pdf_content = ob_get_clean ();
             return $pdf_content;
         }
