@@ -30,8 +30,8 @@ if (!class_exists('WcEazyAdmin')) {
         public $pdf_invoice;
         /* ======== Shipping Bar ========== */
         public $shipping_bar;
-                /* ======== Pre Order ========== */
-                public $pre_order;
+        /* ======== Pre Order ========== */
+        public $pre_order;
         /* ======== Address Book ========== */
         public $address_book;
         /* ======== Product Filter ========== */

@@ -1,12 +1,11 @@
 <?php
 
-
 // If this file is called directly, abort.
-if (!defined ('WPINC')) {
+if (!defined('WPINC')) {
     die;
 }
 
-if (!class_exists ('WcEazyPreOrderAdmin')) {
+if (!class_exists('WcEazyPreOrderAdmin')) {
     class WcEazyPreOrderAdmin
     {
 
@@ -15,7 +14,7 @@ if (!class_exists ('WcEazyPreOrderAdmin')) {
         public $module_admin;
         public $module_slug = "pre_order";
 
-        public function __construct ($base_admin)
+        public function __construct($base_admin)
         {
             $this->module_admin = $this;
             $this->base_admin = $base_admin;

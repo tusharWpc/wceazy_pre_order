@@ -38,9 +38,7 @@
 
 
 
-    <div class="wceazy_modules_list_items">
-
-
+    <div class="wceazy_modules_list_items"> 
         <div class="wceazy_module_item" data-slug="auto_apply_coupon">
             <div class="wceazy_module_logo">
                 <img src="<?php echo esc_url(WCEAZY_IMG_DIR . 'modules/auto_apply_coupon/icon.svg'); ?>" height="100" />

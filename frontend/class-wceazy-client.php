@@ -94,6 +94,14 @@ if (!class_exists('WcEazyClient')) {
                     include_once WCEAZY_PATH . "modules/shipping_bar/ModuleUtils.php";
                     $this->shipping_bar = new WcEazyShippingBarClient($this);
                 }
+                /* ======== Pre Order ========== */
+                if($this->settings->getModuleStatus("pre_order")){
+                    include_once WCEAZY_PATH . "modules/pre_order/class-module-Client.php";
+                    include_once WCEAZY_PATH . "modules/pre_order/ModuleUtils.php";
+                    $this->pre_order = new WcEazyPreOrderClient($this);
+                    // WcEazyPreOrderClient
+                }
+                
                 /* ======== Address Book ========== */
                 if($this->settings->getModuleStatus("address_book")){
                     include_once WCEAZY_PATH . "modules/address_book/class-module-client.php";

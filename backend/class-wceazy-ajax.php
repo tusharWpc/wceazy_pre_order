@@ -50,8 +50,8 @@ if (!class_exists('WcEazyAdminAjax')) {
             /* Shipping Bar */
             add_action( 'wp_ajax_wceazy_shipping_bar_save', array($this, 'wceazy_shipping_bar_save'));
             
-                       /* pre order */
-                       add_action( 'wp_ajax_wceazy_pre_order_save', array($this, 'wceazy_pre_order_save'));
+            /* pre order */
+            add_action( 'wp_ajax_wceazy_pre_order_save', array($this, 'wceazy_pre_order_save'));
 
             /* Address Book */
             add_action( 'wp_ajax_wceazy_address_book_save', array($this, 'wceazy_address_book_save'));

@@ -50,7 +50,6 @@ $wceazy_sb_progress_text_color = isset($wceazy_sb_settings["progress_text_color"
 $wceazy_sb_progress_font_size = isset($wceazy_sb_settings["progress_font_size"]) ? $wceazy_sb_settings["progress_font_size"] : "15";
 $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_radius"]) ? $wceazy_sb_settings["progress_border_radius"] : "20";
 
-
 ?>
 
 
@@ -82,7 +81,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
 
 
     <div class="wceazy_pre_order_container">
- 
+
         <div class="wceazy_pre_order_tab">
             <div class="wceazy_pre_order_tab_part_left">
                 <div class="coupon_data_tabs">
@@ -113,7 +112,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                     <div class="tab_body_title">
                         <h1><?php esc_html_e('General Settings', 'wceazy'); ?></h1>
                     </div>
-                    <div class="tab_body_form"> 
+                    <div class="tab_body_form">
 
                         <div class="wceazy_pre_order_field_group wceazy_pre_order_enable_pre_order">
                             <label
@@ -147,7 +146,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                         class="slider round"></span></label>
                                 <small><?php esc_html_e('Switch ON to display Pre Order on mobile.', 'wceazy'); ?></small>
                             </div>
-                        </div> 
+                        </div>
 
                     </div>
                 </div>
@@ -274,7 +273,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
 
                 <div class="coupon_tab_body" data-id="tab_messages">
                     <div class="tab_body_title">
@@ -316,8 +315,8 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                         </div>
 
                     </div>
-                </div>  
-                
+                </div>
+
                 <div class="coupon_tab_body" data-id="tab_email">
                     <div class="tab_body_title">
                         <h1><?php esc_html_e('Customize Email Templates', 'wceazy'); ?></h1>
@@ -356,9 +355,9 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                 <small><?php esc_html_e('Free Pre_Order Alert: Your order qualifies! Click {checkout_page} to proceed.', 'wceazy'); ?></small>
                             </div>
                         </div>
-                        
+
                     </div>
-                </div>   
+                </div>
 
                 <div class="coupon_tab_body" data-id="tab_effect">
                     <div class="tab_body_title">
@@ -400,7 +399,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
 
                 <div class="coupon_tab_body" data-id="tab_style">
                     <div class="tab_body_title">
