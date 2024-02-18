@@ -62,7 +62,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     'type' => 'datetime-local',
                 )
             );
-            
+
             // Dynamic checkbox for dynamic inventory
             woocommerce_wp_checkbox(
                 array(
@@ -89,19 +89,19 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             );
 
             // Text input for pre-order discount
-            woocommerce_wp_text_input(
-                array(
-                    'id' => '_pre_order_discount',
-                    'label' => __('Pre-order Discount', 'pre-order'),
-                    'placeholder' => __('Enter pre-order discount', 'pre-order'),
-                    'description' => __('Enter the discount for this product during the pre-order period.', 'pre-order'),
-                    'desc_tip' => true,
-                    'type' => 'number',
-                    'custom_attributes' => array(
-                        'step' => 'any',
-                    ),
-                )
-            );
+            // woocommerce_wp_text_input(
+            //     array(
+            //         'id' => '_pre_order_discount',
+            //         'label' => __('Pre-order Discount', 'pre-order'),
+            //         'placeholder' => __('Enter pre-order discount', 'pre-order'),
+            //         'description' => __('Enter the discount for this product during the pre-order period.', 'pre-order'),
+            //         'desc_tip' => true,
+            //         'type' => 'number',
+            //         'custom_attributes' => array(
+            //             'step' => 'any',
+            //         ),
+            //     )
+            // );
 
             echo '</div>'; // End .pre-order-fields
 
@@ -192,24 +192,24 @@ jQuery(document).ready(function($) {
         public function display_preorder_date_and_time()
         {
             global $product;
-        
+
             if ($product && $product->is_type('simple') && 'yes' === get_post_meta($product->get_id(), '_is_pre_order', true)) {
                 $pre_order_date_time = get_post_meta($product->get_id(), '_pre_order_date_time', true);
-        
+
                 if ($pre_order_date_time) {
                     $pre_order_date_time_obj = new DateTime($pre_order_date_time);
                     $formatted_date_time = $pre_order_date_time_obj->format(get_option('date_format') . ' ' . get_option('time_format'));
-        
+
                     echo '<div class="preorder-availability">';
                     echo '<strong class="preorder-label">Pre-order Available on:</strong>';
                     echo '<span class="preorder-date-time">' . $formatted_date_time . '</span>';
                     echo '</div>';
                 }
-        
+
             }
         }
-        
-        
+
+
         // Modify the product price for pre-order products
         public function custom_preorder_price($price, $product)
         {
