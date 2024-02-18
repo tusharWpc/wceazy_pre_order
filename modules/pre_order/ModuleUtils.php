@@ -1,5 +1,4 @@
 <?php
-
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
     die;
@@ -89,19 +88,19 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             );
 
             // Text input for pre-order discount
-            // woocommerce_wp_text_input(
-            //     array(
-            //         'id' => '_pre_order_discount',
-            //         'label' => __('Pre-order Discount', 'pre-order'),
-            //         'placeholder' => __('Enter pre-order discount', 'pre-order'),
-            //         'description' => __('Enter the discount for this product during the pre-order period.', 'pre-order'),
-            //         'desc_tip' => true,
-            //         'type' => 'number',
-            //         'custom_attributes' => array(
-            //             'step' => 'any',
-            //         ),
-            //     )
-            // );
+            woocommerce_wp_text_input(
+                array(
+                    'id' => '_pre_order_discount',
+                    'label' => __('Pre-order Discount ( % )', 'pre-order'),
+                    'placeholder' => __('Enter pre-order discount', 'pre-order'),
+                    'description' => __('Enter the discount for this product during the pre-order period.', 'pre-order'),
+                    'desc_tip' => true,
+                    'type' => 'number',
+                    'custom_attributes' => array(
+                        'step' => 'any',
+                    ),
+                )
+            );
 
             echo '</div>'; // End .pre-order-fields
 
@@ -113,26 +112,26 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         {
             ?>
 
-<script>
-jQuery(document).ready(function($) {
-    var checkbox = $('#_is_pre_order');
-    var preorderFields = $('.pre-order-fields');
+        <script>
+        jQuery(document).ready(function($) {
+            var checkbox = $('#_is_pre_order');
+            var preorderFields = $('.pre-order-fields');
 
-    // Show/hide fields on checkbox change
-    checkbox.change(function() {
-        if (checkbox.is(':checked')) {
-            preorderFields.slideDown();
-        } else {
-            preorderFields.slideUp();
-        }
-    });
+            // Show/hide fields on checkbox change
+            checkbox.change(function() {
+                if (checkbox.is(':checked')) {
+                    preorderFields.slideDown();
+                } else {
+                    preorderFields.slideUp();
+                }
+            });
 
-    // Trigger change event on page load if checkbox is checked
-    if (checkbox.is(':checked')) {
-        preorderFields.show();
-    }
-});
-</script>
+            // Trigger change event on page load if checkbox is checked
+            if (checkbox.is(':checked')) {
+                preorderFields.show();
+            }
+        });
+        </script>
 <?php
 
         }
@@ -172,7 +171,7 @@ jQuery(document).ready(function($) {
 
                 if ($pre_order_price !== '') {
                     $product->set_price($pre_order_price);
-                    add_filter('woocommerce_get_price_html', array($this, 'custom_preorder_price_html'), 10, 2);
+                    // No need to call custom_preorder_price_html here
                 }
 
                 if ($pre_order_discount !== '') {
@@ -219,43 +218,49 @@ jQuery(document).ready(function($) {
 
                 // If a pre-order price is set, use it
                 if (!empty($pre_order_price)) {
-                    $price = $pre_order_price;
+                    return $pre_order_price;
                 }
             }
 
             return $price;
         }
 
-
-        // Modify the product price HTML for pre-order products
-        public function custom_preorder_price_html($price, $product)
+        public function custom_preorder_price_html($price_html, $product)
         {
             $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
             $pre_order_discount = get_post_meta($product->get_id(), '_pre_order_discount', true);
+            $regular_price = $product->get_regular_price();
 
-            if ($pre_order_price !== '') {
-                if ($pre_order_discount !== '') {
+            if (!empty($pre_order_price)) {
+                // Format pre-order price and regular price
+                $pre_order_price_html = wc_price($pre_order_price);
+                $regular_price_html = wc_price($regular_price);
+
+                // Display regular price
+                $price_html = sprintf(__('Regular Price: %s', 'pre-order'), $regular_price_html) . '<br>';
+
+                // Display pre-order price
+                $price_html .= sprintf(__('Pre-order Price: %s', 'pre-order'), $pre_order_price_html) . '<br>';
+
+                // Check if a discount is set
+                if (!empty($pre_order_discount)) {
+                    // Calculate discounted price
                     $discounted_price = $pre_order_price - ($pre_order_price * $pre_order_discount / 100);
-                    $discount_price_html = wc_price($discounted_price);
-                    $price_html = wc_price($pre_order_price);
+                    // Format discounted price
+                    $discounted_price_html = wc_price($discounted_price);
 
-                    // Combine pre-order price and discount price HTML
-                    $price = sprintf(
-                        __('Pre-order Price: %s <br> Discounted Price: %s', 'pre-order'),
-                        $price_html,
-                        $discount_price_html
-                    );
-                } else {
-                    // Display only pre-order price if no discount is set
-                    $price = wc_price($pre_order_price);
+                    // Display discounted price
+                    $price_html .= sprintf(__('Discounted Price: %s', 'pre-order'), $discounted_price_html);
                 }
 
                 // Add small text indicating pre-order price
-                $price .= ' <small class="preorder-text">' . __('(Pre-order Price)', 'pre-order') . '</small>';
+                $price_html .= ' <small class="preorder-text">' . __('(Pre-order Price)', 'pre-order') . '</small>';
             }
 
-            return $price;
+            return $price_html;
         }
+
+
 
         // Schedule a task to update product availability when pre-order period ends
         public function schedule_preorder_availability_update()
@@ -327,3 +332,4 @@ jQuery(document).ready(function($) {
 
     }
 }
+?>

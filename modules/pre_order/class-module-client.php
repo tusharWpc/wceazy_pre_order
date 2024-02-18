@@ -1,6 +1,4 @@
 <?php
-
-// If this file is called directly, abort.
 if (!defined('WPINC')) {
     die;
 }
@@ -8,7 +6,6 @@ if (!defined('WPINC')) {
 if (!class_exists('WcEazyPreOrderClient')) {
     class WcEazyPreOrderClient
     {
-
         public $utils;
         public $base_admin;
         public $module_admin;
@@ -29,18 +26,12 @@ if (!class_exists('WcEazyPreOrderClient')) {
             add_action('wp', array($this->utils, 'schedule_preorder_availability_update'));
             add_action('update_preorder_availability', array($this->utils, 'update_preorder_availability'));
             add_action('woocommerce_before_add_to_cart_form', array($this->utils, 'display_preorder_date_and_time'), 15);
+            add_filter('woocommerce_get_price_html', array($this->utils, 'custom_preorder_price_html'), 10, 2);
             add_filter('woocommerce_product_get_price', array($this->utils, 'custom_preorder_price'), 10, 2);
             add_filter('woocommerce_product_get_regular_price', array($this->utils, 'custom_preorder_price'), 10, 2);
             add_filter('woocommerce_product_variation_get_regular_price', array($this->utils, 'custom_preorder_price'), 10, 2);
             add_filter('woocommerce_product_variation_get_price', array($this->utils, 'custom_preorder_price'), 10, 2);
-
-        }
-
-        public function schedule_preorder_availability_update()
-        {
-            if (!wp_next_scheduled('update_preorder_availability')) {
-                wp_schedule_event(time(), 'daily', 'update_preorder_availability');
-            }
         }
     }
 }
+?>
