@@ -122,8 +122,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                         <?php echo esc_attr($wceazy_sb_enable_pre_order == "yes" ? "checked" : ""); ?>><span
                                         class="slider round"></span></label>
                                 <small><?php esc_html_e('Turn ON the switch to enable the Pre Order.', 'wceazy'); ?></small>
-                            </div>
-                            <?php  var_dump($wceazy_sb_enable_pre_order); ?>
+                            </div> 
                         </div>
 
                         <div class="wceazy_pre_order_field_group wceazy_pre_order_display_desktop">

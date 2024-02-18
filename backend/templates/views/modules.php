@@ -38,7 +38,7 @@
 
 
 
-    <div class="wceazy_modules_list_items"> 
+    <div class="wceazy_modules_list_items">
         <div class="wceazy_module_item" data-slug="auto_apply_coupon">
             <div class="wceazy_module_logo">
                 <img src="<?php echo esc_url(WCEAZY_IMG_DIR . 'modules/auto_apply_coupon/icon.svg'); ?>" height="100" />
@@ -248,7 +248,7 @@
 
         <div class="wceazy_module_item" data-slug="pre_order">
             <div class="wceazy_module_logo">
-                <img src="<?php echo esc_url(WCEAZY_IMG_DIR . 'modules/address_book/icon.svg'); ?>" height="100" />
+                <img src="<?php echo esc_url(WCEAZY_IMG_DIR . 'modules/pre_order/icon.svg'); ?>" height="100" />
             </div>
             <div class="wceazy_module_details">
                 <h3><?php esc_html_e('Pre Order', 'wceazy'); ?></h3>
