@@ -189,8 +189,6 @@ jQuery(document).ready(function($) {
             return $text;
         }
 
-
-        // Display date and time
         public function display_preorder_date_and_time()
         {
             global $product;
