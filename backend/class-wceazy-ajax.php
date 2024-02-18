@@ -102,17 +102,14 @@ if (!class_exists('WcEazyAdminAjax')) {
         public function wceazy_coupon_generator_generate() {
             include_once WCEAZY_PATH . "backend/api/coupon_generator/generate.php";
             wp_die();
-        }
-
+        } 
 
 
         /* URL Coupon */
         public function wceazy_url_coupon_list_coupons() {
             include_once WCEAZY_PATH . "backend/api/url_coupon/coupon_list.php";
             wp_die();
-        }
-
-
+        } 
 
 
         /* Product Sticky Bar */

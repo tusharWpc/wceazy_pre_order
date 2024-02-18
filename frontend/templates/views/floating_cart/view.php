@@ -134,6 +134,7 @@ if($wceazy_fc_basket_enable == "hide_always"){
         --wceazy_fc_quantity_box_bg_color: <?php echo $wceazy_fc_quantity_box_bg_color; ?>;
         --wceazy_fc_quantity_box_text_color: <?php echo $wceazy_fc_quantity_box_text_color; ?>;
     }
+    
     .wceazy_fc_bubble{
         <?php if($wceazy_fc_basket_position == "top_left") { ?> top: 110px; bottom: auto; right: auto; left: 60px; <?php } ?>
         <?php if($wceazy_fc_basket_position == "top_right") { ?> top: 110px; bottom: auto; right: 60px; left: auto; <?php } ?>
