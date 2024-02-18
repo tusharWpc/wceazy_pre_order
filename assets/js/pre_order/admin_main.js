@@ -10,6 +10,29 @@ function wceazy_pre_order_init(host) {
 }
 
 
+   jQuery(document).ready(function ($) {
+                    var checkbox = $('#_is_pre_order');
+                    var preorderFields = $('.pre-order-fields');
+
+                    // Show/hide fields on checkbox change
+                    checkbox.change(function () {
+                        if (checkbox.is(':checked')) {
+                            preorderFields.slideDown();
+                        } else {
+                            preorderFields.slideUp();
+                        }
+                    });
+
+                    // Trigger change event on page load if checkbox is checked
+                    if (checkbox.is(':checked')) {
+                        preorderFields.show();
+                    }
+                });
+
+
+
+
+
 function wceazy_pre_order_init_select2() {
     var wceazy_pre_order_shipping_zone = jQuery('.wceazy_pre_order_shipping_zone select')
     var wceazy_pre_order_dont_show_pages = jQuery('.wceazy_pre_order_dont_show_pages select')
