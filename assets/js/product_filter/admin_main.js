@@ -1,12 +1,12 @@
 
-function wceazy_product_filter_init(host){
+function wceazy_product_filter_init(host) {
     wceazy_hide_all()
     jQuery("#wceazy_product_filter").show();
 
     wceazy_product_filter_tab_init();
 }
 
-function wceazy_product_filter_copy_shortcode(){
+function wceazy_product_filter_copy_shortcode() {
     'use strict';
 
     var temp = jQuery("<input>");
@@ -18,7 +18,7 @@ function wceazy_product_filter_copy_shortcode(){
 }
 
 
-function wceazy_product_filter_tab_init(){
+function wceazy_product_filter_tab_init() {
     jQuery(".wceazy_product_filter_container .coupon_tab_body").hide();
     jQuery(".wceazy_product_filter_container .coupon_tab_body[data-id='tab_general']").show();
     jQuery(".wceazy_product_filter_container .coupon_data_tabs .tab_item").unbind("click");
@@ -78,7 +78,7 @@ function wceazy_product_filter_save() {
 
 
 
-    let jQuerypost_data = {'action': 'wceazy_product_filter_save', 'data': jQuerypostData};
+    let jQuerypost_data = { 'action': 'wceazy_product_filter_save', 'data': jQuerypostData };
 
     jQuery.ajax({
         url: ajaxurl, type: "POST", data: jQuerypost_data,

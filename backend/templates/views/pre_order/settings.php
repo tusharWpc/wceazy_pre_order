@@ -1,7 +1,21 @@
 <?php
 
-$wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
-$wceazy_sb_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
+$wceazy_pre_order_settings = get_option('wceazy_product_filter_settings', False);
+$wceazy_pf_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
+
+echo "<pre>";
+var_dump($wceazy_pf_settings);
+echo "</pre>";
+
+// $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
+// $wceazy_sb_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
+
+// echo"<pre>";
+// var_dump($wceazy_pre_order_settings);
+// echo"</pre>";
+
+
+
 
 $wceazy_sb_enable_pre_order = isset($wceazy_sb_settings["enable_pre_order"]) ? $wceazy_sb_settings["enable_pre_order"] : "yes";
 $wceazy_sb_display_desktop = isset($wceazy_sb_settings["display_desktop"]) ? $wceazy_sb_settings["display_desktop"] : "yes";

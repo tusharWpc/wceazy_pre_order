@@ -32,7 +32,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             echo '<div class="options_group">';
 
             // Checkbox for marking a product as a pre-order
-
             woocommerce_wp_checkbox(
                 array(
                     'id' => '_is_pre_order',
@@ -112,27 +111,27 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         {
             ?>
 
-        <script>
-        jQuery(document).ready(function($) {
-            var checkbox = $('#_is_pre_order');
-            var preorderFields = $('.pre-order-fields');
+            <script>
+                jQuery(document).ready(function ($) {
+                    var checkbox = $('#_is_pre_order');
+                    var preorderFields = $('.pre-order-fields');
 
-            // Show/hide fields on checkbox change
-            checkbox.change(function() {
-                if (checkbox.is(':checked')) {
-                    preorderFields.slideDown();
-                } else {
-                    preorderFields.slideUp();
-                }
-            });
+                    // Show/hide fields on checkbox change
+                    checkbox.change(function () {
+                        if (checkbox.is(':checked')) {
+                            preorderFields.slideDown();
+                        } else {
+                            preorderFields.slideUp();
+                        }
+                    });
 
-            // Trigger change event on page load if checkbox is checked
-            if (checkbox.is(':checked')) {
-                preorderFields.show();
-            }
-        });
-        </script>
-<?php
+                    // Trigger change event on page load if checkbox is checked
+                    if (checkbox.is(':checked')) {
+                        preorderFields.show();
+                    }
+                });
+            </script>
+            <?php
 
         }
 
@@ -145,9 +144,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
 
             $pre_order_date = isset($_POST['_pre_order_date_time']) ? sanitize_text_field($_POST['_pre_order_date_time']) : '';
             update_post_meta($post_id, '_pre_order_date_time', $pre_order_date);
-
-            // $pre_order_time = isset($_POST['_pre_order_time']) ? sanitize_text_field($_POST['_pre_order_time']) : '';
-            // update_post_meta($post_id, '_pre_order_time', $pre_order_time);
 
             $dynamic_inventory = isset($_POST['_dynamic_inventory']) ? 'yes' : 'no';
             update_post_meta($post_id, '_dynamic_inventory', sanitize_text_field($dynamic_inventory));
@@ -169,14 +165,11 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
                 $pre_order_discount = get_post_meta($product->get_id(), '_pre_order_discount', true);
 
-                if ($pre_order_price !== '') {
-                    $product->set_price($pre_order_price);
-                    // No need to call custom_preorder_price_html here
-                }
-
                 if ($pre_order_discount !== '') {
-                    $discounted_price = $product->get_regular_price() - ($product->get_regular_price() * $pre_order_discount / 100);
-                    $product->set_sale_price($discounted_price);
+                    // Calculate discounted price
+                    $discounted_price = $pre_order_price - ($pre_order_price * $pre_order_discount / 100);
+                    // Set the discounted price as product price
+                    $product->set_price($discounted_price);
                 }
 
                 $text = __('Pre-order Now', 'pre-order');
@@ -187,6 +180,8 @@ if (!class_exists('WcEazyPreOrderUtils')) {
 
             return $text;
         }
+
+
 
         public function display_preorder_date_and_time()
         {
@@ -225,37 +220,42 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             return $price;
         }
 
+        // Modify the product price for pre-order products
         public function custom_preorder_price_html($price_html, $product)
         {
             $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
             $pre_order_discount = get_post_meta($product->get_id(), '_pre_order_discount', true);
-            $regular_price = $product->get_regular_price();
-        
+
             if (!empty($pre_order_price)) {
                 // Format pre-order price
                 $pre_order_price_html = wc_price($pre_order_price);
-        
-                // Display pre-order price
-                $price_html = sprintf(__('<del>%s</del>', 'pre-order'), $pre_order_price_html) . '<br>';
-        
-                // Check if a discount is set
+
+                // Calculate discounted price if discount is set
                 if (!empty($pre_order_discount)) {
                     // Calculate discounted price
                     $discounted_price = $pre_order_price - ($pre_order_price * $pre_order_discount / 100);
                     // Format discounted price
                     $discounted_price_html = wc_price($discounted_price);
-        
-                    // Display discounted price
+
+                    // Display discounted price with a strike-through
+                    $price_html = sprintf(__('<del>%s</del>', 'pre-order'), $pre_order_price_html) . '<br>';
+
+                    // Display discounted price as final price
                     $price_html .= sprintf(__('%s', 'pre-order'), $discounted_price_html) . '<br>';
+                } else {
+                    // If no discount is set, display the regular pre-order price
+                    $price_html = sprintf(__('%s', 'pre-order'), $pre_order_price_html) . '<br>';
                 }
-        
+
                 // Add small text indicating pre-order price
                 $price_html .= '<small class="preorder-text">' . __('(Pre-order Price)', 'pre-order') . '</small>';
             }
-        
+
             return $price_html;
         }
-        
+
+
+
 
 
         // Schedule a task to update product availability when pre-order period ends
