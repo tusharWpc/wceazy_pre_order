@@ -236,7 +236,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 $pre_order_price_html = wc_price($pre_order_price);
         
                 // Display pre-order price
-                $price_html = sprintf(__('Pre-order Price: %s', 'pre-order'), $pre_order_price_html) . '<br>';
+                $price_html = sprintf(__('Pre-order Price: <del>%s</del>', 'pre-order'), $pre_order_price_html) . '<br>';
         
                 // Check if a discount is set
                 if (!empty($pre_order_discount)) {
