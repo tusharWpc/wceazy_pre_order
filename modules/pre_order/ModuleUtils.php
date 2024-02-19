@@ -18,11 +18,15 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         {
             $this->base_admin = $base_admin;
             $this->module_admin = $module_admin;
-
-            if (!get_option("wceazy_pre_order_rules")) {
-                update_option('wceazy_pre_order_rules', "");
+        }
+ 
+        public function saveSettings($post_data)
+        {
+            if (!empty($post_data)) {
+                update_option('wceazy_pre_order_settings', json_encode($post_data));
             }
         }
+
 
         // Add custom fields to the product editor for pre-order options
         public function add_preorder_fields()
@@ -203,7 +207,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             }
         }
 
-
         // Modify the product price for pre-order products
         public function custom_preorder_price($price, $product)
         {
@@ -233,7 +236,8 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 // Calculate discounted price if discount is set
                 if (!empty($pre_order_discount)) {
                     // Calculate discounted price
-                    $discounted_price = $pre_order_price - ($pre_order_price * $pre_order_discount / 100);
+                    $discounted_price = $pre_order_price - ($pre_order_price * ($pre_order_discount / 100));
+                    $discounted_price = round($discounted_price, 2); // Round to two decimal places
                     // Format discounted price
                     $discounted_price_html = wc_price($discounted_price);
 
@@ -254,8 +258,34 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             return $price_html;
         }
 
+        // Hook into WooCommerce to modify product prices in the cart
+        function apply_preorder_discount_to_cart($cart)
+        {
+            if (is_admin() && !defined('DOING_AJAX')) {
+                return;
+            }
 
+            if (did_action('woocommerce_before_calculate_totals') >= 2) {
+                return;
+            }
 
+            foreach ($cart->get_cart() as $cart_item_key => $cart_item) {
+                $product = $cart_item['data'];
+                $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
+                $pre_order_discount = get_post_meta($product->get_id(), '_pre_order_discount', true);
+
+                if ($pre_order_discount !== '') {
+                    // Calculate discounted price
+                    $discounted_price = $pre_order_price - ($pre_order_price * ($pre_order_discount / 100));
+                    $discounted_price = round($discounted_price, 2); // Round to two decimal places
+                    // Set the discounted price as product price in the cart
+                    $cart_item['data']->set_price($discounted_price);
+                }
+            }
+
+            // Recalculate cart totals
+            $cart->calculate_totals();
+        }
 
 
         // Schedule a task to update product availability when pre-order period ends
@@ -265,8 +295,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 wp_schedule_event(time(), 'daily', 'update_preorder_availability');
             }
         }
-
-
 
         // Callback function to update product availability
         public function update_preorder_availability()
