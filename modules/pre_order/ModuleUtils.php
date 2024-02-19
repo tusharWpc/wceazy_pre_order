@@ -236,7 +236,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 $pre_order_price_html = wc_price($pre_order_price);
         
                 // Display pre-order price
-                $price_html = sprintf(__('Pre-order Price: <del>%s</del>', 'pre-order'), $pre_order_price_html) . '<br>';
+                $price_html = sprintf(__('<del>%s</del>', 'pre-order'), $pre_order_price_html) . '<br>';
         
                 // Check if a discount is set
                 if (!empty($pre_order_discount)) {
@@ -246,7 +246,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     $discounted_price_html = wc_price($discounted_price);
         
                     // Display discounted price
-                    $price_html .= sprintf(__('Discounted Price: %s', 'pre-order'), $discounted_price_html) . '<br>';
+                    $price_html .= sprintf(__('%s', 'pre-order'), $discounted_price_html) . '<br>';
                 }
         
                 // Add small text indicating pre-order price
