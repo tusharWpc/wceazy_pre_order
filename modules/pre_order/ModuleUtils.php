@@ -230,36 +230,32 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
             $pre_order_discount = get_post_meta($product->get_id(), '_pre_order_discount', true);
             $regular_price = $product->get_regular_price();
-
+        
             if (!empty($pre_order_price)) {
-                // Format pre-order price and regular price
+                // Format pre-order price
                 $pre_order_price_html = wc_price($pre_order_price);
-                $regular_price_html = wc_price($regular_price);
-
-                // Display regular price
-                $price_html = sprintf(__('Regular Price: %s', 'pre-order'), $regular_price_html) . '<br>';
-
+        
                 // Display pre-order price
-                $price_html .= sprintf(__('Pre-order Price: %s', 'pre-order'), $pre_order_price_html) . '<br>';
-
+                $price_html = sprintf(__('Pre-order Price: %s', 'pre-order'), $pre_order_price_html) . '<br>';
+        
                 // Check if a discount is set
                 if (!empty($pre_order_discount)) {
                     // Calculate discounted price
                     $discounted_price = $pre_order_price - ($pre_order_price * $pre_order_discount / 100);
                     // Format discounted price
                     $discounted_price_html = wc_price($discounted_price);
-
+        
                     // Display discounted price
-                    $price_html .= sprintf(__('Discounted Price: %s', 'pre-order'), $discounted_price_html);
+                    $price_html .= sprintf(__('Discounted Price: %s', 'pre-order'), $discounted_price_html) . '<br>';
                 }
-
+        
                 // Add small text indicating pre-order price
-                $price_html .= ' <small class="preorder-text">' . __('(Pre-order Price)', 'pre-order') . '</small>';
+                $price_html .= '<small class="preorder-text">' . __('(Pre-order Price)', 'pre-order') . '</small>';
             }
-
+        
             return $price_html;
         }
-
+        
 
 
         // Schedule a task to update product availability when pre-order period ends
