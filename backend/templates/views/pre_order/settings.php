@@ -4,16 +4,16 @@
 $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
 $wceazy_sb_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
 
-echo "<pre>";
-var_dump($wceazy_pre_order_settings);
-echo "</pre>";
+// echo "<pre>";
+// var_dump($wceazy_pre_order_settings);
+// echo "</pre>";
 
 
 
 
 $wceazy_sb_enable_pre_order = isset($wceazy_sb_settings["enable_pre_order"]) ? $wceazy_sb_settings["enable_pre_order"] : "yes";
 
-$wceazy_sb_pre_order_btn_txt = isset($wceazy_sb_settings["pre_order_btn_txt"]) ? $wceazy_sb_settings["pre_order_btn_txt"] : "PreOrder Now!";
+$wceazy_sb_pre_order_btn_text = isset($wceazy_sb_settings["pre_order_btn_text"]) ? $wceazy_sb_settings["pre_order_btn_text"] : "PreOrder Now!";
 
 
 
@@ -145,17 +145,17 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                     <div class="tab_body_title">
                         <h1>
                             <?php esc_html_e('General Settings', 'wceazy'); ?>
-                        </h1>
+                        </h1>btn_text
                     </div>
                     <div class="tab_body_form">
 
-                        <div class="wceazy_pre_order_field_group wceazy_pre_order_padding_top">
+                        <div class="wceazy_pre_order_field_group wceazy_pre_order_btn_text">
                             <label for="coupon_generator_coupon_amount">
                                 <?php esc_html_e('Button Text', 'wceazy'); ?>
                             </label>
                             <div class="field_with_msg_container">
                                 <input class="wceazy_pre_order_text_field" type="text" placeholder=""
-                                    value="<?php echo esc_attr($wceazy_sb_pre_order_btn_txt); ?>">
+                                    value="<?php echo esc_attr($wceazy_sb_pre_order_btn_text); ?>">
                                 <small>
                                     <?php esc_html_e('Set your Pre Order button text', 'wceazy'); ?>
                                 </small>
