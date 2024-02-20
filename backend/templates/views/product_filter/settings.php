@@ -4,9 +4,9 @@
 $wceazy_product_filter_settings = get_option('wceazy_product_filter_settings', False);
 $wceazy_pf_settings = $wceazy_product_filter_settings ? json_decode($wceazy_product_filter_settings, true) : array();
 
-echo"<pre>";
-var_dump($wceazy_product_filter_settings);
-echo"</pre>";
+// echo"<pre>";
+// var_dump($wceazy_product_filter_settings);
+// echo"</pre>";
 
 
 $wceazy_pf_show_search_filter = isset($wceazy_pf_settings["show_search_filter"]) ? $wceazy_pf_settings["show_search_filter"] : "yes";

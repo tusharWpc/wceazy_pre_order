@@ -167,7 +167,8 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                 <?php esc_html_e('Enable Pre Order', 'wceazy'); ?>
                             </label>
                             <div class="field_with_msg_container">
-                                <label class="toggle_switch"><input type="checkbox" <?php echo esc_attr($wceazy_sb_enable_pre_order == "yes" ? "checked" : ""); ?>><span
+                                <label class="toggle_switch"><input type="checkbox"
+                                        <?php echo esc_attr($wceazy_sb_enable_pre_order == "yes" ? "checked" : ""); ?>><span
                                         class="slider round"></span></label>
                                 <small>
                                     <?php esc_html_e('Turn ON the switch to enable the Pre Order.', 'wceazy'); ?>
@@ -180,7 +181,8 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                 <?php esc_html_e('Display in Desktop', 'wceazy'); ?>
                             </label>
                             <div class="field_with_msg_container">
-                                <label class="toggle_switch"><input type="checkbox" <?php echo esc_attr($wceazy_sb_display_desktop == "yes" ? "checked" : ""); ?>><span
+                                <label class="toggle_switch"><input type="checkbox"
+                                        <?php echo esc_attr($wceazy_sb_display_desktop == "yes" ? "checked" : ""); ?>><span
                                         class="slider round"></span></label>
                                 <small>
                                     <?php esc_html_e('Switch ON to display Pre Order on Desktop.', 'wceazy'); ?>
@@ -193,7 +195,8 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                 <?php esc_html_e('Display in Mobile', 'wceazy'); ?>
                             </label>
                             <div class="field_with_msg_container">
-                                <label class="toggle_switch"><input type="checkbox" <?php echo esc_attr($wceazy_sb_display_mobile == "yes" ? "checked" : ""); ?>><span
+                                <label class="toggle_switch"><input type="checkbox"
+                                        <?php echo esc_attr($wceazy_sb_display_mobile == "yes" ? "checked" : ""); ?>><span
                                         class="slider round"></span></label>
                                 <small>
                                     <?php esc_html_e('Switch ON to display Pre Order on mobile.', 'wceazy'); ?>
@@ -220,7 +223,8 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                 <?php esc_html_e('Cart Total', 'wceazy'); ?>
                             </label>
                             <div class="field_with_msg_container">
-                                <label class="toggle_switch"><input type="checkbox" <?php echo esc_attr($wceazy_sb_show_in_cart == "yes" ? "checked" : ""); ?>><span
+                                <label class="toggle_switch"><input type="checkbox"
+                                        <?php echo esc_attr($wceazy_sb_show_in_cart == "yes" ? "checked" : ""); ?>><span
                                         class="slider round"></span></label>
                                 <small>
                                     <?php esc_html_e('Turn on the switch to show the free Pre_Order message in the shopping cart.', 'wceazy'); ?>
@@ -237,10 +241,12 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                     <option value="">
                                         <?php esc_html_e('Please select', 'wceazy'); ?>
                                     </option>
-                                    <option value="woocommerce_cart_totals_before_Pre_Order" <?php echo esc_attr("woocommerce_cart_totals_before_Pre_Order" == $wceazy_sb_position_cart_subtotal ? "selected" : ""); ?>>
+                                    <option value="woocommerce_cart_totals_before_Pre_Order"
+                                        <?php echo esc_attr("woocommerce_cart_totals_before_Pre_Order" == $wceazy_sb_position_cart_subtotal ? "selected" : ""); ?>>
                                         <?php esc_html_e('Before Pre_Order block', 'wceazy'); ?>
                                     </option>
-                                    <option value="woocommerce_cart_totals_after_Pre_Order" <?php echo esc_attr("woocommerce_cart_totals_after_Pre_Order" == $wceazy_sb_position_cart_subtotal ? "selected" : ""); ?>>
+                                    <option value="woocommerce_cart_totals_after_Pre_Order"
+                                        <?php echo esc_attr("woocommerce_cart_totals_after_Pre_Order" == $wceazy_sb_position_cart_subtotal ? "selected" : ""); ?>>
                                         <?php esc_html_e('After Pre_Order block', 'wceazy'); ?>
                                     </option>
                                 </select>
@@ -259,7 +265,8 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                 <?php esc_html_e('Display in Total Cost Area', 'wceazy'); ?>
                             </label>
                             <div class="field_with_msg_container">
-                                <label class="toggle_switch"><input type="checkbox" <?php echo esc_attr($wceazy_sb_show_in_checkout == "yes" ? "checked" : ""); ?>><span
+                                <label class="toggle_switch"><input type="checkbox"
+                                        <?php echo esc_attr($wceazy_sb_show_in_checkout == "yes" ? "checked" : ""); ?>><span
                                         class="slider round"></span></label>
                                 <small>
                                     <?php esc_html_e('Turn ON the switch to show the free Pre_Order notification in checkout subtotal area.', 'wceazy'); ?>
@@ -276,10 +283,12 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                     <option value="">
                                         <?php esc_html_e('Please select', 'wceazy'); ?>
                                     </option>
-                                    <option value="woocommerce_review_order_before_Pre_Order" <?php echo esc_attr("woocommerce_review_order_before_Pre_Order" == $wceazy_sb_position_checkout_subtotal ? "selected" : ""); ?>>
+                                    <option value="woocommerce_review_order_before_Pre_Order"
+                                        <?php echo esc_attr("woocommerce_review_order_before_Pre_Order" == $wceazy_sb_position_checkout_subtotal ? "selected" : ""); ?>>
                                         <?php esc_html_e('Before Pre_Order block', 'wceazy'); ?>
                                     </option>
-                                    <option value="woocommerce_review_order_after_Pre_Order" <?php echo esc_attr("woocommerce_review_order_after_Pre_Order" == $wceazy_sb_position_checkout_subtotal ? "selected" : ""); ?>>
+                                    <option value="woocommerce_review_order_after_Pre_Order"
+                                        <?php echo esc_attr("woocommerce_review_order_after_Pre_Order" == $wceazy_sb_position_checkout_subtotal ? "selected" : ""); ?>>
                                         <?php esc_html_e('After Pre_Order block', 'wceazy'); ?>
                                     </option>
                                 </select>
@@ -520,7 +529,8 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                 </span>
                             </label>
                             <div class="field_with_msg_container">
-                                <label class="toggle_switch"><input disabled type="checkbox" <?php echo esc_attr($wceazy_sb_allow_disappear_time == "yes" ? "checked" : ""); ?>
+                                <label class="toggle_switch"><input disabled type="checkbox"
+                                        <?php echo esc_attr($wceazy_sb_allow_disappear_time == "yes" ? "checked" : ""); ?>
                                         onchange="wceazy_pre_order_selection_changed()"><span
                                         class="slider round"></span></label>
                                 <small>
@@ -564,10 +574,12 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                     <option value="">
                                         <?php esc_html_e('Please select', 'wceazy'); ?>
                                     </option>
-                                    <option value="top" <?php echo esc_attr("top" == $wceazy_sb_position ? "selected" : ""); ?>>
+                                    <option value="top"
+                                        <?php echo esc_attr("top" == $wceazy_sb_position ? "selected" : ""); ?>>
                                         <?php esc_html_e('Top', 'wceazy'); ?>
                                     </option>
-                                    <option value="bottom" <?php echo esc_attr("bottom" == $wceazy_sb_position ? "selected" : ""); ?>>
+                                    <option value="bottom"
+                                        <?php echo esc_attr("bottom" == $wceazy_sb_position ? "selected" : ""); ?>>
                                         <?php esc_html_e('Bottom', 'wceazy'); ?>
                                     </option>
                                 </select>
@@ -585,10 +597,12 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                     <option value="">
                                         <?php esc_html_e('Please select', 'wceazy'); ?>
                                     </option>
-                                    <option value="1" <?php echo esc_attr("1" == $wceazy_sb_layout ? "selected" : ""); ?>>
+                                    <option value="1"
+                                        <?php echo esc_attr("1" == $wceazy_sb_layout ? "selected" : ""); ?>>
                                         <?php esc_html_e('Layout 1', 'wceazy'); ?>
                                     </option>
-                                    <option value="2" <?php echo esc_attr("2" == $wceazy_sb_layout ? "selected" : ""); ?>>
+                                    <option value="2"
+                                        <?php echo esc_attr("2" == $wceazy_sb_layout ? "selected" : ""); ?>>
                                         <?php esc_html_e('Layout 2', 'wceazy'); ?>
                                     </option>
                                 </select>
@@ -724,13 +738,16 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                     <option value="">
                                         <?php esc_html_e('Please select', 'wceazy'); ?>
                                     </option>
-                                    <option value="left" <?php echo esc_attr("left" == $wceazy_sb_msg_text_align ? "selected" : ""); ?>>
+                                    <option value="left"
+                                        <?php echo esc_attr("left" == $wceazy_sb_msg_text_align ? "selected" : ""); ?>>
                                         <?php esc_html_e('Left', 'wceazy'); ?>
                                     </option>
-                                    <option value="center" <?php echo esc_attr("center" == $wceazy_sb_msg_text_align ? "selected" : ""); ?>>
+                                    <option value="center"
+                                        <?php echo esc_attr("center" == $wceazy_sb_msg_text_align ? "selected" : ""); ?>>
                                         <?php esc_html_e('Center', 'wceazy'); ?>
                                     </option>
-                                    <option value="right" <?php echo esc_attr("right" == $wceazy_sb_msg_text_align ? "selected" : ""); ?>>
+                                    <option value="right"
+                                        <?php echo esc_attr("right" == $wceazy_sb_msg_text_align ? "selected" : ""); ?>>
                                         <?php esc_html_e('Right', 'wceazy'); ?>
                                     </option>
                                 </select>
@@ -804,7 +821,8 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                 <?php esc_html_e('Enable Progress Bar', 'wceazy'); ?>
                             </label>
                             <div class="field_with_msg_container">
-                                <label class="toggle_switch"><input type="checkbox" <?php echo esc_attr($wceazy_sb_enable_progress_bar == "yes" ? "checked" : ""); ?>><span
+                                <label class="toggle_switch"><input type="checkbox"
+                                        <?php echo esc_attr($wceazy_sb_enable_progress_bar == "yes" ? "checked" : ""); ?>><span
                                         class="slider round"></span></label>
                                 <small>
                                     <?php esc_html_e('Show progress bar with free Pre Order.', 'wceazy'); ?>
