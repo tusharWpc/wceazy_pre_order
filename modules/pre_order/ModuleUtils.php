@@ -255,7 +255,8 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         
             return $price_html;
         }
-        // Modify the product prices in the cart for pre-order products
+ 
+// Modify the product prices in the cart for pre-order products
 public function apply_preorder_discount_to_cart($cart)
 {
     if (is_admin() && !defined('DOING_AJAX')) {
@@ -266,6 +267,9 @@ public function apply_preorder_discount_to_cart($cart)
         return;
     }
 
+    // Initialize discount total
+    $discount_total = 0;
+
     foreach ($cart->get_cart() as $cart_item_key => $cart_item) {
         $product = $cart_item['data'];
         $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
@@ -275,14 +279,27 @@ public function apply_preorder_discount_to_cart($cart)
             // Calculate discounted price
             $discounted_price = $pre_order_price - ($pre_order_price * ($pre_order_discount / 100));
             $discounted_price = round($discounted_price, 2); // Round to two decimal places
+
+            // Calculate discount amount for this product
+            $discount_amount = ($product->get_price() - $discounted_price) * $cart_item['quantity'];
+
+            // Accumulate discount total
+            $discount_total += $discount_amount;
+
             // Set the discounted price as product price in the cart
             $cart_item['data']->set_price($discounted_price);
         }
     }
 
+    // Apply discount total to cart subtotal
+    if ($discount_total > 0) {
+        $cart->add_fee(__('Pre-order Discount', 'pre-order'), -$discount_total);
+    }
+
     // Recalculate cart totals
     $cart->calculate_totals();
 }
+
 
 
 
