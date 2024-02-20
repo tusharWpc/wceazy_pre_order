@@ -19,7 +19,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             $this->base_admin = $base_admin;
             $this->module_admin = $module_admin;
         }
- 
+
         public function saveSettings($post_data)
         {
             if (!empty($post_data)) {
@@ -144,20 +144,24 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         {
             // Validate and sanitize input
             $is_pre_order = isset($_POST['_is_pre_order']) ? 'yes' : 'no';
-            update_post_meta($post_id, '_is_pre_order', sanitize_text_field($is_pre_order));
-
             $pre_order_date = isset($_POST['_pre_order_date_time']) ? sanitize_text_field($_POST['_pre_order_date_time']) : '';
-            update_post_meta($post_id, '_pre_order_date_time', $pre_order_date);
-
             $dynamic_inventory = isset($_POST['_dynamic_inventory']) ? 'yes' : 'no';
-            update_post_meta($post_id, '_dynamic_inventory', sanitize_text_field($dynamic_inventory));
-
             $pre_order_price = isset($_POST['_pre_order_price']) ? wc_format_decimal($_POST['_pre_order_price']) : '';
-            update_post_meta($post_id, '_pre_order_price', $pre_order_price);
-
             $pre_order_discount = isset($_POST['_pre_order_discount']) ? wc_format_decimal($_POST['_pre_order_discount']) : '';
-            update_post_meta($post_id, '_pre_order_discount', $pre_order_discount);
+
+            // Prepare data to be saved as an array
+            $data = array(
+                '_is_pre_order' => $is_pre_order,
+                '_pre_order_date_time' => $pre_order_date,
+                '_dynamic_inventory' => $dynamic_inventory,
+                '_pre_order_price' => $pre_order_price,
+                '_pre_order_discount' => $pre_order_discount,
+            );
+
+            // Update the option in the database
+            update_option('wceazy_pre_order_settings', $data);
         }
+
 
 
         // Hook into WooCommerce to modify the Add to Cart button text and handle pre-order price

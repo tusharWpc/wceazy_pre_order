@@ -10,24 +10,24 @@ function wceazy_pre_order_init(host) {
 }
 
 
-   jQuery(document).ready(function ($) {
-                    var checkbox = $('#_is_pre_order');
-                    var preorderFields = $('.pre-order-fields');
+jQuery(document).ready(function ($) {
+    var checkbox = $('#_is_pre_order');
+    var preorderFields = $('.pre-order-fields');
 
-                    // Show/hide fields on checkbox change
-                    checkbox.change(function () {
-                        if (checkbox.is(':checked')) {
-                            preorderFields.slideDown();
-                        } else {
-                            preorderFields.slideUp();
-                        }
-                    });
+    // Show/hide fields on checkbox change
+    checkbox.change(function () {
+        if (checkbox.is(':checked')) {
+            preorderFields.slideDown();
+        } else {
+            preorderFields.slideUp();
+        }
+    });
 
-                    // Trigger change event on page load if checkbox is checked
-                    if (checkbox.is(':checked')) {
-                        preorderFields.show();
-                    }
-                });
+    // Trigger change event on page load if checkbox is checked
+    if (checkbox.is(':checked')) {
+        preorderFields.show();
+    }
+});
 
 
 

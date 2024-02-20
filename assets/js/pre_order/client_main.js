@@ -1,6 +1,6 @@
-function wceazy_frontend_sb_get_contents_on_cart_updated(){
+function wceazy_frontend_sb_get_contents_on_cart_updated() {
 
-    let post_data = {'action': 'wceazy_pre_order_cart_updated'};
+    let post_data = { 'action': 'wceazy_pre_order_cart_updated' };
     jQuery.ajax({
         type: 'post',
         url: wceazy_client_pre_order_object.ajaxurl,
