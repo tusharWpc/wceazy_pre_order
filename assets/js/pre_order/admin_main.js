@@ -150,9 +150,10 @@ function wceazy_pre_order_save() {
     let jQuerypostData = {
 
 
-      
-
         'enable_pre_order': jQuery(".wceazy_pre_order_enable_pre_order input[type='checkbox']:checked").length > 0 ? "yes" : "no",
+
+        'pre_order_btn_text': jQuery(".wceazy_pre_order_btn_text input[type='text']").val(),
+
         'display_desktop': jQuery(".wceazy_pre_order_display_desktop input[type='checkbox']:checked").length > 0 ? "yes" : "no",
         'display_mobile': jQuery(".wceazy_pre_order_display_mobile input[type='checkbox']:checked").length > 0 ? "yes" : "no",
         'shipping_zone': jQuery(".wceazy_pre_order_shipping_zone select").val(),
