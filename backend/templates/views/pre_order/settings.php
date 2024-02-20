@@ -4,9 +4,9 @@
 $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
 $wceazy_sb_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
 
-// echo "<pre>";
-// var_dump($wceazy_pre_order_settings);
-// echo "</pre>";
+echo "<pre>";
+var_dump($wceazy_sb_settings);
+echo "</pre>";
 
 
 
@@ -78,9 +78,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                 <?php esc_html_e('GET PRO', 'wceazy'); ?>
             </a>
         </div>
-    </div>
-
-
+    </div> 
 
     <div class="wceazy_pre_order_page_title">
         <div class="page_title_part_left">
