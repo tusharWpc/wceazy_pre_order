@@ -255,7 +255,35 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         
             return $price_html;
         }
-        
+        // Modify the product prices in the cart for pre-order products
+public function apply_preorder_discount_to_cart($cart)
+{
+    if (is_admin() && !defined('DOING_AJAX')) {
+        return;
+    }
+
+    if (did_action('woocommerce_before_calculate_totals') >= 2) {
+        return;
+    }
+
+    foreach ($cart->get_cart() as $cart_item_key => $cart_item) {
+        $product = $cart_item['data'];
+        $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
+        $pre_order_discount = get_post_meta($product->get_id(), '_pre_order_discount', true);
+
+        if ($pre_order_discount !== '') {
+            // Calculate discounted price
+            $discounted_price = $pre_order_price - ($pre_order_price * ($pre_order_discount / 100));
+            $discounted_price = round($discounted_price, 2); // Round to two decimal places
+            // Set the discounted price as product price in the cart
+            $cart_item['data']->set_price($discounted_price);
+        }
+    }
+
+    // Recalculate cart totals
+    $cart->calculate_totals();
+}
+
 
 
         // Schedule a task to update product availability when pre-order period ends
