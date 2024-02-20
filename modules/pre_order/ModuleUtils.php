@@ -19,10 +19,20 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             $this->base_admin = $base_admin;
             $this->module_admin = $module_admin;
 
-            if (!get_option("wceazy_pre_order_rules")) {
-                update_option('wceazy_pre_order_rules', "");
+            // if (!get_option("wceazy_pre_order_rules")) {
+            //     update_option('wceazy_pre_order_rules', "");
+            // }
+        }
+
+        public function saveSettings($post_data)
+        {
+            if (!empty($post_data)) {
+                update_option('wceazy_pre_order_settings', json_encode($post_data));
             }
         }
+
+
+
 
         // Add custom fields to the product editor for pre-order options
         public function add_preorder_fields()
@@ -112,27 +122,27 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         {
             ?>
 
-        <script>
-        jQuery(document).ready(function($) {
-            var checkbox = $('#_is_pre_order');
-            var preorderFields = $('.pre-order-fields');
+            <script>
+                jQuery(document).ready(function ($) {
+                    var checkbox = $('#_is_pre_order');
+                    var preorderFields = $('.pre-order-fields');
 
-            // Show/hide fields on checkbox change
-            checkbox.change(function() {
-                if (checkbox.is(':checked')) {
-                    preorderFields.slideDown();
-                } else {
-                    preorderFields.slideUp();
-                }
-            });
+                    // Show/hide fields on checkbox change
+                    checkbox.change(function () {
+                        if (checkbox.is(':checked')) {
+                            preorderFields.slideDown();
+                        } else {
+                            preorderFields.slideUp();
+                        }
+                    });
 
-            // Trigger change event on page load if checkbox is checked
-            if (checkbox.is(':checked')) {
-                preorderFields.show();
-            }
-        });
-        </script>
-<?php
+                    // Trigger change event on page load if checkbox is checked
+                    if (checkbox.is(':checked')) {
+                        preorderFields.show();
+                    }
+                });
+            </script>
+            <?php
 
         }
 
@@ -230,75 +240,75 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
             $pre_order_discount = get_post_meta($product->get_id(), '_pre_order_discount', true);
             $regular_price = $product->get_regular_price();
-        
+
             if (!empty($pre_order_price)) {
                 // Format pre-order price
                 $pre_order_price_html = wc_price($pre_order_price);
-        
+
                 // Display pre-order price
                 $price_html = sprintf(__('Pre-order Price: %s', 'pre-order'), $pre_order_price_html) . '<br>';
-        
+
                 // Check if a discount is set
                 if (!empty($pre_order_discount)) {
                     // Calculate discounted price
                     $discounted_price = $pre_order_price - ($pre_order_price * $pre_order_discount / 100);
                     // Format discounted price
                     $discounted_price_html = wc_price($discounted_price);
-        
+
                     // Display discounted price
                     $price_html .= sprintf(__('Discounted Price: %s', 'pre-order'), $discounted_price_html) . '<br>';
                 }
-        
+
                 // Add small text indicating pre-order price
                 $price_html .= '<small class="preorder-text">' . __('(Pre-order Price)', 'pre-order') . '</small>';
             }
-        
+
             return $price_html;
         }
- 
-// Modify the product prices in the cart for pre-order products
-public function apply_preorder_discount_to_cart($cart)
-{
-    if (is_admin() && !defined('DOING_AJAX')) {
-        return;
-    }
 
-    if (did_action('woocommerce_before_calculate_totals') >= 2) {
-        return;
-    }
+        // Modify the product prices in the cart for pre-order products
+        public function apply_preorder_discount_to_cart($cart)
+        {
+            if (is_admin() && !defined('DOING_AJAX')) {
+                return;
+            }
 
-    // Initialize discount total
-    $discount_total = 0;
+            if (did_action('woocommerce_before_calculate_totals') >= 2) {
+                return;
+            }
 
-    foreach ($cart->get_cart() as $cart_item_key => $cart_item) {
-        $product = $cart_item['data'];
-        $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
-        $pre_order_discount = get_post_meta($product->get_id(), '_pre_order_discount', true);
+            // Initialize discount total
+            $discount_total = 0;
 
-        if ($pre_order_discount !== '') {
-            // Calculate discounted price
-            $discounted_price = $pre_order_price - ($pre_order_price * ($pre_order_discount / 100));
-            $discounted_price = round($discounted_price, 2); // Round to two decimal places
+            foreach ($cart->get_cart() as $cart_item_key => $cart_item) {
+                $product = $cart_item['data'];
+                $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
+                $pre_order_discount = get_post_meta($product->get_id(), '_pre_order_discount', true);
 
-            // Calculate discount amount for this product
-            $discount_amount = ($product->get_price() - $discounted_price) * $cart_item['quantity'];
+                if ($pre_order_discount !== '') {
+                    // Calculate discounted price
+                    $discounted_price = $pre_order_price - ($pre_order_price * ($pre_order_discount / 100));
+                    $discounted_price = round($discounted_price, 2); // Round to two decimal places
 
-            // Accumulate discount total
-            $discount_total += $discount_amount;
+                    // Calculate discount amount for this product
+                    $discount_amount = ($product->get_price() - $discounted_price) * $cart_item['quantity'];
 
-            // Set the discounted price as product price in the cart
-            $cart_item['data']->set_price($discounted_price);
+                    // Accumulate discount total
+                    $discount_total += $discount_amount;
+
+                    // Set the discounted price as product price in the cart
+                    $cart_item['data']->set_price($discounted_price);
+                }
+            }
+
+            // Apply discount total to cart subtotal
+            if ($discount_total > 0) {
+                $cart->add_fee(__('Pre-order Discount', 'pre-order'), -$discount_total);
+            }
+
+            // Recalculate cart totals
+            $cart->calculate_totals();
         }
-    }
-
-    // Apply discount total to cart subtotal
-    if ($discount_total > 0) {
-        $cart->add_fee(__('Pre-order Discount', 'pre-order'), -$discount_total);
-    }
-
-    // Recalculate cart totals
-    $cart->calculate_totals();
-}
 
 
 

@@ -4,9 +4,9 @@
 $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
 $wceazy_sb_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
 
-echo "<pre>";
-var_dump($wceazy_sb_settings);
-echo "</pre>";
+    echo "<pre>";
+    var_dump($wceazy_sb_settings);
+    echo "</pre>";
 
 
 

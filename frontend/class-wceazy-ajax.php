@@ -104,6 +104,17 @@ if (!class_exists('WcEazyClientAjax')) {
             wp_die();
         }
 
+// Pre order
+        public function wceazy_pre_order_search() {
+            include_once WCEAZY_PATH . "frontend/api/pre_order/search.php";
+            wp_die();
+        }
+        
+        public function wceazy_pre_order_add_to_cart() {
+            include_once WCEAZY_PATH . "frontend/api/pre_order/add_to_cart.php";
+            wp_die();
+        }
+
 
         /* Product Filter */
         public function wceazy_product_filter_search() {

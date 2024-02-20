@@ -1,4 +1,3 @@
-
 function wceazy_pre_order_init(host) {
     wceazy_hide_all()
     jQuery("#wceazy_pre_order").show();
@@ -151,7 +150,7 @@ function wceazy_pre_order_save() {
     let jQuerypostData = {
 
 
-        'pre_order_btn_text': jQuery(".wceazy_pre_order_btn_text input").val() ? jQuery(".wceazy_pre_order_btn_text input").val() : "no Pre Btn text",
+      
 
         'enable_pre_order': jQuery(".wceazy_pre_order_enable_pre_order input[type='checkbox']:checked").length > 0 ? "yes" : "no",
         'display_desktop': jQuery(".wceazy_pre_order_display_desktop input[type='checkbox']:checked").length > 0 ? "yes" : "no",
@@ -211,7 +210,7 @@ function wceazy_pre_order_save() {
         success: function (data) {
             var obj = JSON.parse(data);
             if (obj.status == 'true') {
-                Command: toastr["success"]("Settings Saved Successfully!");
+                Command: toastr["success"]("Settings Saved Successfully Ew !");
                 jQuery('.wceazy_pre_order_bottom_button_section button').text('Save Settings');
                 jQuery('.wceazy_pre_order_bottom_button_section button').prop('disabled', false);
             } else {
