@@ -2,7 +2,6 @@
 
 $result = array();
 
-var_dump($result);
 
 if(isset($_REQUEST['product_id'])) {
     $product_id = sanitize_text_field($_REQUEST['product_id']);

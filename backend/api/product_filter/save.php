@@ -3,7 +3,7 @@
 $result = array();
 
 /* Check if user has manage option capabilities */
-if (current_user_can ('manage_options')) {
+if (current_user_can('manage_options')) {
 
     $post_data = array();
     if (isset($_REQUEST) && $_REQUEST['data']) {
@@ -17,4 +17,4 @@ if (current_user_can ('manage_options')) {
     $result = array("status" => 'false');
 }
 
-echo json_encode ($result, JSON_UNESCAPED_UNICODE);
+echo json_encode($result, JSON_UNESCAPED_UNICODE);

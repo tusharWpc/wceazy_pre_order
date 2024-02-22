@@ -1,5 +1,5 @@
 
-function wceazy_one_click_checkout_init(host){
+function wceazy_one_click_checkout_init(host) {
     wceazy_hide_all()
     jQuery("#wceazy_one_click_checkout").show();
 
@@ -9,7 +9,7 @@ function wceazy_one_click_checkout_init(host){
 }
 
 
-function wceazy_one_click_checkout_init_select2(){
+function wceazy_one_click_checkout_init_select2() {
     var wceazy_one_click_checkout_redirect_to_page = jQuery('.wceazy_one_click_checkout_redirect_to_page select')
     var wceazy_one_click_checkout_buy_btn_redirect_on_product = jQuery('.wceazy_one_click_checkout_buy_btn_redirect_on_product select')
     var wceazy_one_click_checkout_buy_btn_position_on_product = jQuery('.wceazy_one_click_checkout_buy_btn_position_on_product select')
@@ -18,13 +18,13 @@ function wceazy_one_click_checkout_init_select2(){
     var wceazy_one_click_checkout_remove_billing_fields = jQuery('.wceazy_one_click_checkout_remove_billing_fields select')
     var wceazy_one_click_checkout_remove_shipping_fields = jQuery('.wceazy_one_click_checkout_remove_shipping_fields select')
 
-    if (wceazy_one_click_checkout_redirect_to_page.data('select2')) { wceazy_one_click_checkout_redirect_to_page.select2('destroy');}
-    if (wceazy_one_click_checkout_buy_btn_redirect_on_product.data('select2')) { wceazy_one_click_checkout_buy_btn_redirect_on_product.select2('destroy');}
-    if (wceazy_one_click_checkout_buy_btn_position_on_product.data('select2')) { wceazy_one_click_checkout_buy_btn_position_on_product.select2('destroy');}
-    if (wceazy_one_click_checkout_buy_btn_redirect_on_product_archive.data('select2')) { wceazy_one_click_checkout_buy_btn_redirect_on_product_archive.select2('destroy');}
-    if (wceazy_one_click_checkout_buy_btn_position_on_product_archive.data('select2')) { wceazy_one_click_checkout_buy_btn_position_on_product_archive.select2('destroy');}
-    if (wceazy_one_click_checkout_remove_billing_fields.data('select2')) { wceazy_one_click_checkout_remove_billing_fields.select2('destroy');}
-    if (wceazy_one_click_checkout_remove_shipping_fields.data('select2')) { wceazy_one_click_checkout_remove_shipping_fields.select2('destroy');}
+    if (wceazy_one_click_checkout_redirect_to_page.data('select2')) { wceazy_one_click_checkout_redirect_to_page.select2('destroy'); }
+    if (wceazy_one_click_checkout_buy_btn_redirect_on_product.data('select2')) { wceazy_one_click_checkout_buy_btn_redirect_on_product.select2('destroy'); }
+    if (wceazy_one_click_checkout_buy_btn_position_on_product.data('select2')) { wceazy_one_click_checkout_buy_btn_position_on_product.select2('destroy'); }
+    if (wceazy_one_click_checkout_buy_btn_redirect_on_product_archive.data('select2')) { wceazy_one_click_checkout_buy_btn_redirect_on_product_archive.select2('destroy'); }
+    if (wceazy_one_click_checkout_buy_btn_position_on_product_archive.data('select2')) { wceazy_one_click_checkout_buy_btn_position_on_product_archive.select2('destroy'); }
+    if (wceazy_one_click_checkout_remove_billing_fields.data('select2')) { wceazy_one_click_checkout_remove_billing_fields.select2('destroy'); }
+    if (wceazy_one_click_checkout_remove_shipping_fields.data('select2')) { wceazy_one_click_checkout_remove_shipping_fields.select2('destroy'); }
 
     wceazy_one_click_checkout_redirect_to_page.select2();
     wceazy_one_click_checkout_buy_btn_redirect_on_product.select2();
@@ -36,7 +36,7 @@ function wceazy_one_click_checkout_init_select2(){
 }
 
 
-function wceazy_one_click_checkout_tab_init(){
+function wceazy_one_click_checkout_tab_init() {
     jQuery(".wceazy_one_click_checkout_container .coupon_tab_body").hide();
     jQuery(".wceazy_one_click_checkout_container .coupon_tab_body[data-id='tab_general']").show();
     jQuery(".wceazy_one_click_checkout_container .coupon_data_tabs .tab_item").unbind("click");
@@ -49,17 +49,17 @@ function wceazy_one_click_checkout_tab_init(){
 }
 
 
-function wceazy_one_click_checkout_selection_changed(){
-    if(jQuery(".wceazy_one_click_checkout_enable_redirect_to_cart input[type='checkbox']:checked").length > 0){
+function wceazy_one_click_checkout_selection_changed() {
+    if (jQuery(".wceazy_one_click_checkout_enable_redirect_to_cart input[type='checkbox']:checked").length > 0) {
         jQuery(".wceazy_one_click_checkout_enable_custom_url").show()
-        if(jQuery(".wceazy_one_click_checkout_enable_custom_url input[type='checkbox']:checked").length > 0){
+        if (jQuery(".wceazy_one_click_checkout_enable_custom_url input[type='checkbox']:checked").length > 0) {
             jQuery(".wceazy_one_click_checkout_redirect_to_page").hide()
             jQuery(".wceazy_one_click_checkout_redirect_to_custom_url").show()
-        }else{
+        } else {
             jQuery(".wceazy_one_click_checkout_redirect_to_page").show()
             jQuery(".wceazy_one_click_checkout_redirect_to_custom_url").hide()
         }
-    }else{
+    } else {
         jQuery(".wceazy_one_click_checkout_enable_custom_url").hide()
         jQuery(".wceazy_one_click_checkout_redirect_to_page").hide()
         jQuery(".wceazy_one_click_checkout_redirect_to_custom_url").hide()
@@ -67,18 +67,18 @@ function wceazy_one_click_checkout_selection_changed(){
 
 
 
-    if(jQuery(".wceazy_one_click_checkout_change_add_to_cart_button_text input[type='checkbox']:checked").length > 0){
+    if (jQuery(".wceazy_one_click_checkout_change_add_to_cart_button_text input[type='checkbox']:checked").length > 0) {
         jQuery(".wceazy_one_click_checkout_cart_button_text").show()
         jQuery(".wceazy_one_click_checkout_select_options_button_text").show()
         jQuery(".wceazy_one_click_checkout_read_more_button_text").show()
-    }else{
+    } else {
         jQuery(".wceazy_one_click_checkout_cart_button_text").hide()
         jQuery(".wceazy_one_click_checkout_select_options_button_text").hide()
         jQuery(".wceazy_one_click_checkout_read_more_button_text").hide()
     }
 
 
-    if(jQuery(".wceazy_one_click_checkout_enable_buy_now_button_on_product input[type='checkbox']:checked").length > 0){
+    if (jQuery(".wceazy_one_click_checkout_enable_buy_now_button_on_product input[type='checkbox']:checked").length > 0) {
         jQuery(".wceazy_one_click_checkout_buy_btn_label_on_product").show()
         jQuery(".wceazy_one_click_checkout_buy_btn_redirect_on_product").show()
         jQuery(".wceazy_one_click_checkout_buy_btn_position_on_product").show()
@@ -87,7 +87,7 @@ function wceazy_one_click_checkout_selection_changed(){
         jQuery(".wceazy_one_click_checkout_buy_now_btn_product_mb").show()
         jQuery(".wceazy_one_click_checkout_buy_now_btn_product_ml").show()
         jQuery(".wceazy_one_click_checkout_buy_now_btn_product_mr").show()
-    }else{
+    } else {
         jQuery(".wceazy_one_click_checkout_buy_btn_label_on_product").hide()
         jQuery(".wceazy_one_click_checkout_buy_btn_redirect_on_product").hide()
         jQuery(".wceazy_one_click_checkout_buy_btn_position_on_product").hide()
@@ -99,7 +99,7 @@ function wceazy_one_click_checkout_selection_changed(){
     }
 
 
-    if(jQuery(".wceazy_one_click_checkout_enable_buy_now_button_on_product_archive input[type='checkbox']:checked").length > 0){
+    if (jQuery(".wceazy_one_click_checkout_enable_buy_now_button_on_product_archive input[type='checkbox']:checked").length > 0) {
         jQuery(".wceazy_one_click_checkout_buy_btn_label_on_product_archive").show()
         jQuery(".wceazy_one_click_checkout_buy_btn_redirect_on_product_archive").show()
         jQuery(".wceazy_one_click_checkout_buy_btn_position_on_product_archive").show()
@@ -108,7 +108,7 @@ function wceazy_one_click_checkout_selection_changed(){
         jQuery(".wceazy_one_click_checkout_buy_now_btn_product_archive_mb").show()
         jQuery(".wceazy_one_click_checkout_buy_now_btn_product_archive_ml").show()
         jQuery(".wceazy_one_click_checkout_buy_now_btn_product_archive_mr").show()
-    }else{
+    } else {
         jQuery(".wceazy_one_click_checkout_buy_btn_label_on_product_archive").hide()
         jQuery(".wceazy_one_click_checkout_buy_btn_redirect_on_product_archive").hide()
         jQuery(".wceazy_one_click_checkout_buy_btn_position_on_product_archive").hide()
@@ -180,7 +180,7 @@ function wceazy_one_click_checkout_save() {
 
 
 
-    let jQuerypost_data = {'action': 'wceazy_one_click_checkout_save', 'data': jQuerypostData};
+    let jQuerypost_data = { 'action': 'wceazy_one_click_checkout_save', 'data': jQuerypostData };
 
     jQuery.ajax({
         url: ajaxurl, type: "POST", data: jQuerypost_data,

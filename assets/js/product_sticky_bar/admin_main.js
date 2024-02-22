@@ -1,5 +1,5 @@
 
-function wceazy_product_sticky_bar_init(host){
+function wceazy_product_sticky_bar_init(host) {
     wceazy_hide_all()
     jQuery("#wceazy_product_sticky_bar").show();
 
@@ -8,14 +8,14 @@ function wceazy_product_sticky_bar_init(host){
 }
 
 
-function wceazy_product_sticky_bar_init_select2(){
+function wceazy_product_sticky_bar_init_select2() {
     var wceazy_product_sticky_bar_show_in = jQuery('.wceazy_product_sticky_bar_show_in select')
     var wceazy_product_sticky_bar_disabled_products = jQuery('.wceazy_product_sticky_bar_disabled_products select')
     var wceazy_product_sticky_bar_product_image_shape = jQuery('.wceazy_product_sticky_bar_product_image_shape select')
 
-    if (wceazy_product_sticky_bar_show_in.data('select2')) { wceazy_product_sticky_bar_show_in.select2('destroy');}
-    if (wceazy_product_sticky_bar_disabled_products.data('select2')) { wceazy_product_sticky_bar_disabled_products.select2('destroy');}
-    if (wceazy_product_sticky_bar_product_image_shape.data('select2')) { wceazy_product_sticky_bar_product_image_shape.select2('destroy');}
+    if (wceazy_product_sticky_bar_show_in.data('select2')) { wceazy_product_sticky_bar_show_in.select2('destroy'); }
+    if (wceazy_product_sticky_bar_disabled_products.data('select2')) { wceazy_product_sticky_bar_disabled_products.select2('destroy'); }
+    if (wceazy_product_sticky_bar_product_image_shape.data('select2')) { wceazy_product_sticky_bar_product_image_shape.select2('destroy'); }
 
     wceazy_product_sticky_bar_show_in.select2();
     wceazy_product_sticky_bar_disabled_products.select2();
@@ -23,7 +23,7 @@ function wceazy_product_sticky_bar_init_select2(){
 }
 
 
-function wceazy_product_sticky_bar_tab_init(){
+function wceazy_product_sticky_bar_tab_init() {
     jQuery(".wceazy_product_sticky_bar_container .coupon_tab_body").hide();
     jQuery(".wceazy_product_sticky_bar_container .coupon_tab_body[data-id='tab_settings']").show();
     jQuery(".wceazy_product_sticky_bar_container .coupon_data_tabs .tab_item").unbind("click");
@@ -76,7 +76,7 @@ function wceazy_product_sticky_bar_save() {
 
     };
 
-    let jQuerypost_data = {'action': 'wceazy_product_sticky_bar_save', 'data': jQuerypostData};
+    let jQuerypost_data = { 'action': 'wceazy_product_sticky_bar_save', 'data': jQuerypostData };
 
     jQuery.ajax({
         url: ajaxurl, type: "POST", data: jQuerypost_data,
