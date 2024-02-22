@@ -8,21 +8,46 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
+
+$wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
+$wceazy_sb_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
+
+// echo "<pre>";
+// var_dump($wceazy_sb_settings);
+// echo "</pre>";
+
+
+$wceazy_sb_pre_order_btn_text = isset($wceazy_sb_settings["pre_order_btn_text"]) ? $wceazy_sb_settings["pre_order_btn_text"] : "PreOrder Now!";
+
+// echo "<pre>";
+// var_dump($wceazy_sb_pre_order_btn_text);
+// echo "</pre>";
+
 if (!class_exists('WcEazyPreOrderUtils')) {
     class WcEazyPreOrderUtils
     {
         public $base_admin;
         public $module_admin;
+        public $wceazy_sb_pre_order_btn_text; // Define the variable within the class
+
+
 
         public function __construct($base_admin, $module_admin)
         {
             $this->base_admin = $base_admin;
             $this->module_admin = $module_admin;
 
-            // if (!get_option("wceazy_pre_order_rules")) {
-            //     update_option('wceazy_pre_order_rules', "");
-            // }
+            // Initialize session if not already started
+            if (!isset($_SESSION)) {
+                session_start();
+            }
+
+            // Assign session value or fallback
+            $this->wceazy_sb_pre_order_btn_text = isset($_SESSION['wceazy_sb_pre_order_btn_text']) ? $_SESSION['wceazy_sb_pre_order_btn_text'] : 'Default Button Text';
+
+            // var_dump($this->wceazy_sb_pre_order_btn_text); // Debugging
         }
+
 
         public function saveSettings($post_data)
         {
@@ -30,7 +55,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 update_option('wceazy_pre_order_settings', json_encode($post_data));
             }
         }
-
 
         // Add custom fields to the product editor for pre-order options
         public function add_preorder_fields()
@@ -40,12 +64,11 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             echo '<div class="options_group">';
 
             // Checkbox for marking a product as a pre-order
-
             woocommerce_wp_checkbox(
                 array(
                     'id' => '_is_pre_order',
-                    'label' => __('Offer as Pre-order', 'wceazy'),
-                    'description' => __('Check this if you want to offer this product as a pre-order.', 'wceazy'),
+                    'label' => __('Offer as Pre-order', 'pre-order'),
+                    'description' => __('Check this if you want to offer this product as a pre-order.', 'pre-order'),
                     'desc_tip' => true,
                 )
             );
@@ -62,9 +85,9 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             woocommerce_wp_text_input(
                 array(
                     'id' => '_pre_order_date_time',
-                    'label' => __('Pre-order Date & Time', 'wceazy'),
-                    'placeholder' => __('YYYY-MM-DD HH:MM', 'wceazy'),
-                    'description' => __('Select the date and time when this pre-order will be available.', 'wceazy'),
+                    'label' => __('Pre-order Date & Time', 'pre-order'),
+                    'placeholder' => __('YYYY-MM-DD HH:MM', 'pre-order'),
+                    'description' => __('Select the date and time when this pre-order will be available.', 'pre-order'),
                     'desc_tip' => true,
                     'type' => 'datetime-local',
                 )
@@ -74,8 +97,8 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             woocommerce_wp_checkbox(
                 array(
                     'id' => '_dynamic_inventory',
-                    'label' => __('Dynamic Inventory', 'wceazy'),
-                    'description' => __('Check this if you want to enable dynamic inventory for this product.', 'wceazy'),
+                    'label' => __('Dynamic Inventory', 'pre-order'),
+                    'description' => __('Check this if you want to enable dynamic inventory for this product.', 'pre-order'),
                     'desc_tip' => true,
                 )
             );
@@ -84,9 +107,9 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             woocommerce_wp_text_input(
                 array(
                     'id' => '_pre_order_price',
-                    'label' => __('Pre-order Price', 'wceazy'),
-                    'placeholder' => __('Enter pre-order price', 'wceazy'),
-                    'description' => __('Enter the price for this product when it is in pre-order mode.', 'wceazy'),
+                    'label' => __('Pre-order Price', 'pre-order'),
+                    'placeholder' => __('Enter pre-order price', 'pre-order'),
+                    'description' => __('Enter the price for this product when it is in pre-order mode.', 'pre-order'),
                     'desc_tip' => true,
                     'type' => 'number',
                     'custom_attributes' => array(
@@ -139,9 +162,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             $pre_order_date = isset($_POST['_pre_order_date_time']) ? sanitize_text_field($_POST['_pre_order_date_time']) : '';
             update_post_meta($post_id, '_pre_order_date_time', $pre_order_date);
 
-            // $pre_order_time = isset($_POST['_pre_order_time']) ? sanitize_text_field($_POST['_pre_order_time']) : '';
-            // update_post_meta($post_id, '_pre_order_time', $pre_order_time);
-
             $dynamic_inventory = isset($_POST['_dynamic_inventory']) ? 'yes' : 'no';
             update_post_meta($post_id, '_dynamic_inventory', sanitize_text_field($dynamic_inventory));
 
@@ -151,7 +171,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             // Remove pre-order discount
             delete_post_meta($post_id, '_pre_order_discount');
         }
-
 
         // Hook into WooCommerce to modify the Add to Cart button text and handle pre-order price
         public function custom_preorder_button_text($text)
@@ -166,14 +185,35 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     // No need to call custom_preorder_price_html here
                 }
 
-                $text = __('Pre-order Now', 'wceazy');
+                // Access the dynamic button text here
+                $dynamic_button_text = $this->wceazy_sb_pre_order_btn_text;
+
+                $text = __('Pre-order Now', 'pre-order');
+
+                // Replace the static text with the dynamic button text
+                if (!empty($dynamic_button_text)) {
+                    $text = $dynamic_button_text;
+                }
+
+                // var_dump($text); // Debugging
 
                 // Add action to send email when pre-order is placed
                 add_action('woocommerce_order_status_pending_to_processing_notification', array($this, 'send_preorder_confirmation_email'), 10, 2);
             }
 
-            return $text;
+            $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
+            $wceazy_sb_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
+
+            // echo "<pre>";
+            // var_dump($wceazy_sb_settings);
+            // echo "</pre>";
+
+
+            $wceazy_sb_pre_order_btn_text = isset($wceazy_sb_settings["pre_order_btn_text"]) ? $wceazy_sb_settings["pre_order_btn_text"] : "PreOrder Now!";
+
+            return $wceazy_sb_pre_order_btn_text;
         }
+
 
         public function display_preorder_date_and_time()
         {
@@ -195,7 +235,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             }
         }
 
-
         // Modify the product price for pre-order products
         public function custom_preorder_price($price, $product)
         {
@@ -211,7 +250,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
 
             return $price;
         }
-
 
         public function custom_preorder_price_html($price_html, $product)
         {
@@ -233,26 +271,24 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     $pre_order_price_html = wc_price($pre_order_price);
 
                     // Display all prices
-                    $price_html .= sprintf(__('Regular Price: <del>%s</del> ', 'wceazy'), $regular_price_html) . '<br>';
-                    $price_html .= sprintf(__('Pre-order Price: %s', 'wceazy'), $pre_order_price_html) . '<br>';
+                    $price_html .= sprintf(__('Regular Price: %s', 'pre-order'), $regular_price_html) . '<br>';
+                    $price_html .= sprintf(__('Pre-order Price: %s', 'pre-order'), $pre_order_price_html) . '<br>';
+
                     // Add small text indicating pre-order price
-                    $price_html .= '<small class="preorder-text">' . __('(Pre-order Price)', 'wceazy') . '</small>';
+                    $price_html .= '<small class="preorder-text">' . __('(Pre-order Price)', 'pre-order') . '</small>';
                 } else {
                     // If there's no pre-order price, only display the regular price
-                    $price_html .= sprintf(__('Regular Price: %s', 'wceazy'), $regular_price_html) . '<br>';
+                    $price_html .= sprintf(__('Y Regular Price: %s', 'pre-order'), $regular_price_html) . '<br>';
                 }
             } else {
                 // If the product is not marked as a pre-order, only display the regular price
                 $regular_price = get_post_meta($product_id, '_regular_price', true); // Get the regular price directly from post meta
                 $regular_price_html = wc_price($regular_price);
-                $price_html .= sprintf(__('Regular Price: %s', 'wceazy'), $regular_price_html) . '<br>';
+                $price_html .= sprintf(__('X Regular Price: %s', 'pre-order'), $regular_price_html) . '<br>';
             }
 
             return $price_html;
         }
-
-
-
 
 
         // Modify the product prices in the cart for pre-order products
@@ -285,7 +321,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
 
             // Apply discount total to cart subtotal
             if ($discount_total > 0) {
-                $cart->add_fee(__('Pre-order Discount', 'wceazy'), -$discount_total);
+                $cart->add_fee(__('Pre-order Discount', 'pre-order'), -$discount_total);
             }
 
             // Recalculate cart totals
@@ -353,10 +389,10 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 $email = $order->get_billing_email();
 
                 // Email subject
-                $subject = __('Pre-order Confirmation', 'wceazy');
+                $subject = __('Pre-order Confirmation', 'pre-order');
 
                 // Email body
-                $message = __('Thank you for placing a pre-order. Your order will be processed as soon as the product becomes available.', 'wceazy');
+                $message = __('Thank you for placing a pre-order. Your order will be processed as soon as the product becomes available.', 'pre-order');
 
                 // Send email
                 wp_mail($email, $subject, $message);

@@ -261,7 +261,7 @@ $wceazy_pf_stock_filter_checkbox_checked_bg = isset($wceazy_pf_settings["stock_f
                         <div class="wceazy_product_filter_field_group wceazy_product_filter_product_per_page">
                             <label for="coupon_generator_coupon_amount">
                                 <?php esc_html_e('
-                                B Max Product Per Page', 'wceazy'); ?>
+                                Max Product Per Page', 'wceazy'); ?>
                             </label>
                             <div class="field_with_msg_container">
                                 <input class="wceazy_product_filter_text_field" type="number" placeholder=""

@@ -1,4 +1,4 @@
-function wceazy_bogo_deal_init(host){
+function wceazy_bogo_deal_init(host) {
     wceazy_hide_all()
     jQuery("#wceazy_bogo_deal").show();
 
@@ -7,7 +7,7 @@ function wceazy_bogo_deal_init(host){
 
 
 
-function wceazy_bogo_deal_generate_unique_rule_id(){
+function wceazy_bogo_deal_generate_unique_rule_id() {
     'use strict';
 
     var unique_rule_id = []
@@ -15,13 +15,13 @@ function wceazy_bogo_deal_generate_unique_rule_id(){
         unique_rule_id.push(jQuery(object).attr("data-rule_id"))
     });
     var id = Math.random().toString(36).substr(2, 9);
-    while(jQuery.inArray(id, unique_rule_id) !== -1) {
+    while (jQuery.inArray(id, unique_rule_id) !== -1) {
         id = Math.random().toString(36).substr(2, 9);
     }
     unique_rule_id.push(id);
     return id;
 }
-function wceazy_bogo_deal_generate_unique_product_id(){
+function wceazy_bogo_deal_generate_unique_product_id() {
     'use strict';
 
     var unique_product_id = []
@@ -29,7 +29,7 @@ function wceazy_bogo_deal_generate_unique_product_id(){
         unique_product_id.push(jQuery(object).attr("data-product_id"))
     });
     var id = Math.random().toString(36).substr(2, 9);
-    while(jQuery.inArray(id, unique_product_id) !== -1) {
+    while (jQuery.inArray(id, unique_product_id) !== -1) {
         id = Math.random().toString(36).substr(2, 9);
     }
     unique_product_id.push(id);
@@ -53,11 +53,11 @@ function wceazy_bogo_deal_fetch_rules() {
         data: post_data,
         success: function (data) {
             var obj = JSON.parse(data);
-            if(obj.status === "true"){
+            if (obj.status === "true") {
 
                 try {
                     var rules = JSON.parse(obj.rules)
-                    jQuery.each(rules, function(i, item) {
+                    jQuery.each(rules, function (i, item) {
                         var rule_id = wceazy_bogo_deal_generate_unique_rule_id();
                         var single_rule = jQuery("#wceazy_bogo_deal_block_single_rule").children(0).clone()
                         jQuery(single_rule).attr("data-rule_id", rule_id)
@@ -69,9 +69,9 @@ function wceazy_bogo_deal_fetch_rules() {
                         jQuery(".wceazy_bogo_deal_rules").append(single_rule)
 
                         /* ReInit Select2 on Discount Type */
-                        jQuery(".wceazy_bogo_deal_rules").find(".wceazy_bogo_deal_top_form select").each(function(i, object) {
-                            if (jQuery(object).hasClass("wceazy_bogo_deal_top_form_select2")){
-                            }else{
+                        jQuery(".wceazy_bogo_deal_rules").find(".wceazy_bogo_deal_top_form select").each(function (i, object) {
+                            if (jQuery(object).hasClass("wceazy_bogo_deal_top_form_select2")) {
+                            } else {
                                 jQuery(object).addClass("wceazy_bogo_deal_top_form_select2")
                             }
                         })
@@ -79,13 +79,13 @@ function wceazy_bogo_deal_fetch_rules() {
                         /* ReInit Select2 on Discount Type */
 
 
-                        jQuery.each(item.buy_data, function(j, product) {
+                        jQuery.each(item.buy_data, function (j, product) {
                             var product_id = wceazy_bogo_deal_generate_unique_product_id();
                             var single_product = jQuery("#wceazy_bogo_deal_block_product_buy_row").children(0).clone()
                             jQuery(single_product).attr("data-product_id", product_id)
-                            jQuery(single_product).find("select").each(function(i, object) {
-                                if (jQuery(object).hasClass("wceazy_bogo_deal_product_select2")){
-                                }else{
+                            jQuery(single_product).find("select").each(function (i, object) {
+                                if (jQuery(object).hasClass("wceazy_bogo_deal_product_select2")) {
+                                } else {
                                     jQuery(object).addClass("wceazy_bogo_deal_product_select2")
                                 }
                             })
@@ -98,13 +98,13 @@ function wceazy_bogo_deal_fetch_rules() {
                         })
 
 
-                        jQuery.each(item.get_data, function(j, product) {
+                        jQuery.each(item.get_data, function (j, product) {
                             var product_id = wceazy_bogo_deal_generate_unique_product_id();
                             var single_product = jQuery("#wceazy_bogo_deal_block_product_get_row").children(0).clone()
                             jQuery(single_product).attr("data-product_id", product_id)
-                            jQuery(single_product).find("select").each(function(i, object) {
-                                if (jQuery(object).hasClass("wceazy_bogo_deal_product_select2")){
-                                }else{
+                            jQuery(single_product).find("select").each(function (i, object) {
+                                if (jQuery(object).hasClass("wceazy_bogo_deal_product_select2")) {
+                                } else {
                                     jQuery(object).addClass("wceazy_bogo_deal_product_select2")
                                 }
                             })
@@ -118,10 +118,10 @@ function wceazy_bogo_deal_fetch_rules() {
 
                     })
 
-                    if(rules.length == 0){
+                    if (rules.length == 0) {
                         jQuery(".wceazy_bogo_deal_no_rule").show();
                         jQuery(".wceazy_bogo_deal_loading").hide();
-                    }else{
+                    } else {
                         jQuery(".wceazy_bogo_deal_no_rule").hide();
                         jQuery(".wceazy_bogo_deal_loading").hide();
                     }
@@ -140,7 +140,7 @@ function wceazy_bogo_deal_fetch_rules() {
 
 function wceazy_bogo_deal_save_rules(view) {
     jQuery(view).text("Saving...")
-    jQuery(view).prop("disabled",true);
+    jQuery(view).prop("disabled", true);
 
     var wceazy_bogo_deal_rules = []
     jQuery(".wceazy_bogo_deal_rules .wceazy_bogo_deal_single_rule").each(function (i, object) {
@@ -184,9 +184,9 @@ function wceazy_bogo_deal_save_rules(view) {
         data: post_data,
         success: function (data) {
             var obj = JSON.parse(data);
-            if(obj.status === "true"){
+            if (obj.status === "true") {
                 jQuery(view).text("Save Changes")
-                jQuery(view).prop("disabled",false);
+                jQuery(view).prop("disabled", false);
             }
         }
     })
@@ -200,10 +200,10 @@ function wceazy_bogo_deal_rule_remover(view) {
     jQuery(view).parent().parent().parent().remove()
 
     var num_of_rules = 0
-    jQuery(".wceazy_bogo_deal_rules").find(".wceazy_bogo_deal_single_rule").each(function(i, object) {
+    jQuery(".wceazy_bogo_deal_rules").find(".wceazy_bogo_deal_single_rule").each(function (i, object) {
         num_of_rules = num_of_rules + 1;
     })
-    if(num_of_rules == 0){
+    if (num_of_rules == 0) {
         jQuery(".wceazy_bogo_deal_loading").hide();
         jQuery(".wceazy_bogo_deal_no_rule").show();
     }
@@ -236,7 +236,7 @@ function wceazy_bogo_deal_init_product_select2() {
             },
             delay: 250, dataType: 'json',
             processResults: function (response) {
-                return {results: response.values};
+                return { results: response.values };
             }
         }
     });
@@ -252,10 +252,10 @@ function wceazy_bogo_deal_product_removal(view) {
 function wceazy_bogo_deal_rule_adder() {
     /* Limitation on Free Version */
     var count_rules = 0
-    jQuery(".wceazy_bogo_deal_rules").find(".wceazy_bogo_deal_single_rule").each(function(i, object) {
+    jQuery(".wceazy_bogo_deal_rules").find(".wceazy_bogo_deal_single_rule").each(function (i, object) {
         count_rules = count_rules + 1;
     })
-    if(count_rules >= 2){
+    if (count_rules >= 2) {
         wceazy_get_pro_open_popup("Get the premium version of wcEazy to add more then 2 rules");
         return;
     }
@@ -267,9 +267,9 @@ function wceazy_bogo_deal_rule_adder() {
         jQuery("#wceazy_bogo_deal_block_single_rule").children(0).clone().addClass("maximized")
     )
 
-    jQuery(".wceazy_bogo_deal_rules").find(".wceazy_bogo_deal_top_form select").each(function(i, object) {
-        if (jQuery(object).hasClass("wceazy_bogo_deal_top_form_select2")){
-        }else{
+    jQuery(".wceazy_bogo_deal_rules").find(".wceazy_bogo_deal_top_form select").each(function (i, object) {
+        if (jQuery(object).hasClass("wceazy_bogo_deal_top_form_select2")) {
+        } else {
             jQuery(object).addClass("wceazy_bogo_deal_top_form_select2")
         }
     })
@@ -282,10 +282,10 @@ function wceazy_bogo_deal_rule_adder() {
 function wceazy_bogo_deal_product_buy_adder(view) {
     /* Limitation on Free Version */
     var count_products_buy = 0
-    jQuery(view).parent().parent().find(".wceazy_bogo_deal_data_buy_row_container .wceazy_bogo_deal_product_selection_row").each(function(i, object) {
+    jQuery(view).parent().parent().find(".wceazy_bogo_deal_data_buy_row_container .wceazy_bogo_deal_product_selection_row").each(function (i, object) {
         count_products_buy = count_products_buy + 1;
     })
-    if(count_products_buy >= 2){
+    if (count_products_buy >= 2) {
         wceazy_get_pro_open_popup("Get the premium version of wcEazy to add more then 2 products");
         return;
     }
@@ -293,9 +293,9 @@ function wceazy_bogo_deal_product_buy_adder(view) {
     jQuery(view).parent().parent().find(".wceazy_bogo_deal_data_buy_row_container").append(
         jQuery("#wceazy_bogo_deal_block_product_buy_row").children(0).clone()
     )
-    jQuery(view).parent().parent().find(".wceazy_bogo_deal_data_buy_row_container select").each(function(i, object) {
-        if (jQuery(object).hasClass("wceazy_bogo_deal_product_select2")){
-        }else{
+    jQuery(view).parent().parent().find(".wceazy_bogo_deal_data_buy_row_container select").each(function (i, object) {
+        if (jQuery(object).hasClass("wceazy_bogo_deal_product_select2")) {
+        } else {
             jQuery(object).addClass("wceazy_bogo_deal_product_select2")
         }
     })
@@ -306,10 +306,10 @@ function wceazy_bogo_deal_product_buy_adder(view) {
 function wceazy_bogo_deal_product_get_adder(view) {
     /* Limitation on Free Version */
     var count_products_get = 0
-    jQuery(view).parent().parent().find(".wceazy_bogo_deal_data_get_row_container .wceazy_bogo_deal_product_selection_row").each(function(i, object) {
+    jQuery(view).parent().parent().find(".wceazy_bogo_deal_data_get_row_container .wceazy_bogo_deal_product_selection_row").each(function (i, object) {
         count_products_get = count_products_get + 1;
     })
-    if(count_products_get >= 2){
+    if (count_products_get >= 2) {
         wceazy_get_pro_open_popup("Get the premium version of wcEazy to add more then 2 products");
         return;
     }
@@ -318,9 +318,9 @@ function wceazy_bogo_deal_product_get_adder(view) {
     jQuery(view).parent().parent().find(".wceazy_bogo_deal_data_get_row_container").append(
         jQuery("#wceazy_bogo_deal_block_product_get_row").children(0).clone()
     )
-    jQuery(view).parent().parent().find(".wceazy_bogo_deal_data_get_row_container select").each(function(i, object) {
-        if (jQuery(object).hasClass("wceazy_bogo_deal_product_select2")){
-        }else{
+    jQuery(view).parent().parent().find(".wceazy_bogo_deal_data_get_row_container select").each(function (i, object) {
+        if (jQuery(object).hasClass("wceazy_bogo_deal_product_select2")) {
+        } else {
             jQuery(object).addClass("wceazy_bogo_deal_product_select2")
         }
     })

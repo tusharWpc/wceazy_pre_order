@@ -6,15 +6,10 @@ $wceazy_sb_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order
     // echo "<pre>";
     // var_dump($wceazy_sb_settings);
     // echo "</pre>";
-
-
-
+ 
 
 $wceazy_sb_enable_pre_order = isset($wceazy_sb_settings["enable_pre_order"]) ? $wceazy_sb_settings["enable_pre_order"] : "yes";
-
-
-
-
+ 
 $wceazy_sb_pre_order_btn_text = isset($wceazy_sb_settings["pre_order_btn_text"]) ? $wceazy_sb_settings["pre_order_btn_text"] : "PreOrder Now!";
 
 // echo "<pre>";
@@ -148,7 +143,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                     <div class="tab_body_title">
                         <h1>
                             <?php esc_html_e('General Settings', 'wceazy'); ?>
-                        </h1>btn_text
+                        </h1> 
                     </div>
                     <div class="tab_body_form">
 
