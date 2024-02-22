@@ -9,19 +9,19 @@ if (!isset($_SESSION)) {
 }
 
 
-$wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
-$wceazy_sb_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
+// $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
+// $wceazy_sb_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
 
-// echo "<pre>";
-// var_dump($wceazy_sb_settings);
-// echo "</pre>";
+// // echo "<pre>";
+// // var_dump($wceazy_sb_settings);
+// // echo "</pre>";
 
 
-$wceazy_sb_pre_order_btn_text = isset($wceazy_sb_settings["pre_order_btn_text"]) ? $wceazy_sb_settings["pre_order_btn_text"] : "PreOrder Now!";
+// $wceazy_sb_pre_order_btn_text = isset($wceazy_sb_settings["pre_order_btn_text"]) ? $wceazy_sb_settings["pre_order_btn_text"] : "PreOrder Now!";
 
-// echo "<pre>";
-// var_dump($wceazy_sb_pre_order_btn_text);
-// echo "</pre>";
+// // echo "<pre>";
+// // var_dump($wceazy_sb_pre_order_btn_text);
+// // echo "</pre>";
 
 if (!class_exists('WcEazyPreOrderUtils')) {
     class WcEazyPreOrderUtils
