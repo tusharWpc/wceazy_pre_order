@@ -18,8 +18,6 @@ if (!class_exists('WcEazyPreOrderClient')) {
 
             $this->utils = new WcEazyPreOrderUtils($this->base_admin, $this->module_admin);
 
-            add_filter('woocommerce_before_cart', array($this->utils, 'pre_order_before_cart'));
-            
             add_action('woocommerce_before_calculate_totals', array($this->utils, 'apply_preorder_discount_to_cart'), 1100, 1);
             add_action('woocommerce_product_options_general_product_data', array($this->utils, 'add_preorder_fields'));
             add_action('admin_footer', array($this->utils, 'show_hide_preorder_fields'));
