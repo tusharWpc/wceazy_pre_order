@@ -218,42 +218,41 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         public function custom_preorder_price_html($price_html, $product)
         {
             $product_id = $product->get_id();
-        
+
             // Initialize $price_html
             $price_html = '';
-        
+
             // Check if the product is marked as a pre-order
             if ('yes' === get_post_meta($product_id, '_is_pre_order', true)) {
                 $pre_order_price = get_post_meta($product_id, '_pre_order_price', true);
                 $regular_price = get_post_meta($product_id, '_regular_price', true); // Get the regular price directly from post meta
-        
+
                 // Format regular price
                 $regular_price_html = wc_price($regular_price);
-        
+
                 if (!empty($pre_order_price)) {
                     // Format pre-order price
                     $pre_order_price_html = wc_price($pre_order_price);
-        
+
                     // Display all prices
                     $price_html .= sprintf(__('Regular Price: <del>%s</del> ', 'pre-order'), $regular_price_html) . '<br>';
                     $price_html .= sprintf(__('Pre-order Price: %s', 'pre-order'), $pre_order_price_html) . '<br>';
-        
                     // Add small text indicating pre-order price
                     $price_html .= '<small class="preorder-text">' . __('(Pre-order Price)', 'pre-order') . '</small>';
                 } else {
                     // If there's no pre-order price, only display the regular price
-                    $price_html .= sprintf(__('Y Regular Price: %s', 'pre-order'), $regular_price_html) . '<br>';
+                    $price_html .= sprintf(__('Regular Price: %s', 'pre-order'), $regular_price_html) . '<br>';
                 }
             } else {
                 // If the product is not marked as a pre-order, only display the regular price
                 $regular_price = get_post_meta($product_id, '_regular_price', true); // Get the regular price directly from post meta
                 $regular_price_html = wc_price($regular_price);
-                $price_html .= sprintf(__('X Regular Price: %s', 'pre-order'), $regular_price_html) . '<br>';
+                $price_html .= sprintf(__('Regular Price: %s', 'pre-order'), $regular_price_html) . '<br>';
             }
-        
+
             return $price_html;
         }
-        
+
 
 
 
