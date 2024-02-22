@@ -10,7 +10,6 @@ if (!isset($_SESSION)) {
 
 
 
-
 if (!class_exists('WcEazyPreOrderUtils')) {
     class WcEazyPreOrderUtils
     {
@@ -320,9 +319,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             // Recalculate cart totals
             $cart->calculate_totals();
         }
-
-
-
+ 
 
         // Schedule a task to update product availability when pre-order period ends
         public function schedule_preorder_availability_update()
@@ -330,9 +327,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             if (!wp_next_scheduled('update_preorder_availability')) {
                 wp_schedule_event(time(), 'daily', 'update_preorder_availability');
             }
-        }
-
-
+        } 
 
         // Callback function to update product availability
         public function update_preorder_availability()
