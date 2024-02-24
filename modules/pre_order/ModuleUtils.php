@@ -44,18 +44,18 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         public function add_preorder_fields()
         {
             global $post;
-        
+
             // Retrieve pre-order settings
             $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', false);
             $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
-            
+
             // Determine if pre-order is enabled
             $wceazy_po_pre_order_Enable = isset($wceazy_po_settings["enable_pre_order"]) ? $wceazy_po_settings["enable_pre_order"] : "Pre OO";
-            
+
 
             // Determine if the product is marked as a pre-order
             $is_pre_order = get_post_meta($post->ID, '_is_pre_order', true);
-            
+
             echo '<div class="options_group">';
             // Checkbox for marking a product as a pre-order
             woocommerce_wp_checkbox(
@@ -69,13 +69,13 @@ if (!class_exists('WcEazyPreOrderUtils')) {
 
                 )
             );
-            
+
             // Other fields/buttons hidden by default
             $style = $is_pre_order === 'yes' ? '' : 'style="display: none;"';
-        
+
             // Date selection for pre-order products
             echo '<div class="pre-order-fields" ' . $style . '>';
-        
+
             woocommerce_wp_text_input(
                 array(
                     'id' => '_pre_order_date_time',
@@ -86,7 +86,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     'type' => 'datetime-local',
                 )
             );
-        
+
             // Dynamic checkbox for dynamic inventory
             woocommerce_wp_checkbox(
                 array(
@@ -96,7 +96,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     'desc_tip' => true,
                 )
             );
-        
+
             // Text input for pre-order price
             woocommerce_wp_text_input(
                 array(
@@ -111,12 +111,12 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     ),
                 )
             );
-        
+
             echo '</div>'; // End .pre-order-fields
-        
+
             echo '</div>'; // End .options_group
         }
-        
+
 
 
         // Enqueue JavaScript to show/hide fields/buttons based on checkbox state
@@ -228,8 +228,14 @@ if (!class_exists('WcEazyPreOrderUtils')) {
 
 
             $wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"]) ? $wceazy_po_settings["pre_order_btn_text"] : "PreOrder Now!";
-
-            return $wceazy_po_pre_order_btn_text;
+            // Check if the product is marked as a pre-order
+            $is_pre_order = get_post_meta($product->get_id(), '_is_pre_order', true);
+            if ($is_pre_order === 'yes') {
+                // $text = __('Pre-order Now', 'your-text-domain');
+                return $wceazy_po_pre_order_btn_text;
+            }else{
+                return "Add To Card";
+            }
         }
 
 

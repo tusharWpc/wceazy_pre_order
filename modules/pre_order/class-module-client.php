@@ -61,6 +61,8 @@ if (!class_exists('WcEazyPreOrderClient')) {
             global $product;
 
             $is_pre_order = get_post_meta($product->get_id(), '_is_pre_order', true);
+            
+            // var_dump($is_pre_order);
 
             if ($is_pre_order === 'yes') {
                 add_filter('woocommerce_product_single_add_to_cart_text', array($this->utils, 'custom_preorder_button_text'), 10, 1);
