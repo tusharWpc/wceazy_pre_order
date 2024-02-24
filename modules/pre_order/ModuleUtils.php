@@ -15,7 +15,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         public $module_admin;
         public $wceazy_po_pre_order_btn_text; // Define the variable within the class
         public $wceazy_po_enable_pre_order; // Define the variable within the class
-        
+
         // Constructor to initialize class properties
         public function __construct($base_admin, $module_admin)
         {
@@ -28,7 +28,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             }
 
             // Assign session value or fallback
-            $this->pre_order_btn_text = isset($_SESSION['wceazy_po_pre_order_btn_text']) ? $_SESSION['wceazy_po_pre_order_btn_text'] : 'Default Button Text';
+            // $this->pre_order_btn_text = isset($_SESSION['wceazy_po_pre_order_btn_text']) ? $_SESSION['wceazy_po_pre_order_btn_text'] : 'Default Button Text';
         }
 
         // Function to save settings data
@@ -45,7 +45,22 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         {
             global $woocommerce, $post;
 
-            echo '<div class="options_group">'; 
+            $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
+            $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
+
+            
+            $wceazy_po_pre_order_Enable = isset($wceazy_po_settings["enable_pre_order"]) ? $wceazy_po_settings["enable_pre_order"] : "Pre OO";
+
+            // var_dump($wceazy_po_pre_order_Enable);
+
+            // var_dump($wceazy_po_pre_order_Enable);
+
+            // $this->pre_order_Enable = isset($_SESSION['wceazy_po_pre_order_Enable']) ?
+            //     $_SESSION['wceazy_po_pre_order_Enable'] : 'Default Button Text';
+
+
+
+            echo '<div class="options_group">';
             // Checkbox for marking a product as a pre-order
             woocommerce_wp_checkbox(
                 array(
@@ -53,6 +68,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     'label' => __('Set as Pre-order', 'wceazy'),
                     'description' => __('Check this if you want to offer this product as a pre-order.', 'wceazy'),
                     'desc_tip' => true,
+                    'value' => $this->$wceazy_po_pre_order_Enable, // Set the checkbox value dynamically
                 )
             );
 
@@ -75,6 +91,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
 
             // Date selection for pre-order products
             echo '<div class="pre-order-fields" ' . $style . '>';
+
             woocommerce_wp_text_input(
                 array(
                     'id' => '_pre_order_date_time',
@@ -185,7 +202,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             // If the product doesn't belong to the pre-order category, return false
             return false;
         }
- 
+
 
         // Hook into WooCommerce to modify the Add to Cart button text and handle pre-order price 
 
@@ -453,7 +470,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             }
         }
 
-
         // pre-order Pro feature
 
         // Send email notification for product availability
@@ -661,7 +677,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         //         wp_schedule_event(time(), 'daily', 'auto_cancel_pre_orders');
         //     }
         // }
-    
+
 
 
     }
