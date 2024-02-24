@@ -387,5 +387,101 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             }
         }
 
+
+// Schedule a task to check pre-order availability periodically
+public function schedule_preorder_availability_check()
+{
+    if (!wp_next_scheduled('check_preorder_availability')) {
+        wp_schedule_event(time(), 'daily', 'check_preorder_availability');
+    }
+}
+
+// Callback function to check pre-order availability
+public function check_preorder_availability()
+{
+    $preorder_products = new WP_Query(
+        array(
+            'post_type' => 'product',
+            'posts_per_page' => -1,
+            'meta_query' => array(
+                array(
+                    'key' => '_is_pre_order',
+                    'value' => 'yes',
+                    'compare' => '=',
+                ),
+            ),
+        )
+    );
+
+    if ($preorder_products->have_posts()) {
+        while ($preorder_products->have_posts()) {
+            $preorder_products->the_post();
+            $product_id = get_the_ID();
+            $pre_order_date = get_post_meta($product_id, '_pre_order_date_time', true);
+
+            if (strtotime($pre_order_date) < time()) {
+                // Product is no longer in pre-order period
+                $this->send_preorder_availability_notification($product_id);
+                update_post_meta($product_id, '_is_pre_order', 'no');
+            }
+        }
+        wp_reset_postdata();
+    }
+}
+
+// Send email notification for product availability
+public function send_preorder_availability_notification($product_id)
+{
+    $product = wc_get_product($product_id);
+    $users = $this->get_preorder_customers($product_id);
+
+    if ($users) {
+        $subject = __('Product Availability Notification', 'your-plugin-textdomain');
+        $message = sprintf(__('The pre-order period for "%s" has ended. The product is now available for purchase.', 'your-plugin-textdomain'), $product->get_name());
+
+        foreach ($users as $user_email) {
+            wp_mail($user_email, $subject, $message);
+        }
+    }
+}
+
+// Get customers who pre-ordered the product
+public function get_preorder_customers($product_id)
+{
+    $users = array();
+
+    // Query orders containing the product
+    $orders = wc_get_orders(array(
+        'status' => array('processing', 'completed'),
+        'limit' => -1,
+        'return' => 'ids',
+        'meta_query' => array(
+            array(
+                'key' => '_customer_user',
+                'compare' => 'EXISTS',
+            ),
+        ),
+        'date_created' => '>' . (time() - 60 * 60 * 24 * 30), // Check orders created in the last 30 days
+    ));
+
+    // Check each order for the product
+    foreach ($orders as $order_id) {
+        $order = wc_get_order($order_id);
+        foreach ($order->get_items() as $item) {
+            if ($item->get_product_id() == $product_id) {
+                $user_id = $order->get_customer_id();
+                $user_email = get_userdata($user_id)->user_email;
+                $users[] = $user_email;
+            }
+        }
+    }
+
+    return array_unique($users);
+}
+
+
+
+
+
     }
 }
