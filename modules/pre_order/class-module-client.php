@@ -46,18 +46,13 @@ if (!class_exists('WcEazyPreOrderClient')) {
             add_action('woocommerce_checkout_order_processed', array($this, 'set_preorder_date_on_order_placement'), 10, 3);
 
 
-            // Schedule auto-cancel task
-            add_action('wp', array($this, 'schedule_auto_cancel_task'));
+            // Hook into the auto-cancel task using the WcEazyPreOrderUtils instance
+            // add_action('wp', array($this->utils, 'schedule_auto_cancel_task'));
+
 
             // Hook into the auto-cancel task
             add_action('auto_cancel_pre_orders', array($this, 'auto_cancel_pre_orders'));
 
-
-            // Schedule auto-cancel task
-            add_action('wp', array($this, 'schedule_auto_cancel_task'));
-
-            // Hook into the auto-cancel task
-            add_action('auto_cancel_pre_orders', array($this, 'auto_cancel_pre_orders'));
         }
 
         // Modify single product add to cart text based on '_is_pre_order' meta
