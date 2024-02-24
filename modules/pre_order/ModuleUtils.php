@@ -14,7 +14,8 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         public $base_admin;
         public $module_admin;
         public $wceazy_po_pre_order_btn_text; // Define the variable within the class
-
+        public $wceazy_po_enable_pre_order; // Define the variable within the class
+        
         // Constructor to initialize class properties
         public function __construct($base_admin, $module_admin)
         {
@@ -451,6 +452,9 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 wp_reset_postdata();
             }
         }
+
+
+        // pre-order Pro feature
 
         // Send email notification for product availability
         public function send_preorder_availability_notification($product_id)

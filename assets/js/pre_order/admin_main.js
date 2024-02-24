@@ -156,26 +156,14 @@ function wceazy_pre_order_save() {
 
         'display_desktop': jQuery(".wceazy_pre_order_display_desktop input[type='checkbox']:checked").length > 0 ? "yes" : "no",
         'display_mobile': jQuery(".wceazy_pre_order_display_mobile input[type='checkbox']:checked").length > 0 ? "yes" : "no",
-        'shipping_zone': jQuery(".wceazy_pre_order_shipping_zone select").val(),
-        /*'dont_show_pages': jQuery(".wceazy_pre_order_dont_show_pages select").val().join(","),
-        'exclude_products': jQuery(".wceazy_pre_order_exclude_products select").val().join(","),*/
+        'shipping_zone': jQuery(".wceazy_pre_order_shipping_zone select").val(), 
+        
 
         'show_in_cart': jQuery(".wceazy_pre_order_show_in_cart input[type='checkbox']:checked").length > 0 ? "yes" : "no",
         'position_cart_subtotal': jQuery(".wceazy_pre_order_position_cart_subtotal select").val(),
         'show_in_checkout': jQuery(".wceazy_pre_order_show_in_checkout input[type='checkbox']:checked").length > 0 ? "yes" : "no",
         'position_checkout_subtotal': jQuery(".wceazy_pre_order_position_checkout_subtotal select").val(),
-        'cart_checkout_headline': jQuery(".wceazy_pre_order_cart_checkout_headline input").val(),
-        /*'cart_checkout_progress_bar_bg': jQuery(".wceazy_pre_order_cart_checkout_progress_bar_bg input").val(),
-        'cart_checkout_progress_color': jQuery(".wceazy_pre_order_cart_checkout_progress_color input").val(),
-        'cart_checkout_progress_text_color': jQuery(".wceazy_pre_order_cart_checkout_progress_text_color input").val(),*/
-
-        /*'zero_order_amount_msg': jQuery(".wceazy_pre_order_zero_order_amount_msg textarea").val(),
-        'partial_order_amount_msg': jQuery(".wceazy_pre_order_partial_order_amount_msg textarea").val(),
-        'completed_order_amount_msg': jQuery(".wceazy_pre_order_completed_order_amount_msg textarea").val(),*/
-
-        /*'initial_delay': jQuery(".wceazy_pre_order_initial_delay input").val(),
-        'allow_disappear_time': jQuery(".wceazy_pre_order_allow_disappear_time input[type='checkbox']:checked").length > 0 ? "yes" : "no",
-        'disappear_time': jQuery(".wceazy_pre_order_disappear_time input").val(),*/
+        'cart_checkout_headline': jQuery(".wceazy_pre_order_cart_checkout_headline input").val(), 
 
         'position': jQuery(".wceazy_pre_order_position select").val(),
         'layout': jQuery(".wceazy_pre_order_layout select").val(),
