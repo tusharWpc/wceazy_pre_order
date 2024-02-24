@@ -18,6 +18,11 @@ if (!class_exists('WcEazyPreOrderClient')) {
 
             $this->utils = new WcEazyPreOrderUtils($this->base_admin, $this->module_admin);
 
+
+            // In the constructor of WcEazyPreOrderClient class
+            add_action('woocommerce_order_status_pending_to_processing', array($this->utils, 'send_preorder_purchase_notification'), 10, 2);
+
+
             add_action('woocommerce_before_calculate_totals', array($this->utils, 'apply_preorder_discount_to_cart'), 1100, 1);
             add_action('woocommerce_product_options_general_product_data', array($this->utils, 'add_preorder_fields'));
             add_action('admin_footer', array($this->utils, 'show_hide_preorder_fields'));
@@ -35,6 +40,24 @@ if (!class_exists('WcEazyPreOrderClient')) {
             add_filter('woocommerce_product_get_regular_price', array($this->utils, 'custom_preorder_price'), 10, 2);
             add_filter('woocommerce_product_variation_get_regular_price', array($this->utils, 'custom_preorder_price'), 10, 2);
             add_filter('woocommerce_product_variation_get_price', array($this->utils, 'custom_preorder_price'), 10, 2);
+            add_filter('woocommerce_order_query', array($this->utils, 'filter_orders_by_preorder_products'), 10, 2);
+
+            // Hook to set pre-order date when the order is placed
+            add_action('woocommerce_checkout_order_processed', array($this, 'set_preorder_date_on_order_placement'), 10, 3);
+
+
+            // Schedule auto-cancel task
+            add_action('wp', array($this, 'schedule_auto_cancel_task'));
+
+            // Hook into the auto-cancel task
+            add_action('auto_cancel_pre_orders', array($this, 'auto_cancel_pre_orders'));
+
+
+            // Schedule auto-cancel task
+            add_action('wp', array($this, 'schedule_auto_cancel_task'));
+
+            // Hook into the auto-cancel task
+            add_action('auto_cancel_pre_orders', array($this, 'auto_cancel_pre_orders'));
         }
 
         // Modify single product add to cart text based on '_is_pre_order' meta
