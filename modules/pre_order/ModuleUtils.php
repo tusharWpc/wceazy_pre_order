@@ -43,23 +43,19 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         // Add custom fields to the product editor for pre-order options
         public function add_preorder_fields()
         {
-            global $woocommerce, $post;
-
-            $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
+            global $post;
+        
+            // Retrieve pre-order settings
+            $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', false);
             $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
-
             
+            // Determine if pre-order is enabled
             $wceazy_po_pre_order_Enable = isset($wceazy_po_settings["enable_pre_order"]) ? $wceazy_po_settings["enable_pre_order"] : "Pre OO";
+            
 
-            // var_dump($wceazy_po_pre_order_Enable);
-
-            // var_dump($wceazy_po_pre_order_Enable);
-
-            // $this->pre_order_Enable = isset($_SESSION['wceazy_po_pre_order_Enable']) ?
-            //     $_SESSION['wceazy_po_pre_order_Enable'] : 'Default Button Text';
-
-
-
+            // Determine if the product is marked as a pre-order
+            $is_pre_order = get_post_meta($post->ID, '_is_pre_order', true);
+            
             echo '<div class="options_group">';
             // Checkbox for marking a product as a pre-order
             woocommerce_wp_checkbox(
@@ -68,30 +64,18 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     'label' => __('Set as Pre-order', 'wceazy'),
                     'description' => __('Check this if you want to offer this product as a pre-order.', 'wceazy'),
                     'desc_tip' => true,
-                    'value' => $this->$wceazy_po_pre_order_Enable, // Set the checkbox value dynamically
+                    'value' => $wceazy_po_pre_order_Enable === 'yes' ? 'yes' : 'no', // Set the checkbox value dynamically
+// var_dump($wceazy_po_pre_order_Enable),
+
                 )
             );
-
+            
             // Other fields/buttons hidden by default
-            $style = 'style="display: none;"';
-
-            // Check if the product is out of stock
-            $product_id = $post->ID;
-            $product = wc_get_product($product_id);
-            $is_out_of_stock = !$product->is_in_stock();
-
-            // Check if the product belongs to specified categories
-            $is_pre_order_category = $this->is_pre_order_category($product);
-
-            // Automatically enable pre-order mode based on conditions
-            if ($is_out_of_stock && $is_pre_order_category) {
-                update_post_meta($product_id, '_is_pre_order', 'yes');
-                $style = ''; // Show fields/buttons if the product is set as a pre-order
-            }
-
+            $style = $is_pre_order === 'yes' ? '' : 'style="display: none;"';
+        
             // Date selection for pre-order products
             echo '<div class="pre-order-fields" ' . $style . '>';
-
+        
             woocommerce_wp_text_input(
                 array(
                     'id' => '_pre_order_date_time',
@@ -102,7 +86,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     'type' => 'datetime-local',
                 )
             );
-
+        
             // Dynamic checkbox for dynamic inventory
             woocommerce_wp_checkbox(
                 array(
@@ -112,7 +96,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     'desc_tip' => true,
                 )
             );
-
+        
             // Text input for pre-order price
             woocommerce_wp_text_input(
                 array(
@@ -127,11 +111,12 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     ),
                 )
             );
-
+        
             echo '</div>'; // End .pre-order-fields
-
+        
             echo '</div>'; // End .options_group
         }
+        
 
 
         // Enqueue JavaScript to show/hide fields/buttons based on checkbox state
