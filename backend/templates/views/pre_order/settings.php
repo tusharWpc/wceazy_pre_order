@@ -1,67 +1,67 @@
 <?php
 
 $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
-$wceazy_sb_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
+$wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
 
     // echo "<pre>";
-    // var_dump($wceazy_sb_settings);
+    // var_dump($wceazy_po_settings);
     // echo "</pre>";
  
 
-$wceazy_sb_enable_pre_order = isset($wceazy_sb_settings["enable_pre_order"]) ? $wceazy_sb_settings["enable_pre_order"] : "yes";
+$wceazy_po_enable_pre_order = isset($wceazy_po_settings["enable_pre_order"]) ? $wceazy_po_settings["enable_pre_order"] : "yes";
  
-$wceazy_sb_pre_order_btn_text = isset($wceazy_sb_settings["pre_order_btn_text"]) ? $wceazy_sb_settings["pre_order_btn_text"] : "PreOrder Now!";
+$wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"]) ? $wceazy_po_settings["pre_order_btn_text"] : "PreOrder Now!";
 
 // echo "<pre>";
-// var_dump($wceazy_sb_pre_order_btn_text);
+// var_dump($wceazy_po_pre_order_btn_text);
 // echo "</pre>";
 
 
-$wceazy_sb_display_desktop = isset($wceazy_sb_settings["display_desktop"]) ? $wceazy_sb_settings["display_desktop"] : "yes";
-$wceazy_sb_display_mobile = isset($wceazy_sb_settings["display_mobile"]) ? $wceazy_sb_settings["display_mobile"] : "yes";
-$wceazy_sb_Pre_Order_zone = isset($wceazy_sb_settings["Pre_Order_zone"]) ? $wceazy_sb_settings["Pre_Order_zone"] : "";
-$wceazy_sb_dont_show_pages = isset($wceazy_sb_settings["dont_show_pages"]) ? explode(",", $wceazy_sb_settings["dont_show_pages"]) : array();
-$wceazy_sb_exclude_products = isset($wceazy_sb_settings["exclude_products"]) ? explode(",", $wceazy_sb_settings["exclude_products"]) : array();
+$wceazy_po_display_desktop = isset($wceazy_po_settings["display_desktop"]) ? $wceazy_po_settings["display_desktop"] : "yes";
+$wceazy_po_display_mobile = isset($wceazy_po_settings["display_mobile"]) ? $wceazy_po_settings["display_mobile"] : "yes";
+$wceazy_po_Pre_Order_zone = isset($wceazy_po_settings["Pre_Order_zone"]) ? $wceazy_po_settings["Pre_Order_zone"] : "";
+$wceazy_po_dont_show_pages = isset($wceazy_po_settings["dont_show_pages"]) ? explode(",", $wceazy_po_settings["dont_show_pages"]) : array();
+$wceazy_po_exclude_products = isset($wceazy_po_settings["exclude_products"]) ? explode(",", $wceazy_po_settings["exclude_products"]) : array();
 
 
-$wceazy_sb_show_in_cart = isset($wceazy_sb_settings["show_in_cart"]) ? $wceazy_sb_settings["show_in_cart"] : "yes";
-$wceazy_sb_position_cart_subtotal = isset($wceazy_sb_settings["position_cart_subtotal"]) ? $wceazy_sb_settings["position_cart_subtotal"] : "woocommerce_cart_totals_before_Pre_Order";
-$wceazy_sb_show_in_checkout = isset($wceazy_sb_settings["show_in_checkout"]) ? $wceazy_sb_settings["show_in_checkout"] : "yes";
-$wceazy_sb_position_checkout_subtotal = isset($wceazy_sb_settings["position_checkout_subtotal"]) ? $wceazy_sb_settings["position_checkout_subtotal"] : "woocommerce_review_order_before_Pre_Order";
-$wceazy_sb_pre_order_headline = isset($wceazy_sb_settings["pre_order_headline"]) ? $wceazy_sb_settings["pre_order_headline"] : "Free Pre_Order";
-$wceazy_sb_pre_order_progress_bar_bg = isset($wceazy_sb_settings["pre_order_progress_bar_bg"]) ? $wceazy_sb_settings["pre_order_progress_bar_bg"] : "#0A9663";
-$wceazy_sb_pre_order_progress_color = isset($wceazy_sb_settings["pre_order_progress_color"]) ? $wceazy_sb_settings["pre_order_progress_color"] : "#000000";
-$wceazy_sb_pre_order_progress_text_color = isset($wceazy_sb_settings["pre_order_progress_text_color"]) ? $wceazy_sb_settings["pre_order_progress_text_color"] : "#ffffff";
+$wceazy_po_show_in_cart = isset($wceazy_po_settings["show_in_cart"]) ? $wceazy_po_settings["show_in_cart"] : "yes";
+$wceazy_po_position_cart_subtotal = isset($wceazy_po_settings["position_cart_subtotal"]) ? $wceazy_po_settings["position_cart_subtotal"] : "woocommerce_cart_totals_before_Pre_Order";
+$wceazy_po_show_in_checkout = isset($wceazy_po_settings["show_in_checkout"]) ? $wceazy_po_settings["show_in_checkout"] : "yes";
+$wceazy_po_position_checkout_subtotal = isset($wceazy_po_settings["position_checkout_subtotal"]) ? $wceazy_po_settings["position_checkout_subtotal"] : "woocommerce_review_order_before_Pre_Order";
+$wceazy_po_pre_order_headline = isset($wceazy_po_settings["pre_order_headline"]) ? $wceazy_po_settings["pre_order_headline"] : "Free Pre_Order";
+$wceazy_po_pre_order_progress_bar_bg = isset($wceazy_po_settings["pre_order_progress_bar_bg"]) ? $wceazy_po_settings["pre_order_progress_bar_bg"] : "#0A9663";
+$wceazy_po_pre_order_progress_color = isset($wceazy_po_settings["pre_order_progress_color"]) ? $wceazy_po_settings["pre_order_progress_color"] : "#000000";
+$wceazy_po_pre_order_progress_text_color = isset($wceazy_po_settings["pre_order_progress_text_color"]) ? $wceazy_po_settings["pre_order_progress_text_color"] : "#ffffff";
 
 
-$wceazy_sb_zero_order_amount_msg = isset($wceazy_sb_settings["zero_order_amount_msg"]) ? $wceazy_sb_settings["zero_order_amount_msg"] : "Start placing order of minimum {minimum_order} to apply free Pre_Order";
-$wceazy_sb_partial_order_amount_msg = isset($wceazy_sb_settings["partial_order_amount_msg"]) ? $wceazy_sb_settings["partial_order_amount_msg"] : "You have purchased {cart_total} of {minimum_order} , Buy {missing_amount} worth products more to get the free Pre_Order";
-$wceazy_sb_completed_order_amount_msg = isset($wceazy_sb_settings["completed_order_amount_msg"]) ? $wceazy_sb_settings["completed_order_amount_msg"] : "You are now qualified for the Free Pre_Order, go to {checkout_page}";
+$wceazy_po_zero_order_amount_msg = isset($wceazy_po_settings["zero_order_amount_msg"]) ? $wceazy_po_settings["zero_order_amount_msg"] : "Start placing order of minimum {minimum_order} to apply free Pre_Order";
+$wceazy_po_partial_order_amount_msg = isset($wceazy_po_settings["partial_order_amount_msg"]) ? $wceazy_po_settings["partial_order_amount_msg"] : "You have purchased {cart_total} of {minimum_order} , Buy {missing_amount} worth products more to get the free Pre_Order";
+$wceazy_po_completed_order_amount_msg = isset($wceazy_po_settings["completed_order_amount_msg"]) ? $wceazy_po_settings["completed_order_amount_msg"] : "You are now qualified for the Free Pre_Order, go to {checkout_page}";
 
-$wceazy_sb_initial_delay = isset($wceazy_sb_settings["initial_delay"]) ? $wceazy_sb_settings["initial_delay"] : "0";
-$wceazy_sb_allow_disappear_time = isset($wceazy_sb_settings["allow_disappear_time"]) ? $wceazy_sb_settings["allow_disappear_time"] : "no";
-$wceazy_sb_disappear_time = isset($wceazy_sb_settings["disappear_time"]) ? $wceazy_sb_settings["disappear_time"] : "0";
+$wceazy_po_initial_delay = isset($wceazy_po_settings["initial_delay"]) ? $wceazy_po_settings["initial_delay"] : "0";
+$wceazy_po_allow_disappear_time = isset($wceazy_po_settings["allow_disappear_time"]) ? $wceazy_po_settings["allow_disappear_time"] : "no";
+$wceazy_po_disappear_time = isset($wceazy_po_settings["disappear_time"]) ? $wceazy_po_settings["disappear_time"] : "0";
 
-$wceazy_sb_position = isset($wceazy_sb_settings["position"]) ? $wceazy_sb_settings["position"] : "top";
-$wceazy_sb_layout = isset($wceazy_sb_settings["layout"]) ? $wceazy_sb_settings["layout"] : "1";
-$wceazy_sb_bg = isset($wceazy_sb_settings["bg"]) ? $wceazy_sb_settings["bg"] : "#0A9663";
-$wceazy_sb_padding_top = isset($wceazy_sb_settings["padding_top"]) ? $wceazy_sb_settings["padding_top"] : "10";
-$wceazy_sb_padding_bottom = isset($wceazy_sb_settings["padding_bottom"]) ? $wceazy_sb_settings["padding_bottom"] : "10";
-$wceazy_sb_padding_left_right = isset($wceazy_sb_settings["padding_left_right"]) ? $wceazy_sb_settings["padding_left_right"] : "120";
-$wceazy_sb_msg_text_color = isset($wceazy_sb_settings["msg_text_color"]) ? $wceazy_sb_settings["msg_text_color"] : "#ffffff";
-$wceazy_sb_msg_link_text_color = isset($wceazy_sb_settings["msg_link_text_color"]) ? $wceazy_sb_settings["msg_link_text_color"] : "#ffffff";
-$wceazy_sb_msg_font_size = isset($wceazy_sb_settings["msg_font_size"]) ? $wceazy_sb_settings["msg_font_size"] : "16";
-$wceazy_sb_msg_text_align = isset($wceazy_sb_settings["msg_text_align"]) ? $wceazy_sb_settings["msg_text_align"] : "center";
-$wceazy_sb_remove_icon = isset($wceazy_sb_settings["remove_icon"]) ? $wceazy_sb_settings["remove_icon"] : "icon_1";
-$wceazy_sb_remove_icon_color = isset($wceazy_sb_settings["remove_icon_color"]) ? $wceazy_sb_settings["remove_icon_color"] : "#ffffff";
-$wceazy_sb_remove_icon_size = isset($wceazy_sb_settings["remove_icon_size"]) ? $wceazy_sb_settings["remove_icon_size"] : "16";
-$wceazy_sb_enable_progress_bar = isset($wceazy_sb_settings["enable_progress_bar"]) ? $wceazy_sb_settings["enable_progress_bar"] : "yes";
-$wceazy_sb_progress_margin_top = isset($wceazy_sb_settings["progress_margin_top"]) ? $wceazy_sb_settings["progress_margin_top"] : "5";
-$wceazy_sb_progress_bar_bg = isset($wceazy_sb_settings["progress_bar_bg"]) ? $wceazy_sb_settings["progress_bar_bg"] : "#ffffff";
-$wceazy_sb_progress_color = isset($wceazy_sb_settings["progress_color"]) ? $wceazy_sb_settings["progress_color"] : "#000000";
-$wceazy_sb_progress_text_color = isset($wceazy_sb_settings["progress_text_color"]) ? $wceazy_sb_settings["progress_text_color"] : "#ffffff";
-$wceazy_sb_progress_font_size = isset($wceazy_sb_settings["progress_font_size"]) ? $wceazy_sb_settings["progress_font_size"] : "15";
-$wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_radius"]) ? $wceazy_sb_settings["progress_border_radius"] : "20";
+$wceazy_po_position = isset($wceazy_po_settings["position"]) ? $wceazy_po_settings["position"] : "top";
+$wceazy_po_layout = isset($wceazy_po_settings["layout"]) ? $wceazy_po_settings["layout"] : "1";
+$wceazy_po_bg = isset($wceazy_po_settings["bg"]) ? $wceazy_po_settings["bg"] : "#0A9663";
+$wceazy_po_padding_top = isset($wceazy_po_settings["padding_top"]) ? $wceazy_po_settings["padding_top"] : "10";
+$wceazy_po_padding_bottom = isset($wceazy_po_settings["padding_bottom"]) ? $wceazy_po_settings["padding_bottom"] : "10";
+$wceazy_po_padding_left_right = isset($wceazy_po_settings["padding_left_right"]) ? $wceazy_po_settings["padding_left_right"] : "120";
+$wceazy_po_msg_text_color = isset($wceazy_po_settings["msg_text_color"]) ? $wceazy_po_settings["msg_text_color"] : "#ffffff";
+$wceazy_po_msg_link_text_color = isset($wceazy_po_settings["msg_link_text_color"]) ? $wceazy_po_settings["msg_link_text_color"] : "#ffffff";
+$wceazy_po_msg_font_size = isset($wceazy_po_settings["msg_font_size"]) ? $wceazy_po_settings["msg_font_size"] : "16";
+$wceazy_po_msg_text_align = isset($wceazy_po_settings["msg_text_align"]) ? $wceazy_po_settings["msg_text_align"] : "center";
+$wceazy_po_remove_icon = isset($wceazy_po_settings["remove_icon"]) ? $wceazy_po_settings["remove_icon"] : "icon_1";
+$wceazy_po_remove_icon_color = isset($wceazy_po_settings["remove_icon_color"]) ? $wceazy_po_settings["remove_icon_color"] : "#ffffff";
+$wceazy_po_remove_icon_size = isset($wceazy_po_settings["remove_icon_size"]) ? $wceazy_po_settings["remove_icon_size"] : "16";
+$wceazy_po_enable_progress_bar = isset($wceazy_po_settings["enable_progress_bar"]) ? $wceazy_po_settings["enable_progress_bar"] : "yes";
+$wceazy_po_progress_margin_top = isset($wceazy_po_settings["progress_margin_top"]) ? $wceazy_po_settings["progress_margin_top"] : "5";
+$wceazy_po_progress_bar_bg = isset($wceazy_po_settings["progress_bar_bg"]) ? $wceazy_po_settings["progress_bar_bg"] : "#ffffff";
+$wceazy_po_progress_color = isset($wceazy_po_settings["progress_color"]) ? $wceazy_po_settings["progress_color"] : "#000000";
+$wceazy_po_progress_text_color = isset($wceazy_po_settings["progress_text_color"]) ? $wceazy_po_settings["progress_text_color"] : "#ffffff";
+$wceazy_po_progress_font_size = isset($wceazy_po_settings["progress_font_size"]) ? $wceazy_po_settings["progress_font_size"] : "15";
+$wceazy_po_progress_border_radius = isset($wceazy_po_settings["progress_border_radius"]) ? $wceazy_po_settings["progress_border_radius"] : "20";
 
 ?>
 
@@ -153,7 +153,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <input class="wceazy_pre_order_text_field" type="text" placeholder=""
-                                    value="<?php echo esc_attr($wceazy_sb_pre_order_btn_text); ?>">
+                                    value="<?php echo esc_attr($wceazy_po_pre_order_btn_text); ?>">
                                 <small>
                                     <?php esc_html_e('Set your Pre Order button text', 'wceazy'); ?>
                                 </small>
@@ -166,7 +166,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <label class="toggle_switch"><input type="checkbox"
-                                        <?php echo esc_attr($wceazy_sb_enable_pre_order == "yes" ? "checked" : ""); ?>><span
+                                        <?php echo esc_attr($wceazy_po_enable_pre_order == "yes" ? "checked" : ""); ?>><span
                                         class="slider round"></span></label>
                                 <small>
                                     <?php esc_html_e('Turn ON the switch to enable the Pre Order.', 'wceazy'); ?>
@@ -180,7 +180,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <label class="toggle_switch"><input type="checkbox"
-                                        <?php echo esc_attr($wceazy_sb_display_desktop == "yes" ? "checked" : ""); ?>><span
+                                        <?php echo esc_attr($wceazy_po_display_desktop == "yes" ? "checked" : ""); ?>><span
                                         class="slider round"></span></label>
                                 <small>
                                     <?php esc_html_e('Switch ON to display Pre Order on Desktop.', 'wceazy'); ?>
@@ -194,7 +194,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <label class="toggle_switch"><input type="checkbox"
-                                        <?php echo esc_attr($wceazy_sb_display_mobile == "yes" ? "checked" : ""); ?>><span
+                                        <?php echo esc_attr($wceazy_po_display_mobile == "yes" ? "checked" : ""); ?>><span
                                         class="slider round"></span></label>
                                 <small>
                                     <?php esc_html_e('Switch ON to display Pre Order on mobile.', 'wceazy'); ?>
@@ -222,7 +222,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <label class="toggle_switch"><input type="checkbox"
-                                        <?php echo esc_attr($wceazy_sb_show_in_cart == "yes" ? "checked" : ""); ?>><span
+                                        <?php echo esc_attr($wceazy_po_show_in_cart == "yes" ? "checked" : ""); ?>><span
                                         class="slider round"></span></label>
                                 <small>
                                     <?php esc_html_e('Turn on the switch to show the free Pre_Order message in the shopping cart.', 'wceazy'); ?>
@@ -240,11 +240,11 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                         <?php esc_html_e('Please select', 'wceazy'); ?>
                                     </option>
                                     <option value="woocommerce_cart_totals_before_Pre_Order"
-                                        <?php echo esc_attr("woocommerce_cart_totals_before_Pre_Order" == $wceazy_sb_position_cart_subtotal ? "selected" : ""); ?>>
+                                        <?php echo esc_attr("woocommerce_cart_totals_before_Pre_Order" == $wceazy_po_position_cart_subtotal ? "selected" : ""); ?>>
                                         <?php esc_html_e('Before Pre_Order block', 'wceazy'); ?>
                                     </option>
                                     <option value="woocommerce_cart_totals_after_Pre_Order"
-                                        <?php echo esc_attr("woocommerce_cart_totals_after_Pre_Order" == $wceazy_sb_position_cart_subtotal ? "selected" : ""); ?>>
+                                        <?php echo esc_attr("woocommerce_cart_totals_after_Pre_Order" == $wceazy_po_position_cart_subtotal ? "selected" : ""); ?>>
                                         <?php esc_html_e('After Pre_Order block', 'wceazy'); ?>
                                     </option>
                                 </select>
@@ -264,7 +264,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <label class="toggle_switch"><input type="checkbox"
-                                        <?php echo esc_attr($wceazy_sb_show_in_checkout == "yes" ? "checked" : ""); ?>><span
+                                        <?php echo esc_attr($wceazy_po_show_in_checkout == "yes" ? "checked" : ""); ?>><span
                                         class="slider round"></span></label>
                                 <small>
                                     <?php esc_html_e('Turn ON the switch to show the free Pre_Order notification in checkout subtotal area.', 'wceazy'); ?>
@@ -282,11 +282,11 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                         <?php esc_html_e('Please select', 'wceazy'); ?>
                                     </option>
                                     <option value="woocommerce_review_order_before_Pre_Order"
-                                        <?php echo esc_attr("woocommerce_review_order_before_Pre_Order" == $wceazy_sb_position_checkout_subtotal ? "selected" : ""); ?>>
+                                        <?php echo esc_attr("woocommerce_review_order_before_Pre_Order" == $wceazy_po_position_checkout_subtotal ? "selected" : ""); ?>>
                                         <?php esc_html_e('Before Pre_Order block', 'wceazy'); ?>
                                     </option>
                                     <option value="woocommerce_review_order_after_Pre_Order"
-                                        <?php echo esc_attr("woocommerce_review_order_after_Pre_Order" == $wceazy_sb_position_checkout_subtotal ? "selected" : ""); ?>>
+                                        <?php echo esc_attr("woocommerce_review_order_after_Pre_Order" == $wceazy_po_position_checkout_subtotal ? "selected" : ""); ?>>
                                         <?php esc_html_e('After Pre_Order block', 'wceazy'); ?>
                                     </option>
                                 </select>
@@ -306,7 +306,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <input class="wceazy_pre_order_text_field" type="text" placeholder=""
-                                    value="<?php echo esc_attr($wceazy_sb_pre_order_headline); ?>">
+                                    value="<?php echo esc_attr($wceazy_po_pre_order_headline); ?>">
                                 <small>
                                     <?php esc_html_e('Enter cart & checkout page free Pre_Order progress bar headline text.', 'wceazy'); ?>
                                 </small>
@@ -323,7 +323,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             <div class="field_with_msg_container">
                                 <div class="color_picker_area">
                                     <input disabled type="color" id="wceazy_Pre_Order_progress_bar_bg"
-                                        value="<?php echo esc_attr($wceazy_sb_pre_order_progress_bar_bg); ?>">
+                                        value="<?php echo esc_attr($wceazy_po_pre_order_progress_bar_bg); ?>">
                                     <label for="wceazy_Pre_Order_progress_bar_bg">
                                         <?php esc_html_e('Select Color', 'wceazy'); ?>
                                     </label>
@@ -344,7 +344,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             <div class="field_with_msg_container">
                                 <div class="color_picker_area">
                                     <input disabled type="color" id="wceazy_Pre_Order_progress_color"
-                                        value="<?php echo esc_attr($wceazy_sb_pre_order_progress_color); ?>">
+                                        value="<?php echo esc_attr($wceazy_po_pre_order_progress_color); ?>">
                                     <label for="wceazy_Pre_Order_progress_color">
                                         <?php esc_html_e('Select Color', 'wceazy'); ?>
                                     </label>
@@ -365,7 +365,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             <div class="field_with_msg_container">
                                 <div class="color_picker_area">
                                     <input disabled type="color" id="wceazy_Pre_Order_progress_text_color"
-                                        value="<?php echo esc_attr($wceazy_sb_pre_order_progress_text_color); ?>">
+                                        value="<?php echo esc_attr($wceazy_po_pre_order_progress_text_color); ?>">
                                     <label for="wceazy_Pre_Order_progress_text_color">
                                         <?php esc_html_e('Select Color', 'wceazy'); ?>
                                     </label>
@@ -395,7 +395,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <textarea disabled class="wceazy_pre_order_textarea_field"
-                                    rows="3"><?php echo esc_attr($wceazy_sb_zero_order_amount_msg); ?></textarea>
+                                    rows="3"><?php echo esc_attr($wceazy_po_zero_order_amount_msg); ?></textarea>
                                 <small>
                                     <?php esc_html_e('"Empty Cart in Pre_Order Zone: Add items to qualify for Free Pre_Order ({minimum_order})."', 'wceazy'); ?>
                                 </small>
@@ -411,7 +411,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <textarea disabled class="wceazy_pre_order_textarea_field"
-                                    rows="3"><?php echo esc_attr($wceazy_sb_partial_order_amount_msg); ?></textarea>
+                                    rows="3"><?php echo esc_attr($wceazy_po_partial_order_amount_msg); ?></textarea>
                                 <small>
                                     <?php esc_html_e('Pre_Order Alert: Add {missing_amount} for Free Pre_Order (Min. order: {minimum_order}, Current total: {cart_total}).', 'wceazy'); ?>
                                 </small>
@@ -427,7 +427,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <textarea disabled class="wceazy_pre_order_textarea_field"
-                                    rows="3"><?php echo esc_attr($wceazy_sb_completed_order_amount_msg); ?></textarea>
+                                    rows="3"><?php echo esc_attr($wceazy_po_completed_order_amount_msg); ?></textarea>
                                 <small>
                                     <?php esc_html_e('Free Pre_Order Alert: Your order qualifies! Click {checkout_page} to proceed.', 'wceazy'); ?>
                                 </small>
@@ -454,7 +454,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <textarea disabled class="wceazy_pre_order_textarea_field"
-                                    rows="3"><?php echo esc_attr($wceazy_sb_zero_order_amount_msg); ?></textarea>
+                                    rows="3"><?php echo esc_attr($wceazy_po_zero_order_amount_msg); ?></textarea>
                                 <small>
                                     <?php esc_html_e('"Empty Cart in Pre_Order Zone: Add items to qualify for Free Pre_Order ({minimum_order})."', 'wceazy'); ?>
                                 </small>
@@ -470,7 +470,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <textarea disabled class="wceazy_pre_order_textarea_field"
-                                    rows="3"><?php echo esc_attr($wceazy_sb_partial_order_amount_msg); ?></textarea>
+                                    rows="3"><?php echo esc_attr($wceazy_po_partial_order_amount_msg); ?></textarea>
                                 <small>
                                     <?php esc_html_e('Pre_Order Alert: Add {missing_amount} for Free Pre_Order (Min. order: {minimum_order}, Current total: {cart_total}).', 'wceazy'); ?>
                                 </small>
@@ -486,7 +486,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <textarea disabled class="wceazy_pre_order_textarea_field"
-                                    rows="3"><?php echo esc_attr($wceazy_sb_completed_order_amount_msg); ?></textarea>
+                                    rows="3"><?php echo esc_attr($wceazy_po_completed_order_amount_msg); ?></textarea>
                                 <small>
                                     <?php esc_html_e('Free Pre_Order Alert: Your order qualifies! Click {checkout_page} to proceed.', 'wceazy'); ?>
                                 </small>
@@ -512,7 +512,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <input disabled class="wceazy_pre_order_text_field" type="number" placeholder=""
-                                    value="<?php echo esc_attr($wceazy_sb_initial_delay); ?>">
+                                    value="<?php echo esc_attr($wceazy_po_initial_delay); ?>">
                                 <small>
                                     <?php esc_html_e('Set the time delay for Free Pre Order to decide when it appears in milliseconds.', 'wceazy'); ?>
                                 </small>
@@ -528,7 +528,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <label class="toggle_switch"><input disabled type="checkbox"
-                                        <?php echo esc_attr($wceazy_sb_allow_disappear_time == "yes" ? "checked" : ""); ?>
+                                        <?php echo esc_attr($wceazy_po_allow_disappear_time == "yes" ? "checked" : ""); ?>
                                         onchange="wceazy_pre_order_selection_changed()"><span
                                         class="slider round"></span></label>
                                 <small>
@@ -546,7 +546,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <input disabled class="wceazy_pre_order_text_field" type="number" placeholder=""
-                                    value="<?php echo esc_attr($wceazy_sb_disappear_time); ?>">
+                                    value="<?php echo esc_attr($wceazy_po_disappear_time); ?>">
                                 <small>
                                     <?php esc_html_e('Set disappear time in milliseconds. The Free Pre Order will disappear according to your setting time.', 'wceazy'); ?>
                                 </small>
@@ -573,11 +573,11 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                         <?php esc_html_e('Please select', 'wceazy'); ?>
                                     </option>
                                     <option value="top"
-                                        <?php echo esc_attr("top" == $wceazy_sb_position ? "selected" : ""); ?>>
+                                        <?php echo esc_attr("top" == $wceazy_po_position ? "selected" : ""); ?>>
                                         <?php esc_html_e('Top', 'wceazy'); ?>
                                     </option>
                                     <option value="bottom"
-                                        <?php echo esc_attr("bottom" == $wceazy_sb_position ? "selected" : ""); ?>>
+                                        <?php echo esc_attr("bottom" == $wceazy_po_position ? "selected" : ""); ?>>
                                         <?php esc_html_e('Bottom', 'wceazy'); ?>
                                     </option>
                                 </select>
@@ -596,11 +596,11 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                         <?php esc_html_e('Please select', 'wceazy'); ?>
                                     </option>
                                     <option value="1"
-                                        <?php echo esc_attr("1" == $wceazy_sb_layout ? "selected" : ""); ?>>
+                                        <?php echo esc_attr("1" == $wceazy_po_layout ? "selected" : ""); ?>>
                                         <?php esc_html_e('Layout 1', 'wceazy'); ?>
                                     </option>
                                     <option value="2"
-                                        <?php echo esc_attr("2" == $wceazy_sb_layout ? "selected" : ""); ?>>
+                                        <?php echo esc_attr("2" == $wceazy_po_layout ? "selected" : ""); ?>>
                                         <?php esc_html_e('Layout 2', 'wceazy'); ?>
                                     </option>
                                 </select>
@@ -620,7 +620,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             <div class="field_with_msg_container">
                                 <div class="color_picker_area">
                                     <input disabled type="color" id="wceazy_pre_order_bg"
-                                        value="<?php echo esc_attr($wceazy_sb_bg); ?>">
+                                        value="<?php echo esc_attr($wceazy_po_bg); ?>">
                                     <label for="wceazy_pre_order_bg">
                                         <?php esc_html_e('Select Color', 'wceazy'); ?>
                                     </label>
@@ -637,7 +637,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <input class="wceazy_pre_order_text_field" type="number" placeholder=""
-                                    value="<?php echo esc_attr($wceazy_sb_padding_top); ?>">
+                                    value="<?php echo esc_attr($wceazy_po_padding_top); ?>">
                                 <small>
                                     <?php esc_html_e('Set your free Pre Order\'s top padding.', 'wceazy'); ?>
                                 </small>
@@ -650,7 +650,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <input class="wceazy_pre_order_text_field" type="number" placeholder=""
-                                    value="<?php echo esc_attr($wceazy_sb_padding_bottom); ?>">
+                                    value="<?php echo esc_attr($wceazy_po_padding_bottom); ?>">
                                 <small>
                                     <?php esc_html_e('Set your free Pre Order\'s bottom padding.', 'wceazy'); ?>
                                 </small>
@@ -663,7 +663,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <input class="wceazy_pre_order_text_field" type="number" placeholder=""
-                                    value="<?php echo esc_attr($wceazy_sb_padding_left_right); ?>">
+                                    value="<?php echo esc_attr($wceazy_po_padding_left_right); ?>">
                                 <small>
                                     <?php esc_html_e('Set your free Pre Order\'s left and right padding.', 'wceazy'); ?>
                                 </small>
@@ -681,7 +681,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             <div class="field_with_msg_container">
                                 <div class="color_picker_area">
                                     <input disabled type="color" id="wceazy_pre_order_msg_text_color"
-                                        value="<?php echo esc_attr($wceazy_sb_msg_text_color); ?>">
+                                        value="<?php echo esc_attr($wceazy_po_msg_text_color); ?>">
                                     <label for="wceazy_pre_order_msg_text_color">
                                         <?php esc_html_e('Select Color', 'wceazy'); ?>
                                     </label>
@@ -702,7 +702,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             <div class="field_with_msg_container">
                                 <div class="color_picker_area">
                                     <input disabled type="color" id="wceazy_pre_order_msg_link_text_color"
-                                        value="<?php echo esc_attr($wceazy_sb_msg_link_text_color); ?>">
+                                        value="<?php echo esc_attr($wceazy_po_msg_link_text_color); ?>">
                                     <label for="wceazy_pre_order_msg_link_text_color">
                                         <?php esc_html_e('Select Color', 'wceazy'); ?>
                                     </label>
@@ -719,7 +719,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <input class="wceazy_pre_order_text_field" type="number" placeholder=""
-                                    value="<?php echo esc_attr($wceazy_sb_msg_font_size); ?>">
+                                    value="<?php echo esc_attr($wceazy_po_msg_font_size); ?>">
                                 <small>
                                     <?php esc_html_e('Set your free Pre Order\'s message font size.', 'wceazy'); ?>
                                 </small>
@@ -737,15 +737,15 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                                         <?php esc_html_e('Please select', 'wceazy'); ?>
                                     </option>
                                     <option value="left"
-                                        <?php echo esc_attr("left" == $wceazy_sb_msg_text_align ? "selected" : ""); ?>>
+                                        <?php echo esc_attr("left" == $wceazy_po_msg_text_align ? "selected" : ""); ?>>
                                         <?php esc_html_e('Left', 'wceazy'); ?>
                                     </option>
                                     <option value="center"
-                                        <?php echo esc_attr("center" == $wceazy_sb_msg_text_align ? "selected" : ""); ?>>
+                                        <?php echo esc_attr("center" == $wceazy_po_msg_text_align ? "selected" : ""); ?>>
                                         <?php esc_html_e('Center', 'wceazy'); ?>
                                     </option>
                                     <option value="right"
-                                        <?php echo esc_attr("right" == $wceazy_sb_msg_text_align ? "selected" : ""); ?>>
+                                        <?php echo esc_attr("right" == $wceazy_po_msg_text_align ? "selected" : ""); ?>>
                                         <?php esc_html_e('Right', 'wceazy'); ?>
                                     </option>
                                 </select>
@@ -758,15 +758,15 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <div class="icon_selection_area">
-                                    <div class="icon_field_item icon_1 <?php echo esc_attr("icon_1" == $wceazy_sb_remove_icon ? "active" : ""); ?>"
+                                    <div class="icon_field_item icon_1 <?php echo esc_attr("icon_1" == $wceazy_po_remove_icon ? "active" : ""); ?>"
                                         data-value="icon_1"></div>
-                                    <div class="icon_field_item icon_2 <?php echo esc_attr("icon_2" == $wceazy_sb_remove_icon ? "active" : ""); ?>"
+                                    <div class="icon_field_item icon_2 <?php echo esc_attr("icon_2" == $wceazy_po_remove_icon ? "active" : ""); ?>"
                                         data-value="icon_2"></div>
-                                    <div class="icon_field_item icon_3 <?php echo esc_attr("icon_3" == $wceazy_sb_remove_icon ? "active" : ""); ?>"
+                                    <div class="icon_field_item icon_3 <?php echo esc_attr("icon_3" == $wceazy_po_remove_icon ? "active" : ""); ?>"
                                         data-value="icon_3"></div>
-                                    <div class="icon_field_item icon_4 <?php echo esc_attr("icon_4" == $wceazy_sb_remove_icon ? "active" : ""); ?>"
+                                    <div class="icon_field_item icon_4 <?php echo esc_attr("icon_4" == $wceazy_po_remove_icon ? "active" : ""); ?>"
                                         data-value="icon_4"></div>
-                                    <div class="icon_field_item icon_5 <?php echo esc_attr("icon_5" == $wceazy_sb_remove_icon ? "active" : ""); ?>"
+                                    <div class="icon_field_item icon_5 <?php echo esc_attr("icon_5" == $wceazy_po_remove_icon ? "active" : ""); ?>"
                                         data-value="icon_5"></div>
                                 </div>
                                 <small>
@@ -785,7 +785,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             <div class="field_with_msg_container">
                                 <div class="color_picker_area">
                                     <input disabled type="color" id="wceazy_pre_order_remove_icon_color"
-                                        value="<?php echo esc_attr($wceazy_sb_remove_icon_color); ?>">
+                                        value="<?php echo esc_attr($wceazy_po_remove_icon_color); ?>">
                                     <label for="wceazy_pre_order_remove_icon_color">
                                         <?php esc_html_e('Select Color', 'wceazy'); ?>
                                     </label>
@@ -803,7 +803,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <input class="wceazy_pre_order_text_field" type="number" placeholder=""
-                                    value="<?php echo esc_attr($wceazy_sb_remove_icon_size); ?>">
+                                    value="<?php echo esc_attr($wceazy_po_remove_icon_size); ?>">
                                 <small>
                                     <?php esc_html_e('Set your free Pre Order\'s close icon size.', 'wceazy'); ?>
                                 </small>
@@ -820,7 +820,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <label class="toggle_switch"><input type="checkbox"
-                                        <?php echo esc_attr($wceazy_sb_enable_progress_bar == "yes" ? "checked" : ""); ?>><span
+                                        <?php echo esc_attr($wceazy_po_enable_progress_bar == "yes" ? "checked" : ""); ?>><span
                                         class="slider round"></span></label>
                                 <small>
                                     <?php esc_html_e('Show progress bar with free Pre Order.', 'wceazy'); ?>
@@ -834,7 +834,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <input class="wceazy_pre_order_text_field" type="number" placeholder=""
-                                    value="<?php echo esc_attr($wceazy_sb_progress_margin_top); ?>">
+                                    value="<?php echo esc_attr($wceazy_po_progress_margin_top); ?>">
                                 <small>
                                     <?php esc_html_e('Set your free Pre Order progress margin top.', 'wceazy'); ?>
                                 </small>
@@ -851,7 +851,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             <div class="field_with_msg_container">
                                 <div class="color_picker_area">
                                     <input disabled type="color" id="wceazy_pre_order_progress_bar_bg"
-                                        value="<?php echo esc_attr($wceazy_sb_progress_bar_bg); ?>">
+                                        value="<?php echo esc_attr($wceazy_po_progress_bar_bg); ?>">
                                     <label for="wceazy_pre_order_progress_bar_bg">
                                         <?php esc_html_e('Select Color', 'wceazy'); ?>
                                     </label>
@@ -872,7 +872,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             <div class="field_with_msg_container">
                                 <div class="color_picker_area">
                                     <input disabled type="color" id="wceazy_pre_order_progress_color"
-                                        value="<?php echo esc_attr($wceazy_sb_progress_color); ?>">
+                                        value="<?php echo esc_attr($wceazy_po_progress_color); ?>">
                                     <label for="wceazy_pre_order_progress_color">
                                         <?php esc_html_e('Select Color', 'wceazy'); ?>
                                     </label>
@@ -894,7 +894,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             <div class="field_with_msg_container">
                                 <div class="color_picker_area">
                                     <input disabled type="color" id="wceazy_pre_order_progress_text_color"
-                                        value="<?php echo esc_attr($wceazy_sb_progress_text_color); ?>">
+                                        value="<?php echo esc_attr($wceazy_po_progress_text_color); ?>">
                                     <label for="wceazy_pre_order_progress_text_color">
                                         <?php esc_html_e('Select Color', 'wceazy'); ?>
                                     </label>
@@ -911,7 +911,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <input class="wceazy_pre_order_text_field" type="number" placeholder=""
-                                    value="<?php echo esc_attr($wceazy_sb_progress_font_size); ?>">
+                                    value="<?php echo esc_attr($wceazy_po_progress_font_size); ?>">
                                 <small>
                                     <?php esc_html_e('Set your free Pre Order progress font size.', 'wceazy'); ?>
                                 </small>
@@ -924,7 +924,7 @@ $wceazy_sb_progress_border_radius = isset($wceazy_sb_settings["progress_border_r
                             </label>
                             <div class="field_with_msg_container">
                                 <input class="wceazy_pre_order_text_field" type="number" placeholder=""
-                                    value="<?php echo esc_attr($wceazy_sb_progress_border_radius); ?>">
+                                    value="<?php echo esc_attr($wceazy_po_progress_border_radius); ?>">
                                 <small>
                                     <?php esc_html_e('Set your free Pre Order progress border radius.', 'wceazy'); ?>
                                 </small>

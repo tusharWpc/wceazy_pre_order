@@ -64,8 +64,9 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     'label' => __('Set as Pre-order', 'wceazy'),
                     'description' => __('Check this if you want to offer this product as a pre-order.', 'wceazy'),
                     'desc_tip' => true,
-                    'value' => $wceazy_po_pre_order_Enable === 'yes' ? 'yes' : 'no', // Set the checkbox value dynamically
-// var_dump($wceazy_po_pre_order_Enable),
+                    'value' => $this->$wceazy_po_pre_order_Enable, 
+                    // Set the checkbox value dynamically
+                    // 'value' => $this->$wceazy_po_pre_order_Enable,
 
                 )
             );
@@ -599,75 +600,75 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         }
 
         // Automatically cancel pre-orders if the product is no longer available
-        // public function auto_cancel_pre_orders()
-        // {
-        //     // Query pre-order products
-        //     $preorder_products = new WP_Query(
-        //         array(
-        //             'post_type' => 'product',
-        //             'posts_per_page' => -1,
-        //             'meta_query' => array(
-        //                 array(
-        //                     'key' => '_is_pre_order',
-        //                     'value' => 'yes',
-        //                     'compare' => '=',
-        //                 ),
-        //             ),
-        //         )
-        //     );
+        public function auto_cancel_pre_orders()
+        {
+            // Query pre-order products
+            $preorder_products = new WP_Query(
+                array(
+                    'post_type' => 'product',
+                    'posts_per_page' => -1,
+                    'meta_query' => array(
+                        array(
+                            'key' => '_is_pre_order',
+                            'value' => 'yes',
+                            'compare' => '=',
+                        ),
+                    ),
+                )
+            );
 
-        //     if ($preorder_products->have_posts()) {
-        //         while ($preorder_products->have_posts()) {
-        //             $preorder_products->the_post();
-        //             $product_id = get_the_ID();
-        //             $pre_order_date = get_post_meta($product_id, '_pre_order_date_time', true);
+            if ($preorder_products->have_posts()) {
+                while ($preorder_products->have_posts()) {
+                    $preorder_products->the_post();
+                    $product_id = get_the_ID();
+                    $pre_order_date = get_post_meta($product_id, '_pre_order_date_time', true);
 
-        //             // Check if pre-order date/time has passed
-        //             if (strtotime($pre_order_date) < time()) {
-        //                 // Get pre-order customers
-        //                 $preorder_customers = $this->get_preorder_customers($product_id);
+                    // Check if pre-order date/time has passed
+                    if (strtotime($pre_order_date) < time()) {
+                        // Get pre-order customers
+                        $preorder_customers = $this->get_preorder_customers($product_id);
 
-        //                 // Cancel pre-orders for each customer
-        //                 foreach ($preorder_customers as $customer_email) {
-        //                     $customer_orders = wc_get_orders(
-        //                         array(
-        //                             'status' => array('pending', 'processing'),
-        //                             'customer_email' => $customer_email,
-        //                             'meta_query' => array(
-        //                                 array(
-        //                                     'key' => '_customer_user',
-        //                                     'compare' => 'EXISTS',
-        //                                 ),
-        //                                 array(
-        //                                     'key' => '_pre_ordered_product_id',
-        //                                     'value' => $product_id,
-        //                                     'compare' => '=',
-        //                                 ),
-        //                             ),
-        //                         )
-        //                     );
+                        // Cancel pre-orders for each customer
+                        foreach ($preorder_customers as $customer_email) {
+                            $customer_orders = wc_get_orders(
+                                array(
+                                    'status' => array('pending', 'processing'),
+                                    'customer_email' => $customer_email,
+                                    'meta_query' => array(
+                                        array(
+                                            'key' => '_customer_user',
+                                            'compare' => 'EXISTS',
+                                        ),
+                                        array(
+                                            'key' => '_pre_ordered_product_id',
+                                            'value' => $product_id,
+                                            'compare' => '=',
+                                        ),
+                                    ),
+                                )
+                            );
 
-        //                     // Cancel each order
-        //                     foreach ($customer_orders as $order) {
-        //                         $order->update_status('cancelled', __('Pre-order canceled: Product no longer available', 'your-plugin-textdomain'));
-        //                     }
-        //                 }
+                            // Cancel each order
+                            foreach ($customer_orders as $order) {
+                                $order->update_status('cancelled', __('Pre-order canceled: Product no longer available', 'your-plugin-textdomain'));
+                            }
+                        }
 
-        //                 // Update product meta to mark it as not a pre-order
-        //                 update_post_meta($product_id, '_is_pre_order', 'no');
-        //             }
-        //         }
-        //         wp_reset_postdata();
-        //     }
-        // }
+                        // Update product meta to mark it as not a pre-order
+                        update_post_meta($product_id, '_is_pre_order', 'no');
+                    }
+                }
+                wp_reset_postdata();
+            }
+        }
 
-        // // Define the schedule_auto_cancel_task method
-        // public function schedule_auto_cancel_task() {
-        //     // Implement your logic here for scheduling the auto-cancel task
-        //     if (!wp_next_scheduled('auto_cancel_pre_orders')) {
-        //         wp_schedule_event(time(), 'daily', 'auto_cancel_pre_orders');
-        //     }
-        // }
+        // Define the schedule_auto_cancel_task method
+        public function schedule_auto_cancel_task() {
+            // Implement your logic here for scheduling the auto-cancel task
+            if (!wp_next_scheduled('auto_cancel_pre_orders')) {
+                wp_schedule_event(time(), 'daily', 'auto_cancel_pre_orders');
+            }
+        }
 
 
 

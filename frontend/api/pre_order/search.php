@@ -1,29 +1,29 @@
 <?php
 
 $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
-$wceazy_sb_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
+$wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
 
 // echo "<pre>";
-// var_dump($wceazy_sb_settings);
+// var_dump($wceazy_po_settings);
 // echo "</pre>";
 
 
-$wceazy_sb_pre_order_btn_text = isset($wceazy_sb_settings["pre_order_btn_text"]) ? $wceazy_sb_settings["pre_order_btn_text"] : "PreOrder Now!";
+$wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"]) ? $wceazy_po_settings["pre_order_btn_text"] : "PreOrder Now!";
 
 // echo "<pre>";
-// var_dump($wceazy_sb_pre_order_btn_text);
+// var_dump($wceazy_po_pre_order_btn_text);
 // echo "</pre>";
 
 
 
-// $wceazy_sb_product_per_page = isset($wceazy_sb_settings["product_per_page"]) ? $wceazy_sb_settings["product_per_page"] : "15";
-// $wceazy_sb_add_to_cart_btn_text = isset($wceazy_sb_settings["add_to_cart_btn_text"]) ? $wceazy_sb_settings["add_to_cart_btn_text"] : "Add to Cart";
+// $wceazy_po_product_per_page = isset($wceazy_po_settings["product_per_page"]) ? $wceazy_po_settings["product_per_page"] : "15";
+// $wceazy_po_add_to_cart_btn_text = isset($wceazy_po_settings["add_to_cart_btn_text"]) ? $wceazy_po_settings["add_to_cart_btn_text"] : "Add to Cart";
 
 
-// $wceazy_sb_select_options_btn_text = isset($wceazy_sb_settings["select_options_btn_text"]) ? $wceazy_sb_settings["select_options_btn_text"] : "Select Options";
-// $wceazy_sb_stock_out_btn_text = isset($wceazy_sb_settings["stock_out_btn_text"]) ? $wceazy_sb_settings["stock_out_btn_text"] : "Stock Out";
-// $wceazy_sb_prev_btn_text = isset($wceazy_sb_settings["prev_btn_text"]) ? $wceazy_sb_settings["prev_btn_text"] : "Previous";
-// $wceazy_sb_next_btn_text = isset($wceazy_sb_settings["next_btn_text"]) ? $wceazy_sb_settings["next_btn_text"] : "Next";
+// $wceazy_po_select_options_btn_text = isset($wceazy_po_settings["select_options_btn_text"]) ? $wceazy_po_settings["select_options_btn_text"] : "Select Options";
+// $wceazy_po_stock_out_btn_text = isset($wceazy_po_settings["stock_out_btn_text"]) ? $wceazy_po_settings["stock_out_btn_text"] : "Stock Out";
+// $wceazy_po_prev_btn_text = isset($wceazy_po_settings["prev_btn_text"]) ? $wceazy_po_settings["prev_btn_text"] : "Previous";
+// $wceazy_po_next_btn_text = isset($wceazy_po_settings["next_btn_text"]) ? $wceazy_po_settings["next_btn_text"] : "Next";
 
 
 $products = array();
@@ -33,7 +33,7 @@ if (
     isset($_REQUEST['page']) || isset($_REQUEST['query']) || isset($_REQUEST['price_start']) || isset($_REQUEST['price_end']) || isset($_REQUEST['rating'])
     || isset($_REQUEST['category_query']) || isset($_REQUEST['stock_query'])
 ) {
-    $products_per_page = is_numeric($wceazy_sb_product_per_page) ? $wceazy_sb_product_per_page : 15;
+    $products_per_page = is_numeric($wceazy_po_product_per_page) ? $wceazy_po_product_per_page : 15;
     $page = sanitize_text_field($_REQUEST['page']);
     $query = sanitize_text_field($_REQUEST['query']);
     $price_start = sanitize_text_field($_REQUEST['price_start']);
@@ -101,9 +101,9 @@ if (
             "product_price" => $product->get_price_html(),
             "product_is_variable" => $product->is_type('variable') ? "1" : "0",
             "product_is_in_stock" => $product->get_stock_quantity() === 0 || !$product->is_in_stock() ? "0" : "1",
-            "add_to_cart_btn_text" => $wceazy_sb_add_to_cart_btn_text,
-            "out_of_stock_btn_text" => $wceazy_sb_stock_out_btn_text,
-            "select_options_btn_text" => $wceazy_sb_select_options_btn_text,
+            "add_to_cart_btn_text" => $wceazy_po_add_to_cart_btn_text,
+            "out_of_stock_btn_text" => $wceazy_po_stock_out_btn_text,
+            "select_options_btn_text" => $wceazy_po_select_options_btn_text,
         );
     }
 
@@ -129,8 +129,8 @@ if (
         "status" => 'true',
         "previous_page_number" => $previous_page_number,
         "next_page_number" => $next_page_number,
-        "prev_btn_text" => $wceazy_sb_prev_btn_text,
-        "next_btn_text" => $wceazy_sb_next_btn_text,
+        "prev_btn_text" => $wceazy_po_prev_btn_text,
+        "next_btn_text" => $wceazy_po_next_btn_text,
         "products" => $products_in_page
     );
 
