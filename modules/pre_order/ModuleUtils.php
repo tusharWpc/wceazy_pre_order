@@ -50,7 +50,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
 
             // Determine if pre-order is enabled
-            $wceazy_po_pre_order_Enable = isset($wceazy_po_settings["enable_pre_order"]) ? $wceazy_po_settings["enable_pre_order"] : "Pre OO";
+            $wceazy_po_pre_order_Enable = isset($wceazy_po_settings["enable_pre_order"]) ? $wceazy_po_settings["enable_pre_order"] : "Pre Order enable";
 
 
             // Determine if the product is marked as a pre-order
@@ -471,8 +471,8 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             $users = $this->get_preorder_customers($product_id);
 
             if ($users) {
-                $subject = __('Product Availability Notification', 'your-plugin-textdomain');
-                $message = sprintf(__('The pre-order period for "%s" has ended. The product is now available for purchase.', 'your-plugin-textdomain'), $product->get_name());
+                $subject = __('Product Availability Notification', 'wceazy');
+                $message = sprintf(__('The pre-order period for "%s" has ended. The product is now available for purchase.', 'wceazy'), $product->get_name());
 
                 foreach ($users as $user_email) {
                     wp_mail($user_email, $subject, $message);
@@ -497,10 +497,10 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 $admin_email = get_option('admin_email');
 
                 // Email subject
-                $subject = __('Pre-order Product Purchase Notification', 'your-plugin-textdomain');
+                $subject = __('Pre-order Product Purchase Notification', 'wceazy');
 
                 // Email body
-                $message = sprintf(__('A user has purchased a pre-order product. Order ID: %s', 'your-plugin-textdomain'), $order_id);
+                $message = sprintf(__('A user has purchased a pre-order product. Order ID: %s', 'wceazy'), $order_id);
 
                 // Send email to admin
                 wp_mail($admin_email, $subject, $message);
@@ -650,7 +650,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
 
                             // Cancel each order
                             foreach ($customer_orders as $order) {
-                                $order->update_status('cancelled', __('Pre-order canceled: Product no longer available', 'your-plugin-textdomain'));
+                                $order->update_status('cancelled', __('Pre-order canceled: Product no longer available', 'wceazy'));
                             }
                         }
 
