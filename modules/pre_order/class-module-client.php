@@ -36,21 +36,33 @@ if (!class_exists('WcEazyPreOrderClient')) {
             add_action('update_preorder_availability', array($this->utils, 'update_preorder_availability'));
             add_action('woocommerce_before_add_to_cart_form', array($this->utils, 'display_preorder_date_and_time'), 15);
             add_filter('woocommerce_get_price_html', array($this->utils, 'custom_preorder_price_html'), 10, 2);
+
+
+            // Hook into WooCommerce to display pre-order information in the order details page
+            add_action('woocommerce_order_details_after_order_table', array($this->utils, 'display_preorder_information_in_order_details'), 10, 1);
+
+            add_action('init', array($this->utils, 'add_preorder_status_to_product'), 10, 2);
+
             add_filter('woocommerce_product_get_price', array($this->utils, 'custom_preorder_price'), 10, 2);
             add_filter('woocommerce_product_get_regular_price', array($this->utils, 'custom_preorder_price'), 10, 2);
             add_filter('woocommerce_product_variation_get_regular_price', array($this->utils, 'custom_preorder_price'), 10, 2);
+
             add_filter('woocommerce_product_variation_get_price', array($this->utils, 'custom_preorder_price'), 10, 2);
+
+
+            
+            //    Error
             add_filter('woocommerce_order_query', array($this->utils, 'filter_orders_by_preorder_products'), 10, 2);
 
-            // Hook to set pre-order date when the order is placed
+            // // Hook to set pre-order date when the order is placed
             add_action('woocommerce_checkout_order_processed', array($this, 'set_preorder_date_on_order_placement'), 10, 3);
 
 
-            // Hook into the auto-cancel task using the WcEazyPreOrderUtils instance
-            // add_action('wp', array($this->utils, 'schedule_auto_cancel_task'));
+            // // Hook into the auto-cancel task using the WcEazyPreOrderUtils instance
+            add_action('wp', array($this->utils, 'schedule_auto_cancel_task'));
 
 
-            // Hook into the auto-cancel task
+            // // Hook into the auto-cancel task
             add_action('auto_cancel_pre_orders', array($this, 'auto_cancel_pre_orders'));
 
         }

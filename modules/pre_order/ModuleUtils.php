@@ -23,12 +23,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             $this->module_admin = $module_admin;
 
             // Initialize session if not already started
-            if (!isset($_SESSION)) {
-                session_start();
-            }
-
-            // Assign session value or fallback
-            // $this->pre_order_btn_text = isset($_SESSION['wceazy_po_pre_order_btn_text']) ? $_SESSION['wceazy_po_pre_order_btn_text'] : 'Default Button Text';
+            // Removed session_start() here as it's already started at the beginning of the file
         }
 
         // Function to save settings data
@@ -50,11 +45,28 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
 
             // Determine if pre-order is enabled
-            $wceazy_po_pre_order_Enable = isset($wceazy_po_settings["enable_pre_order"]) ? $wceazy_po_settings["enable_pre_order"] : "Pre OO";
-
+            $wceazy_po_enable_pre_order = isset($wceazy_po_settings["enable_pre_order"]) ? $wceazy_po_settings["enable_pre_order"] : "Pre Order enable";
 
             // Determine if the product is marked as a pre-order
             $is_pre_order = get_post_meta($post->ID, '_is_pre_order', true);
+
+            // Determine if the product is out of stock
+            $is_out_of_stock = false; // Placeholder logic, implement your actual logic here
+            // Example:
+            // $product = wc_get_product($post->ID);
+            // $is_out_of_stock = !$product->is_in_stock();
+
+            // Determine if the product belongs to specific pre-order categories
+            $is_in_preorder_category = false; // Placeholder logic, implement your actual logic here
+            // Example:
+            // $is_in_preorder_category = $this->is_pre_order_category($product);
+
+            // Automatically enable the pre-order mode only for specific out-of-stock products or categories
+            if ($is_out_of_stock || $is_in_preorder_category) {
+                $wceazy_po_enable_pre_order = 'yes';
+            } else {
+                $wceazy_po_enable_pre_order = 'no';
+            }
 
             echo '<div class="options_group">';
             // Checkbox for marking a product as a pre-order
@@ -64,10 +76,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     'label' => __('Set as Pre-order', 'wceazy'),
                     'description' => __('Check this if you want to offer this product as a pre-order.', 'wceazy'),
                     'desc_tip' => true,
-                    'value' => $this->$wceazy_po_pre_order_Enable,
-                    // Set the checkbox value dynamically
-                    // 'value' => $this->$wceazy_po_pre_order_Enable,
-
+                    'value' => $is_pre_order === 'yes' ? 'yes' : 'no', // Set the checkbox value dynamically
                 )
             );
 
@@ -119,7 +128,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         }
 
 
-
         // Enqueue JavaScript to show/hide fields/buttons based on checkbox state
         public function show_hide_preorder_fields()
         {
@@ -168,6 +176,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             // Remove pre-order discount
             delete_post_meta($post_id, '_pre_order_discount');
         }
+
 
 
         // Custom method to check if a product belongs to a pre-order category
@@ -313,6 +322,15 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             }
 
             return $price_html;
+        }
+
+
+        ///////////////////////////////
+        // Callback function to display pre-order information in the order details page
+        public function display_preorder_information_in_order_details($order)
+        {
+            echo "<h1>display_preorder_information_in_order_details</h1>";
+
         }
 
 
@@ -500,7 +518,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 $subject = __('Pre-order Product Purchase Notification', 'your-plugin-textdomain');
 
                 // Email body
-                $message = sprintf(__('A user has purchased a pre-order product. Order ID: %s', 'your-plugin-textdomain'), $order_id);
+                $message = sprintf(__('<h1>A user has purchased a pre-order product. Order ID: %s</h1>', 'your-plugin-textdomain'), $order_id);
 
                 // Send email to admin
                 wp_mail($admin_email, $subject, $message);
@@ -544,43 +562,67 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         }
 
 
-        function filter_orders_by_preorder_products($args)
+        function add_preorder_status_to_product()
         {
-            // Get all products that were ordered during the pre-order phase
-            $preorder_product_ids = array();
-            $preorder_products = new WP_Query(
+            // Get all products
+            $products = get_posts(
                 array(
                     'post_type' => 'product',
-                    'posts_per_page' => -1,
-                    'meta_query' => array(
-                        array(
-                            'key' => '_is_pre_order',
-                            'value' => 'yes',
-                            'compare' => '=',
-                        ),
-                    ),
+                    'numberposts' => -1,
                 )
             );
 
-            if ($preorder_products->have_posts()) {
-                while ($preorder_products->have_posts()) {
-                    $preorder_products->the_post();
-                    $preorder_product_ids[] = get_the_ID();
+            // Loop through each product
+            foreach ($products as $product) {
+                // Add the _is_pre_order meta field to the product
+                add_post_meta($product->ID, '_is_pre_order', 'yes', true);
+            }
+        }
+        // add_action( 'init', 'add_preorder_status_to_product' );
+
+
+        // Callback function to filter orders by pre-order products
+        // Function to filter orders by pre-order products 
+        public function filter_orders_by_preorder_products($args)
+        {
+            // Access the 'orders' array from the provided $args object
+            $orders = $args->orders;
+        
+         
+            // Iterate through the orders
+            foreach ($orders as $order) {
+                // Access the 'meta_data' array of each order
+                $meta_data = $order->get_meta_data();
+
+            
+                // Iterate through the meta data of each order
+                foreach ($meta_data as $meta) {
+                //    print_r($meta->key);
+                    // Check if the meta key matches '_order_has_preorder'
+                    if ($meta->key === '_order_has_preorder') {
+                        // Access the value of '_order_has_preorder'
+                        $order_has_preorder_value = $meta->value;
+        
+                        // Perform any necessary actions with the value
+                        echo "Value of _order_has_preorder: " . $order_has_preorder_value;
+        
+                        // If you want to update the post meta based on this value, you can use:
+                        // $order_id = $order->get_id();
+                        // if ($order_id && $order_has_preorder_value === 'yes') {
+                        //     update_post_meta($order_id, '_order_has_preorder', 'yes');
+                        // }
+        
+                        // Break the loop after finding the relevant meta data
+                        break 2;
+                    }
                 }
-                wp_reset_postdata();
             }
-
-            // If there are products ordered during the pre-order phase, modify the order query
-            if (!empty($preorder_product_ids)) {
-                $args['meta_query'][] = array(
-                    'key' => '_product_id',
-                    'value' => $preorder_product_ids,
-                    'compare' => 'IN',
-                );
-            }
-
+        
+            // Return the modified $args object
             return $args;
         }
+        
+
 
         // Callback function to set pre-order date when the order is placed
         public function set_preorder_date_on_order_placement($order_id, $posted_data, $order)
@@ -669,6 +711,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             if (!wp_next_scheduled('auto_cancel_pre_orders')) {
                 wp_schedule_event(time(), 'daily', 'auto_cancel_pre_orders');
             }
-        } 
+        }
     }
 }
