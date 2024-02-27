@@ -203,12 +203,8 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         }
 
 
-        // Hook into WooCommerce to modify the Add to Cart button text and handle pre-order price 
-
-        public function custom_preorder_button_text($text)
+        public function custom_preorder_button_text($text, $product)
         {
-            global $product;
-
             if ($product && $product->is_type('simple') && 'yes' === get_post_meta($product->get_id(), '_is_pre_order', true)) {
                 $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
 
@@ -227,19 +223,12 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     $text = $dynamic_button_text;
                 }
 
-                // var_dump($text); // Debugging
-
                 // Add action to send email when pre-order is placed
                 // add_action('woocommerce_order_status_pending_to_processing_notification', array($this, 'send_preorder_confirmation_email'), 10, 2);
             }
 
             $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
             $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
-
-            // echo "<pre>";
-            // var_dump($wceazy_po_settings);
-            // echo "</pre>";
-
 
             $wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"]) ? $wceazy_po_settings["pre_order_btn_text"] : "PreOrder Now!";
             // Check if the product is marked as a pre-order
@@ -682,6 +671,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             if (!wp_next_scheduled('auto_cancel_pre_orders')) {
                 wp_schedule_event(time(), 'daily', 'auto_cancel_pre_orders');
             }
-        } 
+        }
     }
 }
