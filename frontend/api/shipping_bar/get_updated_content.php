@@ -7,8 +7,8 @@ $wceazy_po_enable_shipping_bar = isset($wceazy_po_settings["enable_shipping_bar"
 $wceazy_po_display_desktop = isset($wceazy_po_settings["display_desktop"]) ? $wceazy_po_settings["display_desktop"] : "yes";
 $wceazy_po_display_mobile = isset($wceazy_po_settings["display_mobile"]) ? $wceazy_po_settings["display_mobile"] : "yes";
 $wceazy_po_shipping_zone = isset($wceazy_po_settings["shipping_zone"]) ? $wceazy_po_settings["shipping_zone"] : "";
-$wceazy_po_dont_show_pages = isset($wceazy_po_settings["dont_show_pages"]) ? explode(",",$wceazy_po_settings["dont_show_pages"]) : array();
-$wceazy_po_exclude_products = isset($wceazy_po_settings["exclude_products"]) ? explode(",",$wceazy_po_settings["exclude_products"]) : array();
+$wceazy_po_dont_show_pages = isset($wceazy_po_settings["dont_show_pages"]) ? explode(",", $wceazy_po_settings["dont_show_pages"]) : array();
+$wceazy_po_exclude_products = isset($wceazy_po_settings["exclude_products"]) ? explode(",", $wceazy_po_settings["exclude_products"]) : array();
 
 $wceazy_po_show_in_cart = isset($wceazy_po_settings["show_in_cart"]) ? $wceazy_po_settings["show_in_cart"] : "yes";
 $wceazy_po_position_cart_subtotal = isset($wceazy_po_settings["position_cart_subtotal"]) ? $wceazy_po_settings["position_cart_subtotal"] : "woocommerce_cart_totals_before_shipping";
@@ -52,23 +52,23 @@ $wceazy_po_progress_border_radius = isset($wceazy_po_settings["progress_border_r
 
 
 /* Disable if Shipping Bar is disabled */
-if($wceazy_po_enable_shipping_bar == "no"){
+if ($wceazy_po_enable_shipping_bar == "no") {
     return;
 }
 
 /* Disable if shipping zone not defined */
-if($wceazy_po_shipping_zone == ""){
+if ($wceazy_po_shipping_zone == "") {
     return;
 }
 
 /* Check if zone matches */
 $zone_id = $this->base_client->shipping_bar->utils->getUsersShippingZoneID();
-if($wceazy_po_shipping_zone != $zone_id){
+if ($wceazy_po_shipping_zone != $zone_id) {
     return;
 }
 
 /* Check if zone has free shipping method */
-if(!$this->base_client->shipping_bar->utils->isZoneHasFreeShippingMethod($zone_id)){
+if (!$this->base_client->shipping_bar->utils->isZoneHasFreeShippingMethod($zone_id)) {
     return;
 }
 
@@ -81,40 +81,44 @@ $min_required_amount = $this->base_client->shipping_bar->utils->getShippingZoneM
 $cart_amount = WC()->cart->get_cart_contents_total();
 
 /* Progress Percent */
-if($cart_amount >= $min_required_amount){
+if ($cart_amount >= $min_required_amount) {
     $percent = "100";
-}else{
+} else {
     $percent = (100 * $cart_amount) / $min_required_amount;
 }
 
 
 /* Cart Messages */
 $message_text = "";
-if($cart_amount == 0){
+if ($cart_amount == 0) {
     $message_text = $wceazy_po_zero_order_amount_msg;
-}else if($cart_amount > 0 && $cart_amount < $min_required_amount){
+} else if ($cart_amount > 0 && $cart_amount < $min_required_amount) {
     $message_text = $wceazy_po_partial_order_amount_msg;
-}else if($cart_amount > 0 && $cart_amount >= $min_required_amount){
+} else if ($cart_amount > 0 && $cart_amount >= $min_required_amount) {
     $message_text = $wceazy_po_completed_order_amount_msg;
 }
 $message_text = str_replace("{minimum_order}", wc_price($min_required_amount), $message_text);
 $message_text = str_replace("{cart_total}", wc_price($cart_amount), $message_text);
 $message_text = str_replace("{missing_amount}", wc_price($min_required_amount - $cart_amount), $message_text);
-$message_text = str_replace("{checkout_page}", '<a href="'.home_url()."/checkout".'">Checkout</a>', $message_text);
+$message_text = str_replace("{checkout_page}", '<a href="' . home_url() . "/checkout" . '">Checkout</a>', $message_text);
 
 
 
 ?>
 
 <div class="wceazy_frontend_po_header">
-    <p><?php echo $message_text; ?></p>
+    <p>
+        <?php echo $message_text; ?>
+    </p>
     <button class="wceazy_frontend_po_close_icon" onclick="wceazy_close_sb()"></button>
 </div>
-<?php if($cart_amount != 0) { ?>
-    <?php if($wceazy_po_enable_progress_bar == "yes") { ?>
+<?php if ($cart_amount != 0) { ?>
+    <?php if ($wceazy_po_enable_progress_bar == "yes") { ?>
         <div class="wceazy_frontend_po_progress_container">
             <div class="bar-holder">
-                <div class="bar-1" style="width: <?php echo $percent; ?>%;"><?php echo $percent; ?>%</div>
+                <div class="bar-1" style="width: <?php echo $percent; ?>%;">
+                    <?php echo $percent; ?>%
+                </div>
             </div>
         </div>
     <?php } ?>
