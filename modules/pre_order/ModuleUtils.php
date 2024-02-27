@@ -587,41 +587,41 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         {
             // Access the 'orders' array from the provided $args object
             $orders = $args->orders;
-        
-         
+
+
             // Iterate through the orders
             foreach ($orders as $order) {
                 // Access the 'meta_data' array of each order
                 $meta_data = $order->get_meta_data();
 
-            
+
                 // Iterate through the meta data of each order
                 foreach ($meta_data as $meta) {
-                //    print_r($meta->key);
+                    //    print_r($meta->key);
                     // Check if the meta key matches '_order_has_preorder'
                     if ($meta->key === '_order_has_preorder') {
                         // Access the value of '_order_has_preorder'
                         $order_has_preorder_value = $meta->value;
-        
+
                         // Perform any necessary actions with the value
                         echo "Value of _order_has_preorder: " . $order_has_preorder_value;
-        
+
                         // If you want to update the post meta based on this value, you can use:
                         // $order_id = $order->get_id();
                         // if ($order_id && $order_has_preorder_value === 'yes') {
                         //     update_post_meta($order_id, '_order_has_preorder', 'yes');
                         // }
-        
+
                         // Break the loop after finding the relevant meta data
                         break 2;
                     }
                 }
             }
-        
+
             // Return the modified $args object
             return $args;
         }
-        
+
 
 
         // Callback function to set pre-order date when the order is placed
