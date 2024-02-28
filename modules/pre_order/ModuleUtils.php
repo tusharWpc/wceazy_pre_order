@@ -176,7 +176,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             // Remove pre-order discount
             delete_post_meta($post_id, '_pre_order_discount');
         }
-        
+
 
         // new Save custom fields data when the product is saved
         // public function save_preorder_fields($post_id)
@@ -273,7 +273,28 @@ if (!class_exists('WcEazyPreOrderUtils')) {
 
             $wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"]) ? $wceazy_po_settings["pre_order_btn_text"] : "PreOrder Now!";
             // Check if the product is marked as a pre-order
-            $is_pre_order = get_post_meta($product->get_id(), '_is_pre_order', true);
+            // $is_pre_order = get_post_meta($product->get_id(), '_is_pre_order', true);
+            // Check if $product is not null before using it
+            if ($product !== null) {
+                // Access the product ID only if $product is not null
+                $product_id = $product->get_id();
+
+                // Check if $product_id is not null before proceeding
+                if ($product_id !== null) {
+                    // Use $product_id to get the meta value
+                    $is_pre_order = get_post_meta($product_id, '_is_pre_order', true);
+
+                    // Use the $is_pre_order value as needed
+                } else {
+                    // Handle the case where $product_id is null
+                    echo "Product ID is null.";
+                }
+            } else {
+                // Handle the case where $product is null
+                echo "Product is null.";
+            }
+
+
             if ($is_pre_order === 'yes') {
                 // $text = __('Pre-order Now', 'your-text-domain');
                 return $wceazy_po_pre_order_btn_text;

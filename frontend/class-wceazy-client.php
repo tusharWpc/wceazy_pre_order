@@ -96,7 +96,7 @@ if (!class_exists('WcEazyClient')) {
                 }
                 /* ======== Pre Order ========== */
                 if ($this->settings->getModuleStatus("pre_order")) {
-                    include_once WCEAZY_PATH . "modules/pre_order/class-module-Client.php";
+                    include_once WCEAZY_PATH . "modules/pre_order/pre-class-module-client.php";
                     include_once WCEAZY_PATH . "modules/pre_order/ModuleUtils.php";
                     $this->pre_order = new WcEazyPreOrderClient($this);
                     // WcEazyPreOrderClient
