@@ -233,10 +233,13 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         {
             global $product;
 
+
             // Check if $product is set and is an instance of WC_Product
             if ($product && is_a($product, 'WC_Product') && $product->is_type('simple')) {
                 $product_id = $product->get_id();
-
+                // echo "<pre>";
+                // printf($product_id);
+                // echo "</pre>";
                 // Check if the product ID is valid
                 if ($product_id) {
                     // Check if the product is marked as a pre-order
