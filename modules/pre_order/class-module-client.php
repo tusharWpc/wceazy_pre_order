@@ -45,24 +45,22 @@ if (!class_exists('WcEazyPreOrderClient')) {
 
             add_filter('woocommerce_product_get_price', array($this->utils, 'custom_preorder_price'), 10, 2);
             add_filter('woocommerce_product_get_regular_price', array($this->utils, 'custom_preorder_price'), 10, 2);
+
             add_filter('woocommerce_product_variation_get_regular_price', array($this->utils, 'custom_preorder_price'), 10, 2);
 
             add_filter('woocommerce_product_variation_get_price', array($this->utils, 'custom_preorder_price'), 10, 2);
 
+            // //    Error
+            //   add_filter('woocommerce_order_query', array($this->utils, 'filter_orders_by_preorder_products'), 10, 2);
 
-            
-            //    Error
-            add_filter('woocommerce_order_query', array($this->utils, 'filter_orders_by_preorder_products'), 10, 2);
-
-            // // Hook to set pre-order date when the order is placed
+            // // // Hook to set pre-order date when the order is placed
             add_action('woocommerce_checkout_order_processed', array($this, 'set_preorder_date_on_order_placement'), 10, 3);
 
-
-            // // Hook into the auto-cancel task using the WcEazyPreOrderUtils instance
+            // // // Hook into the auto-cancel task using the WcEazyPreOrderUtils instance
             add_action('wp', array($this->utils, 'schedule_auto_cancel_task'));
 
 
-            // // Hook into the auto-cancel task
+            // // // Hook into the auto-cancel task
             add_action('auto_cancel_pre_orders', array($this, 'auto_cancel_pre_orders'));
 
         }

@@ -158,26 +158,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         }
 
         // Save custom fields data when the product is saved
-        // public function save_preorder_fields($post_id)
-        // {
-        //     // Validate and sanitize input
-        //     $is_pre_order = isset($_POST['_is_pre_order']) ? 'yes' : 'no';
-        //     update_post_meta($post_id, '_is_pre_order', sanitize_text_field($is_pre_order));
-
-        //     $pre_order_date = isset($_POST['_pre_order_date_time']) ? sanitize_text_field($_POST['_pre_order_date_time']) : '';
-        //     update_post_meta($post_id, '_pre_order_date_time', $pre_order_date);
-
-        //     $dynamic_inventory = isset($_POST['_dynamic_inventory']) ? 'yes' : 'no';
-        //     update_post_meta($post_id, '_dynamic_inventory', sanitize_text_field($dynamic_inventory));
-
-        //     $pre_order_price = isset($_POST['_pre_order_price']) ? wc_format_decimal($_POST['_pre_order_price']) : '';
-        //     update_post_meta($post_id, '_pre_order_price', $pre_order_price);
-
-        //     // Remove pre-order discount
-        //     delete_post_meta($post_id, '_pre_order_discount');
-        // }
-
-        // new Save custom fields data when the product is saved
         public function save_preorder_fields($post_id)
         {
             // Validate and sanitize input
@@ -190,22 +170,47 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             $dynamic_inventory = isset($_POST['_dynamic_inventory']) ? 'yes' : 'no';
             update_post_meta($post_id, '_dynamic_inventory', sanitize_text_field($dynamic_inventory));
 
-            $pre_order_price = isset($_POST['_pre_order_price']) ? sanitize_text_field($_POST['_pre_order_price']) : '';
+            $pre_order_price = isset($_POST['_pre_order_price']) ? wc_format_decimal($_POST['_pre_order_price']) : '';
             update_post_meta($post_id, '_pre_order_price', $pre_order_price);
 
-            // Set default pre-order status to "on-hold" when a product is marked as pre-order
-            if ($is_pre_order === 'yes') {
-                // Create a new WooCommerce order
-                $order = wc_create_order(array('status' => 'on-hold'));
-
-                // Add product to the order
-                $product = wc_get_product($post_id);
-                $order->add_product($product, 1);
-
-                // Save the order
-                $order->save();
-            }
+            // Remove pre-order discount
+            delete_post_meta($post_id, '_pre_order_discount');
         }
+        
+
+        // new Save custom fields data when the product is saved
+        // public function save_preorder_fields($post_id)
+        // {
+        //     // Validate and sanitize input
+        //     $is_pre_order = isset($_POST['_is_pre_order']) ? 'yes' : 'no';
+        //     update_post_meta($post_id, '_is_pre_order', sanitize_text_field($is_pre_order));
+
+        //     $pre_order_date = isset($_POST['_pre_order_date_time']) ? sanitize_text_field($_POST['_pre_order_date_time']) : '';
+        //     update_post_meta($post_id, '_pre_order_date_time', $pre_order_date);
+
+        //     $dynamic_inventory = isset($_POST['_dynamic_inventory']) ? 'yes' : 'no';
+        //     update_post_meta($post_id, '_dynamic_inventory', sanitize_text_field($dynamic_inventory));
+
+        //     $pre_order_price = isset($_POST['_pre_order_price']) ? sanitize_text_field($_POST['_pre_order_price']) : '';
+        //     update_post_meta($post_id, '_pre_order_price', $pre_order_price);
+
+        //     // Set default pre-order status to "on-hold" when a product is marked as pre-order
+        //     if ($is_pre_order === 'yes') {
+        //         // Create a new WooCommerce order
+        //         $order = wc_create_order(array('status' => 'on-hold'));
+
+        //         // Add product to the order
+        //         $product = wc_get_product($post_id);
+        //         $order->add_product($product, 1);
+
+        //         // Save the order
+        //         $order->save();
+        //     }
+        // }
+
+
+
+
 
 
         // Custom method to check if a product belongs to a pre-order category
@@ -656,45 +661,52 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             }
         }
 
-        // Function to filter orders by pre-order products 
-        public function filter_orders_by_preorder_products($args)
-        {
-            // Access the 'orders' array from the provided $args object
-            $orders = $args->orders;
+        // Error Function to filter orders by pre-order products 
+        // public function filter_orders_by_preorder_products($args)
+        // {
+        //     echo"<pre>";
+        //     printf($args);
+        //     echo"</pre>";
+        //     // Check if the 'orders' property exists and is not null
+        //     if (isset($args['orders'])) {
+        //         // Convert the 'orders' property to an array if it's an object
+        //         $orders = is_array($args['orders']) ? $args['orders'] : (array)$args['orders'];
 
+        //         // Iterate through the orders
+        //         foreach ($orders as $order) {
+        //             // Access the 'meta_data' array of each order
+        //             $meta_data = $order->get_meta_data();
 
-            // Iterate through the orders
-            foreach ($orders as $order) {
-                // Access the 'meta_data' array of each order
-                $meta_data = $order->get_meta_data();
+        //             // Iterate through the meta data of each order
+        //             foreach ($meta_data as $meta) {
+        //                 // Check if the meta key matches '_order_has_preorder'
+        //                 if ($meta->key === '_order_has_preorder') {
+        //                     // Access the value of '_order_has_preorder'
+        //                     $order_has_preorder_value = $meta->value;
 
+        //                     // Perform any necessary actions with the value
+        //                     echo "Value of _order_has_preorder: " . $order_has_preorder_value;
 
-                // Iterate through the meta data of each order
-                foreach ($meta_data as $meta) {
-                    //    print_r($meta->key);
-                    // Check if the meta key matches '_order_has_preorder'
-                    if ($meta->key === '_order_has_preorder') {
-                        // Access the value of '_order_has_preorder'
-                        $order_has_preorder_value = $meta->value;
+        //                     // If you want to update the post meta based on this value, you can use:
+        //                     // $order_id = $order->get_id();
+        //                     // if ($order_id && $order_has_preorder_value === 'yes') {
+        //                     //     update_post_meta($order_id, '_order_has_preorder', 'yes');
+        //                     // }
 
-                        // Perform any necessary actions with the value
-                        echo "Value of _order_has_preorder: " . $order_has_preorder_value;
+        //                     // Break the loop after finding the relevant meta data
+        //                     break 2;
+        //                 }
+        //             }
+        //         }
+        //     } else {
+        //         // Handle case where 'orders' property is missing
+        //         echo "No orders found.";
+        //     }
 
-                        // If you want to update the post meta based on this value, you can use:
-                        // $order_id = $order->get_id();
-                        // if ($order_id && $order_has_preorder_value === 'yes') {
-                        //     update_post_meta($order_id, '_order_has_preorder', 'yes');
-                        // }
+        //     // Return the modified $args object
+        //     return $args;
+        // }
 
-                        // Break the loop after finding the relevant meta data
-                        break 2;
-                    }
-                }
-            }
-
-            // Return the modified $args object
-            return $args;
-        }
 
 
 
