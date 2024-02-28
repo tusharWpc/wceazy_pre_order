@@ -177,7 +177,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             delete_post_meta($post_id, '_pre_order_discount');
         }
 
-
         // new Save custom fields data when the product is saved
         // public function save_preorder_fields($post_id)
         // {
@@ -209,10 +208,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         // }
 
 
-
-
-
-
         // Custom method to check if a product belongs to a pre-order category
         public function is_pre_order_category($product)
         {
@@ -239,37 +234,47 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         {
             global $product;
 
-            // Check if $product is not null before using it
-            if ($product !== null && $product->is_type('simple')) {
-                $product_id = $product->get_id();
+            if ($product && $product->is_type('simple') && 'yes' === get_post_meta($product->get_id(), '_is_pre_order', true)) {
+                $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
 
-                // Check if $product_id is not null before proceeding
-                if ($product_id !== null) {
-                    $is_pre_order = get_post_meta($product_id, '_is_pre_order', true);
-
-                    if ($is_pre_order === 'yes') {
-                        $pre_order_price = get_post_meta($product_id, '_pre_order_price', true);
-
-                        if ($pre_order_price !== '') {
-                            $product->set_price($pre_order_price);
-                        }
-
-                        $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', false);
-                        $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
-                        $wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"]) ? $wceazy_po_settings["pre_order_btn_text"] : "PreOrder Now!";
-
-                        return $wceazy_po_pre_order_btn_text;
-                    }
-                } else {
-                    // Handle the case where $product_id is null
-                    echo "Product ID is null.";
+                if ($pre_order_price !== '') {
+                    $product->set_price($pre_order_price);
+                    // No need to call custom_preorder_price_html here
                 }
-            } else {
-                // Handle the case where $product is null or not a simple product
-                // echo "Product is null or not a simple product.";
+
+                // Access the dynamic button text here
+                $dynamic_button_text = $this->wceazy_po_pre_order_btn_text;
+
+                $text = __('Pre-order Now', 'wceazy');
+
+                // Replace the static text with the dynamic button text
+                if (!empty($dynamic_button_text)) {
+                    $text = $dynamic_button_text;
+                }
+
+                // var_dump($text); // Debugging
+
+                // Add action to send email when pre-order is placed
+                // add_action('woocommerce_order_status_pending_to_processing_notification', array($this, 'send_preorder_confirmation_email'), 10, 2);
             }
 
-            return "Add To Cart";
+            $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
+            $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
+
+            // echo "<pre>";
+            // var_dump($wceazy_po_settings);
+            // echo "</pre>";
+
+
+            $wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"]) ? $wceazy_po_settings["pre_order_btn_text"] : "PreOrder Now!";
+            // Check if the product is marked as a pre-order
+            $is_pre_order = get_post_meta($product->get_id(), '_is_pre_order', true);
+            if ($is_pre_order === 'yes') {
+                // $text = __('Pre-order Now', 'your-text-domain');
+                return $wceazy_po_pre_order_btn_text;
+            } else {
+                return "Add To Card";
+            }
         }
 
 
@@ -651,51 +656,51 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             }
         }
 
-        // Error Function to filter orders by pre-order products 
-        // public function filter_orders_by_preorder_products($args)
-        // {
-        //     echo"<pre>";
-        //     printf($args);
-        //     echo"</pre>";
-        //     // Check if the 'orders' property exists and is not null
-        //     if (isset($args['orders'])) {
-        //         // Convert the 'orders' property to an array if it's an object
-        //         $orders = is_array($args['orders']) ? $args['orders'] : (array)$args['orders'];
+        // Function to filter orders by pre-order products 
+        public function filter_orders_by_preorder_products($args)
+        {
+            echo "<pre>";
+            printf($args);
+            echo "</pre>";
+            // Check if the 'orders' property exists and is not null
+            if (isset($args['orders'])) {
+                // Convert the 'orders' property to an array if it's an object
+                $orders = is_array($args['orders']) ? $args['orders'] : (array) $args['orders'];
 
-        //         // Iterate through the orders
-        //         foreach ($orders as $order) {
-        //             // Access the 'meta_data' array of each order
-        //             $meta_data = $order->get_meta_data();
+                // Iterate through the orders
+                foreach ($orders as $order) {
+                    // Access the 'meta_data' array of each order
+                    $meta_data = $order->get_meta_data();
 
-        //             // Iterate through the meta data of each order
-        //             foreach ($meta_data as $meta) {
-        //                 // Check if the meta key matches '_order_has_preorder'
-        //                 if ($meta->key === '_order_has_preorder') {
-        //                     // Access the value of '_order_has_preorder'
-        //                     $order_has_preorder_value = $meta->value;
+                    // Iterate through the meta data of each order
+                    foreach ($meta_data as $meta) {
+                        // Check if the meta key matches '_order_has_preorder'
+                        if ($meta->key === '_order_has_preorder') {
+                            // Access the value of '_order_has_preorder'
+                            $order_has_preorder_value = $meta->value;
 
-        //                     // Perform any necessary actions with the value
-        //                     echo "Value of _order_has_preorder: " . $order_has_preorder_value;
+                            // Perform any necessary actions with the value
+                            echo "Value of _order_has_preorder: " . $order_has_preorder_value;
 
-        //                     // If you want to update the post meta based on this value, you can use:
-        //                     // $order_id = $order->get_id();
-        //                     // if ($order_id && $order_has_preorder_value === 'yes') {
-        //                     //     update_post_meta($order_id, '_order_has_preorder', 'yes');
-        //                     // }
+                            // If you want to update the post meta based on this value, you can use:
+                            // $order_id = $order->get_id();
+                            // if ($order_id && $order_has_preorder_value === 'yes') {
+                            //     update_post_meta($order_id, '_order_has_preorder', 'yes');
+                            // }
 
-        //                     // Break the loop after finding the relevant meta data
-        //                     break 2;
-        //                 }
-        //             }
-        //         }
-        //     } else {
-        //         // Handle case where 'orders' property is missing
-        //         echo "No orders found.";
-        //     }
+                            // Break the loop after finding the relevant meta data
+                            break 2;
+                        }
+                    }
+                }
+            } else {
+                // Handle case where 'orders' property is missing
+                echo "No orders found.";
+            }
 
-        //     // Return the modified $args object
-        //     return $args;
-        // }
+            // Return the modified $args object
+            return $args;
+        }
 
 
 
