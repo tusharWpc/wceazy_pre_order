@@ -158,24 +158,57 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         }
 
         // Save custom fields data when the product is saved
-        public function save_preorder_fields($post_id)
-        {
-            // Validate and sanitize input
-            $is_pre_order = isset($_POST['_is_pre_order']) ? 'yes' : 'no';
-            update_post_meta($post_id, '_is_pre_order', sanitize_text_field($is_pre_order));
+        // public function save_preorder_fields($post_id)
+        // {
+        //     // Validate and sanitize input
+        //     $is_pre_order = isset($_POST['_is_pre_order']) ? 'yes' : 'no';
+        //     update_post_meta($post_id, '_is_pre_order', sanitize_text_field($is_pre_order));
 
-            $pre_order_date = isset($_POST['_pre_order_date_time']) ? sanitize_text_field($_POST['_pre_order_date_time']) : '';
-            update_post_meta($post_id, '_pre_order_date_time', $pre_order_date);
+        //     $pre_order_date = isset($_POST['_pre_order_date_time']) ? sanitize_text_field($_POST['_pre_order_date_time']) : '';
+        //     update_post_meta($post_id, '_pre_order_date_time', $pre_order_date);
 
-            $dynamic_inventory = isset($_POST['_dynamic_inventory']) ? 'yes' : 'no';
-            update_post_meta($post_id, '_dynamic_inventory', sanitize_text_field($dynamic_inventory));
+        //     $dynamic_inventory = isset($_POST['_dynamic_inventory']) ? 'yes' : 'no';
+        //     update_post_meta($post_id, '_dynamic_inventory', sanitize_text_field($dynamic_inventory));
 
-            $pre_order_price = isset($_POST['_pre_order_price']) ? wc_format_decimal($_POST['_pre_order_price']) : '';
-            update_post_meta($post_id, '_pre_order_price', $pre_order_price);
+        //     $pre_order_price = isset($_POST['_pre_order_price']) ? wc_format_decimal($_POST['_pre_order_price']) : '';
+        //     update_post_meta($post_id, '_pre_order_price', $pre_order_price);
 
-            // Remove pre-order discount
-            delete_post_meta($post_id, '_pre_order_discount');
-        }
+        //     // Remove pre-order discount
+        //     delete_post_meta($post_id, '_pre_order_discount');
+        // }
+
+        // new Save custom fields data when the product is saved
+public function save_preorder_fields($post_id)
+{
+    // Validate and sanitize input
+    $is_pre_order = isset($_POST['_is_pre_order']) ? 'yes' : 'no';
+    update_post_meta($post_id, '_is_pre_order', sanitize_text_field($is_pre_order));
+
+    $pre_order_date = isset($_POST['_pre_order_date_time']) ? sanitize_text_field($_POST['_pre_order_date_time']) : '';
+    update_post_meta($post_id, '_pre_order_date_time', $pre_order_date);
+
+    $dynamic_inventory = isset($_POST['_dynamic_inventory']) ? 'yes' : 'no';
+    update_post_meta($post_id, '_dynamic_inventory', sanitize_text_field($dynamic_inventory));
+
+    $pre_order_price = isset($_POST['_pre_order_price']) ? sanitize_text_field($_POST['_pre_order_price']) : '';
+    update_post_meta($post_id, '_pre_order_price', $pre_order_price);
+
+    // Set default pre-order status to "on-hold" when a product is marked as pre-order
+    if ($is_pre_order === 'yes') {
+        // Create a new WooCommerce order
+        $order = wc_create_order(array('status' => 'on-hold'));
+
+        // Add product to the order
+        $product = wc_get_product($post_id);
+        $order->add_product($product, 1);
+
+        // Save the order
+        $order->save();
+    }
+}
+
+
+
 
 
 
@@ -515,8 +548,8 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             $users = $this->get_preorder_customers($product_id);
 
             if ($users) {
-                $subject = __('Product Availability Notification', 'your-plugin-textdomain');
-                $message = sprintf(__('The pre-order period for "%s" has ended. The product is now available for purchase.', 'your-plugin-textdomain'), $product->get_name());
+                $subject = __('Product Availability Notification', 'wceazy');
+                $message = sprintf(__('The pre-order period for "%s" has ended. The product is now available for purchase.', 'wceazy'), $product->get_name());
 
                 foreach ($users as $user_email) {
                     wp_mail($user_email, $subject, $message);
@@ -541,15 +574,37 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 $admin_email = get_option('admin_email');
 
                 // Email subject
-                $subject = __('Pre-order Product Purchase Notification', 'your-plugin-textdomain');
+                $subject = __('Pre-order Product Purchase Notification', 'wceazy');
 
                 // Email body
-                $message = sprintf(__('<h1>A user has purchased a pre-order product. Order ID: %s</h1>', 'your-plugin-textdomain'), $order_id);
+                $message = '<html>';
+                $message .= '<head>';
+                $message .= '<style>';
+                $message .= 'h1 {color: #007bff; font-size: 28px; margin-bottom: 20px;}';
+                $message .= 'p {color: #555; font-size: 18px; margin-bottom: 10px;}';
+                $message .= '</style>';
+                $message .= '</head>';
+                $message .= '<body>';
+                $message .= sprintf('<h1>%s</h1>', __('Pre-order Product Purchase Notification', 'wceazy'));
+                $message .= '<p>';
+                $message .= __('Dear Admin,', 'wceazy') . '<br>';
+                $message .= __('This is to inform you that a user has just purchased a pre-order product.', 'wceazy') . '<br>';
+                $message .= __('Details of the order are as follows:', 'wceazy') . '<br>';
+                $message .= __('Order ID:', 'wceazy') . ' ' . $order_id . '<br>';
+                $message .= __('Please take necessary actions accordingly.', 'wceazy') . '<br>';
+                $message .= '</p>';
+                $message .= '</body>';
+                $message .= '</html>';
 
                 // Send email to admin
+                add_filter('wp_mail_content_type', function () {
+                    return 'text/html';
+                });
                 wp_mail($admin_email, $subject, $message);
             }
         }
+
+
 
         // Get customers who pre-ordered the product
         public function get_preorder_customers($product_id)
@@ -604,10 +659,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 add_post_meta($product->ID, '_is_pre_order', 'yes', true);
             }
         }
-        // add_action( 'init', 'add_preorder_status_to_product' );
 
-
-        // Callback function to filter orders by pre-order products
         // Function to filter orders by pre-order products 
         public function filter_orders_by_preorder_products($args)
         {
@@ -718,7 +770,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
 
                             // Cancel each order
                             foreach ($customer_orders as $order) {
-                                $order->update_status('cancelled', __('Pre-order canceled: Product no longer available', 'your-plugin-textdomain'));
+                                $order->update_status('cancelled', __('Pre-order canceled: Product no longer available', 'wceazy'));
                             }
                         }
 
