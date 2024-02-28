@@ -229,53 +229,40 @@ if (!class_exists('WcEazyPreOrderUtils')) {
 
 
         // Hook into WooCommerce to modify the Add to Cart button text and handle pre-order price 
-
         public function custom_preorder_button_text($text)
         {
             global $product;
 
-            if ($product && $product->is_type('simple') && 'yes' === get_post_meta($product->get_id(), '_is_pre_order', true)) {
-                $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
+            // Check if $product is set and is an instance of WC_Product
+            if ($product && is_a($product, 'WC_Product') && $product->is_type('simple')) {
+                $product_id = $product->get_id();
 
-                if ($pre_order_price !== '') {
-                    $product->set_price($pre_order_price);
-                    // No need to call custom_preorder_price_html here
+                // Check if the product ID is valid
+                if ($product_id) {
+                    // Check if the product is marked as a pre-order
+                    $is_pre_order = get_post_meta($product_id, '_is_pre_order', true);
+
+                    if ($is_pre_order === 'yes') {
+                        // Access the dynamic button text here
+                        $dynamic_button_text = $this->wceazy_po_pre_order_btn_text;
+
+                        // Set the default text
+                        $text = __('Pre-order Now', 'wceazy');
+
+                        // Replace the static text with the dynamic button text if available
+                        if (!empty($dynamic_button_text)) {
+                            $text = $dynamic_button_text;
+                        }
+
+                        return $text;
+                    }
                 }
-
-                // Access the dynamic button text here
-                $dynamic_button_text = $this->wceazy_po_pre_order_btn_text;
-
-                $text = __('Pre-order Now', 'wceazy');
-
-                // Replace the static text with the dynamic button text
-                if (!empty($dynamic_button_text)) {
-                    $text = $dynamic_button_text;
-                }
-
-                // var_dump($text); // Debugging
-
-                // Add action to send email when pre-order is placed
-                // add_action('woocommerce_order_status_pending_to_processing_notification', array($this, 'send_preorder_confirmation_email'), 10, 2);
             }
 
-            $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
-            $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
-
-            // echo "<pre>";
-            // var_dump($wceazy_po_settings);
-            // echo "</pre>";
-
-
-            $wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"]) ? $wceazy_po_settings["pre_order_btn_text"] : "PreOrder Now!";
-            // Check if the product is marked as a pre-order
-            $is_pre_order = get_post_meta($product->get_id(), '_is_pre_order', true);
-            if ($is_pre_order === 'yes') {
-                // $text = __('Pre-order Now', 'your-text-domain');
-                return $wceazy_po_pre_order_btn_text;
-            } else {
-                return "Add To Card";
-            }
+            return "Add To Cart";
         }
+
+
 
 
         public function display_preorder_date_and_time()
@@ -386,8 +373,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 // You can customize the display of preorder information as needed
             }
         }
-
-
 
         // Modify the product prices in the cart for pre-order products
         public function apply_preorder_discount_to_cart($cart)
