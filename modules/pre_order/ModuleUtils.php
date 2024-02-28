@@ -239,68 +239,37 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         {
             global $product;
 
-            if ($product && $product->is_type('simple') && 'yes' === get_post_meta($product->get_id(), '_is_pre_order', true)) {
-                $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
-
-                if ($pre_order_price !== '') {
-                    $product->set_price($pre_order_price);
-                    // No need to call custom_preorder_price_html here
-                }
-
-                // Access the dynamic button text here
-                $dynamic_button_text = $this->wceazy_po_pre_order_btn_text;
-
-                $text = __('Pre-order Now', 'wceazy');
-
-                // Replace the static text with the dynamic button text
-                if (!empty($dynamic_button_text)) {
-                    $text = $dynamic_button_text;
-                }
-
-                // var_dump($text); // Debugging
-
-                // Add action to send email when pre-order is placed
-                // add_action('woocommerce_order_status_pending_to_processing_notification', array($this, 'send_preorder_confirmation_email'), 10, 2);
-            }
-
-            $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
-            $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
-
-            // echo "<pre>";
-            // var_dump($wceazy_po_settings);
-            // echo "</pre>";
-
-
-            $wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"]) ? $wceazy_po_settings["pre_order_btn_text"] : "PreOrder Now!";
-            // Check if the product is marked as a pre-order
-            // $is_pre_order = get_post_meta($product->get_id(), '_is_pre_order', true);
             // Check if $product is not null before using it
-            if ($product !== null) {
-                // Access the product ID only if $product is not null
+            if ($product !== null && $product->is_type('simple')) {
                 $product_id = $product->get_id();
 
                 // Check if $product_id is not null before proceeding
                 if ($product_id !== null) {
-                    // Use $product_id to get the meta value
                     $is_pre_order = get_post_meta($product_id, '_is_pre_order', true);
 
-                    // Use the $is_pre_order value as needed
+                    if ($is_pre_order === 'yes') {
+                        $pre_order_price = get_post_meta($product_id, '_pre_order_price', true);
+
+                        if ($pre_order_price !== '') {
+                            $product->set_price($pre_order_price);
+                        }
+
+                        $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', false);
+                        $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
+                        $wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"]) ? $wceazy_po_settings["pre_order_btn_text"] : "PreOrder Now!";
+
+                        return $wceazy_po_pre_order_btn_text;
+                    }
                 } else {
                     // Handle the case where $product_id is null
                     echo "Product ID is null.";
                 }
             } else {
-                // Handle the case where $product is null
-                echo "Product is null.";
+                // Handle the case where $product is null or not a simple product
+                // echo "Product is null or not a simple product.";
             }
 
-
-            if ($is_pre_order === 'yes') {
-                // $text = __('Pre-order Now', 'your-text-domain');
-                return $wceazy_po_pre_order_btn_text;
-            } else {
-                return "Add To Card";
-            }
+            return "Add To Cart";
         }
 
 
