@@ -326,12 +326,38 @@ if (!class_exists('WcEazyPreOrderUtils')) {
 
 
         ///////////////////////////////
-        // Callback function to display pre-order information in the order details page
+        // Callback function to display pre-order information in the order details pagepublic function 
+
         public function display_preorder_information_in_order_details($order)
         {
-            echo "<h1>display_preorder_information_in_order_details</h1>";
+            // Access the order's meta data
+            $meta_data = $order->get_meta_data();
 
+            // Initialize a variable to store preorder information
+            $preorder_information = '';
+
+            // Iterate through the meta data
+            foreach ($meta_data as $meta) {
+                // Check if the meta key matches '_order_has_preorder'
+                if ($meta->key === '_order_has_preorder') {
+                    // Access the value of '_order_has_preorder'
+                    $order_has_preorder_value = $meta->value;
+
+                    // Store preorder information
+                    $preorder_information = $order_has_preorder_value;
+
+                    // Break the loop after finding the relevant meta data
+                    break;
+                }
+            }
+
+            // Display the preorder information
+            if (!empty($preorder_information)) {
+                echo "<p>Preorder Information: " . $preorder_information . "</p>";
+                // You can customize the display of preorder information as needed
+            }
         }
+
 
 
         // Modify the product prices in the cart for pre-order products
