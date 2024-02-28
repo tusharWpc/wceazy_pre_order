@@ -178,38 +178,34 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         // }
 
         // new Save custom fields data when the product is saved
-public function save_preorder_fields($post_id)
-{
-    // Validate and sanitize input
-    $is_pre_order = isset($_POST['_is_pre_order']) ? 'yes' : 'no';
-    update_post_meta($post_id, '_is_pre_order', sanitize_text_field($is_pre_order));
+        public function save_preorder_fields($post_id)
+        {
+            // Validate and sanitize input
+            $is_pre_order = isset($_POST['_is_pre_order']) ? 'yes' : 'no';
+            update_post_meta($post_id, '_is_pre_order', sanitize_text_field($is_pre_order));
 
-    $pre_order_date = isset($_POST['_pre_order_date_time']) ? sanitize_text_field($_POST['_pre_order_date_time']) : '';
-    update_post_meta($post_id, '_pre_order_date_time', $pre_order_date);
+            $pre_order_date = isset($_POST['_pre_order_date_time']) ? sanitize_text_field($_POST['_pre_order_date_time']) : '';
+            update_post_meta($post_id, '_pre_order_date_time', $pre_order_date);
 
-    $dynamic_inventory = isset($_POST['_dynamic_inventory']) ? 'yes' : 'no';
-    update_post_meta($post_id, '_dynamic_inventory', sanitize_text_field($dynamic_inventory));
+            $dynamic_inventory = isset($_POST['_dynamic_inventory']) ? 'yes' : 'no';
+            update_post_meta($post_id, '_dynamic_inventory', sanitize_text_field($dynamic_inventory));
 
-    $pre_order_price = isset($_POST['_pre_order_price']) ? sanitize_text_field($_POST['_pre_order_price']) : '';
-    update_post_meta($post_id, '_pre_order_price', $pre_order_price);
+            $pre_order_price = isset($_POST['_pre_order_price']) ? sanitize_text_field($_POST['_pre_order_price']) : '';
+            update_post_meta($post_id, '_pre_order_price', $pre_order_price);
 
-    // Set default pre-order status to "on-hold" when a product is marked as pre-order
-    if ($is_pre_order === 'yes') {
-        // Create a new WooCommerce order
-        $order = wc_create_order(array('status' => 'on-hold'));
+            // Set default pre-order status to "on-hold" when a product is marked as pre-order
+            if ($is_pre_order === 'yes') {
+                // Create a new WooCommerce order
+                $order = wc_create_order(array('status' => 'on-hold'));
 
-        // Add product to the order
-        $product = wc_get_product($post_id);
-        $order->add_product($product, 1);
+                // Add product to the order
+                $product = wc_get_product($post_id);
+                $order->add_product($product, 1);
 
-        // Save the order
-        $order->save();
-    }
-}
-
-
-
-
+                // Save the order
+                $order->save();
+            }
+        }
 
 
         // Custom method to check if a product belongs to a pre-order category
