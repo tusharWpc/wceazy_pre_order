@@ -227,7 +227,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             return false;
         }
 
- 
+
         // Hook into WooCommerce to modify the Add to Cart button text and handle pre-order price 
         public function custom_preorder_button_text($text)
         {
@@ -262,8 +262,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
 
             return "Add To Cart";
         }
-
-
 
 
         public function display_preorder_date_and_time()

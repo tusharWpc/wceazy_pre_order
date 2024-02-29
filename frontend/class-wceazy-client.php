@@ -99,6 +99,7 @@ if (!class_exists('WcEazyClient')) {
                     include_once WCEAZY_PATH . "modules/pre_order/pre-class-module-client.php";
                     include_once WCEAZY_PATH . "modules/pre_order/ModuleUtils.php";
                     $this->pre_order = new WcEazyPreOrderClient($this);
+
                     // WcEazyPreOrderClient
                 }
 

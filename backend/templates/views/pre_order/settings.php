@@ -109,12 +109,12 @@ $wceazy_po_progress_border_radius = isset($wceazy_po_settings["progress_border_r
                             <?php esc_html_e('General', 'wceazy'); ?>
                         </h1>
                     </div>
-                    <div class="tab_item" data-target="tab_text">
+                    <!-- <div class="tab_item" data-target="tab_text">
                         <h1>
                             <?php esc_html_e('Text & Labels', 'wceazy'); ?>
                         </h1>
-                    </div>
-                    <div class="tab_item" data-target="tab_messages">
+                    </div> -->
+                    <!-- <div class="tab_item" data-target="tab_messages">
                         <h1>
                             <?php esc_html_e('Messages', 'wceazy'); ?>
                         </h1>
@@ -133,7 +133,7 @@ $wceazy_po_progress_border_radius = isset($wceazy_po_settings["progress_border_r
                         <h1>
                             <?php esc_html_e('Style', 'wceazy'); ?>
                         </h1>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -160,7 +160,7 @@ $wceazy_po_progress_border_radius = isset($wceazy_po_settings["progress_border_r
                             </div>
                         </div>
 
-                        <div class="wceazy_pre_order_field_group wceazy_pre_order_enable_pre_order">
+                        <!-- <div class="wceazy_pre_order_field_group wceazy_pre_order_enable_pre_order">
                             <label for="coupon_generator_coupon_amount">
                                 <?php esc_html_e('Enable Pre Order', 'wceazy'); ?>
                             </label>
@@ -172,9 +172,9 @@ $wceazy_po_progress_border_radius = isset($wceazy_po_settings["progress_border_r
                                     <?php esc_html_e('Turn ON the switch to enable the Pre Order.', 'wceazy'); ?>
                                 </small>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="wceazy_pre_order_field_group wceazy_pre_order_display_desktop">
+                        <!-- <div class="wceazy_pre_order_field_group wceazy_pre_order_display_desktop">
                             <label for="coupon_generator_coupon_amount">
                                 <?php esc_html_e('Display in Desktop', 'wceazy'); ?>
                             </label>
@@ -186,9 +186,9 @@ $wceazy_po_progress_border_radius = isset($wceazy_po_settings["progress_border_r
                                     <?php esc_html_e('Switch ON to display Pre Order on Desktop.', 'wceazy'); ?>
                                 </small>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="wceazy_pre_order_field_group wceazy_pre_order_display_mobile">
+                        <!-- <div class="wceazy_pre_order_field_group wceazy_pre_order_display_mobile">
                             <label for="coupon_generator_coupon_amount">
                                 <?php esc_html_e('Display in Mobile', 'wceazy'); ?>
                             </label>
@@ -200,7 +200,7 @@ $wceazy_po_progress_border_radius = isset($wceazy_po_settings["progress_border_r
                                     <?php esc_html_e('Switch ON to display Pre Order on mobile.', 'wceazy'); ?>
                                 </small>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
