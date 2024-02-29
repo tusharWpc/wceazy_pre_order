@@ -227,13 +227,11 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             return false;
         }
 
-
+ 
         // Hook into WooCommerce to modify the Add to Cart button text and handle pre-order price 
         public function custom_preorder_button_text($text)
         {
             global $product;
-
-
             // Check if $product is set and is an instance of WC_Product
             if ($product && is_a($product, 'WC_Product') && $product->is_type('simple')) {
                 $product_id = $product->get_id();
