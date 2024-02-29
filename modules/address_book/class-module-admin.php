@@ -2,11 +2,11 @@
 
 
 // If this file is called directly, abort.
-if (!defined ('WPINC')) {
+if (!defined('WPINC')) {
     die;
 }
 
-if (!class_exists ('WcEazyAddressBookAdmin')) {
+if (!class_exists('WcEazyAddressBookAdmin')) {
     class WcEazyAddressBookAdmin
     {
 
@@ -15,7 +15,7 @@ if (!class_exists ('WcEazyAddressBookAdmin')) {
         public $module_admin;
         public $module_slug = "address_book";
 
-        public function __construct ($base_admin)
+        public function __construct($base_admin)
         {
             $this->module_admin = $this;
             $this->base_admin = $base_admin;

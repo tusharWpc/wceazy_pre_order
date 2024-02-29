@@ -246,6 +246,8 @@
             </div>
         </div>
 
+        
+
         <div class="wceazy_module_item" data-slug="pre_order">
             <div class="wceazy_module_logo">
                 <img src="<?php echo esc_url(WCEAZY_IMG_DIR . 'modules/pre_order/icon.svg'); ?>" height="100" />
