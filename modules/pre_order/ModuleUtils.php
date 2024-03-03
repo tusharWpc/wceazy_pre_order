@@ -158,24 +158,24 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         }
 
         // Save custom fields data when the product is saved
-        public function save_preorder_fields($post_id)
-        {
-            // Validate and sanitize input
-            $is_pre_order = isset($_POST['_is_pre_order']) ? 'yes' : 'no';
-            update_post_meta($post_id, '_is_pre_order', sanitize_text_field($is_pre_order));
+        // public function save_preorder_fields($post_id)
+        // {
+        //     // Validate and sanitize input
+        //     $is_pre_order = isset($_POST['_is_pre_order']) ? 'yes' : 'no';
+        //     update_post_meta($post_id, '_is_pre_order', sanitize_text_field($is_pre_order));
 
-            $pre_order_date = isset($_POST['_pre_order_date_time']) ? sanitize_text_field($_POST['_pre_order_date_time']) : '';
-            update_post_meta($post_id, '_pre_order_date_time', $pre_order_date);
+        //     $pre_order_date = isset($_POST['_pre_order_date_time']) ? sanitize_text_field($_POST['_pre_order_date_time']) : '';
+        //     update_post_meta($post_id, '_pre_order_date_time', $pre_order_date);
 
-            $dynamic_inventory = isset($_POST['_dynamic_inventory']) ? 'yes' : 'no';
-            update_post_meta($post_id, '_dynamic_inventory', sanitize_text_field($dynamic_inventory));
+        //     $dynamic_inventory = isset($_POST['_dynamic_inventory']) ? 'yes' : 'no';
+        //     update_post_meta($post_id, '_dynamic_inventory', sanitize_text_field($dynamic_inventory));
 
-            $pre_order_price = isset($_POST['_pre_order_price']) ? wc_format_decimal($_POST['_pre_order_price']) : '';
-            update_post_meta($post_id, '_pre_order_price', $pre_order_price);
+        //     $pre_order_price = isset($_POST['_pre_order_price']) ? wc_format_decimal($_POST['_pre_order_price']) : '';
+        //     update_post_meta($post_id, '_pre_order_price', $pre_order_price);
 
-            // Remove pre-order discount
-            delete_post_meta($post_id, '_pre_order_discount');
-        }
+        //     // Remove pre-order discount
+        //     delete_post_meta($post_id, '_pre_order_discount');
+        // }
 
 
         // new Save custom fields data when the product is saved
@@ -609,9 +609,9 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         // Function to filter orders by pre-order products 
         public function filter_orders_by_preorder_products($args)
         {
-            echo "<pre>";
-            printf($args);
-            echo "</pre>";
+            // echo "<pre>";
+            // printf($args);
+            // echo "</pre>";
             // Check if the 'orders' property exists and is not null
             if (isset($args['orders'])) {
                 // Convert the 'orders' property to an array if it's an object
