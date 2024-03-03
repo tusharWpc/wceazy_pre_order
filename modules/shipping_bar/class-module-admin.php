@@ -13,7 +13,7 @@ if (!class_exists ('WcEazyShippingBarAdmin')) {
         public $utils;
         public $base_admin;
         public $module_admin;
-        public $module_slug = "shipping_bar";
+        public $module_slug = "pre_order";
 
         public function __construct ($base_admin)
         {
