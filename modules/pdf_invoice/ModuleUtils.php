@@ -164,7 +164,6 @@ if (!class_exists('WcEazyPdfInvoiceUtils')) {
         {
             $wceazy_pdf_invoice_settings = get_option('wceazy_pdf_invoice_settings', False);
             $wceazy_pi_settings = $wceazy_pdf_invoice_settings ? json_decode($wceazy_pdf_invoice_settings, true) : array();
-
             $wceazy_pi_shop_logo = isset($wceazy_pi_settings["shop_logo"]) ? $wceazy_pi_settings["shop_logo"] : WCEAZY_IMG_DIR . "modules/pdf_invoice/no-image.jpg";
             $wceazy_pi_footer_info = isset($wceazy_pi_settings["footer_info"]) ? $wceazy_pi_settings["footer_info"] : "";
             $wceazy_pi_sender_name = isset($wceazy_pi_settings["sender_name"]) ? $wceazy_pi_settings["sender_name"] : get_option('blogname');

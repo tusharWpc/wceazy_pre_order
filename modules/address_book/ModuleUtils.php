@@ -5,7 +5,6 @@ if (!defined('WPINC')) {
     die;
 }
 
-
 if (!class_exists('WcEazyAddressBookUtils')) {
     class WcEazyAddressBookUtils
     {
@@ -25,16 +24,10 @@ if (!class_exists('WcEazyAddressBookUtils')) {
             }
         }
 
-
-
-
-
-
-
         public function wc_address_book_add_to_menu($items)
         {
 
-            $wceazy_address_book_settings = get_option('wceazy_address_book_settings', False);
+            $wceazy_address_book_settings = get_option('wceazy_address_book_settings', false);
             $wceazy_ab_settings = $wceazy_address_book_settings ? json_decode($wceazy_address_book_settings, true) : array();
             $wceazy_ab_enable_billing_address_book = isset($wceazy_ab_settings["enable_billing_address_book"]) ? $wceazy_ab_settings["enable_billing_address_book"] : "yes";
             $wceazy_ab_enable_shipping_address_book = isset($wceazy_ab_settings["enable_shipping_address_book"]) ? $wceazy_ab_settings["enable_shipping_address_book"] : "yes";
@@ -55,7 +48,6 @@ if (!class_exists('WcEazyAddressBookUtils')) {
             include 'template.php';
         }
 
-
         public function update_address_names($user_id, $name)
         {
             if (!wp_verify_nonce($this->nonce_value('woocommerce-edit-address-nonce'), 'woocommerce-edit_address')) {
@@ -68,8 +60,6 @@ if (!class_exists('WcEazyAddressBookUtils')) {
             }
             $this->add_address_name($user_id, $name, $type);
         }
-
-
 
         public function get_address_book($user_id, $type)
         {
@@ -99,7 +89,6 @@ if (!class_exists('WcEazyAddressBookUtils')) {
             }
             return $address_book;
         }
-
 
         public function get_address_names($user_id, $type)
         {
@@ -158,8 +147,6 @@ if (!class_exists('WcEazyAddressBookUtils')) {
             update_user_meta($user_id, 'wceazy_address_book_' . $type, $new_value);
         }
 
-
-
         public function get_address_book_endpoint_url($address_book, $type)
         {
             $url = wc_get_endpoint_url('edit-address', $type, get_permalink());
@@ -179,7 +166,6 @@ if (!class_exists('WcEazyAddressBookUtils')) {
             }
             return $name;
         }
-
 
         public function get_address_type($name)
         {
@@ -234,17 +220,6 @@ if (!class_exists('WcEazyAddressBookUtils')) {
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
         public function address_select_label($address, $name)
         {
             $label = '';
@@ -283,22 +258,18 @@ if (!class_exists('WcEazyAddressBookUtils')) {
                 $label .= $address[$name . '_state'];
             }
 
-
             return $label;
         }
-
-
 
         public function checkout_address_select_field($fields)
         {
 
-            $wceazy_address_book_settings = get_option('wceazy_address_book_settings', False);
+            $wceazy_address_book_settings = get_option('wceazy_address_book_settings', false);
             $wceazy_ab_settings = $wceazy_address_book_settings ? json_decode($wceazy_address_book_settings, true) : array();
             $wceazy_ab_enable_billing_address_book_checkout = isset($wceazy_ab_settings["enable_billing_address_book_checkout"]) ? $wceazy_ab_settings["enable_billing_address_book_checkout"] : "yes";
             $wceazy_ab_enable_shipping_address_book_checkout = isset($wceazy_ab_settings["enable_shipping_address_book_checkout"]) ? $wceazy_ab_settings["enable_shipping_address_book_checkout"] : "yes";
 
             $wceazy_ab_checkout_field_label = isset($wceazy_ab_settings["checkout_field_label"]) ? $wceazy_ab_settings["checkout_field_label"] : "Select Address";
-
 
             if (is_user_logged_in()) {
                 foreach ($fields as $type => $address_fields) {

@@ -39,7 +39,10 @@
         <?php if ($this->settings->getModuleStatus("shipping_bar")) { ?>
             <?php include WCEAZY_PATH . "backend/templates/views/shipping_bar/settings.php"; ?>
         <?php } ?>
- 
+
+        <?php if ($this->settings->getModuleStatus("pre_order")) { ?>
+            <?php include WCEAZY_PATH . "backend/templates/views/pre_order/settings.php"; ?>
+        <?php } ?>
 
         <?php if ($this->settings->getModuleStatus("address_book")) { ?>
             <?php include WCEAZY_PATH . "backend/templates/views/address_book/settings.php"; ?>
