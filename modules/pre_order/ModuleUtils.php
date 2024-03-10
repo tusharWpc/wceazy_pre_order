@@ -45,13 +45,14 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             $emails = get_option('woocommerce_pre_order_settings');
             // $r = __DIR__ . '/inc/wc-pre-order.php';
             // var_dump($r);
-            // var_dump($emails);
+            var_dump($emails);
         }
         public function manage_email_class($emails)
         {
             $emails['WC_Pre_Order_New'] = include __DIR__ . '/inc/wc-new-pre-order.php';
             $emails['WC_Pre_Order'] = include __DIR__ . '/inc/wc-pre-order.php';
-            return $emails;
+            // return $emails;
+            // print_r($emails);
         }
         // `````new end
 
@@ -115,14 +116,14 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             );
 
             // Dynamic checkbox for dynamic inventory
-            woocommerce_wp_checkbox(
-                array(
-                    'id' => '_dynamic_inventory',
-                    'label' => __('Dynamic Inventory', 'wceazy'),
-                    'description' => __('Check this if you want to enable dynamic inventory for this product.', 'wceazy'),
-                    'desc_tip' => true,
-                )
-            );
+            // woocommerce_wp_checkbox(
+            //     array(
+            //         'id' => '_dynamic_inventory',
+            //         'label' => __('Dynamic Inventory', 'wceazy'),
+            //         'description' => __('Check this if you want to enable dynamic inventory for this product.', 'wceazy'),
+            //         'desc_tip' => true,
+            //     )
+            // );
 
             // Text input for pre-order price
             woocommerce_wp_text_input(
@@ -140,7 +141,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             );
 
             echo '</div>'; // End .pre-order-fields
-
             echo '</div>'; // End .options_group
         }
 
@@ -307,7 +307,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
 
         ///////////////////////////////
         // Callback function to display pre-order information in the order details pagepublic function
-
         public function display_preorder_information_in_order_details($order)
         {
             // Access the order's meta data
