@@ -29,8 +29,6 @@ defined('WCEAZY_HELP_PAGE') or define('WCEAZY_HELP_PAGE', "https://wceazy.com/co
 defined('WCEAZY_DOCS_PAGE') or define('WCEAZY_DOCS_PAGE', "https://wceazy.com/documentation");
 defined('WCEAZY_GET_PRO_URL') or define('WCEAZY_GET_PRO_URL', "https://wceazy.com");
 
-
-
 /**
  * Initialize the plugin tracker
  *

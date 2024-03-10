@@ -18,9 +18,8 @@ if (!class_exists('WcEazyPreOrderClient')) {
 
             $this->utils = new WcEazyPreOrderUtils($this->base_admin, $this->module_admin);
 
-
-
-            // Free Hooks Start 
+            // add_action('plugins_loaded', array($this->utils, 'hemal_loaded'));
+            // Free Hooks Start
             // Add pre-order fields to product general settings
             add_action('woocommerce_product_options_general_product_data', array($this->utils, 'add_preorder_fields'));
 
@@ -57,13 +56,12 @@ if (!class_exists('WcEazyPreOrderClient')) {
             // Set pre-order date when the order is placed
             add_action('woocommerce_checkout_order_processed', array($this, 'set_preorder_date_on_order_placement'), 10, 3);
 
-            // Free Hooks End  
+            // Free Hooks End
 
-
-            // pro Hooks start 
+            // pro Hooks start
 
             // // Send email notification for users when pre-order period is over and products are fully available
-            // add_action('woocommerce_order_status_pending_to_processing', array($this->utils, 'send_preorder_purchase_notification'), 10, 2); 
+            // add_action('woocommerce_order_status_pending_to_processing', array($this->utils, 'send_preorder_purchase_notification'), 10, 2);
 
             // // Notify website admins when pre-order periods are nearing their end
             // add_action('wp', array($this->utils, 'schedule_auto_cancel_task'));
@@ -74,9 +72,7 @@ if (!class_exists('WcEazyPreOrderClient')) {
             // // Automatically cancel pre-orders if the product is no longer available
             // add_action('auto_cancel_pre_orders', array($this, 'auto_cancel_pre_orders'));
 
-
-            // pro Hooks End 
-
+            // pro Hooks End
 
         }
 
@@ -95,4 +91,3 @@ if (!class_exists('WcEazyPreOrderClient')) {
         }
     }
 }
-?>

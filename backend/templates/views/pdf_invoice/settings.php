@@ -113,9 +113,7 @@ $wceazy_pi_enable_shipping_phone = isset($wceazy_pi_settings["enable_shipping_ph
                     <div class="tab_body_title">
                         <h1><?php esc_html_e('PDF Document', 'wceazy'); ?></h1>
                     </div>
-                    <div class="tab_body_form">
-
-
+                    <div class="tab_body_form"> 
                         <div class="wceazy_pdf_invoice_field_group wceazy_pdf_invoice_deactivate_invoice">
                             <label
                                 for="coupon_generator_coupon_amount"><?php esc_html_e('Deactivate Invoice ', 'wceazy'); ?></label>
