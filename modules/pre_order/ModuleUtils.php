@@ -83,12 +83,12 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 // Access the 'subject' element
                 $subject = $settings['subject'];
                 $pre_emails = $settings['heading'];
-                $subject = $settings['additional_content']; 
+                $additional_content = $settings['additional_content']; 
 
-                echo "Subject: $subject";
-                echo "heading: $pre_emails";
-                echo "additional_content: $pre_emails";
-                echo "Subject: $pre_emails";
+                echo "Subject: $subject <br>";
+                echo "heading: $pre_emails <br>";
+                echo "additional_content: $additional_content <br>";
+                echo "Subject: $pre_emails <br>";
             }
         }
 
