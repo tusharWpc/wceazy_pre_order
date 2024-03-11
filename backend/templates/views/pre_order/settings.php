@@ -13,11 +13,9 @@ $wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"])
 
 $wceazy_po_pre_order_avl_date_label = isset($wceazy_po_settings["pre_order_avl_date_label"]) ? $wceazy_po_settings["pre_order_avl_date_label"] : "Default Avl Data";
 
- 
+// $wceazy_po_pre_order_admin_email = isset($wceazy_po_settings["pre_order_avl_date_label"]) ? $wceazy_po_settings["pre_order_admin_email"] : "PreOrder Now!";
 
-echo "<pre>";
-var_dump($wceazy_po_pre_order_avl_date_label);
-echo "</pre>";
+ 
 
 ?>
 
@@ -104,7 +102,7 @@ echo "</pre>";
                             </label>
                             <div class="field_with_msg_container">
                                 <input class="wceazy_pre_order_text_field" type="text" placeholder=""
-                                    value="<?php echo esc_attr($wceazy_po_pre_order_custom_email); ?>">
+                                    value=" ">
                                 <small>
                                     <?php esc_html_e('Set your Pre Order Custom Email', 'wceazy'); ?>
                                 </small>
