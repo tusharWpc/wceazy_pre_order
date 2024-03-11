@@ -55,7 +55,6 @@ $wceazy_po_pre_order_admin_email = isset($wceazy_po_settings["pre_order_admin_em
 
 
     <div class="wceazy_pre_order_container">
-
         <div class="wceazy_pre_order_tab">
             <div class="wceazy_pre_order_tab_part_left">
                 <div class="coupon_data_tabs">
@@ -67,6 +66,11 @@ $wceazy_po_pre_order_admin_email = isset($wceazy_po_settings["pre_order_admin_em
                     <div class="tab_item tab_item" data-target="tab_email">
                         <h1>
                             <?php esc_html_e('Email Templates', 'wceazy'); ?>
+                        </h1>
+                    </div>
+                    <div class="tab_item tab_item" data-target="tab_notification">
+                        <h1>
+                            <?php esc_html_e('Email Notification', 'wceazy'); ?>
                         </h1>
                     </div>
 
@@ -125,6 +129,50 @@ $wceazy_po_pre_order_admin_email = isset($wceazy_po_settings["pre_order_admin_em
                     <div class="tab_body_title">
                         <h1>
                             <?php esc_html_e('Email Templates', 'wceazy'); ?>
+                        </h1>
+                    </div>
+                    <div class="tab_body_form">
+                        <div class="wceazy_pre_order_field_group wceazy_pre_order_btn_text">
+                            <label for="coupon_generator_coupon_amount">
+                                <?php esc_html_e('Admin', 'wceazy'); ?>
+                            </label>
+                            <div class="field_with_msg_container">
+                                <a href="<?php echo esc_url(admin_url('admin.php?page=wc-settings&tab=email&section=wc_pre_order')); ?>"
+                                    class="button-link">
+                                    <input class="wceazy_pre_order_text_field" type="submit" placeholder=""
+                                        value="New Pre-Order Admin">
+                                </a>
+
+                                <small>
+                                    <?php esc_html_e('Click here for Customize Admin Pre-Oeder email', 'wceazy'); ?>
+
+                                </small>
+                            </div>
+                        </div>
+                        <div class="wceazy_pre_order_field_group wceazy_pre_order_custom_email">
+                            <label for="wceazy_pre_order_custom_email">
+                                <?php esc_html_e('Customer', 'wceazy'); ?>
+                            </label>
+                            <div class="field_with_msg_container">
+                                <a href="<?php echo esc_url(admin_url('admin.php?page=wc-settings&tab=email&section=wc_pre_order_new')); ?>"
+                                    class="button-link">
+                                    <input class="wceazy_pre_order_text_field" type="submit" placeholder=""
+                                        value="Pre-Order Customer">
+                                </a>
+
+                                <small>
+                                    <?php esc_html_e('Click here for Customize Custom Pre-Oeder email', 'wceazy'); ?>
+
+                                </small>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="coupon_tab_body" data-id="tab_notification">
+                    <div class="tab_body_title">
+                        <h1>
+                            <?php esc_html_e('Email Notification', 'wceazy'); ?>
                         </h1>
                     </div>
                     <div class="tab_body_form">
