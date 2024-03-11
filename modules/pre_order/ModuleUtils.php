@@ -92,8 +92,20 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             }
 
         }
+ 
 
-
+        public function preorderCustomColumn( $columns ) {
+            $newColumns = [];
+            foreach ( $columns as $columnName => $columnInfo ) {
+                $newColumns[$columnName] = $columnInfo;
+                if ( 'order_total' === $columnName ) {
+                    $newColumns['order_preorder_date'] = __( 'Preorder Date', 'pre-orders-for-woocommerce' );
+                    
+                }
+            }
+    
+            return $newColumns;
+        }  
 
 
         // `````new end

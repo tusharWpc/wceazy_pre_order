@@ -51,14 +51,26 @@ if (!class_exists('WcEazyPreOrderClient')) {
             add_filter('woocommerce_product_get_price', array($this->utils, 'custom_preorder_price'), 10, 2);
             add_filter('woocommerce_product_get_regular_price', array($this->utils, 'custom_preorder_price'), 10, 2);
             add_filter('woocommerce_product_variation_get_regular_price', array($this->utils, 'custom_preorder_price'), 10, 2);
-            add_filter('woocommerce_product_variation_get_price', array($this->utils, 'custom_preorder_price'), 10, 2); 
+            add_filter('woocommerce_product_variation_get_price', array($this->utils, 'custom_preorder_price'), 10, 2);
 
             // Free Hooks End
+
+            // Hook into the 'woocommerce_admin_order_data_after_billing_address' or 'woocommerce_admin_order_data_after_shipping_address' action hook
+            add_filter('manage_edit-shop_order_columns', array($this->utils, 'preorderCustomColumn'), 10, 2);
+
+
+            add_filter('manage_woocommerce_page_wc-orders_columns', array($this->utils, 'preorderCustomColumn'), 10, 2);
+
+
+
+
+
+
 
             // pro Hooks start
             // Set pre-order date when the order is placed
             add_action('woocommerce_checkout_order_processed', array($this, 'set_preorder_date_on_order_placement'), 10, 3);
-            
+
             // // Send email notification for users when pre-order period is over and products are fully available
             // add_action('woocommerce_order_status_pending_to_processing', array($this->utils, 'send_preorder_purchase_notification'), 10, 2);
 
