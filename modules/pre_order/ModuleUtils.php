@@ -208,9 +208,25 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         {
             ?>
 
-            <script>     jQuery(document).ready(function ($) { var checkbox = $('#_is_pre_order'); var preorderFields = $('.pre-order-fields');
-                // Show/hide fields on checkbox change         checkbox.change(function () {             if (checkbox.is(':checked')) {                 preorderFields.slideDown();             } else {                 preorderFields.slideUp();             }         });
-                // Trigger change event on page load if checkbox is checked         if (checkbox.is(':checked')) {             preorderFields.show();         }     });
+            <script>
+                jQuery(document).ready(function ($) {
+                    var checkbox = $('#_is_pre_order');
+                    var preorderFields = $('.pre-order-fields');
+
+                    // Show/hide fields on checkbox change
+                    checkbox.change(function () {
+                        if (checkbox.is(':checked')) {
+                            preorderFields.slideDown();
+                        } else {
+                            preorderFields.slideUp();
+                        }
+                    });
+
+                    // Trigger change event on page load if checkbox is checked
+                    if (checkbox.is(':checked')) {
+                        preorderFields.show();
+                    }
+                });
             </script>
             <?php
 
