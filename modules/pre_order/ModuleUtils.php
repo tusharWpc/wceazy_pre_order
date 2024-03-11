@@ -234,6 +234,10 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             // Define $wceazy_po_pre_order_btn_text as a class property
             $this->wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"]) ? $wceazy_po_settings["pre_order_btn_text"] : "PreOrder Now!";
 
+            // Debugging output to verify the value of $wceazy_po_pre_order_btn_text
+            // echo "<pre>";
+            // var_dump($this->wceazy_po_pre_order_btn_text);
+            // echo "</pre>";
 
             if ($product && is_a($product, 'WC_Product') && $product->is_type('simple')) {
                 $product_id = $product->get_id();
@@ -287,6 +291,8 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 }
             }
         }
+
+
 
 
 

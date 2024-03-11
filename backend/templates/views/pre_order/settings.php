@@ -11,13 +11,13 @@ $wceazy_po_enable_pre_order = isset($wceazy_po_settings["enable_pre_order"]) ? $
 
 $wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"]) ? $wceazy_po_settings["pre_order_btn_text"] : "PreOrder Now!";
 
-$wceazy_po_pre_order_avl_date_label = isset($wceazy_po_settings["pre_order_avl_date_label"]) ? $wceazy_po_settings[""] : "Default Avl Data";
+$wceazy_po_pre_order_avl_date_label = isset($wceazy_po_settings["pre_order_avl_date_label"]) ? $wceazy_po_settings["pre_order_avl_date_label"] : "Default Avl Data";
 
-$wceazy_po_pre_order_admin_email = isset($wceazy_po_settings["pre_order_avl_date_label"]) ? $wceazy_po_settings["pre_order_avl_date_label"] : "PreOrder Now!";
+ 
 
-// echo "<pre>";
-// var_dump($wceazy_po_pre_order_admin_email);
-// echo "</pre>";
+echo "<pre>";
+var_dump($wceazy_po_pre_order_avl_date_label);
+echo "</pre>";
 
 ?>
 
