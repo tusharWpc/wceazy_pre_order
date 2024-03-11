@@ -60,7 +60,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         //     return $emails;
         // }
 
-// 2
+        // 2
         // public function manage_email_class($emails)
         // {
         //     $pre_emails['WC_Pre_Order_New'] = include __DIR__ . '/inc/wc-new-pre-order.php';
@@ -72,7 +72,9 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         // }
 
         public function manage_email_class($emails)
-        {
+        { 
+
+
             $pre_emails = include __DIR__ . '/inc/wc-new-pre-order.php';
 
             // Check if $pre_emails is an object
@@ -83,9 +85,10 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 // Access the 'subject' element
                 $subject = $settings['subject'];
                 $pre_emails = $settings['heading'];
-                $additional_content = $settings['additional_content']; 
+                $additional_content = $settings['additional_content'];
 
                 echo "Subject: $subject <br>";
+
                 echo "heading: $pre_emails <br>";
                 echo "additional_content: $additional_content <br>";
                 echo "Subject: $pre_emails <br>";
@@ -123,9 +126,8 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             $emails = get_option('woocommerce_pre_order_settings');
             //  echo"<pre>";
             // print_r($emails);
-            // echo"</pre>";
-
-
+            // echo"</pre>"; 
+            
             // Check if $emails is an array
             if (!is_array($emails)) {
                 // Handle error if settings are not retrieved or if it's not an array
@@ -152,39 +154,39 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                 }
             }
 
-            // if ($preorder_products) {
-            //     // Get admin email
-            //     $admin_email = $heading;
+            if ($preorder_products) {
+                // Get admin email
+                $admin_email = $heading;
 
-            //     // Email subject
-            //     $subject = __($subject);
+                // Email subject
+                $subject = __($subject);
 
-            //     // Email body
-            //     $message = '<html>';
-            //     $message .= '<head>';
-            //     $message .= '<style>';
-            //     $message .= 'h1 {color: #007bff; font-size: 28px; margin-bottom: 20px;}';
-            //     $message .= 'p {color: #555; font-size: 18px; margin-bottom: 10px;}';
-            //     $message .= '</style>';
-            //     $message .= '</head>';
-            //     $message .= '<body>';
-            //     $message .= sprintf('<h1>%s</h1>', __('Pre-order Product Purchase Notification', 'wceazy'));
-            //     $message .= '<p>';
-            //     $message .= __('Dear Admin,', 'wceazy') . '<br>';
-            //     $message .= __('This is to inform you that a user has just purchased a pre-order product.', 'wceazy') . '<br>';
-            //     $message .= __('Details of the order are as follows:', 'wceazy') . '<br>';
-            //     $message .= __('Order ID:', 'wceazy') . ' ' . $order_id . '<br>';
-            //     $message .= __('Please take necessary actions accordingly.', 'wceazy') . '<br>';
-            //     $message .= '</p>';
-            //     $message .= '</body>';
-            //     $message .= '</html>';
+                // Email body
+                $message = '<html>';
+                $message .= '<head>';
+                $message .= '<style>';
+                $message .= 'h1 {color: #007bff; font-size: 28px; margin-bottom: 20px;}';
+                $message .= 'p {color: #555; font-size: 18px; margin-bottom: 10px;}';
+                $message .= '</style>';
+                $message .= '</head>';
+                $message .= '<body>';
+                $message .= sprintf('<h1>%s</h1>', __('Pre-order Product Purchase Notification', 'wceazy'));
+                $message .= '<p>';
+                $message .= __('Dear Admin,', 'wceazy') . '<br>';
+                $message .= __('This is to inform you that a user has just purchased a pre-order product.', 'wceazy') . '<br>';
+                $message .= __('Details of the order are as follows:', 'wceazy') . '<br>';
+                $message .= __('Order ID:', 'wceazy') . ' ' . $order_id . '<br>';
+                $message .= __('Please take necessary actions accordingly.', 'wceazy') . '<br>';
+                $message .= '</p>';
+                $message .= '</body>';
+                $message .= '</html>';
 
-            //     // Send email to admin
-            //     add_filter('wp_mail_content_type', function () {
-            //         return 'text/html';
-            //     });
-            //     wp_mail($admin_email, $subject, $message);
-            // }
+                // Send email to admin
+                add_filter('wp_mail_content_type', function () {
+                    return 'text/html';
+                });
+                wp_mail($admin_email, $subject, $message);
+            }
         }
 
 
@@ -714,9 +716,9 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         // Function to filter orders by pre-order products
         public function filter_orders_by_preorder_products($args)
         {
-            echo "<pre>";
-            printf($args);
-            echo "</pre>";
+            // echo "<pre>";
+            // printf($args);
+            // echo "</pre>";
             // Check if the 'orders' property exists and is not null
             if (isset($args['orders'])) {
                 // Convert the 'orders' property to an array if it's an object
