@@ -61,16 +61,16 @@ if (!class_exists('WcEazyPreOrderClient')) {
             // pro Hooks start
 
             // // Send email notification for users when pre-order period is over and products are fully available
-            add_action('woocommerce_order_status_pending_to_processing', array($this->utils, 'send_preorder_purchase_notification'), 10, 2);
+            // add_action('woocommerce_order_status_pending_to_processing', array($this->utils, 'send_preorder_purchase_notification'), 10, 2);
 
             // // Notify website admins when pre-order periods are nearing their end
             // add_action('wp', array($this->utils, 'schedule_auto_cancel_task'));
 
             // // Update pre-order availability
-            add_action('update_preorder_availability', array($this->utils, 'update_preorder_availability'));
+            // add_action('update_preorder_availability', array($this->utils, 'update_preorder_availability'));
 
             // // Automatically cancel pre-orders if the product is no longer available
-            add_action('auto_cancel_pre_orders', array($this, 'auto_cancel_pre_orders'));
+            // add_action('auto_cancel_pre_orders', array($this, 'auto_cancel_pre_orders'));
 
             // pro Hooks End
 

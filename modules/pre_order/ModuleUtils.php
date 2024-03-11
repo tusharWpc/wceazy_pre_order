@@ -515,7 +515,8 @@ public function send_preorder_purchase_notification($order_id, $order)
             }
         }
 
-        if ($preorder_products) { 
+        if ($preorder_products) {
+                    // Email body
             $message = '<html>';
             $message .= '<head>';
             $message .= '<style>';
