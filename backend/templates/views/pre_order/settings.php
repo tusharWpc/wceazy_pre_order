@@ -13,9 +13,11 @@ $wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"])
 
 $wceazy_po_pre_order_avl_date_label = isset($wceazy_po_settings["pre_order_avl_date_label"]) ? $wceazy_po_settings["pre_order_avl_date_label"] : "Default Avl Data";
 
-$wceazy_po_enable_pre_order_avl_text = isset($wceazy_po_settings["pre_orde_enabler_avl_date_label"]) ? $wceazy_po_settings["pre_orde_enabler_avl_date_label"] : "on";
+$wceazy_po_pre_orde_enabler_avl_date_label = isset($wceazy_po_settings["pre_orde_enabler_avl_date_label"]) ? $wceazy_po_settings["pre_orde_enabler_avl_date_label"] : "true";
 
- 
+echo "<pre>";
+var_dump($wceazy_po_pre_orde_enabler_avl_date_label);
+echo "</pre>";
 
 ?>
 
@@ -83,8 +85,8 @@ $wceazy_po_enable_pre_order_avl_text = isset($wceazy_po_settings["pre_orde_enabl
                             <?php esc_html_e('General Settings', 'wceazy'); ?>
                         </h1>
                     </div>
-                    <div class="tab_body_form"> 
-                    <div class="wceazy_pre_order_field_group wceazy_pre_order_btn_text">
+                    <div class="tab_body_form">
+                        <div class="wceazy_pre_order_field_group wceazy_pre_order_btn_text">
                             <label for="coupon_generator_coupon_amount">
                                 <?php esc_html_e('Button Text', 'wceazy'); ?>
                             </label>
@@ -95,9 +97,9 @@ $wceazy_po_enable_pre_order_avl_text = isset($wceazy_po_settings["pre_orde_enabl
                                     <?php esc_html_e('Set your Pre Order button text', 'wceazy'); ?>
                                 </small>
                             </div>
-                    </div>
+                        </div>
 
-                    <div class="wceazy_pre_order_field_group wceazy_pre_order_admin_emaill">
+                        <div class="wceazy_pre_order_field_group wceazy_pre_order_avl_date_label">
                             <label for="wceazy_pre_order_admin_emaill">
                                 <?php esc_html_e('Available Date Label', 'wceazy'); ?>
                             </label>
@@ -108,17 +110,19 @@ $wceazy_po_enable_pre_order_avl_text = isset($wceazy_po_settings["pre_orde_enabl
                                     <?php esc_html_e('Set Pre Order Available Date Label', 'wceazy'); ?>
                                 </small>
                             </div>
-                    </div>  
-                        
-                        <div class="wceazy_pre_order_field_group wceazy_pre_order_enable_avl_text">
-                            <label for="coupon_generator_coupon_amount">Enable Availablity Text</label>
+                        </div>
+
+                        <div class="wceazy_pre_order_field_group wceazy_pre_order_enabler_avl_date_label">
+                            <label for="coupon_generator_coupon_amount">Enable Availability Lablet</label>
                             <div class="field_with_msg_container">
-                                <label class="toggle_switch"><input type="checkbox"
-                                        <?php echo esc_attr($wceazy_po_enable_pre_order_avl_text == "yes" ? "checked" : ""); ?>><span
-                                        class="slider round"></span></label>
-                                <small>Enable Pre Order Availablity Text.</small>
+                                <label class="toggle_switch">
+                                    <input type="checkbox" <?php echo esc_attr($wceazy_po_pre_orde_enabler_avl_date_label == "yes" ? "checked" : ""); ?>>
+                                    <span class="slider round"></span>
+                                </label>
+                                <small>Enable Pre Order Availability Text.</small>
                             </div>
                         </div>
+
                     </div>
                 </div>
                 <div class="coupon_tab_body" data-id="tab_email">
