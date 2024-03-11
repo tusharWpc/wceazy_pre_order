@@ -11,9 +11,9 @@ $wceazy_po_enable_pre_order = isset($wceazy_po_settings["enable_pre_order"]) ? $
 
 $wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"]) ? $wceazy_po_settings["pre_order_btn_text"] : "PreOrder Now!";
 
-$wceazy_po_pre_order_custom_email = isset($wceazy_po_settings["pre_order_custom_email"]) ? $wceazy_po_settings["pre_order_custom_email"] : "PreOrder Now!";
+$wceazy_po_pre_order_avl_date_label = isset($wceazy_po_settings["pre_order_avl_date_label"]) ? $wceazy_po_settings[""] : "Default Avl Data";
 
-$wceazy_po_pre_order_admin_email = isset($wceazy_po_settings["pre_order_admin_email"]) ? $wceazy_po_settings["pre_order_custom_email"] : "PreOrder Now!";
+$wceazy_po_pre_order_admin_email = isset($wceazy_po_settings["pre_order_avl_date_label"]) ? $wceazy_po_settings["pre_order_avl_date_label"] : "PreOrder Now!";
 
 // echo "<pre>";
 // var_dump($wceazy_po_pre_order_admin_email);
@@ -111,15 +111,16 @@ $wceazy_po_pre_order_admin_email = isset($wceazy_po_settings["pre_order_admin_em
                             </div>
                         </div>
 
+               
                         <div class="wceazy_pre_order_field_group wceazy_pre_order_admin_emaill">
                             <label for="wceazy_pre_order_admin_emaill">
-                                <?php esc_html_e('Admin Email', 'wceazy'); ?>
+                                <?php esc_html_e('Available Date Label', 'wceazy'); ?>
                             </label>
                             <div class="field_with_msg_container">
                                 <input class="wceazy_pre_order_text_field" type="text" placeholder=""
-                                    value="<?php echo esc_attr($wceazy_po_pre_order_admin_email); ?>">
+                                    value="<?php echo esc_attr($wceazy_po_pre_order_avl_date_label); ?>">
                                 <small>
-                                    <?php esc_html_e('Set your Pre Order Custom Email', 'wceazy'); ?>
+                                    <?php esc_html_e('Set Pre Order Available Date Label', 'wceazy'); ?>
                                 </small>
                             </div>
                         </div>

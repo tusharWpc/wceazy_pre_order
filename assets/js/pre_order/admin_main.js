@@ -219,8 +219,8 @@ function wceazy_pre_order_save() {
   let postData = {
     enable_pre_order: jQuery(".wceazy_pre_order_enable_pre_order input[type='checkbox']:checked").length > 0 ? "yes" : "no",
     pre_order_btn_text: jQuery(".wceazy_pre_order_btn_text input[type='text']").val(),
-    pre_order_custom_email: jQuery(".wceazy_pre_order_custom_email input[type='text']").val(),
-    pre_order_admin_email: jQuery(".wceazy_pre_order_admin_emaill input[type='text']").val(), // corrected the class name
+    pre_order_avl_date_label: jQuery(".wceazy_pre_order_avl_date_label input[type='text']").val(),
+    pre_order_avl_date_label: jQuery(".wceazy_pre_order_admin_emaill input[type='text']").val(), // corrected the class name
     // Add other fields here
   };
 
