@@ -14,11 +14,7 @@ $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order
 // Correct the array key to access the pre_order_avl_date_label
 $wceazy_po_pre_order_avl_date_label = isset($wceazy_po_settings["pre_order_avl_date_label"]) ? $wceazy_po_settings["pre_order_avl_date_label"] : "Default Avl Data";
 
-$wceazy_po_pre_order_enable_avl_date_label = isset($wceazy_po_settings["pre_order_enable_avl_date_label"]) ? $wceazy_po_settings["pre_order_enable_avl_date_label"] : "on";
-
-
-// $wceazy_po_pre_order_enable_avl_date_label = isset($wceazy_po_settings["pre_order_enable_avl_date_label"]) ? $wceazy_po_settings["pre_order_enable_avl_date_label"] : "yes";
-
+$wceazy_po_pre_order_enable_avl_date_label = isset($wceazy_po_settings["pre_order_enable_avl_date_label"]) ? $wceazy_po_settings["pre_order_enable_avl_date_label"] : "on"; 
 
 // echo "<pre>";
 // var_dump($wceazy_po_pre_order_enable_avl_date_label);
