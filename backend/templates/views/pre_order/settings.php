@@ -154,15 +154,16 @@ echo "</pre>";
                             <div class="field_with_msg_container">
                                 <a href="<?php echo esc_url(admin_url('admin.php?page=wc-settings&tab=email&section=wc_pre_order')); ?>"
                                     class="button-link">
-                                    <input class="wceazy_pre_order_text_field" type="submit" placeholder=""
-                                        value="New Pre-Order Admin">
+                                    <button class="wceazy_pre_order_text_field" type="button">
+                                        <?php esc_html_e('New Pre-Order Admin', 'wceazy'); ?>
+                                    </button>
                                 </a>
 
                                 <small>
-                                    <?php esc_html_e('Click here for Customize Admin Pre-Oeder email', 'wceazy'); ?>
-
+                                    <?php esc_html_e('Click here for Customize Admin Pre-Order email', 'wceazy'); ?>
                                 </small>
                             </div>
+
                         </div>
                         <div class="wceazy_pre_order_field_group wceazy_pre_order_custom_email">
                             <label for="wceazy_pre_order_custom_email">
@@ -171,8 +172,9 @@ echo "</pre>";
                             <div class="field_with_msg_container">
                                 <a href="<?php echo esc_url(admin_url('admin.php?page=wc-settings&tab=email&section=wc_pre_order_new')); ?>"
                                     class="button-link">
-                                    <input class="wceazy_pre_order_text_field" type="submit" placeholder=""
-                                        value="Pre-Order Customer">
+                                    <button class="wceazy_pre_order_text_field" type="button">
+                                        <?php esc_html_e(' Pre-Order Customer', 'wceazy'); ?>
+                                    </button>
                                 </a>
                                 <small>
                                     <?php esc_html_e('Click here for Customize Custom Pre-Oeder email', 'wceazy'); ?>

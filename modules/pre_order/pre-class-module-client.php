@@ -60,11 +60,7 @@ if (!class_exists('WcEazyPreOrderClient')) {
 
 
             add_filter('manage_woocommerce_page_wc-orders_columns', array($this->utils, 'preorderCustomColumn'), 10, 2);
-
-
-
-
-
+ 
 
 
             // pro Hooks start
