@@ -220,8 +220,9 @@ function wceazy_pre_order_save() {
     enable_pre_order: jQuery(".wceazy_pre_order_enable_pre_order input[type='checkbox']:checked").length > 0 ? "yes" : "no",
     pre_order_btn_text: jQuery(".wceazy_pre_order_btn_text input[type='text']").val(),
     pre_order_avl_date_label: jQuery(".wceazy_pre_order_avl_date_label input[type='text']").val(),
-    pre_orde_enabler_avl_date_label: jQuery(".wceazy_pre_order_enabler_avl_date_label input[type='checkbox']").val(), // corrected the class name
+    pre_order_enable_avl_date_label: jQuery(".pre_order_enable_avl_date_label input[type='checkbox']:checked").length > 0 ? "yes" : "no", // corrected the class name
     // Add other fields here
+
   };
 
   let post_data = {

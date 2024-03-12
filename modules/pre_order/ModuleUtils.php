@@ -14,25 +14,31 @@ $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order
 // Correct the array key to access the pre_order_avl_date_label
 $wceazy_po_pre_order_avl_date_label = isset($wceazy_po_settings["pre_order_avl_date_label"]) ? $wceazy_po_settings["pre_order_avl_date_label"] : "Default Avl Data";
 
-$wceazy_po_wceazy_pre_order_enabler_avl_date_label = isset($wceazy_po_settings["wceazy_pre_order_enabler_avl_date_label"]) ? $wceazy_po_settings["wceazy_pre_order_enabler_avl_date_label"] : "on";
+$wceazy_po_pre_order_enable_avl_date_label = isset($wceazy_po_settings["pre_order_enable_avl_date_label"]) ? $wceazy_po_settings["pre_order_enable_avl_date_label"] : "on";
 
-echo "<pre>";
-var_dump($wceazy_po_wceazy_pre_order_enabler_avl_date_label);
-echo "</pre>";
+
+// $wceazy_po_pre_order_enable_avl_date_label = isset($wceazy_po_settings["pre_order_enable_avl_date_label"]) ? $wceazy_po_settings["pre_order_enable_avl_date_label"] : "true";
+
+
+
+
+
+// echo "<pre>";
+// var_dump($wceazy_po_pre_order_enable_avl_date_label);
+// echo "</pre>";
 
 
 
 if (!class_exists('WcEazyPreOrderUtils')) {
     class WcEazyPreOrderUtils
-    {
-
-
+    { 
         public $base_admin;
         public $module_admin;
         public $wceazy_po_pre_order_btn_text; // Define the variable within the class
         public $wceazy_po_enable_pre_order; // Define the variable within the class
         public $wceazy_po_pre_order_avl_date_label;
-        public $wceazy_po_wceazy_pre_order_enabler_avl_date_label;
+        public $wceazy_po_pre_order_enable_avl_date_label;
+        
 
 
 
@@ -301,7 +307,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             // Correct the array key to access the pre_order_avl_date_label
             $wceazy_po_pre_order_avl_date_label = isset($wceazy_po_settings["pre_order_avl_date_label"]) ? $wceazy_po_settings["pre_order_avl_date_label"] : "Default Avl Data";
 
-            $wceazy_po_wceazy_pre_order_enabler_avl_date_label = isset($wceazy_po_settings["wceazy_pre_order_enabler_avl_date_label"]) ? $wceazy_po_settings["wceazy_pre_order_enabler_avl_date_label"] : "on";
+            $wceazy_po_pre_order_enable_avl_date_label = isset($wceazy_po_settings["pre_order_enable_avl_date_label"]) ? $wceazy_po_settings["pre_order_enable_avl_date_label"] : "on";
 
             if ($product && $product->is_type('simple') && 'yes' === get_post_meta($product->get_id(), '_is_pre_order', true)) {
                 $pre_order_date_time = get_post_meta($product->get_id(), '_pre_order_date_time', true);
