@@ -3,10 +3,6 @@
 $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', false);
 $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
 
-// echo "<pre>";
-// var_dump($wceazy_po_settings);
-// echo "</pre>";
-
 $wceazy_po_enable_pre_order = isset($wceazy_po_settings["enable_pre_order"]) ? $wceazy_po_settings["enable_pre_order"] : "yes";
 
 $wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"]) ? $wceazy_po_settings["pre_order_btn_text"] : "PreOrder Now!";
@@ -15,9 +11,9 @@ $wceazy_po_pre_order_avl_date_label = isset($wceazy_po_settings["pre_order_avl_d
 
 $wceazy_po_pre_order_enable_avl_date_label = isset($wceazy_po_settings["pre_order_enable_avl_date_label"]) ? $wceazy_po_settings["pre_order_enable_avl_date_label"] : "yes";
 // wceazy_po_wceazy_pre_order_enabler_avl_date_label
-echo "<pre>";
-var_dump($wceazy_po_pre_order_enable_avl_date_label);
-echo "</pre>";
+// echo "<pre>";
+// var_dump($wceazy_po_pre_order_enable_avl_date_label);
+// echo "</pre>";
 
 ?>
 
@@ -53,7 +49,6 @@ echo "</pre>";
         </div>
     </div>
 
-
     <div class="wceazy_pre_order_container">
         <div class="wceazy_pre_order_tab">
             <div class="wceazy_pre_order_tab_part_left">
@@ -73,7 +68,6 @@ echo "</pre>";
                             <?php esc_html_e('Email Notification', 'wceazy'); ?>
                         </h1>
                     </div>
-
                 </div>
             </div>
 
@@ -119,13 +113,13 @@ echo "</pre>";
                             <div class="field_with_msg_container">
                                 <label class="toggle_switch">
                                     <input type="checkbox" <?php echo esc_attr($wceazy_po_pre_order_enable_avl_date_label == "yes" ? "checked" : ""); ?>>
-                                    <span class="slider round"></span> 
+                                    <span class="slider round"></span>
                                 </label>
                                 <small>
                                     <?php esc_html_e('Enable Pre Order Availability Text.', 'wceazy'); ?>
                                 </small>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
                 <div class="coupon_tab_body" data-id="tab_email">
@@ -161,9 +155,9 @@ echo "</pre>";
                                     class="button-link">
                                     <input class="wceazy_pre_order_text_field" type="submit" placeholder=""
                                         value="Pre-Order Customer">
-                                </a> 
+                                </a>
                                 <small>
-                                    <?php esc_html_e('Click here for Customize Custom Pre-Oeder email', 'wceazy'); ?> 
+                                    <?php esc_html_e('Click here for Customize Custom Pre-Oeder email', 'wceazy'); ?>
                                 </small>
                             </div>
 

@@ -17,10 +17,7 @@ $wceazy_po_pre_order_avl_date_label = isset($wceazy_po_settings["pre_order_avl_d
 $wceazy_po_pre_order_enable_avl_date_label = isset($wceazy_po_settings["pre_order_enable_avl_date_label"]) ? $wceazy_po_settings["pre_order_enable_avl_date_label"] : "on";
 
 
-// $wceazy_po_pre_order_enable_avl_date_label = isset($wceazy_po_settings["pre_order_enable_avl_date_label"]) ? $wceazy_po_settings["pre_order_enable_avl_date_label"] : "true";
-
-
-
+// $wceazy_po_pre_order_enable_avl_date_label = isset($wceazy_po_settings["pre_order_enable_avl_date_label"]) ? $wceazy_po_settings["pre_order_enable_avl_date_label"] : "yes";
 
 
 // echo "<pre>";
@@ -31,14 +28,14 @@ $wceazy_po_pre_order_enable_avl_date_label = isset($wceazy_po_settings["pre_orde
 
 if (!class_exists('WcEazyPreOrderUtils')) {
     class WcEazyPreOrderUtils
-    { 
+    {
         public $base_admin;
         public $module_admin;
         public $wceazy_po_pre_order_btn_text; // Define the variable within the class
         public $wceazy_po_enable_pre_order; // Define the variable within the class
         public $wceazy_po_pre_order_avl_date_label;
         public $wceazy_po_pre_order_enable_avl_date_label;
-        
+
 
 
 
@@ -88,7 +85,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             if (is_object($pre_emails) && isset($pre_emails->settings)) {
                 // Access the settings array
                 $settings = $pre_emails->settings;
-
                 // Access the 'subject' element
                 $subject = $settings['subject'];
                 $pre_emails = $settings['heading'];
@@ -118,8 +114,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         }
 
 
-        // `````new end
-
+        // `````new end 
         // Add custom fields to the product editor for pre-order options
         public function add_preorder_fields()
         {
@@ -180,14 +175,14 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             );
 
             // Dynamic checkbox for dynamic inventory
-            woocommerce_wp_checkbox(
-                array(
-                    'id' => '_dynamic_inventory',
-                    'label' => __('Dynamic Inventory', 'wceazy'),
-                    'description' => __('Check this if you want to enable dynamic inventory for this product.', 'wceazy'),
-                    'desc_tip' => true,
-                )
-            );
+            // woocommerce_wp_checkbox(
+            //     array(
+            //         'id' => '_dynamic_inventory',
+            //         'label' => __('Dynamic Inventory', 'wceazy'),
+            //         'description' => __('Check this if you want to enable dynamic inventory for this product.', 'wceazy'),
+            //         'desc_tip' => true,
+            //     )
+            // );
 
             // Text input for pre-order price
             woocommerce_wp_text_input(
@@ -319,19 +314,19 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     echo '<div class="preorder-availability">';
 
                     // Use a variable to hold the content
-                    $label_content = '<strong class="preorder-label">' . $wceazy_po_pre_order_avl_date_label . '</strong>';
-
+                    if ($wceazy_po_pre_order_enable_avl_date_label == "yes") {
+                        $label_content = '<strong class="preorder-label">' . $wceazy_po_pre_order_avl_date_label . '</strong>';
+                        echo $label_content;
+                    } else {
+                        # code...
+                    }
                     // Echo the content
-                    echo $label_content;
 
                     echo '<span class="preorder-date-time">' . $formatted_date_time . '</span>';
                     echo '</div>';
                 }
             }
         }
-
-
-
 
 
         // Modify the product price for pre-order products
