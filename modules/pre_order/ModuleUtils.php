@@ -20,10 +20,10 @@ $wceazy_po_pre_order_enable_avl_date_label = isset($wceazy_po_settings["pre_orde
 
 $wceazy_po_pre_order_enable_avl_date_and_label = isset($wceazy_po_settings["pre_order_enable_avl_date_and_label"]) ? $wceazy_po_settings["pre_order_enable_avl_date_and_label"] : "yes";
 
-echo "<pre>";
-echo "avl:";
-var_dump($wceazy_po_pre_order_enable_avl_date_and_label);
-echo "</pre>";
+// echo "<pre>";
+// echo "avl:";
+// var_dump($wceazy_po_pre_order_enable_avl_date_and_label);
+// echo "</pre>";
 
 
 
@@ -332,18 +332,21 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     echo '</div>';
                 }
             }
-        }
-
-
+        } 
         // Modify the product price for pre-order products
         public function custom_preorder_price($price, $product)
-        {
+        { 
+           
+
             // Check if the product is marked as a pre-order
+            // echo "PreOrder Price:"; 
             if ('yes' === get_post_meta($product->get_id(), '_is_pre_order', true)) {
-                $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
+              $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
+
 
                 // If a pre-order price is set, use it
                 if (!empty($pre_order_price)) {
+                   
                     return $pre_order_price;
                 }
             }

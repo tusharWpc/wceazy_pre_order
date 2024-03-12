@@ -49,7 +49,7 @@ if (!class_exists('WcEazyPreOrderClient')) {
 
             // Modify product price for pre-order products
             add_filter('woocommerce_product_get_price', array($this->utils, 'custom_preorder_price'), 10, 2);
-            add_filter('woocommerce_product_get_regular_price', array($this->utils, 'custom_preorder_price'), 10, 2);
+            // add_filter('woocommerce_product_get_regular_price', array($this->utils, 'custom_preorder_price_html'), 10, 2);
             add_filter('woocommerce_product_variation_get_regular_price', array($this->utils, 'custom_preorder_price'), 10, 2);
             add_filter('woocommerce_product_variation_get_price', array($this->utils, 'custom_preorder_price'), 10, 2);
 
