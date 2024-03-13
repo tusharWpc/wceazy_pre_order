@@ -222,6 +222,7 @@ function wceazy_pre_order_save() {
     pre_order_avl_date_label: jQuery(".wceazy_pre_order_avl_date_label input[type='text']").val(),
     pre_order_enable_avl_date_label: jQuery(".pre_order_enable_avl_date_label input[type='checkbox']:checked").length > 0 ? "yes" : "no",
     pre_order_enable_avl_date_and_label: jQuery(".pre_order_enable_avl_date_and_label input[type='checkbox']:checked").length > 0 ? "yes" : "no",
+    pre_order_enable_admin_notifi: jQuery(".pre_order_enable_admin_notifi input[type='checkbox']:checked").length > 0 ? "yes" : "no",
 
 
   };

@@ -18,6 +18,17 @@ if (!class_exists('WcEazyPreOrderClient')) {
 
             $this->utils = new WcEazyPreOrderUtils($this->base_admin, $this->module_admin);
 
+
+            $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', false);
+            $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
+
+            var_dump($wceazy_po_settings);
+
+            $wceazy_po_pre_order_enable_admin_notifi = isset($wceazy_po_settings["pre_order_enable_admin_notifi"]) ? $wceazy_po_settings["pre_order_enable_admin_notifi"] : "yes";
+
+
+            var_dump($wceazy_po_pre_order_enable_admin_notifi);
+
             // add_action('plugins_loaded', array($this->utils, 'hemal_loaded'));
             // Free Hooks Start
             // Add pre-order fields to product general settings
@@ -67,11 +78,14 @@ if (!class_exists('WcEazyPreOrderClient')) {
             // Set pre-order date when the order is placed
             add_action('woocommerce_checkout_order_processed', array($this, 'set_preorder_date_on_order_placement'), 10, 3);
 
-            // // Send email notification for users when pre-order period is over and products are fully available
+
+
+
+            // Send pre-order purchase notification email to admin
             add_action('woocommerce_order_status_pending_to_processing', array($this->utils, 'send_preorder_purchase_notification'), 10, 2);
 
-            // // Notify website admins when pre-order periods are nearing their end
-            add_action('wp', array($this->utils, 'schedule_auto_cancel_task'));
+            // Notify website admins when pre-order periods are nearing their end
+            // add_action('wp', array($this->utils, 'schedule_auto_cancel_task'));
 
             // // Update pre-order availability
             // add_action('update_preorder_availability', array($this->utils, 'update_preorder_availability'));

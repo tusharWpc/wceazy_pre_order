@@ -11,13 +11,15 @@ $wceazy_po_pre_order_avl_date_label = isset($wceazy_po_settings["pre_order_avl_d
 
 $wceazy_po_pre_order_enable_avl_date_label = isset($wceazy_po_settings["pre_order_enable_avl_date_label"]) ? $wceazy_po_settings["pre_order_enable_avl_date_label"] : "yes";
 
+
 $wceazy_po_pre_order_enable_avl_date_and_label = isset($wceazy_po_settings["pre_order_enable_avl_date_and_label"]) ? $wceazy_po_settings["pre_order_enable_avl_date_and_label"] : "yes";
 
+$wceazy_po_pre_order_enable_admin_notifi = isset($wceazy_po_settings["pre_order_enable_admin_notifi"]) ? $wceazy_po_settings["pre_order_enable_admin_notifi"] : "yes";
 
 // wceazy_po_wceazy_pre_order_enabler_avl_date_label
-echo "<pre>";
-var_dump($wceazy_po_pre_order_enable_avl_date_and_label);
-echo "</pre>";
+// echo "<pre>";
+// var_dump($wceazy_po_pre_order_enable_admin_notifi);
+// echo "</pre>";
 
 ?>
 
@@ -193,33 +195,29 @@ echo "</pre>";
                     <div class="tab_body_form">
                         <div class="wceazy_pre_order_field_group wceazy_pre_order_btn_text">
                             <label for="coupon_generator_coupon_amount">
-                                <?php esc_html_e('Admin', 'wceazy'); ?>
+                                <?php esc_html_e('Admin Notification', 'wceazy'); ?>
                             </label>
                             <div class="field_with_msg_container">
-                                <a href="<?php echo esc_url(admin_url('admin.php?page=wc-settings&tab=email&section=wc_pre_order')); ?>"
-                                    class="button-link">
-                                    <input class="wceazy_pre_order_text_field" type="submit" placeholder=""
-                                        value="New Pre-Order Admin">
-                                </a>
-
+                                <label class="toggle_switch">
+                                    <input type="checkbox" <?php echo esc_attr($wceazy_po_pre_order_enable_admin_notifi == "yes" ? "checked" : ""); ?>>
+                                    <span class="slider round"></span>
+                                </label>
                                 <small>
-                                    <?php esc_html_e('Click here for Customize Admin Pre-Oeder email', 'wceazy'); ?>
-
+                                    <?php esc_html_e('Enable Pre Order Availability Text.', 'wceazy'); ?>
                                 </small>
                             </div>
                         </div>
                         <div class="wceazy_pre_order_field_group wceazy_pre_order_custom_email">
                             <label for="wceazy_pre_order_custom_email">
-                                <?php esc_html_e('Customer', 'wceazy'); ?>
+                                <?php esc_html_e('Customer Notification', 'wceazy'); ?>
                             </label>
                             <div class="field_with_msg_container">
-                                <a href="<?php echo esc_url(admin_url('admin.php?page=wc-settings&tab=email&section=wc_pre_order_new')); ?>"
-                                    class="button-link">
-                                    <input class="wceazy_pre_order_text_field" type="submit" placeholder=""
-                                        value="Pre-Order Customer"></a>
+                                <label class="toggle_switch">
+                                    <input type="checkbox" <?php echo esc_attr($wceazy_po_pre_order_enable_avl_date_label == "yes" ? "checked" : ""); ?>>
+                                    <span class="slider round"></span>
+                                </label>
                                 <small>
-                                    <?php esc_html_e('Click here for Customize Custom Pre-Oeder email', 'wceazy'); ?>
-
+                                    <?php esc_html_e('Enable Pre Order Availability Text.', 'wceazy'); ?>
                                 </small>
                             </div>
                         </div>

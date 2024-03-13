@@ -20,6 +20,10 @@ $wceazy_po_pre_order_enable_avl_date_label = isset($wceazy_po_settings["pre_orde
 
 $wceazy_po_pre_order_enable_avl_date_and_label = isset($wceazy_po_settings["pre_order_enable_avl_date_and_label"]) ? $wceazy_po_settings["pre_order_enable_avl_date_and_label"] : "yes";
 
+
+
+$wceazy_po_pre_order_enable_admin_notifi = isset($wceazy_po_settings["pre_order_enable_admin_notifi"]) ? $wceazy_po_settings["pre_order_enable_admin_notifi"] : "yes";
+
 // echo "<pre>";
 // echo "avl:";
 // var_dump($wceazy_po_pre_order_enable_avl_date_and_label);
