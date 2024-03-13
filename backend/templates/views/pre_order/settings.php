@@ -16,9 +16,7 @@ $wceazy_po_pre_order_enable_avl_date_and_label = isset($wceazy_po_settings["pre_
 
 $wceazy_po_pre_order_enable_admin_notifi = isset($wceazy_po_settings["pre_order_enable_admin_notifi"]) ? $wceazy_po_settings["pre_order_enable_admin_notifi"] : "yes";
 
-echo "<pre>";
-var_dump($wceazy_po_pre_order_enable_admin_notifi);
-echo "</pre>";
+$wceazy_po_pre_order_enable_customer_notifi = isset($wceazy_po_settings["pre_order_enable_customer_notifi"]) ? $wceazy_po_settings["pre_order_enable_customer_notifi"] : "yes";
 
 ?>
 
@@ -77,7 +75,6 @@ echo "</pre>";
             </div>
 
             <div class="wceazy_pre_order_tab_part_right">
-
                 <div class="coupon_tab_body" data-id="tab_general">
                     <div class="tab_body_title">
                         <h1>
@@ -191,7 +188,7 @@ echo "</pre>";
                         </h1>
                     </div>
                     <div class="tab_body_form">
-                        <div class="wceazy_pre_order_field_group wceazy_pre_order_btn_text">
+                        <div class="wceazy_pre_order_field_group pre_order_enable_admin_notifi">
                             <label for="coupon_generator_coupon_amount">
                                 <?php esc_html_e('Admin Notification', 'wceazy'); ?>
                             </label>
@@ -211,7 +208,7 @@ echo "</pre>";
                             </label>
                             <div class="field_with_msg_container">
                                 <label class="toggle_switch">
-                                    <input type="checkbox" <?php echo esc_attr($wceazy_po_pre_order_enable_avl_date_label == "yes" ? "checked" : ""); ?>>
+                                    <input type="checkbox" <?php echo esc_attr($wceazy_po_pre_order_enable_customer_notifi == "yes" ? "checked" : ""); ?>>
                                     <span class="slider round"></span>
                                 </label>
                                 <small>
