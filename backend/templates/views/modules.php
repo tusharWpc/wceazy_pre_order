@@ -32,9 +32,7 @@
                     placeholder="Search module, please type 3 or more characters">
             </div>
         </div>
-    </div>
-
-
+    </div> 
 
     <div class="wceazy_modules_list_items">
         <div class="wceazy_module_item" data-slug="auto_apply_coupon">

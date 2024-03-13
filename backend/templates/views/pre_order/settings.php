@@ -114,7 +114,8 @@ $wceazy_po_pre_order_enable_customer_notifi = isset($wceazy_po_settings["pre_ord
                             </label>
                             <div class="field_with_msg_container">
                                 <label class="toggle_switch">
-                                    <input type="checkbox" <?php echo esc_attr($wceazy_po_pre_order_enable_avl_date_label == "yes" ? "checked" : ""); ?>>
+                                    <input type="checkbox"
+                                        <?php echo esc_attr($wceazy_po_pre_order_enable_avl_date_label == "yes" ? "checked" : ""); ?>>
                                     <span class="slider round"></span>
                                 </label>
                                 <small>
@@ -128,7 +129,8 @@ $wceazy_po_pre_order_enable_customer_notifi = isset($wceazy_po_settings["pre_ord
                             </label>
                             <div class="field_with_msg_container">
                                 <label class="toggle_switch">
-                                    <input type="checkbox" <?php echo esc_attr($wceazy_po_pre_order_enable_avl_date_and_label == "yes" ? "checked" : ""); ?>>
+                                    <input type="checkbox"
+                                        <?php echo esc_attr($wceazy_po_pre_order_enable_avl_date_and_label == "yes" ? "checked" : ""); ?>>
                                     <span class="slider round"></span>
                                 </label>
                                 <small>
@@ -194,7 +196,8 @@ $wceazy_po_pre_order_enable_customer_notifi = isset($wceazy_po_settings["pre_ord
                             </label>
                             <div class="field_with_msg_container">
                                 <label class="toggle_switch">
-                                    <input type="checkbox" <?php echo esc_attr($wceazy_po_pre_order_enable_admin_notifi == "yes" ? "checked" : ""); ?>>
+                                    <input type="checkbox"
+                                        <?php echo esc_attr($wceazy_po_pre_order_enable_admin_notifi == "yes" ? "checked" : ""); ?>>
                                     <span class="slider round"></span>
                                 </label>
                                 <small>
@@ -208,7 +211,8 @@ $wceazy_po_pre_order_enable_customer_notifi = isset($wceazy_po_settings["pre_ord
                             </label>
                             <div class="field_with_msg_container">
                                 <label class="toggle_switch">
-                                    <input type="checkbox" <?php echo esc_attr($wceazy_po_pre_order_enable_customer_notifi == "yes" ? "checked" : ""); ?>>
+                                    <input type="checkbox"
+                                        <?php echo esc_attr($wceazy_po_pre_order_enable_customer_notifi == "yes" ? "checked" : ""); ?>>
                                     <span class="slider round"></span>
                                 </label>
                                 <small>

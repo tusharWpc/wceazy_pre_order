@@ -27,9 +27,8 @@ $wceazy_po_pre_order_enable_admin_notifi = isset($wceazy_po_settings["pre_order_
 
 $wceazy_po_pre_order_enable_customer_notifi = isset($wceazy_po_settings["pre_order_enable_customer_notifi"]) ? $wceazy_po_settings["pre_order_enable_customer_notifi"] : "yes";
 
-// echo "<pre>";
-// echo "avl:";
-// var_dump($wceazy_po_pre_order_enable_avl_date_and_label);
+// echo "<pre>"; 
+// var_dump($wceazy_po_pre_order_enable_customer_notifi);
 // echo "</pre>";
 
 
@@ -179,9 +178,9 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     'desc_tip' => true,
                     'type' => 'datetime-local',
                 )
-            ); 
+            );
 
-         // Text input for pre-order price
+            // Text input for pre-order price
             woocommerce_wp_text_input(
                 array(
                     'id' => '_pre_order_price',
@@ -393,7 +392,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             }
         }
 
-        // Callback function to update product availability and send email notifications
+     // Customer   // Callback function to update product availability and send email notifications
         public function update_preorder_availability_and_notify()
         {
             $preorder_products = new WP_Query(
@@ -507,6 +506,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
 
         // pre-order Pro feature 
         // Send email notification for product availability
+
         public function send_preorder_availability_notification($product_id)
         {
             $product = wc_get_product($product_id);
