@@ -11,9 +11,7 @@
                     href="<?php echo WCEAZY_GET_PRO_URL; ?>"><?php esc_html_e('GET PRO', 'wceazy'); ?></a>
             </div>
         </div>
-    </div>
-
-
+    </div> 
 
     <div class="wceazy_modules_page_title">
         <h2><?php esc_html_e('Modules', 'wceazy'); ?></h2>

@@ -332,21 +332,22 @@ if (!class_exists('WcEazyPreOrderUtils')) {
                     echo '</div>';
                 }
             }
-        } 
+        }
         // Modify the product price for pre-order products
+        
         public function custom_preorder_price($price, $product)
-        { 
-           
+        {
+
 
             // Check if the product is marked as a pre-order
             // echo "PreOrder Price:"; 
             if ('yes' === get_post_meta($product->get_id(), '_is_pre_order', true)) {
-              $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
+                $pre_order_price = get_post_meta($product->get_id(), '_pre_order_price', true);
 
 
                 // If a pre-order price is set, use it
                 if (!empty($pre_order_price)) {
-                   
+
                     return $pre_order_price;
                 }
             }
