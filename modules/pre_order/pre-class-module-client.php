@@ -22,7 +22,7 @@ if (!class_exists('WcEazyPreOrderClient')) {
             $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', false);
             $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
 
-            var_dump($wceazy_po_settings);
+            // var_dump($wceazy_po_settings);
 
             $wceazy_po_pre_order_enable_admin_notifi = isset($wceazy_po_settings["pre_order_enable_admin_notifi"]) ? $wceazy_po_settings["pre_order_enable_admin_notifi"] : "yes";
 

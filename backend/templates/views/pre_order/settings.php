@@ -16,10 +16,9 @@ $wceazy_po_pre_order_enable_avl_date_and_label = isset($wceazy_po_settings["pre_
 
 $wceazy_po_pre_order_enable_admin_notifi = isset($wceazy_po_settings["pre_order_enable_admin_notifi"]) ? $wceazy_po_settings["pre_order_enable_admin_notifi"] : "yes";
 
-// wceazy_po_wceazy_pre_order_enabler_avl_date_label
-// echo "<pre>";
-// var_dump($wceazy_po_pre_order_enable_admin_notifi);
-// echo "</pre>";
+echo "<pre>";
+var_dump($wceazy_po_pre_order_enable_admin_notifi);
+echo "</pre>";
 
 ?>
 
@@ -160,7 +159,6 @@ $wceazy_po_pre_order_enable_admin_notifi = isset($wceazy_po_settings["pre_order_
                                         <?php esc_html_e('New Pre-Order Admin', 'wceazy'); ?>
                                     </button>
                                 </a>
-
                                 <small>
                                     <?php esc_html_e('Click here for Customize Admin Pre-Order email', 'wceazy'); ?>
                                 </small>
@@ -175,7 +173,7 @@ $wceazy_po_pre_order_enable_admin_notifi = isset($wceazy_po_settings["pre_order_
                                 <a href="<?php echo esc_url(admin_url('admin.php?page=wc-settings&tab=email&section=wc_pre_order_new')); ?>"
                                     class="button-link">
                                     <button class="wceazy_pre_order_text_field" type="button">
-                                        <?php esc_html_e(' Pre-Order Customer', 'wceazy'); ?>
+                                        <?php esc_html_e('Pre-Order Customer', 'wceazy'); ?>
                                     </button>
                                 </a>
                                 <small>

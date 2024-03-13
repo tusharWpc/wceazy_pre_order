@@ -629,9 +629,9 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         // Function to filter orders by pre-order products
         public function filter_orders_by_preorder_products($args)
         {
-            echo "<pre>";
-            printf($args);
-            echo "</pre>";
+            // echo "<pre>";
+            // printf($args);
+            // echo "</pre>";
             // Check if the 'orders' property exists and is not null
             if (isset($args['orders'])) {
                 // Convert the 'orders' property to an array if it's an object
