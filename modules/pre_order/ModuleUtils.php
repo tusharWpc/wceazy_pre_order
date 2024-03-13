@@ -392,7 +392,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             }
         }
 
-     // Customer   // Callback function to update product availability and send email notifications
+        // Customer   // Callback function to update product availability and send email notifications
         public function update_preorder_availability_and_notify()
         {
             $preorder_products = new WP_Query(
