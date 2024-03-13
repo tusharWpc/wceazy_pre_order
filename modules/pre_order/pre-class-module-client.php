@@ -42,7 +42,7 @@ if (!class_exists('WcEazyPreOrderClient')) {
             add_action('woocommerce_before_add_to_cart_form', array($this->utils, 'display_preorder_date_and_time'), 15);
 
             // Display pre-order information in order details page
-            add_action('woocommerce_order_details_after_order_table', array($this->utils, 'display_preorder_information_in_order_details'), 10, 1);
+            // add_action('woocommerce_order_details_after_order_table', array($this->utils, 'display_preorder_information_in_order_details'), 10, 1);
 
             // Add pre-order status to product
             add_action('init', array($this->utils, 'add_preorder_status_to_product'), 10, 2);
@@ -60,7 +60,7 @@ if (!class_exists('WcEazyPreOrderClient')) {
 
 
             add_filter('manage_woocommerce_page_wc-orders_columns', array($this->utils, 'preorderCustomColumn'), 10, 2);
- 
+
 
 
             // pro Hooks start
@@ -68,16 +68,16 @@ if (!class_exists('WcEazyPreOrderClient')) {
             add_action('woocommerce_checkout_order_processed', array($this, 'set_preorder_date_on_order_placement'), 10, 3);
 
             // // Send email notification for users when pre-order period is over and products are fully available
-            // add_action('woocommerce_order_status_pending_to_processing', array($this->utils, 'send_preorder_purchase_notification'), 10, 2);
+            add_action('woocommerce_order_status_pending_to_processing', array($this->utils, 'send_preorder_purchase_notification'), 10, 2);
 
             // // Notify website admins when pre-order periods are nearing their end
-            // add_action('wp', array($this->utils, 'schedule_auto_cancel_task'));
+            add_action('wp', array($this->utils, 'schedule_auto_cancel_task'));
 
             // // Update pre-order availability
             // add_action('update_preorder_availability', array($this->utils, 'update_preorder_availability'));
 
             // // Automatically cancel pre-orders if the product is no longer available
-            // add_action('auto_cancel_pre_orders', array($this, 'auto_cancel_pre_orders'));
+            add_action('auto_cancel_pre_orders', array($this, 'auto_cancel_pre_orders'));
 
             // pro Hooks End
 
