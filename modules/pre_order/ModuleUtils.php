@@ -16,21 +16,15 @@ $wceazy_po_pre_order_avl_date_label = isset($wceazy_po_settings["pre_order_avl_d
 
 $wceazy_po_pre_order_enable_avl_date_label = isset($wceazy_po_settings["pre_order_enable_avl_date_label"]) ? $wceazy_po_settings["pre_order_enable_avl_date_label"] : "on";
 
-
-
 $wceazy_po_pre_order_enable_avl_date_and_label = isset($wceazy_po_settings["pre_order_enable_avl_date_and_label"]) ? $wceazy_po_settings["pre_order_enable_avl_date_and_label"] : "yes";
 
-
-
 $wceazy_po_pre_order_enable_admin_notifi = isset($wceazy_po_settings["pre_order_enable_admin_notifi"]) ? $wceazy_po_settings["pre_order_enable_admin_notifi"] : "yes";
-
 
 $wceazy_po_pre_order_enable_customer_notifi = isset($wceazy_po_settings["pre_order_enable_customer_notifi"]) ? $wceazy_po_settings["pre_order_enable_customer_notifi"] : "yes";
 
 // echo "<pre>"; 
 // var_dump($wceazy_po_pre_order_enable_customer_notifi);
 // echo "</pre>";
-
 
 
 if (!class_exists('WcEazyPreOrderUtils')) {
@@ -42,8 +36,6 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         public $wceazy_po_enable_pre_order; // Define the variable within the class
         public $wceazy_po_pre_order_avl_date_label;
         public $wceazy_po_pre_order_enable_avl_date_label;
-
-
 
 
         // Constructor to initialize class properties
