@@ -6,7 +6,7 @@ if (!class_exists('WC_Pre_Order')) {
         {
             $this->id = 'pre_order';
             $this->customer_email = true;
-            $this->title = __('Pre order', 'woocommerce');
+            $this->title = __('WCZ Pre order', 'woocommerce');
             $this->description = __('New pre emails are sent to chosen recipient(s) when a new order is received.', 'woocommerce');
             $this->template_html = 'template/customer-preorder.php';
             $this->template_plain = 'template/plain/customer-preorder.php';
@@ -17,9 +17,9 @@ if (!class_exists('WC_Pre_Order')) {
 
 
             //Triggers for this mail
-            add_action('woocommerce_order_status_pending_to_pre-ordered_notification', array( $this, 'trigger' ), 10, 2);
-            add_action('woocommerce_order_status_failed_to_pre-ordered_notification', array( $this, 'trigger' ), 10, 2);
-            add_action('woocommerce_order_status_cancelled_to_pre-ordered_notification', array( $this, 'trigger' ), 10, 2);
+            add_action('woocommerce_order_status_pending_to_pre-ordered_notification', array($this, 'trigger'), 10, 2);
+            add_action('woocommerce_order_status_failed_to_pre-ordered_notification', array($this, 'trigger'), 10, 2);
+            add_action('woocommerce_order_status_cancelled_to_pre-ordered_notification', array($this, 'trigger'), 10, 2);
 
             // Call parent constructor.
             parent::__construct();
@@ -48,14 +48,14 @@ if (!class_exists('WC_Pre_Order')) {
         {
             $this->setup_locale();
 
-            if ($order_id && ! is_a($order, 'WC_Order')) {
+            if ($order_id && !is_a($order, 'WC_Order')) {
                 $order = wc_get_order($order_id);
             }
 
             if (is_a($order, 'WC_Order')) {
-                $this->object                         = $order;
-                $this->recipient                      = $this->object->get_billing_email();
-                $this->placeholders['{order_date}']   = wc_format_datetime($this->object->get_date_created());
+                $this->object = $order;
+                $this->recipient = $this->object->get_billing_email();
+                $this->placeholders['{order_date}'] = wc_format_datetime($this->object->get_date_created());
                 $this->placeholders['{order_number}'] = $this->object->get_order_number();
             }
 
@@ -75,12 +75,12 @@ if (!class_exists('WC_Pre_Order')) {
             return wc_get_template_html(
                 $this->template_html,
                 array(
-                    'order'              => $this->object,
-                    'email_heading'      => $this->get_heading(),
+                    'order' => $this->object,
+                    'email_heading' => $this->get_heading(),
                     'additional_content' => $this->get_additional_content(),
-                    'sent_to_admin'      => false,
-                    'plain_text'         => false,
-                    'email'              => $this,
+                    'sent_to_admin' => false,
+                    'plain_text' => false,
+                    'email' => $this,
                 ),
                 '',
                 $this->template_base
@@ -97,12 +97,12 @@ if (!class_exists('WC_Pre_Order')) {
             return wc_get_template_html(
                 $this->template_plain,
                 array(
-                    'order'              => $this->object,
-                    'email_heading'      => $this->get_heading(),
+                    'order' => $this->object,
+                    'email_heading' => $this->get_heading(),
                     'additional_content' => $this->get_additional_content(),
-                    'sent_to_admin'      => false,
-                    'plain_text'         => true,
-                    'email'              => $this,
+                    'sent_to_admin' => false,
+                    'plain_text' => true,
+                    'email' => $this,
                 ),
                 '',
                 $this->template_base

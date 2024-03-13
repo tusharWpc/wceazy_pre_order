@@ -7,7 +7,7 @@ if (!class_exists('WC_Pre_Order_New')) {
         {
             $this->id = 'new_pre_order';
             $this->admin_email = true;
-            $this->title = __('New Pre order', 'woocommerce');
+            $this->title = __('WCZ New Pre order', 'woocommerce');
             $this->description = __('New pre emails are sent to chosen recipient(s) when a new order is received.', 'woocommerce');
             $this->template_html = 'template/admin-preorder.php';
             $this->template_plain = 'template/plain/admin-preorder.php';
