@@ -202,7 +202,7 @@ $wceazy_po_pre_order_enable_customer_notifi = isset($wceazy_po_settings["pre_ord
                                 </small>
                             </div>
                         </div>
-                        <div class="wceazy_pre_order_field_group wceazy_pre_order_custom_email">
+                        <div class="wceazy_pre_order_field_group pre_order_enable_customer_notifi">
                             <label for="wceazy_pre_order_custom_email">
                                 <?php esc_html_e('Customer Notification', 'wceazy'); ?>
                             </label>

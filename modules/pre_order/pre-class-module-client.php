@@ -27,7 +27,10 @@ if (!class_exists('WcEazyPreOrderClient')) {
             $wceazy_po_pre_order_enable_admin_notifi = isset($wceazy_po_settings["pre_order_enable_admin_notifi"]) ? $wceazy_po_settings["pre_order_enable_admin_notifi"] : "yes";
 
 
-            var_dump($wceazy_po_pre_order_enable_admin_notifi);
+            $wceazy_po_pre_order_enable_customer_notifi = isset($wceazy_po_settings["pre_order_enable_customer_notifi"]) ? $wceazy_po_settings["pre_order_enable_customer_notifi"] : "yes";
+
+
+            // var_dump($wceazy_po_pre_order_enable_admin_notifi);
 
             // add_action('plugins_loaded', array($this->utils, 'hemal_loaded'));
             // Free Hooks Start
