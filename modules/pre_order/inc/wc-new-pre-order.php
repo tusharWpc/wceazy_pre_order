@@ -5,6 +5,9 @@ if (!class_exists('WC_Pre_Order_New')) {
     {
         public function __construct()
         {
+
+
+
             $this->id = 'new_pre_order';
             $this->title = __('WCZ New Pre order', 'woocommerce');
             $this->description = __('New pre emails are sent to chosen recipient(s) when a new order is received.', 'woocommerce');
