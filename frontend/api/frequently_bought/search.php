@@ -1,17 +1,17 @@
 <?php
 
-$wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', False);
-$wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
+$wceazy_frequently_bought_settings = get_option('wceazy_frequently_bought_settings', False);
+$wceazy_po_settings = $wceazy_frequently_bought_settings ? json_decode($wceazy_frequently_bought_settings, true) : array();
 
 // echo "<pre>";
 // var_dump($wceazy_po_settings);
 // echo "</pre>";
 
 
-$wceazy_po_pre_order_btn_text = isset($wceazy_po_settings["pre_order_btn_text"]) ? $wceazy_po_settings["pre_order_btn_text"] : "PreOrder Now!";
+$wceazy_po_frequently_bought_btn_text = isset ($wceazy_po_settings["frequently_bought_btn_text"]) ? $wceazy_po_settings["frequently_bought_btn_text"] : "PreOrder Now!";
 
 // echo "<pre>";
-// var_dump($wceazy_po_pre_order_btn_text);
+// var_dump($wceazy_po_frequently_bought_btn_text);
 // echo "</pre>";
 
 
@@ -30,8 +30,8 @@ $products = array();
 
 
 if (
-    isset($_REQUEST['page']) || isset($_REQUEST['query']) || isset($_REQUEST['price_start']) || isset($_REQUEST['price_end']) || isset($_REQUEST['rating'])
-    || isset($_REQUEST['category_query']) || isset($_REQUEST['stock_query'])
+    isset ($_REQUEST['page']) || isset ($_REQUEST['query']) || isset ($_REQUEST['price_start']) || isset ($_REQUEST['price_end']) || isset ($_REQUEST['rating'])
+    || isset ($_REQUEST['category_query']) || isset ($_REQUEST['stock_query'])
 ) {
     $products_per_page = is_numeric($wceazy_po_product_per_page) ? $wceazy_po_product_per_page : 15;
     $page = sanitize_text_field($_REQUEST['page']);
@@ -96,7 +96,7 @@ if (
         $products[] = array(
             "product_id" => $product->get_id(),
             "product_title" => $product->get_name(),
-            "product_image" => wp_get_attachment_image_url($product->get_image_id()) != false ? wp_get_attachment_image_url($product->get_image_id()) : WCEAZY_IMG_DIR . "modules/pre_order/no_image.jpg",
+            "product_image" => wp_get_attachment_image_url($product->get_image_id()) != false ? wp_get_attachment_image_url($product->get_image_id()) : WCEAZY_IMG_DIR . "modules/frequently_bought/no_image.jpg",
             "product_url" => get_permalink($product->get_id()),
             "product_price" => $product->get_price_html(),
             "product_is_variable" => $product->is_type('variable') ? "1" : "0",

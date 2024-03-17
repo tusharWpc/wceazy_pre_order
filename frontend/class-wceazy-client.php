@@ -34,6 +34,9 @@ if (!class_exists('WcEazyClient')) {
         /* ======== Product Filter ========== */
         public $product_filter;
 
+        /* ======== Frequently Bought ========== */
+        public $frequently_bought;
+
         public function __construct()
         {
             if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
@@ -115,6 +118,12 @@ if (!class_exists('WcEazyClient')) {
                     include_once WCEAZY_PATH . "modules/product_filter/ModuleUtils.php";
                     $this->product_filter = new WcEazyProductFilterClient($this);
                 }
+                /* ======== Frequently Bought ========== */
+                if ($this->settings->getModuleStatus("frequently_bought")) {
+                    include_once WCEAZY_PATH . "modules/frequently_bought/class-module-client.php";
+                    include_once WCEAZY_PATH . "modules/frequently_bought/ModuleUtils.php";
+                    $this->frequently_bought = new WcEazyFrequentlyBoughtClient($this);
+                }
             }
 
         }
@@ -193,6 +202,18 @@ if (!class_exists('WcEazyClient')) {
                 wp_localize_script(
                     'wceazy-client-module-product-filter',
                     'wceazy_client_product_filter_object',
+                    array(
+                        'ajaxurl' => admin_url('admin-ajax.php')
+                    )
+                );
+            }
+            /* ======== Frequently Bought ========== */
+            if ($this->settings->getModuleStatus("frequently_bought")) {
+                wp_enqueue_style('wceazy-client-module-frequently-bought', WCEAZY_CSS_DIR . 'frequently_bought/client_main.css', array(), WCEAZY_VERSION);
+                wp_enqueue_script('wceazy-client-module-frequently-bought', WCEAZY_JS_DIR . 'frequently_bought/client_main.js', array('jquery'), WCEAZY_VERSION);
+                wp_localize_script(
+                    'wceazy-client-module-frequently-bought',
+                    'wceazy_client_frequently_bought_object',
                     array(
                         'ajaxurl' => admin_url('admin-ajax.php')
                     )

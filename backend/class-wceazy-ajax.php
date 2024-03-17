@@ -58,6 +58,9 @@ if (!class_exists('WcEazyAdminAjax')) {
 
             /* Product Filter */
             add_action( 'wp_ajax_wceazy_product_filter_save', array($this, 'wceazy_product_filter_save'));
+
+              /* Frequently Bought */
+              add_action( 'wp_ajax_wceazy_frequently_bought_save', array($this, 'wceazy_frequently_bought_save'));
         }
 
 
@@ -166,6 +169,11 @@ if (!class_exists('WcEazyAdminAjax')) {
         /* Product Filter */
         public function wceazy_product_filter_save() {
             include_once WCEAZY_PATH . "backend/api/product_filter/save.php";
+            wp_die();
+        }
+                /* Frequently Bought */
+        public function wceazy_frequently_bought_save() {
+            include_once WCEAZY_PATH . "backend/api/frequently_bought/save.php";
             wp_die();
         }
 

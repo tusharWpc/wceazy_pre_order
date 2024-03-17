@@ -18,20 +18,17 @@ if (!class_exists('WcEazyPreOrderClient')) {
 
             $this->utils = new WcEazyPreOrderUtils($this->base_admin, $this->module_admin);
 
-
             $wceazy_pre_order_settings = get_option('wceazy_pre_order_settings', false);
             $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
             // var_dump($wceazy_po_settings);
 
             $wceazy_po_pre_order_enable_admin_notifi = isset($wceazy_po_settings["pre_order_enable_admin_notifi"]) ? $wceazy_po_settings["pre_order_enable_admin_notifi"] : "yes";
 
-
             $wceazy_po_pre_order_enable_customer_notifi = isset($wceazy_po_settings["pre_order_enable_customer_notifi"]) ? $wceazy_po_settings["pre_order_enable_customer_notifi"] : "yes";
-
-
+            
+            $wceazy_po_pre_order_automatically_cancel_pre_orders = isset($wceazy_po_settings["pre_order_automatically_cancel_pre_orders"]) ? $wceazy_po_settings["pre_order_automatically_cancel_pre_orders"] : "yes";
 
             add_action('woocommerce_product_set_stock_status', array($this->utils, 'send_preorder_availability_notification', 10, 2));
-
 
             // add_action('plugins_loaded', array($this->utils, 'hemal_loaded'));
             // Free Hooks Start
@@ -50,8 +47,10 @@ if (!class_exists('WcEazyPreOrderClient')) {
             // Change add to cart text for pre-order products
             add_filter('woocommerce_product_add_to_cart_text', array($this->utils, 'custom_preorder_button_text'), 10, 1);
 
-            // Schedule pre-order availability update
-            add_action('wp', array($this->utils, 'schedule_preorder_availability_update'));
+            // Schedule pre-order availability update 
+
+                add_action('wp', array($this->utils, 'schedule_preorder_availability_update'));
+          
 
             // Display pre-order date and time on product page
             add_action('woocommerce_before_add_to_cart_form', array($this->utils, 'display_preorder_date_and_time'), 15);
@@ -71,17 +70,24 @@ if (!class_exists('WcEazyPreOrderClient')) {
             // Free Hooks End
 
             // Hook into the 'woocommerce_admin_order_data_after_billing_address' or 'woocommerce_admin_order_data_after_shipping_address' action hook
-            add_filter('manage_edit-shop_order_columns', array($this->utils, 'preorderCustomColumn'), 10, 2);
+                add_filter('manage_edit-shop_order_columns', array($this->utils, 'preorderCustomColumn'), 10, 2);
+                add_filter('manage_woocommerce_page_wc-orders_columns', array($this->utils, 'preorderCustomColumn'), 10, 2);
+
+// Add action to save preorder date
+add_action('woocommerce_checkout_update_order_meta', array($this->utils, 'save_preorder_date'), 10, 2);
+
+// Add filter to add custom column to order table
+add_filter('manage_edit-shop_order_columns', array($this->utils, 'preorderCustomColumn'), 10, 1);
+
+// Add action to display preorder date in custom column
+add_action('manage_shop_order_posts_custom_column', array($this->utils, 'display_preorder_date'), 10, 2);
 
 
-            add_filter('manage_woocommerce_page_wc-orders_columns', array($this->utils, 'preorderCustomColumn'), 10, 2);
-
-
+                
 
             // pro Hooks start
             // Set pre-order date when the order is placed
             add_action('woocommerce_checkout_order_processed', array($this, 'set_preorder_date_on_order_placement'), 10, 3);
-
 
             if ($wceazy_po_pre_order_enable_admin_notifi == "yes") {
                 // Send pre-order purchase notification email to admin
@@ -91,13 +97,14 @@ if (!class_exists('WcEazyPreOrderClient')) {
             }
 
             // Notify website admins when pre-order periods are nearing their end
-            // add_action('wp', array($this->utils, 'schedule_auto_cancel_task'));
+//            add_action('wp', array($this->utils, 'schedule_auto_cancel_task'));
 
             // // Update pre-order availability
-            // add_action('update_preorder_availability', array($this->utils, 'update_preorder_availability'));
+            add_action('update_preorder_availability', array($this->utils, 'update_preorder_availability'));
 
             // // Automatically cancel pre-orders if the product is no longer available
             add_action('auto_cancel_pre_orders', array($this, 'auto_cancel_pre_orders'));
+
 
             // pro Hooks End
 

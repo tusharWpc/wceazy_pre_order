@@ -9,73 +9,73 @@ $wceazy_pf_settings = $wceazy_product_filter_settings ? json_decode($wceazy_prod
 // echo"</pre>";
 
 
-$wceazy_pf_show_search_filter = isset($wceazy_pf_settings["show_search_filter"]) ? $wceazy_pf_settings["show_search_filter"] : "yes";
-$wceazy_pf_show_price_filter = isset($wceazy_pf_settings["show_price_filter"]) ? $wceazy_pf_settings["show_price_filter"] : "yes";
-$wceazy_pf_show_rating_filter = isset($wceazy_pf_settings["show_rating_filter"]) ? $wceazy_pf_settings["show_rating_filter"] : "yes";
-$wceazy_pf_show_category_filter = isset($wceazy_pf_settings["show_category_filter"]) ? $wceazy_pf_settings["show_category_filter"] : "yes";
-$wceazy_pf_show_stock_filter = isset($wceazy_pf_settings["show_stock_filter"]) ? $wceazy_pf_settings["show_stock_filter"] : "yes";
-$wceazy_pf_sidebar_position = isset($wceazy_pf_settings["sidebar_position"]) ? $wceazy_pf_settings["sidebar_position"] : "right";
+$wceazy_pf_show_search_filter = isset ($wceazy_pf_settings["show_search_filter"]) ? $wceazy_pf_settings["show_search_filter"] : "yes";
+$wceazy_pf_show_price_filter = isset ($wceazy_pf_settings["show_price_filter"]) ? $wceazy_pf_settings["show_price_filter"] : "yes";
+$wceazy_pf_show_rating_filter = isset ($wceazy_pf_settings["show_rating_filter"]) ? $wceazy_pf_settings["show_rating_filter"] : "yes";
+$wceazy_pf_show_category_filter = isset ($wceazy_pf_settings["show_category_filter"]) ? $wceazy_pf_settings["show_category_filter"] : "yes";
+$wceazy_pf_show_stock_filter = isset ($wceazy_pf_settings["show_stock_filter"]) ? $wceazy_pf_settings["show_stock_filter"] : "yes";
+$wceazy_pf_sidebar_position = isset ($wceazy_pf_settings["sidebar_position"]) ? $wceazy_pf_settings["sidebar_position"] : "right";
 
-$wceazy_pf_product_per_page = isset($wceazy_pf_settings["product_per_page"]) ? $wceazy_pf_settings["product_per_page"] : "16";
-$wceazy_pf_add_to_cart_btn_text = isset($wceazy_pf_settings["add_to_cart_btn_text"]) ? $wceazy_pf_settings["add_to_cart_btn_text"] : "Add to Cart";
-$wceazy_pf_select_options_btn_text = isset($wceazy_pf_settings["select_options_btn_text"]) ? $wceazy_pf_settings["select_options_btn_text"] : "Select Options";
-$wceazy_pf_stock_out_btn_text = isset($wceazy_pf_settings["stock_out_btn_text"]) ? $wceazy_pf_settings["stock_out_btn_text"] : "Stock Out";
-$wceazy_pf_prev_btn_text = isset($wceazy_pf_settings["prev_btn_text"]) ? $wceazy_pf_settings["prev_btn_text"] : "Previous";
-$wceazy_pf_next_btn_text = isset($wceazy_pf_settings["next_btn_text"]) ? $wceazy_pf_settings["next_btn_text"] : "Next";
-$wceazy_pf_action_btn_bg_color = isset($wceazy_pf_settings["action_btn_bg_color"]) ? $wceazy_pf_settings["action_btn_bg_color"] : "#6E32C9";
-$wceazy_pf_action_btn_text_color = isset($wceazy_pf_settings["action_btn_text_color"]) ? $wceazy_pf_settings["action_btn_text_color"] : "#FFFFFF";
-$wceazy_pf_pagination_btn_border_color = isset($wceazy_pf_settings["pagination_btn_border_color"]) ? $wceazy_pf_settings["pagination_btn_border_color"] : "#6E32C9";
-$wceazy_pf_pagination_btn_text_color = isset($wceazy_pf_settings["pagination_btn_text_color"]) ? $wceazy_pf_settings["pagination_btn_text_color"] : "#6E32C9";
-$wceazy_pf_loader_color = isset($wceazy_pf_settings["loader_color"]) ? $wceazy_pf_settings["loader_color"] : "#E0E1E3";
-
-
-$wceazy_pf_search_filter_label_text = isset($wceazy_pf_settings["search_filter_label_text"]) ? $wceazy_pf_settings["search_filter_label_text"] : esc_html__('Search Product', 'wceazy');
+$wceazy_pf_product_per_page = isset ($wceazy_pf_settings["product_per_page"]) ? $wceazy_pf_settings["product_per_page"] : "16";
+$wceazy_pf_add_to_cart_btn_text = isset ($wceazy_pf_settings["add_to_cart_btn_text"]) ? $wceazy_pf_settings["add_to_cart_btn_text"] : "Add to Cart";
+$wceazy_pf_select_options_btn_text = isset ($wceazy_pf_settings["select_options_btn_text"]) ? $wceazy_pf_settings["select_options_btn_text"] : "Select Options";
+$wceazy_pf_stock_out_btn_text = isset ($wceazy_pf_settings["stock_out_btn_text"]) ? $wceazy_pf_settings["stock_out_btn_text"] : "Stock Out";
+$wceazy_pf_prev_btn_text = isset ($wceazy_pf_settings["prev_btn_text"]) ? $wceazy_pf_settings["prev_btn_text"] : "Previous";
+$wceazy_pf_next_btn_text = isset ($wceazy_pf_settings["next_btn_text"]) ? $wceazy_pf_settings["next_btn_text"] : "Next";
+$wceazy_pf_action_btn_bg_color = isset ($wceazy_pf_settings["action_btn_bg_color"]) ? $wceazy_pf_settings["action_btn_bg_color"] : "#6E32C9";
+$wceazy_pf_action_btn_text_color = isset ($wceazy_pf_settings["action_btn_text_color"]) ? $wceazy_pf_settings["action_btn_text_color"] : "#FFFFFF";
+$wceazy_pf_pagination_btn_border_color = isset ($wceazy_pf_settings["pagination_btn_border_color"]) ? $wceazy_pf_settings["pagination_btn_border_color"] : "#6E32C9";
+$wceazy_pf_pagination_btn_text_color = isset ($wceazy_pf_settings["pagination_btn_text_color"]) ? $wceazy_pf_settings["pagination_btn_text_color"] : "#6E32C9";
+$wceazy_pf_loader_color = isset ($wceazy_pf_settings["loader_color"]) ? $wceazy_pf_settings["loader_color"] : "#E0E1E3";
 
 
-
-$wceazy_pf_search_filter_placeholder_text = isset($wceazy_pf_settings["search_filter_placeholder_text"]) ? $wceazy_pf_settings["search_filter_placeholder_text"] : esc_html__('Search by Product Name', 'wceazy');
-$wceazy_pf_search_filter_label_color = isset($wceazy_pf_settings["search_filter_label_color"]) ? $wceazy_pf_settings["search_filter_label_color"] : "#222222";
-$wceazy_pf_search_filter_input_border_color = isset($wceazy_pf_settings["search_filter_input_border_color"]) ? $wceazy_pf_settings["search_filter_input_border_color"] : "#E4E4E6";
-$wceazy_pf_search_filter_input_bg_color = isset($wceazy_pf_settings["search_filter_input_bg_color"]) ? $wceazy_pf_settings["search_filter_input_bg_color"] : "#F6F8FA";
-$wceazy_pf_search_filter_input_text_color = isset($wceazy_pf_settings["search_filter_input_text_color"]) ? $wceazy_pf_settings["search_filter_input_text_color"] : "#43454B";
-
-$wceazy_pf_price_filter_label_text = isset($wceazy_pf_settings["price_filter_label_text"]) ? $wceazy_pf_settings["price_filter_label_text"] : esc_html__('Filter By Price', 'wceazy');
-$wceazy_pf_price_filter_min_placeholder_text = isset($wceazy_pf_settings["price_filter_min_placeholder_text"]) ? $wceazy_pf_settings["price_filter_min_placeholder_text"] : esc_html__('Min', 'wceazy');
-$wceazy_pf_price_filter_max_placeholder_text = isset($wceazy_pf_settings["price_filter_max_placeholder_text"]) ? $wceazy_pf_settings["price_filter_max_placeholder_text"] : esc_html__('Max', 'wceazy');
-$wceazy_pf_price_filter_label_color = isset($wceazy_pf_settings["price_filter_label_color"]) ? $wceazy_pf_settings["price_filter_label_color"] : "#222222";
-$wceazy_pf_price_filter_input_border_color = isset($wceazy_pf_settings["price_filter_input_border_color"]) ? $wceazy_pf_settings["price_filter_input_border_color"] : "#E4E4E6";
-$wceazy_pf_price_filter_input_bg_color = isset($wceazy_pf_settings["price_filter_input_bg_color"]) ? $wceazy_pf_settings["price_filter_input_bg_color"] : "#F6F8FA";
-$wceazy_pf_price_filter_input_text_color = isset($wceazy_pf_settings["price_filter_input_text_color"]) ? $wceazy_pf_settings["price_filter_input_text_color"] : "#43454B";
+$wceazy_pf_search_filter_label_text = isset ($wceazy_pf_settings["search_filter_label_text"]) ? $wceazy_pf_settings["search_filter_label_text"] : esc_html__('Search Product', 'wceazy');
 
 
-$wceazy_pf_rating_filter_label_text = isset($wceazy_pf_settings["rating_filter_label_text"]) ? $wceazy_pf_settings["rating_filter_label_text"] : esc_html__('Filter By Rating', 'wceazy');
-$wceazy_pf_rating_filter_and_up_text = isset($wceazy_pf_settings["rating_filter_and_up_text"]) ? $wceazy_pf_settings["rating_filter_and_up_text"] : esc_html__('And Up', 'wceazy');
-$wceazy_pf_rating_filter_label_color = isset($wceazy_pf_settings["rating_filter_label_color"]) ? $wceazy_pf_settings["rating_filter_label_color"] : "#222222";
-$wceazy_pf_rating_filter_and_up_color = isset($wceazy_pf_settings["rating_filter_and_up_color"]) ? $wceazy_pf_settings["rating_filter_and_up_color"] : "#555555";
-$wceazy_pf_rating_filter_show_5_star_rating = isset($wceazy_pf_settings["rating_filter_show_5_star_rating"]) ? $wceazy_pf_settings["rating_filter_show_5_star_rating"] : "yes";
-$wceazy_pf_rating_filter_show_4_star_rating = isset($wceazy_pf_settings["rating_filter_show_4_star_rating"]) ? $wceazy_pf_settings["rating_filter_show_4_star_rating"] : "yes";
-$wceazy_pf_rating_filter_show_3_star_rating = isset($wceazy_pf_settings["rating_filter_show_3_star_rating"]) ? $wceazy_pf_settings["rating_filter_show_3_star_rating"] : "yes";
-$wceazy_pf_rating_filter_show_2_star_rating = isset($wceazy_pf_settings["rating_filter_show_2_star_rating"]) ? $wceazy_pf_settings["rating_filter_show_2_star_rating"] : "yes";
-$wceazy_pf_rating_filter_show_1_star_rating = isset($wceazy_pf_settings["rating_filter_show_1_star_rating"]) ? $wceazy_pf_settings["rating_filter_show_1_star_rating"] : "yes";
-$wceazy_pf_rating_filter_show_0_star_rating = isset($wceazy_pf_settings["rating_filter_show_0_star_rating"]) ? $wceazy_pf_settings["rating_filter_show_0_star_rating"] : "no";
+
+$wceazy_pf_search_filter_placeholder_text = isset ($wceazy_pf_settings["search_filter_placeholder_text"]) ? $wceazy_pf_settings["search_filter_placeholder_text"] : esc_html__('Search by Product Name', 'wceazy');
+$wceazy_pf_search_filter_label_color = isset ($wceazy_pf_settings["search_filter_label_color"]) ? $wceazy_pf_settings["search_filter_label_color"] : "#222222";
+$wceazy_pf_search_filter_input_border_color = isset ($wceazy_pf_settings["search_filter_input_border_color"]) ? $wceazy_pf_settings["search_filter_input_border_color"] : "#E4E4E6";
+$wceazy_pf_search_filter_input_bg_color = isset ($wceazy_pf_settings["search_filter_input_bg_color"]) ? $wceazy_pf_settings["search_filter_input_bg_color"] : "#F6F8FA";
+$wceazy_pf_search_filter_input_text_color = isset ($wceazy_pf_settings["search_filter_input_text_color"]) ? $wceazy_pf_settings["search_filter_input_text_color"] : "#43454B";
+
+$wceazy_pf_price_filter_label_text = isset ($wceazy_pf_settings["price_filter_label_text"]) ? $wceazy_pf_settings["price_filter_label_text"] : esc_html__('Filter By Price', 'wceazy');
+$wceazy_pf_price_filter_min_placeholder_text = isset ($wceazy_pf_settings["price_filter_min_placeholder_text"]) ? $wceazy_pf_settings["price_filter_min_placeholder_text"] : esc_html__('Min', 'wceazy');
+$wceazy_pf_price_filter_max_placeholder_text = isset ($wceazy_pf_settings["price_filter_max_placeholder_text"]) ? $wceazy_pf_settings["price_filter_max_placeholder_text"] : esc_html__('Max', 'wceazy');
+$wceazy_pf_price_filter_label_color = isset ($wceazy_pf_settings["price_filter_label_color"]) ? $wceazy_pf_settings["price_filter_label_color"] : "#222222";
+$wceazy_pf_price_filter_input_border_color = isset ($wceazy_pf_settings["price_filter_input_border_color"]) ? $wceazy_pf_settings["price_filter_input_border_color"] : "#E4E4E6";
+$wceazy_pf_price_filter_input_bg_color = isset ($wceazy_pf_settings["price_filter_input_bg_color"]) ? $wceazy_pf_settings["price_filter_input_bg_color"] : "#F6F8FA";
+$wceazy_pf_price_filter_input_text_color = isset ($wceazy_pf_settings["price_filter_input_text_color"]) ? $wceazy_pf_settings["price_filter_input_text_color"] : "#43454B";
 
 
-$wceazy_pf_category_filter_label_text = isset($wceazy_pf_settings["category_filter_label_text"]) ? $wceazy_pf_settings["category_filter_label_text"] : esc_html__('Filter By Category', 'wceazy');
-$wceazy_pf_category_filter_label_color = isset($wceazy_pf_settings["category_filter_label_color"]) ? $wceazy_pf_settings["category_filter_label_color"] : "#222222";
-$wceazy_pf_category_filter_category_color = isset($wceazy_pf_settings["category_filter_category_color"]) ? $wceazy_pf_settings["category_filter_category_color"] : "#444444";
-$wceazy_pf_category_filter_checkbox_unchecked_bg = isset($wceazy_pf_settings["category_filter_checkbox_unchecked_bg"]) ? $wceazy_pf_settings["category_filter_checkbox_unchecked_bg"] : "#F6F8FA";
-$wceazy_pf_category_filter_checkbox_unchecked_border = isset($wceazy_pf_settings["category_filter_checkbox_unchecked_border"]) ? $wceazy_pf_settings["category_filter_checkbox_unchecked_border"] : "#E4E4E6";
-$wceazy_pf_category_filter_checkbox_checked_bg = isset($wceazy_pf_settings["category_filter_checkbox_checked_bg"]) ? $wceazy_pf_settings["category_filter_checkbox_checked_bg"] : "#787B83";
+$wceazy_pf_rating_filter_label_text = isset ($wceazy_pf_settings["rating_filter_label_text"]) ? $wceazy_pf_settings["rating_filter_label_text"] : esc_html__('Filter By Rating', 'wceazy');
+$wceazy_pf_rating_filter_and_up_text = isset ($wceazy_pf_settings["rating_filter_and_up_text"]) ? $wceazy_pf_settings["rating_filter_and_up_text"] : esc_html__('And Up', 'wceazy');
+$wceazy_pf_rating_filter_label_color = isset ($wceazy_pf_settings["rating_filter_label_color"]) ? $wceazy_pf_settings["rating_filter_label_color"] : "#222222";
+$wceazy_pf_rating_filter_and_up_color = isset ($wceazy_pf_settings["rating_filter_and_up_color"]) ? $wceazy_pf_settings["rating_filter_and_up_color"] : "#555555";
+$wceazy_pf_rating_filter_show_5_star_rating = isset ($wceazy_pf_settings["rating_filter_show_5_star_rating"]) ? $wceazy_pf_settings["rating_filter_show_5_star_rating"] : "yes";
+$wceazy_pf_rating_filter_show_4_star_rating = isset ($wceazy_pf_settings["rating_filter_show_4_star_rating"]) ? $wceazy_pf_settings["rating_filter_show_4_star_rating"] : "yes";
+$wceazy_pf_rating_filter_show_3_star_rating = isset ($wceazy_pf_settings["rating_filter_show_3_star_rating"]) ? $wceazy_pf_settings["rating_filter_show_3_star_rating"] : "yes";
+$wceazy_pf_rating_filter_show_2_star_rating = isset ($wceazy_pf_settings["rating_filter_show_2_star_rating"]) ? $wceazy_pf_settings["rating_filter_show_2_star_rating"] : "yes";
+$wceazy_pf_rating_filter_show_1_star_rating = isset ($wceazy_pf_settings["rating_filter_show_1_star_rating"]) ? $wceazy_pf_settings["rating_filter_show_1_star_rating"] : "yes";
+$wceazy_pf_rating_filter_show_0_star_rating = isset ($wceazy_pf_settings["rating_filter_show_0_star_rating"]) ? $wceazy_pf_settings["rating_filter_show_0_star_rating"] : "no";
 
 
-$wceazy_pf_stock_filter_label_text = isset($wceazy_pf_settings["stock_filter_label_text"]) ? $wceazy_pf_settings["stock_filter_label_text"] : __("Filter By Stock", "wceazy");
-$wceazy_pf_stock_filter_in_stock_text = isset($wceazy_pf_settings["stock_filter_in_stock_text"]) ? $wceazy_pf_settings["stock_filter_in_stock_text"] : __("In Stock", "wceazy");
-$wceazy_pf_stock_filter_out_stock_text = isset($wceazy_pf_settings["stock_filter_out_stock_text"]) ? $wceazy_pf_settings["stock_filter_out_stock_text"] : __("Out of Stock", "wceazy");
-$wceazy_pf_stock_filter_label_color = isset($wceazy_pf_settings["stock_filter_label_color"]) ? $wceazy_pf_settings["stock_filter_label_color"] : "#222222";
-$wceazy_pf_stock_filter_stock_color = isset($wceazy_pf_settings["stock_filter_stock_color"]) ? $wceazy_pf_settings["stock_filter_stock_color"] : "#444444";
-$wceazy_pf_stock_filter_checkbox_unchecked_bg = isset($wceazy_pf_settings["stock_filter_checkbox_unchecked_bg"]) ? $wceazy_pf_settings["stock_filter_checkbox_unchecked_bg"] : "#F6F8FA";
-$wceazy_pf_stock_filter_checkbox_unchecked_border = isset($wceazy_pf_settings["stock_filter_checkbox_unchecked_border"]) ? $wceazy_pf_settings["stock_filter_checkbox_unchecked_border"] : "#E4E4E6";
-$wceazy_pf_stock_filter_checkbox_checked_bg = isset($wceazy_pf_settings["stock_filter_checkbox_checked_bg"]) ? $wceazy_pf_settings["stock_filter_checkbox_checked_bg"] : "#787B83";
+$wceazy_pf_category_filter_label_text = isset ($wceazy_pf_settings["category_filter_label_text"]) ? $wceazy_pf_settings["category_filter_label_text"] : esc_html__('Filter By Category', 'wceazy');
+$wceazy_pf_category_filter_label_color = isset ($wceazy_pf_settings["category_filter_label_color"]) ? $wceazy_pf_settings["category_filter_label_color"] : "#222222";
+$wceazy_pf_category_filter_category_color = isset ($wceazy_pf_settings["category_filter_category_color"]) ? $wceazy_pf_settings["category_filter_category_color"] : "#444444";
+$wceazy_pf_category_filter_checkbox_unchecked_bg = isset ($wceazy_pf_settings["category_filter_checkbox_unchecked_bg"]) ? $wceazy_pf_settings["category_filter_checkbox_unchecked_bg"] : "#F6F8FA";
+$wceazy_pf_category_filter_checkbox_unchecked_border = isset ($wceazy_pf_settings["category_filter_checkbox_unchecked_border"]) ? $wceazy_pf_settings["category_filter_checkbox_unchecked_border"] : "#E4E4E6";
+$wceazy_pf_category_filter_checkbox_checked_bg = isset ($wceazy_pf_settings["category_filter_checkbox_checked_bg"]) ? $wceazy_pf_settings["category_filter_checkbox_checked_bg"] : "#787B83";
+
+
+$wceazy_pf_stock_filter_label_text = isset ($wceazy_pf_settings["stock_filter_label_text"]) ? $wceazy_pf_settings["stock_filter_label_text"] : __("Filter By Stock", "wceazy");
+$wceazy_pf_stock_filter_in_stock_text = isset ($wceazy_pf_settings["stock_filter_in_stock_text"]) ? $wceazy_pf_settings["stock_filter_in_stock_text"] : __("In Stock", "wceazy");
+$wceazy_pf_stock_filter_out_stock_text = isset ($wceazy_pf_settings["stock_filter_out_stock_text"]) ? $wceazy_pf_settings["stock_filter_out_stock_text"] : __("Out of Stock", "wceazy");
+$wceazy_pf_stock_filter_label_color = isset ($wceazy_pf_settings["stock_filter_label_color"]) ? $wceazy_pf_settings["stock_filter_label_color"] : "#222222";
+$wceazy_pf_stock_filter_stock_color = isset ($wceazy_pf_settings["stock_filter_stock_color"]) ? $wceazy_pf_settings["stock_filter_stock_color"] : "#444444";
+$wceazy_pf_stock_filter_checkbox_unchecked_bg = isset ($wceazy_pf_settings["stock_filter_checkbox_unchecked_bg"]) ? $wceazy_pf_settings["stock_filter_checkbox_unchecked_bg"] : "#F6F8FA";
+$wceazy_pf_stock_filter_checkbox_unchecked_border = isset ($wceazy_pf_settings["stock_filter_checkbox_unchecked_border"]) ? $wceazy_pf_settings["stock_filter_checkbox_unchecked_border"] : "#E4E4E6";
+$wceazy_pf_stock_filter_checkbox_checked_bg = isset ($wceazy_pf_settings["stock_filter_checkbox_checked_bg"]) ? $wceazy_pf_settings["stock_filter_checkbox_checked_bg"] : "#787B83";
 
 
 ?>

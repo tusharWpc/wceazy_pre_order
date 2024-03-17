@@ -13,6 +13,7 @@ function wceazy_hide_all() {
     jQuery("#wceazy_pdf_invoice").hide();
     jQuery("#wceazy_shipping_bar").hide();
     jQuery("#wceazy_pre_order").hide();
+    jQuery("#wceazy_frequently_bought").hide();
     jQuery("#wceazy_address_book").hide();
     jQuery("#wceazy_product_filter").hide();
 }
@@ -85,6 +86,11 @@ function wceazy_start_module_settings(host, view) {
         case "product_filter":
             if (typeof wceazy_product_filter_init !== "undefined") {
                 wceazy_product_filter_init(host)
+            }
+            break;
+            case "frequently_bought":
+            if (typeof wceazy_frequently_bought_init !== "undefined") {
+                wceazy_frequently_bought_init(host)
             }
             break;
     }

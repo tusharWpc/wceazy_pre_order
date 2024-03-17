@@ -9,8 +9,8 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
-if (!class_exists('WcEazyProductFilterUtils')) {
-    class WcEazyProductFilterUtils
+if (!class_exists('WcEazyFrequentlyBoughtUtils')) {
+    class WcEazyFrequentlyBoughtUtils
     {
         public $base_admin;
         public $module_admin;
@@ -24,7 +24,7 @@ if (!class_exists('WcEazyProductFilterUtils')) {
         public function saveSettings($post_data)
         {
             if (!empty($post_data)) {
-                update_option('wceazy_product_filter_settings', json_encode($post_data));
+                update_option('wceazy_frequently_bought_settings', json_encode($post_data));
             }
         }
 

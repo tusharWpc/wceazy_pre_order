@@ -51,6 +51,10 @@
         <?php if ($this->settings->getModuleStatus("product_filter")) { ?>
             <?php include WCEAZY_PATH . "backend/templates/views/product_filter/settings.php"; ?>
         <?php } ?>
+        
+        <?php if ($this->settings->getModuleStatus("frequently_bought")) { ?>
+            <?php include WCEAZY_PATH . "backend/templates/views/frequently_bought/settings.php"; ?>
+        <?php } ?>
 
 
     </div>
