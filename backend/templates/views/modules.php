@@ -290,7 +290,7 @@
 
         <div class="wceazy_module_item" data-slug="frequently_bought">
             <div class="wceazy_module_logo">
-                <img src="<?php echo esc_url(WCEAZY_IMG_DIR . 'modules/frequently_bought/icon.svg'); ?>" height="100" />
+                <img src="<?php echo esc_url(WCEAZY_IMG_DIR . 'modules/shipping_bar/icon.svg'); ?>" height="100" />
             </div>
             <div class="wceazy_module_details">
                 <h3><?php esc_html_e('Frequently Bought', 'wceazy'); ?></h3>

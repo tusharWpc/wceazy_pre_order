@@ -40,10 +40,7 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             $wceazy_po_settings = $wceazy_pre_order_settings ? json_decode($wceazy_pre_order_settings, true) : array();
 
             $wceazy_po_pre_order_automatically_cancel_pre_orders = isset ($wceazy_po_settings["pre_order_automatically_cancel_pre_orders"]) ? $wceazy_po_settings["pre_order_automatically_cancel_pre_orders"] : "yes";
-
-
-
-
+ 
 
             // Hook to save preorder date when the order is placed
             add_action('woocommerce_checkout_update_order_meta', array($this, 'save_preorder_date'), 10, 2);
@@ -57,6 +54,8 @@ if (!class_exists('WcEazyPreOrderUtils')) {
 
         }
 
+
+        
 
         // Function to save settings data
         public function saveSettings($post_data)
@@ -104,47 +103,28 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             }
         }
 
-        public function preorderCustomColumn($columns)
-        {
-            $newColumns = $columns;
-            $newColumns['order_preorder_date'] = __('Preorder Dates', 'pre-orders-for-woocommerce');
-            return $newColumns;
-        }
+        // public function preorderCustomColumn($columns)
+        // {
+        //     $newColumns = $columns;
+        //     $newColumns['order_preorder_date'] = __('Preorder Dates', 'pre-orders-for-woocommerce');
+        //     return $newColumns;
+        // }
 
-        // Function to display pre-order date in custom column
-        public function display_preorder_date($column, $post_id)
-        {
-            if (!$column === 'order_preorder_date') {
-                // Get pre-order date from the variable $wceazy_po_pre_order_avl_date_label
-                global $wceazy_po_pre_order_avl_date_label;
+        // // Function to display pre-order date in custom column
+        // public function display_preorder_date($column, $post_id)
+        // {
+        //     if (!$column === 'order_preorder_date') {
+        //         // Get pre-order date from the variable $wceazy_po_pre_order_avl_date_label
+        //         global $wceazy_po_pre_order_avl_date_label;
 
-                // Display pre-order date if available
-                if (!empty ($wceazy_po_pre_order_avl_date_label)) {
-                    echo esc_html($wceazy_po_pre_order_avl_date_label);
-                } else {
-                    echo __('N/A', 'pre-orders-for-woocommerce');
-                }
-            }
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        //         // Display pre-order date if available
+        //         if (!empty ($wceazy_po_pre_order_avl_date_label)) {
+        //             echo esc_html($wceazy_po_pre_order_avl_date_label);
+        //         } else {
+        //             echo __('N/A', 'pre-orders-for-woocommerce');
+        //         }
+        //     }
+        // } 
 
 
 
