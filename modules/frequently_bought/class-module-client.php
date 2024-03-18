@@ -20,41 +20,16 @@ if (!class_exists('WcEazyFrequentlyBoughtClient')) {
             $this->base_admin = $base_admin;
             $this->utils = new WcEazyFrequentlyBoughtUtils($this->base_admin, $this->module_admin);
 
-            add_shortcode('product_type_selector', array($this, 'product_type_selector'));
+            // add_shortcode('product_type_selector', array($this, 'product_type_selector')); 
 
+  
+            // add section in product edit page.
+            add_filter('woocommerce_product_data_tabs', array($this->utils, 'add_bought_together_tab'), 10, 1);
+            add_action('woocommerce_product_data_panels', array($this->utils, 'add_bought_together_panel'));
 
-
-            add_action('woocommerce_product_set_stock_status', array($this->utils, 'send_preorder_availability_notification', 10, 2));
-
-
-            add_action('init', array($this->utils, 'init', 10, 2));
-
-
-            // Add image to variation
-            add_filter('woocommerce_available_variation', array($this->utils, 'available_variation', 10, 2));
-
-
-            // Settings
-            add_action('admin_init', array($this->utils, 'register_settings', 10, 2));
-            add_action('admin_menu', array($this->utils, 'admin_menu', 10, 2));
-
-            // Enqueue frontend scripts
-            add_action('wp_enqueue_scripts', array($this->utils, 'enqueue_scripts', 10, 2));
-
-            // Enqueue backend scripts
-            add_action('admin_enqueue_scripts', array($this->utils, 'admin_enqueue_scripts', 10, 2));
-
-            // Backend AJAX
-            add_action('wp_ajax_woosb_update_search_settings', array($this->utils, 'ajax_update_search_settings', 10, 2));
-            add_action('wp_ajax_woosb_get_search_results', array($this->utils, 'ajax_get_search_results', 10, 2));
-
-            // Add to selector
-            add_filter('product_type_selector', array($this->utils, 'product_data_tabs', 10, 2));
-
-            // Product data tabs
-            add_filter('woocommerce_product_data_tabs', array($this->utils, $this, 'product_data_tabs', 10, 2));
-
-
+            // search product.
+            add_action('wp_ajax_wceazy_ajax_search_product', array($this->utils, 'wceazy_ajax_search_product'));
+            add_action('wp_ajax_nopriv_wceazy_ajax_search_product', array($this->utils, 'wceazy_ajax_search_product'));
 
         }
 

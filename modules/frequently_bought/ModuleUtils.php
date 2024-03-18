@@ -1,169 +1,295 @@
 <?php
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
-    die;
+	die;
 }
 
+// Start session if not already started
 if (!isset ($_SESSION)) {
-    session_start();
+	session_start();
 }
 
+// Get frequently bought settings from options
 $wceazy_frequently_bought_settings = get_option('wceazy_frequently_bought_settings', false);
 $wceazy_po_settings = $wceazy_frequently_bought_settings ? json_decode($wceazy_frequently_bought_settings, true) : array();
 
-// Correct the array key to access the frequently_bought_avl_date_label
+// Retrieve frequently bought settings
 $wceazy_po_frequently_bought_avl_date_label = isset ($wceazy_po_settings["frequently_bought_avl_date_label"]) ? $wceazy_po_settings["frequently_bought_avl_date_label"] : "Default Avl Data";
-$wceazy_po_frequently_bought_enable_avl_date_label = isset ($wceazy_po_settings["frequently_bought_enable_avl_date_label"]) ? $wceazy_po_settings["frequently_bought_enable_avl_date_label"] : "on";
-$wceazy_po_frequently_bought_enable_avl_date_and_label = isset ($wceazy_po_settings["frequently_bought_enable_avl_date_and_label"]) ? $wceazy_po_settings["frequently_bought_enable_avl_date_and_label"] : "yes";
-$wceazy_po_frequently_bought_automatically_cancel_frequently_boughts = isset ($wceazy_po_settings["frequently_bought_automatically_cancel_frequently_boughts"]) ? $wceazy_po_settings["frequently_bought_automatically_cancel_frequently_boughts"] : "yes";
+ 
 
+// Define WcEazyFrequentlyBoughtUtils class
 if (!class_exists('WcEazyFrequentlyBoughtUtils')) {
-    class WcEazyFrequentlyBoughtUtils
-    {
+	class WcEazyFrequentlyBoughtUtils
+	{
+		// Properties declaration
+		public $base_admin;
+		public $module_admin;
+		public $wceazy_po_frequently_bought_btn_text;
+		public $wceazy_po_enable_frequently_bought;
+		public $wceazy_po_frequently_bought_avl_date_label;
+		public $wceazy_po_frequently_bought_enable_avl_date_label;
 
+		// Constructor to initialize class properties
+		public function __construct($base_admin, $module_admin)
+		{
+			$this->base_admin = $base_admin;
+			$this->module_admin = $module_admin;
 
-
-
-        
-        public $base_admin;
-        public $module_admin;
-        public $wceazy_po_frequently_bought_btn_text; // Define the variable within the class
-        public $wceazy_po_enable_frequently_bought; // Define the variable within the class
-        public $wceazy_po_frequently_bought_avl_date_label;
-        public $wceazy_po_frequently_bought_enable_avl_date_label;
-
-        // Constructor to initialize class properties
-        public function __construct($base_admin, $module_admin)
-        {
-            $this->base_admin = $base_admin;
-            $this->module_admin = $module_admin;
-
-            // Assuming this is a valid method to call
-            // $this->wcz_frequently_bought_mail();
-
-            $wceazy_frequently_bought_settings = get_option('wceazy_frequently_bought_settings', false);
-            $wceazy_po_settings = $wceazy_frequently_bought_settings ? json_decode($wceazy_frequently_bought_settings, true) : array();
-
-            $wceazy_po_frequently_bought_automatically_cancel_frequently_boughts = isset ($wceazy_po_settings["frequently_bought_automatically_cancel_frequently_boughts"]) ? $wceazy_po_settings["frequently_bought_automatically_cancel_frequently_boughts"] : "yes";
-
-
-            // Hook to save preorder date when the order is placed
-            add_action('woocommerce_checkout_update_order_meta', array($this, 'save_preorder_date'), 10, 2);
-
-
-            if ($wceazy_po_frequently_bought_automatically_cancel_frequently_boughts == "yes") {
-
-                add_action('wp', array($this, 'auto_cancel_frequently_boughts'));
-            }
-        }
-
-
-		function init() {
-			// image size
-			self::$image_size = apply_filters( 'woosb_image_size', self::$image_size );
-
-			// shortcode
-			add_shortcode( 'woosb_form', [ $this, 'shortcode_form' ] );
-			add_shortcode( 'woosb_bundled', [ $this, 'shortcode_bundled' ] );
-			add_shortcode( 'woosb_bundles', [ $this, 'shortcode_bundles' ] );
+			// Get frequently bought settings
+			$wceazy_frequently_bought_settings = get_option('wceazy_frequently_bought_settings', false);
+			$this->wceazy_po_settings = $wceazy_frequently_bought_settings ? json_decode($wceazy_frequently_bought_settings, true) : array();
 		}
 
-		function available_variation( $data, $variable, $variation ) {
-			if ( $image_id = $variation->get_image_id() ) {
-				$data['woosb_image'] = wp_get_attachment_image( $image_id, self::$image_size );
+
+
+		public function wcz_get_prop($object, $key, $single = true, $context = 'view')
+		{
+			$prop_map = wcz_return_new_attribute_map();
+			$is_wc_data = $object instanceof WC_Data;
+	
+			if ($is_wc_data) {
+				$key = (array_key_exists($key, $prop_map)) ? $prop_map[$key] : $key;
+				$getter = false;
+				if (method_exists($object, "get{$key}")) {
+					$getter = "get{$key}";
+				} elseif (method_exists($object, "get_{$key}")) {
+					$getter = "get_{$key}";
+				}
+	
+				if ($getter) {
+					return $object->$getter($context);
+				} else {
+					return $object->get_meta($key, $single);
+				}
+			} else {
+				$key = (in_array($key, $prop_map, true)) ? array_search($key, $prop_map, true) : $key;
+	
+				if (isset ($object->$key)) {
+					return $object->$key;
+				} elseif (wcz_wc_check_post_columns($key)) {
+					return $object->post->$key;
+				} else {
+					$object_id = 0;
+					$getter = $object instanceof WC_Customer ? 'get_user_meta' : 'get_post_meta';
+	
+					if (!!$object) {
+						$object_id = is_callable(array($object, 'get_id')) ? $object->get_id() : $object->id;
+					}
+	
+					return !!$object_id ? $getter($object_id, $key, true) : null;
+				}
+			}
+		}
+
+
+
+
+
+
+		// Add tab for Frequently Bought Together
+		public function add_bought_together_tab($tabs)
+		{
+			$tabs['wceazy-wfbt'] = array(
+				'label' => _x('Frequently Bought Together X', 'tab in product data box', 'wceazy-woocommerce-frequently-bought-together'),
+				'target' => 'wceazy_wfbt_data_option',
+				'class' => array('hide_if_grouped', 'hide_if_external', 'hide_if_bundle'),
+			);
+
+			return $tabs;
+		}
+
+		// Add panel for Frequently Bought Together in product edit page
+		public function add_bought_together_panel()
+		{
+			global $post, $product_object;
+
+			$product_id = $post->ID;
+			if (is_null($product_object)) {
+				$product_object = wc_get_product($product_id);
+			}
+			$to_exclude = array($product_id);
+
+			?>
+
+			<div id="wcz_wfbt_data_option" class="panel woocommerce_options_panel">
+				<div class="options_group">
+					<p class="form-field">
+						<label for="wcz_wfbt_ids">
+							<?php esc_html_e('Select products', 'wcz-woocommerce-frequently-bought-together'); ?>
+						</label>
+						<?php
+						$product_ids = wcz_get_prop($product_object, wcz_WFBT_META, true);
+						$product_ids = array_filter(array_map('absint', (array) $product_ids));
+						$json_ids = array();
+
+						foreach ($product_ids as $product_id) {
+							$product = wc_get_product($product_id);
+							if (is_object($product)) {
+								$json_ids[$product_id] = wp_kses_post(html_entity_decode($product->get_formatted_name()));
+							}
+						}
+
+						wcz_add_select2_fields(
+							array(
+								'class' => 'wc-product-search',
+								'style' => 'width: 50%;',
+								'id' => 'wcz_wfbt_ids',
+								'name' => 'wcz_wfbt_ids',
+								'data-placeholder' => __('Search for a product&hellip;', 'wcz-woocommerce-frequently-bought-together'),
+								'data-multiple' => true,
+								'data-action' => 'wcz_ajax_search_product',
+								'data-selected' => $json_ids,
+								'value' => implode(',', array_keys($json_ids)),
+								'custom-attributes' => array(
+									'data-exclude' => implode(',', $to_exclude),
+								),
+							)
+						);
+						?>
+
+						<img class="help_tip"
+							data-tip='<?php esc_html_e('Select products for "Frequently bought together" group', 'wcz-woocommerce-frequently-bought-together'); ?>'
+							src="<?php echo esc_url(WC()->plugin_url()); ?>/assets/images/help.png" height="16" width="16" />
+					</p>
+				</div>
+			</div>
+			<?php
+		}
+
+		// Ajax action to search for products
+		public function wceazy_ajax_search_product()
+		{
+			ob_start();
+
+			check_ajax_referer('search-products', 'security');
+			// @codingStandardsIgnoreStart
+
+			$term = isset ($_GET['term']) ? (string) wc_clean(stripslashes($_GET['term'])) : '';
+			$post_types = array('product', 'product_variation');
+
+			$to_exclude = isset ($_GET['exclude']) ? explode(',', wc_clean(stripslashes($_GET['exclude']))) : false;
+			// @codingStandardsIgnoreEnd
+			if (empty ($term)) {
+				die();
 			}
 
-			return $data;
-		}
-		function register_settings() {
-			// settings
-			register_setting( 'woosb_settings', 'woosb_settings' );
-			// localization
-			register_setting( 'woosb_localization', 'woosb_localization' );
+			$args = array(
+				'post_type' => $post_types,
+				'post_status' => 'publish',
+				'posts_per_page' => -1,
+				's' => $term,
+				'fields' => 'ids',
+			);
+
+			if ($to_exclude) {
+				$args['post__not_in'] = $to_exclude;
+			}
+
+			if (is_numeric($term)) {
+				$args2 = array(
+					'post_type' => $post_types,
+					'post_status' => 'publish',
+					'posts_per_page' => -1,
+					'post__in' => array(0, $term),
+					'fields' => 'ids',
+				);
+
+				$args3 = array(
+					'post_type' => $post_types,
+					'post_status' => 'publish',
+					'posts_per_page' => -1,
+					'post_parent' => $term,
+					'fields' => 'ids',
+				);
+
+				$args4 = array(
+					'post_type' => $post_types,
+					'post_status' => 'publish',
+					'posts_per_page' => -1,
+					'meta_query' => array( //phpcs:ignore slow query ok.
+						array(
+							'key' => '_sku',
+							'value' => $term,
+							'compare' => 'LIKE',
+						),
+					),
+					'fields' => 'ids',
+				);
+
+				$posts = array_unique(array_merge(get_posts($args), get_posts($args2), get_posts($args3), get_posts($args4)));
+			} else {
+				$args2 = array(
+					'post_type' => $post_types,
+					'post_status' => 'publish',
+					'posts_per_page' => -1,
+					'meta_query' => array( //phpcs:ignore slow query ok.
+						array(
+							'key' => '_sku',
+							'value' => $term,
+							'compare' => 'LIKE',
+						),
+					),
+					'fields' => 'ids',
+				);
+
+				$posts = array_unique(array_merge(get_posts($args), get_posts($args2)));
+			}
+
+			$found_products = array();
+
+			if ($posts) {
+				foreach ($posts as $post) {
+					$current_id = $post;
+					$product = wc_get_product($post);
+					// exclude variable product.
+					if (!$product || $product->is_type(array('variable', 'external'))) {
+						continue;
+					} elseif ($product->is_type('variation')) {
+						$current_id = wp_get_post_parent_id($post);
+						if (!wc_get_product($current_id)) {
+							continue;
+						}
+					}
+
+					$found_products[$post] = rawurldecode($product->get_formatted_name());
+				}
+			}
+
+			wp_send_json(apply_filters('wceazy_wfbt_ajax_search_product_result', $found_products));
 		}
 
-		function admin_menu() {
-			add_submenu_page( 'wpclever', esc_html__( 'WPC Product Bundles', 'woo-product-bundle' ), esc_html__( 'Product Bundles', 'woo-product-bundle' ), 'manage_options', 'wpclever-woosb', [
+		// Register plugin settings
+		public function register_settings()
+		{
+			// settings
+			register_setting('woosb_settings', 'woosb_settings');
+			// localization
+			register_setting('woosb_localization', 'woosb_localization');
+		}
+
+		// Add admin menu
+		public function admin_menu()
+		{
+			add_submenu_page('wpclever', esc_html__('WPC Product Bundles', 'woo-product-bundle'), esc_html__('Product Bundles', 'woo-product-bundle'), 'manage_options', 'wpclever-woosb', [
 				$this,
 				'admin_menu_content'
-			] );
+			]);
 		}
 
-
-
-		function enqueue_scripts() {
-			wp_enqueue_style( 'woosb-frontend', WOOSB_URI . 'assets/css/frontend.css', [], WOOSB_VERSION );
-			wp_enqueue_script( 'woosb-frontend', WOOSB_URI . 'assets/js/frontend.js', [ 'jquery' ], WOOSB_VERSION, true );
-			wp_localize_script( 'woosb-frontend', 'woosb_vars', apply_filters( 'woosb_vars', [
-					'wc_price_decimals'           => wc_get_price_decimals(),
-					'wc_price_format'             => get_woocommerce_price_format(),
-					'wc_price_thousand_separator' => wc_get_price_thousand_separator(),
-					'wc_price_decimal_separator'  => wc_get_price_decimal_separator(),
-					'wc_currency_symbol'          => get_woocommerce_currency_symbol(),
-					'price_decimals'              => apply_filters( 'woosb_price_decimals', wc_get_price_decimals() ),
-					'price_format'                => get_woocommerce_price_format(), // old version before 7.1.0
-					'price_thousand_separator'    => wc_get_price_thousand_separator(), // old version before 7.1.0
-					'price_decimal_separator'     => wc_get_price_decimal_separator(), // old version before 7.1.0
-					'currency_symbol'             => get_woocommerce_currency_symbol(), // old version before 7.1.0
-					'trim_zeros'                  => apply_filters( 'woosb_price_trim_zeros', apply_filters( 'woocommerce_price_trim_zeros', false ) ),
-					'change_image'                => WPCleverWoosb_Helper()->get_setting( 'change_image', 'yes' ),
-					'bundled_price'               => WPCleverWoosb_Helper()->get_setting( 'bundled_price', 'price' ),
-					'bundled_price_from'          => WPCleverWoosb_Helper()->get_setting( 'bundled_price_from', 'sale_price' ),
-					'change_price'                => WPCleverWoosb_Helper()->get_setting( 'change_price', 'yes' ),
-					'price_selector'              => WPCleverWoosb_Helper()->get_setting( 'change_price_custom', '' ),
-					'saved_text'                  => WPCleverWoosb_Helper()->localization( 'saved', esc_html__( '(saved [d])', 'woo-product-bundle' ) ),
-					'price_text'                  => WPCleverWoosb_Helper()->localization( 'total', esc_html__( 'Bundle price:', 'woo-product-bundle' ) ),
-					'alert_selection'             => WPCleverWoosb_Helper()->localization( 'alert_selection', esc_html__( 'Please select a purchasable variation for [name] before adding this bundle to the cart.', 'woo-product-bundle' ) ),
-					'alert_unpurchasable'         => WPCleverWoosb_Helper()->localization( 'alert_unpurchasable', esc_html__( 'Product [name] is unpurchasable. Please remove it before adding the bundle to the cart.', 'woo-product-bundle' ) ),
-					'alert_empty'                 => WPCleverWoosb_Helper()->localization( 'alert_empty', esc_html__( 'Please choose at least one product before adding this bundle to the cart.', 'woo-product-bundle' ) ),
-					'alert_min'                   => WPCleverWoosb_Helper()->localization( 'alert_min', esc_html__( 'Please choose at least a total quantity of [min] products before adding this bundle to the cart.', 'woo-product-bundle' ) ),
-					'alert_max'                   => WPCleverWoosb_Helper()->localization( 'alert_max', esc_html__( 'Sorry, you can only choose at max a total quantity of [max] products before adding this bundle to the cart.', 'woo-product-bundle' ) ),
-					'alert_total_min'             => WPCleverWoosb_Helper()->localization( 'alert_total_min', esc_html__( 'The total must meet the minimum amount of [min].', 'woo-product-bundle' ) ),
-					'alert_total_max'             => WPCleverWoosb_Helper()->localization( 'alert_total_max', esc_html__( 'The total must meet the maximum amount of [max].', 'woo-product-bundle' ) ),
-				] )
-			);
+		// Function to save settings data
+		public function saveSettings($post_data)
+		{
+			if (!empty ($post_data)) {
+				update_option('wceazy_frequently_bought_settings', json_encode($post_data));
+			}
 		}
 
-		function admin_enqueue_scripts() {
-			wp_enqueue_style( 'hint', WOOSB_URI . 'assets/css/hint.css' );
-			wp_enqueue_style( 'woosb-backend', WOOSB_URI . 'assets/css/backend.css', [], WOOSB_VERSION );
-			wp_enqueue_script( 'woosb-backend', WOOSB_URI . 'assets/js/backend.js', [
-				'jquery',
-				'jquery-ui-dialog',
-				'jquery-ui-sortable',
-				'selectWoo',
-			], WOOSB_VERSION, true );
-			wp_localize_script( 'woosb-backend', 'woosb_vars', [
-					'nonce'                    => wp_create_nonce( 'woosb-security' ),
-					'price_decimals'           => wc_get_price_decimals(),
-					'price_thousand_separator' => wc_get_price_thousand_separator(),
-					'price_decimal_separator'  => wc_get_price_decimal_separator()
-				]
-			);
-		} 
+		// Product type selector
+		public function product_type_selector($types)
+		{
+			$types['woosb'] = esc_html__('Smart bundleX', 'woo-product-bundle');
 
-
-        // Function to save settings data
-        public function saveSettings($post_data)
-        {
-            if (!empty ($post_data)) {
-                update_option('wceazy_frequently_bought_settings', json_encode($post_data));
-            }
-        }
-
-        // `````new satrt  
-
-
-        function product_type_selector($types)
-        {
-            $types['woosb'] = esc_html__('Smart bundleX', 'woo-product-bundle');
-
-            return $types;
-        }
-
-
-
-
-
-    }
+			return $types;
+		}
+	}
 }
