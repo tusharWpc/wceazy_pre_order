@@ -103,29 +103,44 @@ if (!class_exists('WcEazyPreOrderUtils')) {
             }
         }
 
-        // public function preorderCustomColumn($columns)
-        // {
-        //     $newColumns = $columns;
-        //     $newColumns['order_preorder_date'] = __('Preorder Dates', 'pre-orders-for-woocommerce');
-        //     return $newColumns;
-        // }
 
-        // // Function to display pre-order date in custom column
-        // public function display_preorder_date($column, $post_id)
-        // {
-        //     if (!$column === 'order_preorder_date') {
-        //         // Get pre-order date from the variable $wceazy_po_pre_order_avl_date_label
-        //         global $wceazy_po_pre_order_avl_date_label;
+        public function preorderCustomColumn($columns)
+        {
+            $columns[ 'order_preorder_date' ] = 'Pre Order Date';
+            return $columns;
+        }
 
-        //         // Display pre-order date if available
-        //         if (!empty ($wceazy_po_pre_order_avl_date_label)) {
-        //             echo esc_html($wceazy_po_pre_order_avl_date_label);
-        //         } else {
-        //             echo __('N/A', 'pre-orders-for-woocommerce');
-        //         }
-        //     }
-        // } 
+        public function preorderCustomColumnContent($column, $order)
+{
+    if ('order_preorder_date' === $column) {
+        // Get all items in the order
+        $items = $order->get_items();
 
+        // Initialize an array to store pre-order dates
+        $preorder_dates = array();
+
+        // Loop through each item in the order
+        foreach ($items as $item) {
+            $product_id = $item->get_product_id();
+            // Check if the product is a pre-order product
+            $is_preorder_product = get_post_meta($product_id, '_is_pre_order', true);
+            if ($is_preorder_product === 'yes') {
+                // Get the pre-order date for the product
+                $pre_order_date = get_post_meta($product_id, '_pre_order_date_time', true);
+                if (!empty($pre_order_date)) {
+                    $preorder_dates[] = date_i18n(get_option('date_format'), strtotime($pre_order_date));
+                }
+            }
+        }
+
+        // Display pre-order dates if available
+        if (!empty($preorder_dates)) {
+            echo implode(', ', $preorder_dates);
+        } else {
+            echo __('N/A', 'your-text-domain');
+        }
+    }
+}
 
 
 
@@ -224,27 +239,27 @@ if (!class_exists('WcEazyPreOrderUtils')) {
         {
             ?>
 
-            <script>
-                jQuery(document).ready(function ($) {
-                    var checkbox = $('#_is_pre_order');
-                    var preorderFields = $('.pre-order-fields');
+<script>
+jQuery(document).ready(function($) {
+    var checkbox = $('#_is_pre_order');
+    var preorderFields = $('.pre-order-fields');
 
-                    // Show/hide fields on checkbox change
-                    checkbox.change(function () {
-                        if (checkbox.is(':checked')) {
-                            preorderFields.slideDown();
-                        } else {
-                            preorderFields.slideUp();
-                        }
-                    });
+    // Show/hide fields on checkbox change
+    checkbox.change(function() {
+        if (checkbox.is(':checked')) {
+            preorderFields.slideDown();
+        } else {
+            preorderFields.slideUp();
+        }
+    });
 
-                    // Trigger change event on page load if checkbox is checked
-                    if (checkbox.is(':checked')) {
-                        preorderFields.show();
-                    }
-                });
-            </script>
-            <?php
+    // Trigger change event on page load if checkbox is checked
+    if (checkbox.is(':checked')) {
+        preorderFields.show();
+    }
+});
+</script>
+<?php
 
         }
 

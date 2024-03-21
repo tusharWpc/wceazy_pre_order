@@ -1,295 +1,140 @@
 <?php
-// If this file is called directly, abort.
 if (!defined('WPINC')) {
-	die;
+    die;
 }
 
-// Start session if not already started
-if (!isset ($_SESSION)) {
-	session_start();
+class WcEazyFrequentlyBoughtUtils
+{
+    public function __construct()
+    {
+        include_once(plugin_dir_path(__FILE__) . 'inc/ajax-handler.php'); // Include ajax-handler.php here
+        
+        add_action('admin_enqueue_scripts', array($this, 'enqueue_bought_together_scripts'));
+        add_action('wp_ajax_search_products', array($this, 'search_products'));
+        add_action('wp_ajax_nopriv_search_products', array($this, 'search_products'));
+        add_action('wp_ajax_save_selected_products', array($this, 'save_selected_products'));
+        add_filter('woocommerce_product_data_tabs', array($this, 'add_bought_together_tab'), 10, 1);
+        add_action('woocommerce_product_data_panels', array($this, 'add_bought_together_panel'));
+    }
+
+    public function enqueue_bought_together_scripts()
+    {
+        wp_enqueue_script('fbt-ajax', plugin_dir_url(__FILE__) . 'inc/ajax-search.js', array('jquery'), '1.0', true);
+        wp_localize_script(
+            'fbt-ajax',
+            'ajax_params',
+            array(
+                'ajax_url' => admin_url('admin-ajax.php'),
+                'search_nonce' => wp_create_nonce('search_nonce'),
+                'current_product_id' => get_the_ID(), // Set the current product ID
+            )
+        );
+    }
+
+    public function search_products()
+    {
+        check_ajax_referer('search_nonce', 'security');
+
+        $search_term = isset($_POST['search_term']) ? sanitize_text_field($_POST['search_term']) : '';
+
+        if (empty($search_term)) {
+            wp_send_json_error(__('Search term is empty.', 'fbt'));
+        }
+
+        $args = array(
+            'post_type' => 'product',
+            'post_status' => 'publish',
+            's' => $search_term,
+        );
+
+        $products_query = new WP_Query($args);
+
+        ob_start();
+        if ($products_query->have_posts()) {
+            while ($products_query->have_posts()) {
+                $products_query->the_post();
+                // Output your product results here with checkboxes
+                echo '<div>';
+                echo '<input type="checkbox" class="product-checkbox" value="' . get_the_ID() . '">'; // Add checkbox with product ID as value
+                echo '<label>' . get_the_title() . '</label>';
+                echo '</div>';
+            }
+        } else {
+            echo '<p>' . __('No products found.', 'fbt') . '</p>';
+        }
+        
+        $response = ob_get_clean();
+
+        wp_reset_postdata();
+
+        wp_send_json_success(array('data' => $response));
+    }
+
+    public function save_selected_products()
+    {
+        check_ajax_referer('search_nonce', 'security');
+        
+        // Get the current product ID
+        $currentProductId = isset($_POST['current_product_id']) ? $_POST['current_product_id'] : '';
+        
+        // Get the selected product IDs
+        $selected_products = isset($_POST['selected_products']) ? $_POST['selected_products'] : array();
+        
+        // Update post meta with selected product IDs for the current product
+        update_post_meta($currentProductId, 'selected_product', $selected_products);
+        
+        // Debugging information
+        error_log('Current Product ID: ' . $currentProductId);
+        error_log('Selected Product IDs: ' . implode(',', $selected_products));
+        
+        wp_send_json_success();
+        wp_die(); // Terminate the script execution
+    }
+    
+    
+
+    public function add_bought_together_tab($tabs)
+    {
+        $tabs['bought_together'] = array(
+            'label' => __('wcz Bought Together', 'fbt'),
+            'target' => 'bought_together_data_option',
+            'class' => array('hide_if_grouped', 'hide_if_external', 'hide_if_bundle'),
+        );
+        return $tabs;
+    }
+
+    public function add_bought_together_panel()
+    {
+        global $post;
+        $currentProductId = $post->ID;
+        
+        // Get the saved selected product IDs for the current product
+        $selected_product_ids = get_post_meta($currentProductId, 'selected_product', true);
+        // var_dump($selected_product_ids);
+        // Display saved products if any
+        if (!empty($selected_product_ids)) {
+            echo '<ul id="selected_products_list">';
+            foreach ($selected_product_ids as $product_id) {
+                $product_title = get_the_title($product_id);
+                echo '<li>' . $product_title . '</li>';
+            }
+            echo '</ul>';
+        }
+        ?>
+<div id="bought_together_data_option" class="panel woocommerce_options_panel">
+    <div class="options_group">
+        <p class="form-field">
+            <input type="text" id="bought_together_search" class="short" name="bought_together_search">
+            <button id="clear_search" class="button">
+                <?php _e('Clear', 'fbt'); ?>
+            </button>
+        </p>
+        <div id="bought_together_search_results"></div>
+    </div>
+</div>
+<?php
+    }   
 }
 
-// Get frequently bought settings from options
-$wceazy_frequently_bought_settings = get_option('wceazy_frequently_bought_settings', false);
-$wceazy_po_settings = $wceazy_frequently_bought_settings ? json_decode($wceazy_frequently_bought_settings, true) : array();
-
-// Retrieve frequently bought settings
-$wceazy_po_frequently_bought_avl_date_label = isset ($wceazy_po_settings["frequently_bought_avl_date_label"]) ? $wceazy_po_settings["frequently_bought_avl_date_label"] : "Default Avl Data";
- 
-
-// Define WcEazyFrequentlyBoughtUtils class
-if (!class_exists('WcEazyFrequentlyBoughtUtils')) {
-	class WcEazyFrequentlyBoughtUtils
-	{
-		// Properties declaration
-		public $base_admin;
-		public $module_admin;
-		public $wceazy_po_frequently_bought_btn_text;
-		public $wceazy_po_enable_frequently_bought;
-		public $wceazy_po_frequently_bought_avl_date_label;
-		public $wceazy_po_frequently_bought_enable_avl_date_label;
-
-		// Constructor to initialize class properties
-		public function __construct($base_admin, $module_admin)
-		{
-			$this->base_admin = $base_admin;
-			$this->module_admin = $module_admin;
-
-			// Get frequently bought settings
-			$wceazy_frequently_bought_settings = get_option('wceazy_frequently_bought_settings', false);
-			$this->wceazy_po_settings = $wceazy_frequently_bought_settings ? json_decode($wceazy_frequently_bought_settings, true) : array();
-		}
-
-
-
-		public function wcz_get_prop($object, $key, $single = true, $context = 'view')
-		{
-			$prop_map = wcz_return_new_attribute_map();
-			$is_wc_data = $object instanceof WC_Data;
-	
-			if ($is_wc_data) {
-				$key = (array_key_exists($key, $prop_map)) ? $prop_map[$key] : $key;
-				$getter = false;
-				if (method_exists($object, "get{$key}")) {
-					$getter = "get{$key}";
-				} elseif (method_exists($object, "get_{$key}")) {
-					$getter = "get_{$key}";
-				}
-	
-				if ($getter) {
-					return $object->$getter($context);
-				} else {
-					return $object->get_meta($key, $single);
-				}
-			} else {
-				$key = (in_array($key, $prop_map, true)) ? array_search($key, $prop_map, true) : $key;
-	
-				if (isset ($object->$key)) {
-					return $object->$key;
-				} elseif (wcz_wc_check_post_columns($key)) {
-					return $object->post->$key;
-				} else {
-					$object_id = 0;
-					$getter = $object instanceof WC_Customer ? 'get_user_meta' : 'get_post_meta';
-	
-					if (!!$object) {
-						$object_id = is_callable(array($object, 'get_id')) ? $object->get_id() : $object->id;
-					}
-	
-					return !!$object_id ? $getter($object_id, $key, true) : null;
-				}
-			}
-		}
-
-
-
-
-
-
-		// Add tab for Frequently Bought Together
-		public function add_bought_together_tab($tabs)
-		{
-			$tabs['wceazy-wfbt'] = array(
-				'label' => _x('Frequently Bought Together X', 'tab in product data box', 'wceazy-woocommerce-frequently-bought-together'),
-				'target' => 'wceazy_wfbt_data_option',
-				'class' => array('hide_if_grouped', 'hide_if_external', 'hide_if_bundle'),
-			);
-
-			return $tabs;
-		}
-
-		// Add panel for Frequently Bought Together in product edit page
-		public function add_bought_together_panel()
-		{
-			global $post, $product_object;
-
-			$product_id = $post->ID;
-			if (is_null($product_object)) {
-				$product_object = wc_get_product($product_id);
-			}
-			$to_exclude = array($product_id);
-
-			?>
-
-			<div id="wcz_wfbt_data_option" class="panel woocommerce_options_panel">
-				<div class="options_group">
-					<p class="form-field">
-						<label for="wcz_wfbt_ids">
-							<?php esc_html_e('Select products', 'wcz-woocommerce-frequently-bought-together'); ?>
-						</label>
-						<?php
-						$product_ids = wcz_get_prop($product_object, wcz_WFBT_META, true);
-						$product_ids = array_filter(array_map('absint', (array) $product_ids));
-						$json_ids = array();
-
-						foreach ($product_ids as $product_id) {
-							$product = wc_get_product($product_id);
-							if (is_object($product)) {
-								$json_ids[$product_id] = wp_kses_post(html_entity_decode($product->get_formatted_name()));
-							}
-						}
-
-						wcz_add_select2_fields(
-							array(
-								'class' => 'wc-product-search',
-								'style' => 'width: 50%;',
-								'id' => 'wcz_wfbt_ids',
-								'name' => 'wcz_wfbt_ids',
-								'data-placeholder' => __('Search for a product&hellip;', 'wcz-woocommerce-frequently-bought-together'),
-								'data-multiple' => true,
-								'data-action' => 'wcz_ajax_search_product',
-								'data-selected' => $json_ids,
-								'value' => implode(',', array_keys($json_ids)),
-								'custom-attributes' => array(
-									'data-exclude' => implode(',', $to_exclude),
-								),
-							)
-						);
-						?>
-
-						<img class="help_tip"
-							data-tip='<?php esc_html_e('Select products for "Frequently bought together" group', 'wcz-woocommerce-frequently-bought-together'); ?>'
-							src="<?php echo esc_url(WC()->plugin_url()); ?>/assets/images/help.png" height="16" width="16" />
-					</p>
-				</div>
-			</div>
-			<?php
-		}
-
-		// Ajax action to search for products
-		public function wceazy_ajax_search_product()
-		{
-			ob_start();
-
-			check_ajax_referer('search-products', 'security');
-			// @codingStandardsIgnoreStart
-
-			$term = isset ($_GET['term']) ? (string) wc_clean(stripslashes($_GET['term'])) : '';
-			$post_types = array('product', 'product_variation');
-
-			$to_exclude = isset ($_GET['exclude']) ? explode(',', wc_clean(stripslashes($_GET['exclude']))) : false;
-			// @codingStandardsIgnoreEnd
-			if (empty ($term)) {
-				die();
-			}
-
-			$args = array(
-				'post_type' => $post_types,
-				'post_status' => 'publish',
-				'posts_per_page' => -1,
-				's' => $term,
-				'fields' => 'ids',
-			);
-
-			if ($to_exclude) {
-				$args['post__not_in'] = $to_exclude;
-			}
-
-			if (is_numeric($term)) {
-				$args2 = array(
-					'post_type' => $post_types,
-					'post_status' => 'publish',
-					'posts_per_page' => -1,
-					'post__in' => array(0, $term),
-					'fields' => 'ids',
-				);
-
-				$args3 = array(
-					'post_type' => $post_types,
-					'post_status' => 'publish',
-					'posts_per_page' => -1,
-					'post_parent' => $term,
-					'fields' => 'ids',
-				);
-
-				$args4 = array(
-					'post_type' => $post_types,
-					'post_status' => 'publish',
-					'posts_per_page' => -1,
-					'meta_query' => array( //phpcs:ignore slow query ok.
-						array(
-							'key' => '_sku',
-							'value' => $term,
-							'compare' => 'LIKE',
-						),
-					),
-					'fields' => 'ids',
-				);
-
-				$posts = array_unique(array_merge(get_posts($args), get_posts($args2), get_posts($args3), get_posts($args4)));
-			} else {
-				$args2 = array(
-					'post_type' => $post_types,
-					'post_status' => 'publish',
-					'posts_per_page' => -1,
-					'meta_query' => array( //phpcs:ignore slow query ok.
-						array(
-							'key' => '_sku',
-							'value' => $term,
-							'compare' => 'LIKE',
-						),
-					),
-					'fields' => 'ids',
-				);
-
-				$posts = array_unique(array_merge(get_posts($args), get_posts($args2)));
-			}
-
-			$found_products = array();
-
-			if ($posts) {
-				foreach ($posts as $post) {
-					$current_id = $post;
-					$product = wc_get_product($post);
-					// exclude variable product.
-					if (!$product || $product->is_type(array('variable', 'external'))) {
-						continue;
-					} elseif ($product->is_type('variation')) {
-						$current_id = wp_get_post_parent_id($post);
-						if (!wc_get_product($current_id)) {
-							continue;
-						}
-					}
-
-					$found_products[$post] = rawurldecode($product->get_formatted_name());
-				}
-			}
-
-			wp_send_json(apply_filters('wceazy_wfbt_ajax_search_product_result', $found_products));
-		}
-
-		// Register plugin settings
-		public function register_settings()
-		{
-			// settings
-			register_setting('woosb_settings', 'woosb_settings');
-			// localization
-			register_setting('woosb_localization', 'woosb_localization');
-		}
-
-		// Add admin menu
-		public function admin_menu()
-		{
-			add_submenu_page('wpclever', esc_html__('WPC Product Bundles', 'woo-product-bundle'), esc_html__('Product Bundles', 'woo-product-bundle'), 'manage_options', 'wpclever-woosb', [
-				$this,
-				'admin_menu_content'
-			]);
-		}
-
-		// Function to save settings data
-		public function saveSettings($post_data)
-		{
-			if (!empty ($post_data)) {
-				update_option('wceazy_frequently_bought_settings', json_encode($post_data));
-			}
-		}
-
-		// Product type selector
-		public function product_type_selector($types)
-		{
-			$types['woosb'] = esc_html__('Smart bundleX', 'woo-product-bundle');
-
-			return $types;
-		}
-	}
-}
+new WcEazyFrequentlyBoughtUtils();
+?>

@@ -64,20 +64,22 @@ if (!class_exists('WcEazyPreOrderClient')) {
             // Modify product price for pre-order products
             add_filter('woocommerce_product_get_price', array($this->utils, 'custom_preorder_price'), 10, 2);
             // add_filter('woocommerce_product_get_regular_price', array($this->utils, 'custom_preorder_price_html'), 10, 2);
-            add_filter('woocommerce_product_variation_get_regular_price', array($this->utils, 'custom_preorder_price'), 10, 2);
-            add_filter('woocommerce_product_variation_get_price', array($this->utils, 'custom_preorder_price'), 10, 2);
+          add_filter('woocommerce_product_variation_get_regular_price', array($this->utils, 'custom_preorder_price'), 10, 2);
+           add_filter('woocommerce_product_variation_get_price', array($this->utils, 'custom_preorder_price'), 10, 2);
 
             // Free Hooks End
 
             // Hook into the 'woocommerce_admin_order_data_after_billing_address' or 'woocommerce_admin_order_data_after_shipping_address' action hook
-                add_filter('manage_edit-shop_order_columns', array($this->utils, 'preorderCustomColumn'), 10, 2);
-                add_filter('manage_woocommerce_page_wc-orders_columns', array($this->utils, 'preorderCustomColumn'), 10, 2);
+               add_filter('manage_edit-shop_order_columns', array($this->utils, 'preorderCustomColumn'), 10, 2);
+               add_filter('manage_woocommerce_page_wc-orders_columns', array($this->utils, 'preorderCustomColumn'), 10, 2);
+
+
+            add_action( 'manage_shop_order_posts_custom_column', array($this->utils,'preorderCustomColumnContent'), 25, 2 );
+            add_action( 'manage_woocommerce_page_wc-orders_custom_column', array($this->utils,'preorderCustomColumnContent'), 25, 2 );
 
 // Add action to save preorder date
 add_action('woocommerce_checkout_update_order_meta', array($this->utils, 'save_preorder_date'), 10, 2);
 
-// Add filter to add custom column to order table
-add_filter('manage_edit-shop_order_columns', array($this->utils, 'preorderCustomColumn'), 10, 1);
 
 // Add action to display preorder date in custom column
 add_action('manage_shop_order_posts_custom_column', array($this->utils, 'display_preorder_date'), 10, 2);

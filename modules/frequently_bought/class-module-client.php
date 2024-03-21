@@ -23,14 +23,21 @@ if (!class_exists('WcEazyFrequentlyBoughtClient')) {
             // add_shortcode('product_type_selector', array($this, 'product_type_selector')); 
 
   
-            // add section in product edit page.
-            add_filter('woocommerce_product_data_tabs', array($this->utils, 'add_bought_together_tab'), 10, 1);
-            add_action('woocommerce_product_data_panels', array($this->utils, 'add_bought_together_panel'));
+            // // add section in product edit page.
+            // add_filter('woocommerce_product_data_tabs', array($this->utils, 'add_bought_together_tab'), 10, 1);
+            // add_action('woocommerce_product_data_panels', array($this->utils, 'add_bought_together_panel'));
 
-            // search product.
-            add_action('wp_ajax_wceazy_ajax_search_product', array($this->utils, 'wceazy_ajax_search_product'));
-            add_action('wp_ajax_nopriv_wceazy_ajax_search_product', array($this->utils, 'wceazy_ajax_search_product'));
+            // // search product.
+            // add_action('wp_ajax_wceazy_ajax_search_product', array($this->utils, 'wceazy_ajax_search_product'));
+            // add_action('wp_ajax_nopriv_wceazy_ajax_search_product', array($this->utils, 'wceazy_ajax_search_product'));
 
+
+
+            // add_action('wp_ajax_search_products', array($this->utils, 'search_products'));
+            // add_action('wp_ajax_nopriv_search_products', array($this->utils, 'search_products'));
+            
+
+            
         }
 
 
