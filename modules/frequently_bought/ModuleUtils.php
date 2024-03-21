@@ -7,14 +7,17 @@ class WcEazyFrequentlyBoughtUtils
 {
     public function __construct()
     {
-        include_once(plugin_dir_path(__FILE__) . 'inc/ajax-handler.php'); // Include ajax-handler.php here
-        
+        include_once (plugin_dir_path(__FILE__) . 'inc/ajax-handler.php'); // Include ajax-handler.php here
+
         add_action('admin_enqueue_scripts', array($this, 'enqueue_bought_together_scripts'));
         add_action('wp_ajax_search_products', array($this, 'search_products'));
         add_action('wp_ajax_nopriv_search_products', array($this, 'search_products'));
         add_action('wp_ajax_save_selected_products', array($this, 'save_selected_products'));
         add_filter('woocommerce_product_data_tabs', array($this, 'add_bought_together_tab'), 10, 1);
         add_action('woocommerce_product_data_panels', array($this, 'add_bought_together_panel'));
+
+        add_action('woocommerce_before_add_to_cart_form', array($this, 'show_items_before_sdsc'));
+
     }
 
     public function enqueue_bought_together_scripts()
@@ -35,9 +38,9 @@ class WcEazyFrequentlyBoughtUtils
     {
         check_ajax_referer('search_nonce', 'security');
 
-        $search_term = isset($_POST['search_term']) ? sanitize_text_field($_POST['search_term']) : '';
+        $search_term = isset ($_POST['search_term']) ? sanitize_text_field($_POST['search_term']) : '';
 
-        if (empty($search_term)) {
+        if (empty ($search_term)) {
             wp_send_json_error(__('Search term is empty.', 'fbt'));
         }
 
@@ -62,7 +65,7 @@ class WcEazyFrequentlyBoughtUtils
         } else {
             echo '<p>' . __('No products found.', 'fbt') . '</p>';
         }
-        
+
         $response = ob_get_clean();
 
         wp_reset_postdata();
@@ -73,25 +76,25 @@ class WcEazyFrequentlyBoughtUtils
     public function save_selected_products()
     {
         check_ajax_referer('search_nonce', 'security');
-        
+
         // Get the current product ID
-        $currentProductId = isset($_POST['current_product_id']) ? $_POST['current_product_id'] : '';
-        
+        $currentProductId = isset ($_POST['current_product_id']) ? $_POST['current_product_id'] : '';
+
         // Get the selected product IDs
-        $selected_products = isset($_POST['selected_products']) ? $_POST['selected_products'] : array();
-        
+        $selected_products = isset ($_POST['selected_products']) ? $_POST['selected_products'] : array();
+
         // Update post meta with selected product IDs for the current product
         update_post_meta($currentProductId, 'selected_product', $selected_products);
-        
+
         // Debugging information
         error_log('Current Product ID: ' . $currentProductId);
         error_log('Selected Product IDs: ' . implode(',', $selected_products));
-        
+
         wp_send_json_success();
         wp_die(); // Terminate the script execution
     }
-    
-    
+
+
 
     public function add_bought_together_tab($tabs)
     {
@@ -107,33 +110,87 @@ class WcEazyFrequentlyBoughtUtils
     {
         global $post;
         $currentProductId = $post->ID;
-        
+
         // Get the saved selected product IDs for the current product
         $selected_product_ids = get_post_meta($currentProductId, 'selected_product', true);
         // var_dump($selected_product_ids);
         // Display saved products if any
-        if (!empty($selected_product_ids)) {
-            echo '<ul id="selected_products_list">';
-            foreach ($selected_product_ids as $product_id) {
-                $product_title = get_the_title($product_id);
-                echo '<li>' . $product_title . '</li>';
-            }
-            echo '</ul>';
-        }
         ?>
 <div id="bought_together_data_option" class="panel woocommerce_options_panel">
     <div class="options_group">
+
+
         <p class="form-field">
             <input type="text" id="bought_together_search" class="short" name="bought_together_search">
             <button id="clear_search" class="button">
                 <?php _e('Clear', 'fbt'); ?>
             </button>
+            <?php
+                    if (!empty ($selected_product_ids)) {
+                        echo '<ul id="selected_products_list">';
+                        foreach ($selected_product_ids as $product_id) {
+                            $product_title = get_the_title($product_id);
+                            echo '<li>' . $product_title . '</li>';
+                        }
+                        echo '</ul>';
+                    }
+                    ?>
         </p>
         <div id="bought_together_search_results"></div>
+
     </div>
 </div>
 <?php
-    }   
+    }
+ 
+
+    /**
+     * Function for `woocommerce_before_add_to_cart_form` action-hook.
+     * 
+     * @return void
+     */
+    function show_items_before_sdsc()
+    {
+        global $post;
+        $currentProductId = $post->ID;
+
+        // Get the saved selected product IDs for the current product
+        $selected_product_ids = get_post_meta($currentProductId, 'selected_product', true);
+
+        if (!empty ($selected_product_ids)) {
+            echo '<ul id="selected_products_list">';
+            foreach ($selected_product_ids as $product_id) {
+                $product_title = get_the_title($product_id);
+                $product_image = get_the_post_thumbnail($product_id, 'thumbnail'); // Change 'thumbnail' to the desired image size
+                echo '<li>';
+                echo $product_image;
+                echo '<span>' . $product_title . '</span>';
+                echo '</li>';
+            }
+            echo '</ul>';
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 new WcEazyFrequentlyBoughtUtils();
