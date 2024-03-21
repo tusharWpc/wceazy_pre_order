@@ -161,40 +161,65 @@ class WcEazyFrequentlyBoughtUtils
         ?>
         <style>
             /* Internal CSS styles */
-            .freq-product-item {
+            .selected-products-list {
+                border-collapse: collapse;
+                width: 100%;
+            }
 
-                /* display: flex !important;
-                                                gap: 10%;
-                                                align-content: center; */
+            .freq-product-item {
                 padding: 10px 0;
-                margin: 0;
-                justify-content: space-between;
-                display: flex;
-                align-items: center;
                 border-bottom: 1px dotted #e5e5e5;
             }
 
-            .product-details {
-                display: contents;
+            .product-thumbnail img {
+                max-width: 100px;
+                /* Adjust as needed */
+                height: auto;
             }
 
-            .product-thumbnail img {
-                max-width: 50%;
-                /* Ensure image doesn't exceed its container width */
-                height: auto;
-                /* Maintain aspect ratio */
+            .product-details {
+                padding-left: 10px;
+            }
+
+            .product-title {
+                font-weight: bold;
+            }
+
+            .product-price {
+                color: #555;
+            }
+
+            .product-checkbox {
+                /* Customize checkbox appearance */
+                width: 20px;
+                height: 20px;
+            }
+
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                .selected-products-list {
+                    font-size: 14px;
+                }
+
+                .product-thumbnail img {
+                    max-width: 80px;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .product-thumbnail img {
+                    max-width: 60px;
+                }
             }
         </style>
+
 
         <?php
 
 
-
-
         if (!empty ($selected_product_ids)) {
-            echo '<tr class="selected-products-list">';
+            echo '<table class="selected-products-list">';
             foreach ($selected_product_ids as $product_id) {
-
                 // Replace with actual logic to fetch product data from your database
                 $product = wc_get_product($product_id);
 
@@ -203,21 +228,23 @@ class WcEazyFrequentlyBoughtUtils
                     $product_image = get_the_post_thumbnail_url($product_id, 'thumbnail'); // Change 'thumbnail' to the desired image size
                     $product_price = $product->get_price_html(); // Get the formatted price
 
-                    echo '<div class="freq-product-item">';
-                    echo '<div class="product-thumbnail"><img src="' . $product_image . '" alt="' . $product_title . '"></div>';
-                    echo '<div class="product-details">';
-                    echo '<span class="product-title">' . $product_title . '</span>';
-                    echo '<br>';
+                    // Generate a dynamic ID for the checkbox
+                    $checkbox_id = 'product_checkbox_' . $product_id;
+
+                    echo '<tr class="freq-product-item">';
+                    echo '<td><input type="checkbox" id="' . $checkbox_id . '" class="product-checkbox"></td>';
+                    echo '<td class="product-thumbnail"><img src="' . $product_image . '" alt="' . $product_title . '"></td>';
+                    echo '<td class="product-details">';
+                    echo '<span class="product-title">' . $product_title . '</span><br>';
                     echo '<span class="product-price">' . $product_price . '</span>';
-                    echo '</div>';
-                    echo '</div>';
+                    echo '</td>';
+                    echo '</tr>';
+                   
                 }
             }
-            echo '</tr>';
-        }
-
-
-
+            echo '</table>';
+            echo '<br>'; 
+        } 
 
     }
 
