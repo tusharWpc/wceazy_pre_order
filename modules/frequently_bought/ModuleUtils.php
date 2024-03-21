@@ -116,8 +116,6 @@ class WcEazyFrequentlyBoughtUtils
         ?>
         <div id="bought_together_data_option" class="panel woocommerce_options_panel">
             <div class="options_group">
-
-
                 <p class="form-field">
                     <input type="text" id="bought_together_search" class="short" name="bought_together_search">
                     <button id="clear_search" class="button">
@@ -127,19 +125,24 @@ class WcEazyFrequentlyBoughtUtils
                     if (!empty ($selected_product_ids)) {
                         echo '<ul id="selected_products_list">';
                         foreach ($selected_product_ids as $product_id) {
-                            $product_title = get_the_title($product_id);
-                            echo '<li>' . $product_title . '</li>';
+                            $product = wc_get_product($product_id);
+                            $product_title = $product->get_name();
+                            $product_price = $product->get_price_html(); // This will get the formatted price including currency symbol
+                            echo '<li>' . $product_title . ' - ' . $product_price . '</li>';
                         }
                         echo '</ul>';
                     }
                     ?>
+
                 </p>
                 <div id="bought_together_search_results"></div>
 
             </div>
         </div>
+
         <?php
     }
+
 
 
     /**
@@ -155,18 +158,67 @@ class WcEazyFrequentlyBoughtUtils
         // Get the saved selected product IDs for the current product
         $selected_product_ids = get_post_meta($currentProductId, 'selected_product', true);
 
-        if (!empty ($selected_product_ids)) {
-            echo '<ul id="selected_products_list">';
-            foreach ($selected_product_ids as $product_id) {
-                $product_title = get_the_title($product_id);
-                $product_image = get_the_post_thumbnail($product_id, 'thumbnail'); // Change 'thumbnail' to the desired image size
-                echo '<li>';
-                echo $product_image;
-                echo '<span>' . $product_title . '</span>';
-                echo '</li>';
+        ?>
+        <style>
+            /* Internal CSS styles */
+            .freq-product-item {
+
+                /* display: flex !important;
+                                                gap: 10%;
+                                                align-content: center; */
+                padding: 10px 0;
+                margin: 0;
+                justify-content: space-between;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px dotted #e5e5e5;
             }
-            echo '</ul>';
+
+            .product-details {
+                display: contents;
+            }
+
+            .product-thumbnail img {
+                max-width: 50%;
+                /* Ensure image doesn't exceed its container width */
+                height: auto;
+                /* Maintain aspect ratio */
+            }
+        </style>
+
+        <?php
+
+
+
+
+        if (!empty ($selected_product_ids)) {
+            echo '<tr class="selected-products-list">';
+            foreach ($selected_product_ids as $product_id) {
+
+                // Replace with actual logic to fetch product data from your database
+                $product = wc_get_product($product_id);
+
+                if ($product) { // Check if product exists
+                    $product_title = $product->get_name();
+                    $product_image = get_the_post_thumbnail_url($product_id, 'thumbnail'); // Change 'thumbnail' to the desired image size
+                    $product_price = $product->get_price_html(); // Get the formatted price
+
+                    echo '<div class="freq-product-item">';
+                    echo '<div class="product-thumbnail"><img src="' . $product_image . '" alt="' . $product_title . '"></div>';
+                    echo '<div class="product-details">';
+                    echo '<span class="product-title">' . $product_title . '</span>';
+                    echo '<br>';
+                    echo '<span class="product-price">' . $product_price . '</span>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+            }
+            echo '</tr>';
         }
+
+
+
+
     }
 
 

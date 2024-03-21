@@ -1,9 +1,18 @@
 /* ===============
-Product Filter
+Frequently Bought
 ================ */
-#wceazy_frequently_bought{
+#wceazy_frequently_bought {
     display: none;
 }
+
+
+
+.freq-product-item {
+    display: flex;
+    background-color: #ac2809;
+}
+
+    
 
 
 .wceazy_frequently_bought_header {
@@ -16,12 +25,14 @@ Product Filter
     column-gap: 10px;
     box-shadow: 0 13px 22px -5px rgb(0 0 0 / 6%);
 }
+
 .wceazy_frequently_bought_header .wceazy_header_part_left p {
     font-size: 30px;
     font-weight: 700;
     margin: 0px;
     position: relative;
 }
+
 .wceazy_frequently_bought_header .wceazy_header_part_left p span {
     position: absolute;
     top: 0;
@@ -33,6 +44,7 @@ Product Filter
     color: #fff;
     font-weight: normal;
 }
+
 .wceazy_frequently_bought_header .wceazy_header_part_right a {
     text-decoration: none;
     font-size: 17px;
@@ -41,6 +53,7 @@ Product Filter
     padding: 0;
     font-weight: 500;
 }
+
 .wceazy_frequently_bought_header .wceazy_header_part_right a.wceazy_get_pro {
     text-decoration: none;
     font-size: 20px;
@@ -51,6 +64,7 @@ Product Filter
     border-radius: 3px;
     transition: 0.1s;
 }
+
 .wceazy_frequently_bought_header .wceazy_header_part_right a.wceazy_get_pro:hover {
     background: #ac2809;
 }
@@ -62,7 +76,7 @@ Product Filter
 
 
 
-.wceazy_frequently_bought_page_title{
+.wceazy_frequently_bought_page_title {
     margin: 20px 53px 0 53px;
     display: flex;
     justify-content: space-between;
@@ -78,12 +92,14 @@ Product Filter
     justify-content: space-between;
     flex-wrap: nowrap;
 }
+
 .wceazy_frequently_bought_page_title .page_title_part_left h2 {
     position: relative;
     font-size: 30px;
     line-height: 35px;
     margin: 25px 0;
 }
+
 .wceazy_frequently_bought_page_title .page_title_part_left h2:after {
     position: absolute;
     content: "";
@@ -121,6 +137,7 @@ Product Filter
     padding: 8px 14px 8px 35px;
     font-size: 14px;
 }
+
 .wceazy_frequently_bought_page_title .page_title_part_right button.wceazy_frequently_bought_back_to_dashboard_btn {
     cursor: pointer;
     border: 0;
@@ -138,7 +155,7 @@ Product Filter
 
 
 
-.wceazy_frequently_bought_container{
+.wceazy_frequently_bought_container {
     padding: 50px 50px;
 }
 
@@ -147,41 +164,45 @@ Product Filter
 
 
 /* Input Field Customization */
-.wceazy_frequently_bought_field_group{
+.wceazy_frequently_bought_field_group {
     margin-top: 40px;
     display: flex;
     align-items: flex-start;
 }
-.wceazy_frequently_bought_field_group label{
+
+.wceazy_frequently_bought_field_group label {
     width: 25%;
     color: #191D23;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    display:block;
+    display: block;
     margin-top: 10px;
 }
-.wceazy_frequently_bought_field_group .field_with_msg_container{
+
+.wceazy_frequently_bought_field_group .field_with_msg_container {
     display: block;
     width: 30%;
 }
-.wceazy_frequently_bought_field_group .wceazy_frequently_bought_text_field{
+
+.wceazy_frequently_bought_field_group .wceazy_frequently_bought_text_field {
     padding: 12px 8px;
     background: #FFFFFF;
     border: 1px solid #BDCEF1;
     border-radius: 8px;
     width: 100%;
 }
-.wceazy_frequently_bought_field_group .wceazy_frequently_bought_select_field{
+
+.wceazy_frequently_bought_field_group .wceazy_frequently_bought_select_field {
     padding: 12px 20px;
     border-radius: 8px;
     width: 100%;
     border: 1px solid #BDCEF1;
-    color:#5b5b5bf5 !important;
+    color: #5b5b5bf5 !important;
     font-size: 15px !important;
 }
 
-.wceazy_frequently_bought_field_group small{
+.wceazy_frequently_bought_field_group small {
     display: block;
     font-size: 14px;
     margin-top: 5px;
@@ -198,6 +219,7 @@ Product Filter
     border: 1px solid #E4E4E6;
     border-radius: 3px;
 }
+
 .wceazy_frequently_bought_field_group .color_picker_area label {
     display: flex;
     align-items: center;
@@ -209,6 +231,7 @@ Product Filter
     width: 100%;
     height: 100%;
 }
+
 .wceazy_frequently_bought_field_group .color_picker_area input[type="color"] {
     -webkit-appearance: none;
     box-shadow: none !important;
@@ -220,9 +243,11 @@ Product Filter
     outline: none;
     border: 1px;
 }
+
 .wceazy_frequently_bought_field_group .color_picker_area input[type="color"]::-webkit-color-swatch-wrapper {
     padding: 0;
 }
+
 .wceazy_frequently_bought_field_group .color_picker_area input[type="color"]::-webkit-color-swatch {
     border-color: transparent;
     border-radius: 3px;
@@ -237,29 +262,35 @@ Product Filter
 #wceazy_frequently_bought .select2-container {
     display: block;
 }
-#wceazy_frequently_bought .select2-container--default .select2-selection--multiple .select2-selection__choice{
+
+#wceazy_frequently_bought .select2-container--default .select2-selection--multiple .select2-selection__choice {
     padding: 5px;
     padding-left: 20px;
 }
-#wceazy_frequently_bought .select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
+
+#wceazy_frequently_bought .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
     top: 3px;
 }
-#wceazy_frequently_bought .select2-container--default .select2-selection--multiple{
+
+#wceazy_frequently_bought .select2-container--default .select2-selection--multiple {
     padding: 12px 20px;
     border-radius: 8px;
     width: 100%;
     border: 1px solid #BDCEF1;
-    color:#5b5b5bf5 !important;
+    color: #5b5b5bf5 !important;
     font-size: 15px !important;
 }
-#wceazy_frequently_bought .select2-container .select2-selection--single{
+
+#wceazy_frequently_bought .select2-container .select2-selection--single {
     height: 50px;
 }
+
 #wceazy_frequently_bought .select2-container--default .select2-selection--single .select2-selection__rendered {
     line-height: 50px;
 }
+
 #wceazy_frequently_bought .select2-container--default .select2-selection--single .select2-selection__arrow {
-    top:13px;
+    top: 13px;
 }
 
 #wceazy_frequently_bought .select2-container--default .select2-selection--single,
@@ -270,7 +301,7 @@ Product Filter
 
 
 /* Slider Checkbox customization */
-.wceazy_frequently_bought_field_group .toggle_switch{
+.wceazy_frequently_bought_field_group .toggle_switch {
     font-size: 19px;
     position: relative;
     display: inline-block;
@@ -278,11 +309,13 @@ Product Filter
     height: 25px;
     margin-left: 0;
 }
+
 .wceazy_frequently_bought_field_group .toggle_switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
+
 .wceazy_frequently_bought_field_group .toggle_switch .slider {
     position: absolute;
     cursor: pointer;
@@ -294,6 +327,7 @@ Product Filter
     -webkit-transition: .4s;
     transition: .4s;
 }
+
 .wceazy_frequently_bought_field_group .toggle_switch .slider:before {
     position: absolute;
     content: "";
@@ -305,20 +339,25 @@ Product Filter
     -webkit-transition: .4s;
     transition: .4s;
 }
-.wceazy_frequently_bought_field_group .toggle_switch input:checked + .slider {
+
+.wceazy_frequently_bought_field_group .toggle_switch input:checked+.slider {
     background-color: #6E32C9;
 }
-.wceazy_frequently_bought_field_group .toggle_switch input:focus + .slider {
+
+.wceazy_frequently_bought_field_group .toggle_switch input:focus+.slider {
     box-shadow: 0 0 1px #2196F3;
 }
-.wceazy_frequently_bought_field_group .toggle_switch input:checked + .slider:before {
+
+.wceazy_frequently_bought_field_group .toggle_switch input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
 }
+
 .wceazy_frequently_bought_field_group .toggle_switch .slider.round {
     border-radius: 34px;
 }
+
 .wceazy_frequently_bought_field_group .toggle_switch .slider.round:before {
     border-radius: 50%;
 }
@@ -329,47 +368,55 @@ Product Filter
 
 
 
-.wceazy_frequently_bought_tab{
+.wceazy_frequently_bought_tab {
     margin: 0;
     display: flex;
     padding-top: 5px;
 }
 
 .wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_left {
-    width: 20% ;
+    width: 20%;
     height: 200px;
     border-top: 1px solid #DDD8EE;
 }
+
 .wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_left .coupon_data_tabs .tab_item {
     padding: 10px 56px;
     cursor: pointer;
     border-bottom: 1px solid #DDD8EE;
 }
-.wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_left .coupon_data_tabs .tab_item{
+
+.wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_left .coupon_data_tabs .tab_item {
     border-left: 4px solid transparent;
     transition: .3s;
 }
+
 .wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_left .coupon_data_tabs .tab_item:hover {
     background-color: #FFFF;
     border-left: 4px solid #6E32C9;
     transition: .3s;
 }
+
 .wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_left .coupon_data_tabs .tab_item:hover h1 {
-    color:#6E32C9;
+    color: #6E32C9;
 }
+
 .wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_left .coupon_data_tabs .tab_item h1 {
     color: #050505;
     font-weight: 600;
     font-size: 18px;
 }
+
 .wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_left .coupon_data_tabs .tab_item_active {
     background-color: #FFFF;
     border-left: 4px solid #6E32C9;
     transition: .3s;
 }
-.wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_left .coupon_data_tabs .tab_item_active  h1{
-    color:#6E32C9;
+
+.wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_left .coupon_data_tabs .tab_item_active h1 {
+    color: #6E32C9;
 }
+
 .wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_left .coupon_data_tabs .tab_item_active {
     background-color: #FFFF;
     border-left: 4px solid #6E32C9;
@@ -384,16 +431,19 @@ Product Filter
     background: #ffffff;
     padding: 50px 50px 60px 50px;
 }
-.wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_right .tab_body_title{
+
+.wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_right .tab_body_title {
     border-bottom: 1px solid #E3E0ED;
     padding-bottom: 15px;
 }
-.wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_right .tab_body_title h1{
+
+.wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_right .tab_body_title h1 {
     font-size: 28px;
     color: #6E32C9;
     font-weight: 700;
 }
-.wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_right h4{
+
+.wceazy_frequently_bought_tab .wceazy_frequently_bought_tab_part_right h4 {
     font-size: 20px;
     color: #6E32C9;
     font-weight: 600;
@@ -408,12 +458,13 @@ Product Filter
 
 
 
-.wceazy_frequently_bought_bottom_button_section{
+.wceazy_frequently_bought_bottom_button_section {
     display: flex;
     justify-content: right;
     margin-top: 60px;
 }
-.wceazy_frequently_bought_bottom_button_section button{
+
+.wceazy_frequently_bought_bottom_button_section button {
     text-decoration: none;
     background-color: #6E32C9;
     padding: 17px 30px;
@@ -421,11 +472,12 @@ Product Filter
     border-radius: 5px;
     font-size: 20px;
     transition: 0.3s;
-    border:  1px solid transparent
+    border: 1px solid transparent
 }
-.wceazy_frequently_bought_bottom_button_section button:hover{
-    border:  1px solid #6E32C9;
+
+.wceazy_frequently_bought_bottom_button_section button:hover {
+    border: 1px solid #6E32C9;
     background: transparent;
-    color: #6E32C9 ;
+    color: #6E32C9;
     cursor: pointer;
 }
