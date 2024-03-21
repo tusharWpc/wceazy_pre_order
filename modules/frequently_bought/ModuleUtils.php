@@ -84,6 +84,30 @@ class WcEazyFrequentlyBoughtUtils
         // Update post meta with selected product IDs for the current product
         update_post_meta($currentProductId, 'selected_product', $selected_products);
 
+        // Initialize an array to store product data
+        $selected_products_data = array();
+
+        // Loop through selected products to get their data
+        foreach ($selected_products as $product_id) {
+            // Replace with actual logic to fetch product data from your database
+            $product = wc_get_product($product_id);
+
+            if ($product) { // Check if product exists
+                $product_title = $product->get_name();
+                $product_price = $product->get_price(); // Get the product price without formatting
+
+                // Add product data to the array
+                $selected_products_data[] = array(
+                    'id' => $product_id,
+                    'title' => $product_title,
+                    'price' => $product_price
+                );
+            }
+        }
+
+        // Save the selected products data in session or user meta
+        WC()->session->set('selected_products_data', $selected_products_data);
+
         // Debugging information
         error_log('Current Product ID: ' . $currentProductId);
         error_log('Selected Product IDs: ' . implode(',', $selected_products));
@@ -154,7 +178,6 @@ class WcEazyFrequentlyBoughtUtils
     {
         global $post;
         $currentProductId = $post->ID;
-
         // Get the saved selected product IDs for the current product
         $selected_product_ids = get_post_meta($currentProductId, 'selected_product', true);
 
@@ -239,19 +262,96 @@ class WcEazyFrequentlyBoughtUtils
                     echo '<span class="product-price">' . $product_price . '</span>';
                     echo '</td>';
                     echo '</tr>';
-                   
+
                 }
             }
             echo '</table>';
-            echo '<br>'; 
-        } 
+            echo '<br>';
+        }
 
     }
 
+    // Function to add selected products to the cart
+    public function add_to_cart_selected_products()
+    {
+        check_ajax_referer('add_to_cart_nonce', 'security');
+
+        // Get the selected product IDs
+        $selected_products = isset ($_POST['selected_products']) ? $_POST['selected_products'] : array();
+
+        // var_dump($)
+
+        // Loop through selected products and add them to the cart
+        foreach ($selected_products as $product_id) {
+            WC()->cart->add_to_cart($product_id);
+        }
+
+        wp_send_json_success();
+    }
 
 
 }
 
 $WcEazyFrequentlyBoughtUtils = new WcEazyFrequentlyBoughtUtils();
+
+// New function to show selected products before add to cart button
+function show_items_before_sdsc()
+{
+    global $WcEazyFrequentlyBoughtUtils;
+    $WcEazyFrequentlyBoughtUtils->show_items_before_sdsc();
+}
+ 
+
+
+// if (!empty ($selected_product_ids)) {
+//     // Initialize an array to store product data
+//     $selected_products_data = array();
+
+//     foreach ($selected_product_ids as $product_id) {
+//         // Replace with actual logic to fetch product data from your database
+//         $product = wc_get_product($product_id);
+
+//         if ($product) { // Check if product exists
+//             $product_title = $product->get_name();
+//             $product_image = get_the_post_thumbnail_url($product_id, 'thumbnail'); // Change 'thumbnail' to the desired image size
+//             $product_price = $product->get_price(); // Get the product price without formatting
+
+//             // Add product data to the array
+//             $selected_products_data[] = array(
+//                 'id' => $product_id,
+//                 'title' => $product_title,
+//                 'image' => $product_image,
+//                 'price' => $product_price
+//             );
+//         }
+//     }
+
+//     // Check if there are selected products data
+//     if (!empty ($selected_products_data)) {
+//         // Encode the selected products data as JSON and store it in a hidden input field
+//         echo '<input type="hidden" id="selected_products_data" value="' . htmlspecialchars(json_encode($selected_products_data)) . '">';
+
+//         // Output the selected products table
+//         echo '<table class="selected-products-list">';
+//         foreach ($selected_products_data as $product_data) {
+//             echo '<tr class="freq-product-item">';
+//             echo '<td class="product-thumbnail"><img src="' . $product_data['image'] . '" alt="' . $product_data['title'] . '"></td>';
+//             echo '<td class="product-details">';
+//             echo '<span class="product-title">' . $product_data['title'] . '</span><br>';
+//             echo '<span class="product-price">' . wc_price($product_data['price']) . '</span>';
+//             echo '</td>';
+//             echo '</tr>';
+//         }
+//         echo '</table>';
+//         echo '<br>';
+//     }
+// }
+
+
 add_action('woocommerce_before_add_to_cart_form', array($WcEazyFrequentlyBoughtUtils, 'show_items_before_sdsc'));
+
+
+
+
+
 ?>
