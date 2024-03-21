@@ -16,8 +16,6 @@ class WcEazyFrequentlyBoughtUtils
         add_filter('woocommerce_product_data_tabs', array($this, 'add_bought_together_tab'), 10, 1);
         add_action('woocommerce_product_data_panels', array($this, 'add_bought_together_panel'));
 
-        add_action('woocommerce_before_add_to_cart_form', array($this, 'show_items_before_sdsc'));
-
     }
 
     public function enqueue_bought_together_scripts()
@@ -116,16 +114,16 @@ class WcEazyFrequentlyBoughtUtils
         // var_dump($selected_product_ids);
         // Display saved products if any
         ?>
-<div id="bought_together_data_option" class="panel woocommerce_options_panel">
-    <div class="options_group">
+        <div id="bought_together_data_option" class="panel woocommerce_options_panel">
+            <div class="options_group">
 
 
-        <p class="form-field">
-            <input type="text" id="bought_together_search" class="short" name="bought_together_search">
-            <button id="clear_search" class="button">
-                <?php _e('Clear', 'fbt'); ?>
-            </button>
-            <?php
+                <p class="form-field">
+                    <input type="text" id="bought_together_search" class="short" name="bought_together_search">
+                    <button id="clear_search" class="button">
+                        <?php _e('Clear', 'fbt'); ?>
+                    </button>
+                    <?php
                     if (!empty ($selected_product_ids)) {
                         echo '<ul id="selected_products_list">';
                         foreach ($selected_product_ids as $product_id) {
@@ -135,14 +133,14 @@ class WcEazyFrequentlyBoughtUtils
                         echo '</ul>';
                     }
                     ?>
-        </p>
-        <div id="bought_together_search_results"></div>
+                </p>
+                <div id="bought_together_search_results"></div>
 
-    </div>
-</div>
-<?php
+            </div>
+        </div>
+        <?php
     }
- 
+
 
     /**
      * Function for `woocommerce_before_add_to_cart_form` action-hook.
@@ -173,25 +171,8 @@ class WcEazyFrequentlyBoughtUtils
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
-new WcEazyFrequentlyBoughtUtils();
+$WcEazyFrequentlyBoughtUtils = new WcEazyFrequentlyBoughtUtils();
+add_action('woocommerce_before_add_to_cart_form', array($WcEazyFrequentlyBoughtUtils, 'show_items_before_sdsc'));
 ?>
