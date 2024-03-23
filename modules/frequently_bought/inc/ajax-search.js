@@ -49,7 +49,7 @@ jQuery(document).ready(function ($) {
         $("#bought_together_search_results").html(response);
         // Update the data-product-id attribute for each result item
         $("#bought_together_search_results p").each(function (index) {
-          $(this).attr("search_result data-product-id", index + 1);
+          $(this).attr("data-product-id", index + 1);
         });
       },
       error: function (xhr, status, error) {
@@ -65,19 +65,21 @@ jQuery(document).ready(function ($) {
   });
 
   // Event delegation for dynamically added checkboxes (product selection)
+  // Event delegation for dynamically added checkboxes (product selection)
   $("#bought_together_search_results").on(
     "change",
     ".product-checkbox",
     function () {
       // Get the selected product ID and title
       var productId = $(this).val();
-      // var productTitle = $(this).siblings("label").text().trim();
+      var productTitle = $(this).siblings("label").text().trim(); // Uncomment this line to define productTitle
       // Call function to handle the product selection
       handleProductSelection(productId, productTitle);
       // Update selected products (send to server)
       updateSelectedProducts();
     }
   );
+
 
   // Function to update selected products
   function updateSelectedProducts() {
@@ -106,4 +108,3 @@ jQuery(document).ready(function ($) {
     });
   }
 });
-

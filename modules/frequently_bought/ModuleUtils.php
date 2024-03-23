@@ -182,8 +182,8 @@ class WcEazyFrequentlyBoughtUtils
             }
 
             /* #bought_together_search div {
-                                                            display: flex;
-                                                        } */
+                                                                    display: flex;
+                                                                } */
 
             #clear_search {
                 background-color: #007bff;
@@ -223,7 +223,7 @@ class WcEazyFrequentlyBoughtUtils
 
 
             /* .options_group p {
-                                                /* margin-bottom: 10px; */
+                                                        /* margin-bottom: 10px; */
 
             /* width: 1200px; */
             }
@@ -239,7 +239,7 @@ class WcEazyFrequentlyBoughtUtils
                     </button>
                 </div> <br>
                 <div class="selected-products-label">
-                    <h1 class="label">Selected Products:</h1>
+                    <!-- <h1 class="label">Selected Products:</h1> -->
 
                     <?php
                     if (!empty ($selected_product_ids)) {
@@ -258,8 +258,7 @@ class WcEazyFrequentlyBoughtUtils
                     }
                     ?>
                 </div>
-
-                <h1 class="search_result">Search results:</h1>
+ 
 
                 <h1 id="bought_together_search_results"></h1>
             </div>
