@@ -9,17 +9,28 @@ class WcEazyFrequentlyBoughtUtils
     {
         include_once (plugin_dir_path(__FILE__) . 'inc/ajax-handler.php'); // Include ajax-handler.php here
 
-        add_action('admin_enqueue_scripts', array($this, 'enqueue_bought_together_scripts'));
+        add_action('wp_enqueue_scripts', array($this, 'enqueue_bought_together_scripts'));
+
+        // add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+
+
         add_action('wp_ajax_search_products', array($this, 'search_products'));
         add_action('wp_ajax_nopriv_search_products', array($this, 'search_products'));
         add_action('wp_ajax_save_selected_products', array($this, 'save_selected_products'));
+        add_action('wp_ajax_add_selected_products_to_cart', array($this, 'add_selected_products_to_cart')); // Corrected action name
+        add_action('wp_ajax_nopriv_add_selected_products_to_cart', array($this, 'add_selected_products_to_cart')); // Corrected action name
         add_filter('woocommerce_product_data_tabs', array($this, 'add_bought_together_tab'), 10, 1);
         add_action('woocommerce_product_data_panels', array($this, 'add_bought_together_panel'));
 
+        // Hook the function to display selected products before add to cart button
+        add_action('woocommerce_before_add_to_cart_form', array($this, 'show_items_in_single_page'));
     }
+
 
     public function enqueue_bought_together_scripts()
     {
+        // Enqueue the script for the user side
         wp_enqueue_script('fbt-ajax', plugin_dir_url(__FILE__) . 'inc/ajax-search.js', array('jquery'), '1.0', true);
         wp_localize_script(
             'fbt-ajax',
@@ -27,10 +38,17 @@ class WcEazyFrequentlyBoughtUtils
             array(
                 'ajax_url' => admin_url('admin-ajax.php'),
                 'search_nonce' => wp_create_nonce('search_nonce'),
+                'add_to_cart_nonce' => wp_create_nonce('add_to_cart_nonce'), // Add nonce for adding to cart
                 'current_product_id' => get_the_ID(), // Set the current product ID
             )
         );
+
+        // Enqueue the script for the admin side 
+        wp_enqueue_script('ajax-add-to-cart', plugin_dir_url(__FILE__) . 'inc/ajax-add-to-cart.js', array('jquery'), '1.0', true);
+
     }
+
+
 
     public function search_products()
     {
@@ -84,39 +102,25 @@ class WcEazyFrequentlyBoughtUtils
         // Update post meta with selected product IDs for the current product
         update_post_meta($currentProductId, 'selected_product', $selected_products);
 
-        // Initialize an array to store product data
-        $selected_products_data = array();
-
-        // Loop through selected products to get their data
-        foreach ($selected_products as $product_id) {
-            // Replace with actual logic to fetch product data from your database
-            $product = wc_get_product($product_id);
-
-            if ($product) { // Check if product exists
-                $product_title = $product->get_name();
-                $product_price = $product->get_price(); // Get the product price without formatting
-
-                // Add product data to the array
-                $selected_products_data[] = array(
-                    'id' => $product_id,
-                    'title' => $product_title,
-                    'price' => $product_price
-                );
-            }
-        }
-
-        // Save the selected products data in session or user meta
-        WC()->session->set('selected_products_data', $selected_products_data);
-
-        // Debugging information
-        error_log('Current Product ID: ' . $currentProductId);
-        error_log('Selected Product IDs: ' . implode(',', $selected_products));
-
         wp_send_json_success();
         wp_die(); // Terminate the script execution
     }
 
+    public function add_selected_products_to_cart()
+    {
+        check_ajax_referer('add_to_cart_nonce', 'security');
 
+        // Get the selected product IDs
+        $selected_products = isset ($_POST['selected_products']) ? $_POST['selected_products'] : array();
+
+        // Loop through selected products and add them to the cart
+        foreach ($selected_products as $product_id) {
+            WC()->cart->add_to_cart($product_id);
+        }
+
+        wp_send_json_success();
+        wp_die();
+    }
 
     public function add_bought_together_tab($tabs)
     {
@@ -128,6 +132,57 @@ class WcEazyFrequentlyBoughtUtils
         return $tabs;
     }
 
+    public function show_items_in_single_page()
+    {
+        global $post;
+        $currentProductId = $post->ID;
+
+        // Get the saved selected product IDs for the current product
+        $selected_product_ids = get_post_meta($currentProductId, 'selected_product', true);
+
+        ?>
+        <div id="bought_together_data_option" class="panel woocommerce_options_panel">
+            <div class="options_group">
+                <p class="form-field">
+                    <?php
+                    if (!empty ($selected_product_ids)) {
+                        echo '<tr id="selected_products_list" class="selected-products-list">';
+                        foreach ($selected_product_ids as $product_id) {
+                            $product = wc_get_product($product_id);
+                            if ($product) {
+                                $product_title = $product->get_name();
+                                $product_image = $product->get_image(array(100, 100)); // Adjust image size as needed
+                                $product_price = $product->get_price_html();
+
+                                echo '<li class="product-item">';
+                                echo '<label class="product-label">';
+                                echo '<input type="checkbox" class="selected-product-checkbox" value="' . $product_id . '" />';
+                                echo $product_image; // Display product image
+                                echo '<span class="product-title">' . $product_title . '</span>';
+                                echo '<span class="product-price">' . $product_price . '</span>';
+                                echo '</label>';
+                                echo '</li>';
+                            }
+                        }
+                        echo '</tr>';
+                    }
+                    ?>
+                </p>
+                <button id="add-selected-to-cart-btn" class="button">
+                    <?php _e('Add Selected Products to Cart', 'fbt'); ?>
+                </button>
+                <div id="bought_together_search_results"></div>
+            </div>
+        </div>
+
+        <?php
+
+        // Hook the function to display selected products before add to cart button
+        // add_action('woocommerce_before_add_to_cart_form', array($this, 'show_items_in_single_page'));
+    }
+
+
+    // Function to show selected products before add to cart button
     public function add_bought_together_panel()
     {
         global $post;
@@ -135,8 +190,7 @@ class WcEazyFrequentlyBoughtUtils
 
         // Get the saved selected product IDs for the current product
         $selected_product_ids = get_post_meta($currentProductId, 'selected_product', true);
-        // var_dump($selected_product_ids);
-        // Display saved products if any
+
         ?>
         <div id="bought_together_data_option" class="panel woocommerce_options_panel">
             <div class="options_group">
@@ -152,206 +206,28 @@ class WcEazyFrequentlyBoughtUtils
                             $product = wc_get_product($product_id);
                             $product_title = $product->get_name();
                             $product_price = $product->get_price_html(); // This will get the formatted price including currency symbol
-                            echo '<li>' . $product_title . ' - ' . $product_price . '</li>';
+                            echo '<li>';
+                            echo '<input type="checkbox" class="selected-product-checkbox" value="' . $product_id . '" />';
+                            echo $product_title . ' - ' . $product_price;
+                            echo '</li>';
                         }
                         echo '</ul>';
                     }
                     ?>
-
                 </p>
+                <button id="add-selected-to-cart-btn" class="button">
+                    <?php _e('Wrong Add Selected Products to Cart', 'fbt'); ?>
+                </button>
                 <div id="bought_together_search_results"></div>
-
             </div>
         </div>
-
-        <?php
-    }
-
-
-
-    /**
-     * Function for `woocommerce_before_add_to_cart_form` action-hook.
-     * 
-     * @return void
-     */
-    function show_items_before_sdsc()
-    {
-        global $post;
-        $currentProductId = $post->ID;
-        // Get the saved selected product IDs for the current product
-        $selected_product_ids = get_post_meta($currentProductId, 'selected_product', true);
-
-        ?>
-        <style>
-            /* Internal CSS styles */
-            .selected-products-list {
-                border-collapse: collapse;
-                width: 100%;
-            }
-
-            .freq-product-item {
-                padding: 10px 0;
-                border-bottom: 1px dotted #e5e5e5;
-            }
-
-            .product-thumbnail img {
-                max-width: 100px;
-                /* Adjust as needed */
-                height: auto;
-            }
-
-            .product-details {
-                padding-left: 10px;
-            }
-
-            .product-title {
-                font-weight: bold;
-            }
-
-            .product-price {
-                color: #555;
-            }
-
-            .product-checkbox {
-                /* Customize checkbox appearance */
-                width: 20px;
-                height: 20px;
-            }
-
-            /* Responsive adjustments */
-            @media (max-width: 768px) {
-                .selected-products-list {
-                    font-size: 14px;
-                }
-
-                .product-thumbnail img {
-                    max-width: 80px;
-                }
-            }
-
-            @media (max-width: 576px) {
-                .product-thumbnail img {
-                    max-width: 60px;
-                }
-            }
-        </style>
-
-
         <?php
 
-
-        if (!empty ($selected_product_ids)) {
-            echo '<table class="selected-products-list">';
-            foreach ($selected_product_ids as $product_id) {
-                // Replace with actual logic to fetch product data from your database
-                $product = wc_get_product($product_id);
-
-                if ($product) { // Check if product exists
-                    $product_title = $product->get_name();
-                    $product_image = get_the_post_thumbnail_url($product_id, 'thumbnail'); // Change 'thumbnail' to the desired image size
-                    $product_price = $product->get_price_html(); // Get the formatted price
-
-                    // Generate a dynamic ID for the checkbox
-                    $checkbox_id = 'product_checkbox_' . $product_id;
-
-                    echo '<tr class="freq-product-item">';
-                    echo '<td><input type="checkbox" id="' . $checkbox_id . '" class="product-checkbox"></td>';
-                    echo '<td class="product-thumbnail"><img src="' . $product_image . '" alt="' . $product_title . '"></td>';
-                    echo '<td class="product-details">';
-                    echo '<span class="product-title">' . $product_title . '</span><br>';
-                    echo '<span class="product-price">' . $product_price . '</span>';
-                    echo '</td>';
-                    echo '</tr>';
-
-                }
-            }
-            echo '</table>';
-            echo '<br>';
-        }
-
-    }
-
-    // Function to add selected products to the cart
-    public function add_to_cart_selected_products()
-    {
-        check_ajax_referer('add_to_cart_nonce', 'security');
-
-        // Get the selected product IDs
-        $selected_products = isset ($_POST['selected_products']) ? $_POST['selected_products'] : array();
-
-        // var_dump($)
-
-        // Loop through selected products and add them to the cart
-        foreach ($selected_products as $product_id) {
-            WC()->cart->add_to_cart($product_id);
-        }
-
-        wp_send_json_success();
+        // Hook the function to display selected products before add to cart button
+        // add_action('woocommerce_before_add_to_cart_form', array($this, 'show_items_in_single_page'));
     }
 
 
 }
 
 $WcEazyFrequentlyBoughtUtils = new WcEazyFrequentlyBoughtUtils();
-
-// New function to show selected products before add to cart button
-function show_items_before_sdsc()
-{
-    global $WcEazyFrequentlyBoughtUtils;
-    $WcEazyFrequentlyBoughtUtils->show_items_before_sdsc();
-}
- 
-
-
-// if (!empty ($selected_product_ids)) {
-//     // Initialize an array to store product data
-//     $selected_products_data = array();
-
-//     foreach ($selected_product_ids as $product_id) {
-//         // Replace with actual logic to fetch product data from your database
-//         $product = wc_get_product($product_id);
-
-//         if ($product) { // Check if product exists
-//             $product_title = $product->get_name();
-//             $product_image = get_the_post_thumbnail_url($product_id, 'thumbnail'); // Change 'thumbnail' to the desired image size
-//             $product_price = $product->get_price(); // Get the product price without formatting
-
-//             // Add product data to the array
-//             $selected_products_data[] = array(
-//                 'id' => $product_id,
-//                 'title' => $product_title,
-//                 'image' => $product_image,
-//                 'price' => $product_price
-//             );
-//         }
-//     }
-
-//     // Check if there are selected products data
-//     if (!empty ($selected_products_data)) {
-//         // Encode the selected products data as JSON and store it in a hidden input field
-//         echo '<input type="hidden" id="selected_products_data" value="' . htmlspecialchars(json_encode($selected_products_data)) . '">';
-
-//         // Output the selected products table
-//         echo '<table class="selected-products-list">';
-//         foreach ($selected_products_data as $product_data) {
-//             echo '<tr class="freq-product-item">';
-//             echo '<td class="product-thumbnail"><img src="' . $product_data['image'] . '" alt="' . $product_data['title'] . '"></td>';
-//             echo '<td class="product-details">';
-//             echo '<span class="product-title">' . $product_data['title'] . '</span><br>';
-//             echo '<span class="product-price">' . wc_price($product_data['price']) . '</span>';
-//             echo '</td>';
-//             echo '</tr>';
-//         }
-//         echo '</table>';
-//         echo '<br>';
-//     }
-// }
-
-
-add_action('woocommerce_before_add_to_cart_form', array($WcEazyFrequentlyBoughtUtils, 'show_items_before_sdsc'));
-
-
-
-
-
-?>

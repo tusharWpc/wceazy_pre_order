@@ -1,28 +1,31 @@
+alert("check");
 jQuery(document).ready(function($) {
-    $('.single_add_to_cart_button ').click(function(e) {
-        e.preventDefault();
-
-        var selectedProducts = [];
-        $('.product-checkbox:checked').each(function() {
-            selectedProducts.push($(this).val());
-        });
-
+    $('#add-selected-to-cart-btn').on('click', function() {
+      var selectedProducts = [];
+      $('.selected-product-checkbox:checked').each(function() {
+        selectedProducts.push($(this).val());
+      });
+  
+      if (selectedProducts.length > 0) {
         $.ajax({
-            type: 'POST',
-            url: ajax_params.ajax_url,
-            data: {
-                action: 'add_to_cart_selected_products',
-                security: ajax_params.add_to_cart_nonce,
-                selected_products: selectedProducts
-            },
-            success: function(response) {
-                // Redirect to the cart page after successful addition
-                window.location.href = response.redirect_url;
-            },
-            error: function(xhr, status, error) {
-                // Handle error
-                console.log(xhr.responseText);
-            }
+          url: ajax_params.ajax_url,
+          type: 'POST',
+          data: {
+            action: 'add_selected_products_to_cart',
+            selected_products: selectedProducts,
+            security: ajax_params.add_to_cart_nonce
+          },
+          success: function(response) {
+            // Handle success response here
+            console.log(response);
+          },
+          error: function(xhr, status, error) {
+            // Handle error here
+            console.log(xhr.responseText);
+          }
         });
+      } else {
+        alert('Please select at least one product to add to cart.');
+      }
     });
-});
+  });
