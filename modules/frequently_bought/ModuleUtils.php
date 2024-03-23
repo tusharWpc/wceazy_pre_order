@@ -45,7 +45,7 @@ class WcEazyFrequentlyBoughtUtils
             )
         );
     }
- 
+
     public function enqueue_bought_together_scripts()
     {
         // Enqueue the script for the user side
@@ -90,7 +90,7 @@ class WcEazyFrequentlyBoughtUtils
             while ($products_query->have_posts()) {
                 $products_query->the_post();
                 // Output your product results here with checkboxes
-                echo '<div>';
+                echo '<div class="search_results">';
                 echo '<input type="checkbox" class="product-checkbox" value="' . get_the_ID() . '">'; // Add checkbox with product ID as value
                 echo '<label>' . get_the_title() . '</label>';
                 echo '</div>';
@@ -158,35 +158,114 @@ class WcEazyFrequentlyBoughtUtils
         $selected_product_ids = get_post_meta($currentProductId, 'selected_product', true);
 
         ?>
+        <style>
+            .options_group {
+                margin-bottom: 20px;
+                background-color: #f9f9f9;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+
+            .options_group p {
+                /* margin-bottom: 10px; */
+                margin: 0;
+                padding: 0;
+            }
+
+            #bought_together_search {
+                width: 200px;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                margin-right: 10px;
+            }
+
+            /* #bought_together_search div {
+                                                            display: flex;
+                                                        } */
+
+            #clear_search {
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+
+            #selected_products_list {
+                list-style-type: none;
+                padding: 0;
+                margin-top: 10px;
+            }
+
+            #selected_products_list li {
+                margin-bottom: 5px;
+                border: 1px solid;
+                padding: 5px;
+            }
+
+            #bought_together_search_results {
+                margin-top: 10px;
+                /* gap: 3px; */
+            }
+
+            h1#bought_together_search_results div {
+                border: 2px solid;
+                padding: 10px;
+            }
+
+            .options_group p {
+                font-size: smaller;
+                margin-bottom: 10px;
+            }
+
+
+            /* .options_group p {
+                                                /* margin-bottom: 10px; */
+
+            /* width: 1200px; */
+            }
+
+            */
+        </style>
         <div id="bought_together_data_option" class="panel woocommerce_options_panel">
             <div class="options_group">
-                <p class="form-field">
+                <div class="form-field">
                     <input type="text" id="bought_together_search" class="short" name="bought_together_search">
                     <button id="clear_search" class="button">
                         <?php _e('Clear', 'fbt'); ?>
                     </button>
+                </div> <br>
+                <div class="selected-products-label">
+                    <h1 class="label">Selected Products:</h1>
+
                     <?php
                     if (!empty ($selected_product_ids)) {
                         echo '<ul id="selected_products_list">';
                         foreach ($selected_product_ids as $product_id) {
                             $product = wc_get_product($product_id);
-                            $product_title = $product->get_name();
-                            $product_price = $product->get_price_html(); // This will get the formatted price including currency symbol
-                            echo '<li>';
-                            echo '<input type="checkbox" class="selected-product-checkbox" value="' . $product_id . '" />';
-                            echo $product_title . ' - ' . $product_price;
-                            echo '</li>';
+                            if ($product) {
+                                $product_title = $product->get_name();
+                                $product_price = $product->get_price_html();
+                                echo '<li>';
+                                echo '<span class="product-title">' . $product_title . '</span> - <span class="product-price">' . $product_price . '</span>';
+                                echo '</li>';
+                            }
                         }
                         echo '</ul>';
                     }
                     ?>
-                </p>
-                <button id="add-selected-to-cart-btn" class="button">
-                    <?php _e('Wrong Add Selected Products to Cart', 'fbt'); ?>
-                </button>
-                <div id="bought_together_search_results"></div>
+                </div>
+
+                <h1 class="search_result">Search results:</h1>
+
+                <h1 id="bought_together_search_results"></h1>
             </div>
         </div>
+
+
         <?php
 
         // Hook the function to display selected products before add to cart button

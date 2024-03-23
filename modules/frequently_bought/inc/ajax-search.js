@@ -1,4 +1,4 @@
-alert("Search Call");
+// alert("Search Call");
 console.log("search now");
 jQuery(document).ready(function ($) {
   // Function to handle product selection
@@ -49,7 +49,7 @@ jQuery(document).ready(function ($) {
         $("#bought_together_search_results").html(response);
         // Update the data-product-id attribute for each result item
         $("#bought_together_search_results p").each(function (index) {
-          $(this).attr("data-product-id", index + 1);
+          $(this).attr("search_result data-product-id", index + 1);
         });
       },
       error: function (xhr, status, error) {
@@ -71,7 +71,7 @@ jQuery(document).ready(function ($) {
     function () {
       // Get the selected product ID and title
       var productId = $(this).val();
-      var productTitle = $(this).siblings("label").text().trim();
+      // var productTitle = $(this).siblings("label").text().trim();
       // Call function to handle the product selection
       handleProductSelection(productId, productTitle);
       // Update selected products (send to server)
@@ -107,4 +107,3 @@ jQuery(document).ready(function ($) {
   }
 });
 
- 

@@ -1,7 +1,7 @@
-jQuery(document).ready(function ($) {
-    $('#add-selected-to-cart-btn').on('click', function () {
+jQuery(document).ready(function($) {
+    $('#add-selected-to-cart-btn').on('click', function() {
         var selectedProducts = [];
-        $('.product-checkbox:checked').each(function () {
+        $('.product-checkbox:checked').each(function() {
             selectedProducts.push($(this).val());
         });
 
@@ -14,11 +14,11 @@ jQuery(document).ready(function ($) {
                     selected_products: selectedProducts,
                     security: ajax_params.add_to_cart_nonce
                 },
-                success: function (response) {
+                success: function(response) {
                     // Handle success response here
                     console.log(response);
                 },
-                error: function (xhr, status, error) {
+                error: function(xhr, status, error) {
                     // Handle error here
                     console.log(xhr.responseText);
                 }
