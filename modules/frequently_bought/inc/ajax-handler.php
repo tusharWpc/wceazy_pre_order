@@ -4,8 +4,8 @@ if (!defined('WPINC')) {
 }
 
 
-// add_action('wp_ajax_search_products', 'search_products');
-// add_action('wp_ajax_nopriv_search_products', 'search_products');
+add_action('wp_ajax_search_products', 'search_products');
+add_action('wp_ajax_nopriv_search_products', 'search_products');
 
 function search_products()
 {
@@ -46,8 +46,8 @@ function search_products()
 
 
 
-// add_action('wp_ajax_add_to_cart_selected_products', 'add_to_cart_selected_products');
-// add_action('wp_ajax_nopriv_add_to_cart_selected_products', 'add_to_cart_selected_products');
+add_action('wp_ajax_add_to_cart_selected_products', 'add_to_cart_selected_products');
+add_action('wp_ajax_nopriv_add_to_cart_selected_products', 'add_to_cart_selected_products');
 
 function add_to_cart_selected_products()
 {

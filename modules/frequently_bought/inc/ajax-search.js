@@ -1,3 +1,5 @@
+alert("Search Call");
+console.log("search now");
 jQuery(document).ready(function ($) {
   // Function to handle product selection
   function handleProductSelection(productId, productTitle) {
@@ -105,5 +107,4 @@ jQuery(document).ready(function ($) {
   }
 });
 
-
-
+ 
